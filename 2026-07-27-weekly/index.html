@@ -866,20 +866,14 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
     letter-spacing:.12em;text-transform:uppercase;color:#7d4b00;background:#ffe6bb;padding:5px 12px;border-radius:999px}
   .ac-h{font-size:21px;font-weight:800;letter-spacing:-.015em;line-height:1.35;margin:13px 0 7px;color:var(--ink)}
   .ac-h em{font-style:normal;color:#b06600;border-bottom:3px solid #ffd79a;padding-bottom:1px}
-  .ac-sub{font-size:13.5px;color:#5b564b;line-height:1.68;margin:0 0 16px;max-width:82ch}
+  .ac-sub{font-size:13.5px;color:#5b564b;line-height:1.68;margin:0 0 16px;max-width:82ch;word-break:keep-all;overflow-wrap:anywhere}
   .ac-sub b{color:var(--ink)}
   .ac-shots{display:grid;gap:12px}
   .ac-shot{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
   .ac-shot img{display:block;width:100%;height:auto}
-  .ac-cap{font-size:12px;color:var(--muted);line-height:1.5;padding:9px 13px;border-top:1px solid var(--line);background:#faf9f4}
+  .ac-cap{font-size:12px;color:var(--muted);line-height:1.5;padding:9px 13px;border-top:1px solid var(--line);background:#faf9f4;word-break:keep-all;overflow-wrap:anywhere}
   .ac-cap b{color:var(--ink)}
-  .ac-notes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-  .ac-note{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;
-    font-size:12.5px;line-height:1.62;color:#3b3a35}
-  .ac-note.warn{background:var(--warn-bg);border-color:#efd9a8}
-  .ac-note-h{font-size:11.5px;font-weight:800;letter-spacing:.04em;margin-bottom:5px;color:var(--muted)}
-  .ac-note.warn .ac-note-h{color:#96620a}
-  @media(max-width:720px){.ac-notes{grid-template-columns:1fr}.ac-h{font-size:18px}}
+  @media(max-width:720px){.ac-h{font-size:18px}}
 </style>
 <div class="trendwrap">
     <div class="tw-h">📊 6주 추이 — 주간 광고비 vs 매출, 그리고 MER</div>
@@ -992,7 +986,7 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
   <div class="acwrap">
     <div class="ac-kicker">🏆 NEW · 07.27 확인</div>
     <div class="ac-h">세럼·크림이 <em>둘 다 Amazon&rsquo;s Choice</em>가 됐습니다</div>
-    <p class="ac-sub"><b>Amazon&rsquo;s Choice가 뭐냐면</b> — 아마존이 검색어별로 &ldquo;평점 좋고·꾸준히 팔리고·바로 배송되는&rdquo; 상품을 골라 자동으로 달아주는 추천 배지입니다. <b>돈 주고 사거나 신청할 수 없고</b>, 아마존 알고리즘이 알아서 답니다. 검색 결과와 상세페이지 양쪽에 노출돼서, 같은 노출이라도 클릭·구매로 이어지는 비율이 올라갑니다. <b>지금 US 리스팅 두 개 모두</b> 이 배지를 달고 있습니다 — 세럼 4.4★(28), 크림 4.4★(27).</p>
+    <p class="ac-sub"><b>Amazon&rsquo;s Choice가 뭐냐면</b> — 아마존이 검색어별로 &ldquo;평점 좋고·꾸준히 팔리고·바로 배송되는&rdquo; 상품을 골라 자동으로 달아주는 추천 배지입니다. <b>돈 주고 사거나 신청할 수 없고</b>, 아마존 알고리즘이 알아서 답니다. 검색 결과와 상세페이지 양쪽에 노출돼서, 같은 노출이라도 클릭·구매로 이어지는 비율이 올라갑니다. <b>지금 US 리스팅 두 개 모두</b>(세럼&nbsp;4.4★28 · 크림&nbsp;4.4★27) 이 배지를 달고 있습니다.</p>
 
     <div class="ac-shots">
       <div class="ac-shot">
@@ -1005,16 +999,6 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
       </div>
     </div>
 
-    <div class="ac-notes">
-      <div class="ac-note">
-        <div class="ac-note-h">📌 언제 붙었나 — 아직 날짜 미확정</div>
-        7/7 소재 작업 때 세럼 리스팅을 직접 열어 확인했을 때는 배지가 <b>없었습니다</b>(changelog 기록). 지금은 둘 다 달려 있습니다. 이번 주 검색결과 클릭률이 <b>세럼 2.3배·크림 6.1배</b>로 뛴 것과 시점이 겹치지만, <b>배지가 원인인지는 부착일을 잡아야 확정</b>됩니다 — 다음 주 확인 과제.
-      </div>
-      <div class="ac-note warn">
-        <div class="ac-note-h">⚠️ 유지 조건 — 언제든 사라질 수 있음</div>
-        아마존이 자동으로 다는 <b>동적 배지</b>라, 재고·가격·평점·배송이 나빠지면 예고 없이 빠집니다. 현재 UGC·SB 광고 소재 하단에 &ldquo;Amazon&rsquo;s Choice&rdquo; 문구를 쓰고 있어서, <b>배지가 빠지면 소재 문구도 즉시 내려야 합니다</b>(허위표기·아마존 크리에이티브 정책 리스크).
-      </div>
-    </div>
   </div>
 
   <!-- TL;DR -->
@@ -1759,5 +1743,5 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
   if(el && el.classList.contains('tabpanel')) show(h, false);
 })();
 </script>
-<!-- build:a7d5a47aba3f --></body>
+</body>
 </html>
