@@ -203,6 +203,9 @@
   .tbl tr:last-child td{border-bottom:none}
   .tbl td.num{text-align:right;font-variant-numeric:tabular-nums}
   .tbl th.num{text-align:right}
+  /* 중앙정렬+세로 구분선 표(2026-08-04 John) — 숫자·텍스트 정렬이 좌우로 갈려 읽기 힘든 표에 사용 */
+  .tbl.ctr th,.tbl.ctr td,.tbl.ctr td.num,.tbl.ctr th.num{text-align:center}
+  .tbl.ctr th:not(:last-child),.tbl.ctr td:not(:last-child){border-right:1px solid var(--line)}
   .row-win{background:#fcfdf2}
   .row-bad{background:#fdf6f5}
   .verdict{font-weight:800;font-size:13px}
@@ -624,13 +627,13 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
     <div class="grid2">
       <div class="card">
         <span class="chan amz">🟠 아마존 광고</span>
-        <p class="assume"><b>최근 2주 실측 · 브랜드 검색 제외</b>: 광고를 누른 <b>100명 중 2.7명</b>이 삽니다 (전환율 2.70% · 클릭 1,742·구매 47 · 7/19~8/1) <span style="color:var(--muted)">— 두 가지를 보정한 값입니다. ① 최근 1주만 쓰면 구매가 며칠 늦게 합산되는 구조 때문에 낮게 나와서(2.92%), 집계가 끝난 전주까지 2주를 봅니다. ② "레몬더마"를 검색해 산 구매 29건은 뺐습니다 — 7/29부터 광고비로 사지 않는 손님이라, 포함하면 기준선이 실제보다 관대해집니다(포함 시 3.69%)</span></p>
+        <p class="assume"><b>전주(6주차 7/19~25) 실측 · 브랜드 검색 제외</b>: 광고를 누른 <b>100명 중 3.0명</b>이 삽니다 (전환율 2.99% · 클릭 635·구매 19) <span style="color:var(--muted)">— <b>구매 집계가 완전히 끝난 가장 최근 주</b>를 씁니다. 이번 주(7주차)는 구매가 며칠 늦게 합산되는 구조라 아직 과소 집계 상태(2.53%)이고, 전주는 14일 귀속 창이 닫혀 확정된 값입니다. "레몬더마"를 검색해 산 구매는 뺐습니다 — 7/29부터 광고비로 사지 않는 손님이라, 포함하면 4.92%로 부풀려져 기준선이 관대해집니다</span></p>
         <div class="be-row"><span class="be-label">CPC<span class="tiny">클릭 1번 비용 · 낮을수록 좋음</span></span>
-          <span class="be-val">$0.61 이하<span class="pill line">본전선</span></span></div>
+          <span class="be-val">$0.68 이하<span class="pill line">본전선</span></span></div>
         <div class="be-row"><span class="be-label">ROAS<span class="tiny">광고비 1달러로 만든 매출 · 높을수록 좋음</span></span>
           <span class="be-val">1.59배 이상<span class="pill line">본전선</span></span></div>
         <div class="oneline">한마디로 → <b>"광고비 1달러 써서 1.59달러 넘으면 본전"</b>.</div>
-        <div class="callout" style="margin-top:12px">⚠️ <b>현실 확인:</b> 🔴 <b>현실 확인:</b> 본전 CPC는 <b>$0.61</b>입니다(주문당 마진 $22.61 × 위 실측 전환율 2.70%). 앞으로 우리가 실제로 사는 트래픽(브랜드 제외) 기준 실제 CPC는 <b>$0.94</b> — <b>본전의 1.5배</b>를 내고 있습니다. ROAS로 봐도 같은 기준 <b>1.04배 vs 본전 1.59배</b>로 미달입니다. 격차를 만드는 곳은 이번 주 SB(0.86배)와 브랜드 착시를 뺀 SP(0.46배)입니다.</div>
+        <div class="callout" style="margin-top:12px">⚠️ <b>현실 확인:</b> 🔴 <b>현실 확인:</b> 본전 CPC는 <b>$0.68</b>입니다(주문당 마진 $22.61 × 위 실측 전환율 2.99%). 우리가 앞으로 실제로 사는 트래픽(브랜드 제외) 기준 실제 CPC는 <b>$0.91</b> — <b>본전의 1.35배</b>입니다. ROAS로 봐도 같은 기준 <b>1.21배 vs 본전 1.59배</b>로 미달입니다.<div style="margin-top:12px"><b>합계 전환율이 3% 아래인 이유 — 채널마다 완전히 다릅니다</b><div class="tbl-scroll" style="margin-top:6px"><table class="mini"><thead><tr><th>채널</th><th class="num">클릭</th><th class="num">전환율</th><th class="num">본전 CPC</th><th class="num">실제 CPC</th><th>판정</th></tr></thead><tbody><tr><td>SP 자동광고</td><td class="num">51</td><td class="num">11.76%</td><td class="num">$2.66</td><td class="num">$1.08</td><td><span class="v-pill win">🟢 본전 아래 — 여유 있음</span></td></tr><tr><td>SB 영상광고</td><td class="num">566</td><td class="num">1.94%</td><td class="num">$0.44</td><td class="num">$0.91</td><td><span class="v-pill lose">🔴 본전의 2.1배</span></td></tr><tr><td>SD 리마케팅</td><td class="num">18</td><td class="num">11.11%</td><td class="num">$2.51</td><td class="num">$0.61</td><td><span class="v-pill win">🟢 본전 아래 — 여유 있음</span></td></tr></tbody></table></div><div class="dnote">합계 전환율(2.99%)은 <b>클릭의 89%를 차지하는 SB(1.94%)</b>가 끌어내린 평균값입니다. SP는 전환율이 6배 높아(11.76%) 클릭당 $2.66까지 써도 본전인데 실제로는 $1.08만 쓰고 있습니다 — <b>같은 돈을 SB에서 SP로 옮기는 것이 지금 가장 큰 레버</b>라는 뜻이고, 8월 계획의 1순위 항목입니다. 단 SP 논브랜드 클릭은 주 51회로 표본이 작아, 옮기는 폭은 실측을 보며 단계적으로 정합니다.</div></div></div>
       </div>
       <div class="card">
         <span class="chan meta">🔵 메타 광고</span>
@@ -667,7 +670,7 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
     <div class="clarify">⚖️ <b>핵심 진단:</b> 이번 주 MER 하락(-29.5%p)의 <b>실질 원인은 SB 지출 증액($444)이 본전을 못 넘긴 것, 이것 하나입니다</b> — 총 지출 증가분($371)보다도 큰 금액이라 사실상 하락 전부를 설명합니다. 브랜드 착시 제거(7/29~)는 별개 사안입니다 — SP 한 채널의 표시 비율을 나빠 보이게 했을 뿐, 그 손님들은 광고 없이도 사고 있어서 회사 전체 매출에는 거의 영향을 안 줬습니다(SP 광고귀속 매출은 $391 줄었는데 회사 전체 매출은 $82만 줄었다는 게 그 증거). 8/1 귀속 미성숙(매출 하한 계상)도 소액의 별도 요인입니다. <b>액션 대상은 SB뿐입니다</b>(★1). 브랜드 차단의 최종 성과 판정에 쓸 KPI(주간 브랜드 검색 총구매)는 이번 주 아마존이 데이터를 발행하지 않아 다음 주로 이월합니다.</div>
 
     <div class="tbl-scroll">
-      <table class="tbl">
+      <table class="tbl ctr">
         <thead><tr><th>채널 / 구간</th><th class="num">광고비</th><th class="num">매출</th><th class="num">ROAS·MER</th><th>판정 (흑자선 대비)</th></tr></thead>
         <tbody>
           <tr><td>아마존 · 영상 검색광고(SB)</td><td>$960.03</td><td>$827.12</td><td>0.86배</td><td><span class="v-pill lose">🔴 본전 54%</span></td></tr>
@@ -1441,7 +1444,7 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
     <tbody>
       <tr><td>지출</td><td>$264.55</td><td>$345.87</td><td>-23.5% — 7/27 예산 하향(소재당 ₩14,000→₩10,000)에 따른 계획된 축소</td></tr>
       <tr><td>구매 버튼 클릭(IC)</td><td>430</td><td>589</td><td>-27.0% — 지출 축소와 거의 비례</td></tr>
-      <tr><td>클릭당 비용(CPI)</td><td>$0.615</td><td>$0.587</td><td>본전선 $0.80 이내 유지 — 전면부 효율은 계속 양호</td></tr>
+      <tr><td>클릭당 비용(CPI)</td><td>$0.615</td><td>$0.587</td><td>클릭 자체는 싸게 사고 있으나, 실측 전환율(0.47%)로 계산한 본전 CPC는 $0.11 — 실제는 그 6배(§1)</td></tr>
       <tr><td>랜딩 대비 구매버튼 클릭률</td><td>64.2%</td><td>59.9%</td><td>오히려 개선 — 웹사이트 단계는 문제가 아님</td></tr>
       <tr><td>아마존 귀속 구매</td><td>2건</td><td>2건</td><td>2주 연속 IC 대비 0.3~0.5%대. 이번 주 2건은 <b>둘 다 7/26</b>(구 소재 정지 전 마지막 날)</td></tr>
       <tr><td>소재 로스터</td><td>4종 교체</td><td>—</td><td>7/27 구 4종 정지(2주 연속 구매당 비용 $28 초과) + 신규 4종 충원</td></tr>
@@ -1890,7 +1893,8 @@ table.whytbl .wt-sub{font-size:11px;color:var(--muted);font-weight:400}
 <tr><td>일별 아마존 매출·주문 기록(베이스라인 대조)</td><td>8/10 판정의 입력 데이터</td><td>진행 중</td></tr>
 <tr><td>브랜드 검색 성과 리포트(SQP) 발행 즉시 브랜드 총구매 확인(통상 화~수)</td><td>차단 후 브랜드 구매 자체가 줄었는지 보는 안전장치 — 급락이면 실험 중단을 감수하고 차단을 되돌립니다</td><td>발행 대기</td></tr>
 <tr><td rowspan="3">이번 주 ②<br>측정 수리<br>(매출 영향 0)</td><td>SD 리마케팅이 대시보드 주간 합계에서 빠지는 집계 결함 수정</td><td>SD $40이 총계 누락(★1) — 자를 못 믿으면 어떤 판정도 못 합니다</td><td>실행</td></tr>
-<tr><td>본전선 산정을 "최근 2주 실측·브랜드 검색 제외"로 교체</td><td>브랜드 구매 29건이 전환율을 3.69%로 부풀림 — 실제 2.70%, 본전 CPC $0.61(§1)</td><td>✅ 완료(본 보고서부터)</td></tr>
+<tr><td>본전선 산정을 "집계 완료된 전주 실측·브랜드 검색 제외"로 교체</td><td>이번 주는 구매 집계 미완(2.53%)이라 전주(6주차) 확정값 사용 — 전환율 2.99%·본전 CPC $0.68. 브랜드 구매 포함 시 4.92%로 부풀려짐(§1)</td><td>✅ 완료(본 보고서부터)</td></tr>
+<tr><td>채널별 본전선 분해 신설 — SP·SB·SD 각각의 전환율·본전 CPC</td><td>합계 2.99%는 클릭 89%를 쓰는 SB(1.94%)가 만든 평균. SP는 11.76%로 클릭당 $2.66까지 여유 — 예산 이동 근거(§1)</td><td>✅ 완료(본 보고서부터)</td></tr>
 <tr><td>귀속 중복 집계 해석 규칙 문서화 — 메타 기여는 하한으로 읽기</td><td>아마존+메타 귀속 합계 = 매출의 98.9%로 중복 확정(★5) — 정본 metrics.md 등재</td><td>✅ 완료(8/4)</td></tr>
 <tr><td rowspan="4">이번 주 ③<br>실수 재발 방지<br>(★4 사고 → 장치)</td><td><b>D+3 사후 재감사 절차 신설</b> — 네거티브 등록·캠페인 중지는 3일 뒤 귀속 확정 후 재확인</td><td>vitamin k 검색어 오차단(재검토 1,696건)·이예지C1 중지 오판의 공통 원인이 "재확인 절차 부재"</td><td>이번 주 실행</td></tr>
 <tr><td>낡은 데이터 집행 가드 작동 검증 — 브리핑 날짜와 집행 날짜 불일치 시 중단</td><td>8/3 사고(3일 묵은 수치로 입찰·예산 집행) 직후 만든 규칙 — 이번 주가 첫 준수 확인 주</td><td>이번 주 실행</td></tr>
