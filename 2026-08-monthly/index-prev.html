@@ -250,6 +250,23 @@
   footer{margin-top:54px;border-top:1px solid var(--line);padding-top:18px;font-size:12.5px;color:var(--muted)}
   .fx{font-size:12px;color:var(--muted)}
 
+  .dstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px;margin:12px 0}
+  .dstat .ds{background:#faf9f4;border:1px solid var(--line);border-radius:12px;padding:11px 13px}
+  .dstat .ds-v{font-size:21px;font-weight:800;letter-spacing:-.01em;line-height:1.15}
+  .dstat .ds-l{font-size:11.5px;color:var(--muted);font-weight:700;margin-top:3px;line-height:1.4}
+  .dstat .ds.g .ds-v{color:#1a8f3c}
+  .dstat .ds.b .ds-v{color:#d23b2e}
+  .dstat .ds.w .ds-v{color:#c98300}
+  .dflow{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;margin:12px 0}
+  .dflow .df{flex:1;min-width:112px;background:#faf9f4;border:1px solid var(--line);border-radius:10px;padding:9px 11px}
+  .dflow .df-t{font-size:11px;font-weight:800;color:var(--lime-deep);letter-spacing:.03em}
+  .dflow .df-v{font-size:15px;font-weight:800;margin:2px 0 1px}
+  .dflow .df-s{font-size:11px;color:var(--muted);line-height:1.45}
+  .dflow .df.bad{background:#fdf1ef;border-color:#f0c9c2}
+  .dflow .df.good{background:#f2f8ec;border-color:#cfe3bb}
+  .dflow .dfa{align-self:center;color:#b9b3a3;font-weight:800;font-size:13px}
+  @media (max-width:640px){.dflow{flex-direction:column}.dflow .dfa{display:none}}
+  .dnote{font-size:12.5px;color:var(--muted);line-height:1.6;margin:8px 0 0;padding-left:11px;border-left:2px solid var(--line)}
   .trendwrap{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 22px 14px;box-shadow:var(--shadow)}
   .trendwrap .tw-h{font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--lime-deep);margin-bottom:6px}
   .tw-sub{font-size:12.5px;color:var(--muted);margin-bottom:12px;line-height:1.5}
@@ -394,17 +411,17 @@
     <div class="grid2">
       <div class="card">
         <span class="chan amz">🟠 아마존 광고</span>
-        <div class="be-row"><span class="be-label">클릭 1번에 쓰는 돈</span><span class="be-val">$1.13 이하<span class="pill line">본전선</span></span></div>
-        <div class="be-row"><span class="be-label">광고비 대비 매출</span><span class="be-val">1.59배 이상<span class="pill line">본전선</span></span></div>
-        <div class="be-row"><span class="be-label">매출 중 광고비 비중</span><span class="be-val">62.8% 이하<span class="pill line">본전선</span></span></div>
-        <div class="callout" style="margin-top:12px">⚠️ <b>현실 확인:</b> 6주 아마존 단독 ROAS는 <b>1.25</b>(BEP 1.59 미달)이지만, 오가닉 매출까지 포함한 '아마존 생태계 대비 광고비' 기준으로는 <b>1.547×</b>로 본전에 0.04 근접 — 격차는 크지 않습니다(★A 참조).</div>
+        <div class="be-row"><span class="be-label">CPC (클릭 1번 비용)</span><span class="be-val">$0.61 이하<span class="pill line">본전선</span></span></div>
+        <div class="be-row"><span class="be-label">ROAS (광고비 대비 매출)</span><span class="be-val">1.59배 이상<span class="pill line">본전선</span></span></div>
+        <p style="font-size:12px;color:var(--muted);margin:8px 0 0">본전 CPC는 최근 2주 실측 전환율 2.70%(브랜드 검색 구매 제외, 클릭 1,742·구매 47) 기준 — 과거 가정치(5%)로 계산하던 $1.13에서 8/4 실측 기준으로 교체했습니다.</p>
+        <div class="callout" style="margin-top:12px">⚠️ <b>현실 확인:</b> 6주 아마존 단독 ROAS는 <b>1.25</b>(BEP 1.59 미달)이지만, 오가닉 매출까지 포함한 '아마존 생태계 대비 광고비' 기준으로는 <b>1.547×</b>로 본전에 0.04 근접 — 격차는 크지 않습니다(★A 참조). 클릭 단가로는 실제 CPC $0.94(브랜드 제외) vs 본전 $0.61로 <b>본전의 1.5배</b>입니다(★B).</div>
       </div>
       <div class="card">
         <span class="chan meta">🔵 메타 광고</span>
-        <div class="be-row"><span class="be-label">구매로 이어질 클릭 1번 비용</span><span class="be-val">$0.80 이하<span class="pill line">본전선</span></span></div>
-        <div class="be-row"><span class="be-label">한 개 팔리게 하는 비용</span><span class="be-val">$18.8 이하<span class="pill line">본전선</span></span></div>
-        <div class="be-row"><span class="be-label">광고비 대비 아마존 매출</span><span class="be-val">1.37배 이상<span class="pill line">본전선</span></span></div>
-        <div class="callout" style="margin-top:12px">🟡 전면부(클릭단가)는 본전 통과, 후면부(실제 구매)는 낙제. CPI $0.69로 본전선($0.80) 안이지만 귀속 ROAS는 ~0.65로 BEP 1.37의 절반. 후광 추정 3법 전부 '약한 긍정 신호 + 인과 확정 불가'.</div>
+        <div class="be-row"><span class="be-label">CPC (구매 버튼 클릭 1번 비용)</span><span class="be-val">$0.11 이하<span class="pill line">본전선</span></span></div>
+        <div class="be-row"><span class="be-label">ROAS (광고비 대비 아마존 매출)</span><span class="be-val">1.37배 이상<span class="pill line">본전선</span></span></div>
+        <p style="font-size:12px;color:var(--muted);margin:8px 0 0">본전 CPC는 실측 전환율 0.47%(구매 버튼 클릭→아마존 구매) 기준 — 과거 가정치(2%)로 계산하던 $0.80에서 8/4 실측 기준으로 교체했습니다.</p>
+        <div class="callout" style="margin-top:12px">🔴 <b>실측 기준 재판정:</b> 과거 가정(전환 2%)으로는 클릭 단가가 "본전 안"으로 보였지만, 실측 전환율 0.47%로 다시 계산하면 실제 CPC $0.69는 <b>본전($0.11)의 약 6배</b>입니다. 귀속 ROAS 밴드 0.58~0.92도 본전 1.37 미달(★D) — 이 판정으로 8/4 US 메타 광고를 전면 중단했습니다.</div>
       </div>
     </div>
     <p class="lead" style="margin-top:14px;font-size:13.5px;color:var(--muted)">* 회사 공식 ROAS 게이트(흑자 1.9× / 검증완료 2.0× / 최우선 3.0×) 유래는 Ⅴ막에서 재검토. 세럼 판매가 $36.58 기준.</p>
@@ -571,7 +588,7 @@
   <div class="cr-why"><b>단, 착시 보정 필요 →</b> 이 캠페인 귀속매출의 55~65%는 브랜드 검색어 착시(7/29 제거)였습니다. 차단이 완전 발효된 7주차 단주 실측으로는 착시 비중이 84.5%까지 나왔습니다 — 말미로 갈수록 착시가 더 컸다는 뜻입니다. 착시 제거 후 실질 ROAS 1.67~2.47을 새 기준선으로 8월 증액을 판단해야 합니다(#900).</div>
 </div></div></div>
     <div class="proof" style="margin-top:16px">📊 <b>154건 액션 중 판정 가능한 106건의 승률은 47%다. 카테고리로 가르면 지출을 빼는 액션(킬·네거티브)이 79% 이겼고, 지출을 넣는 액션(소재·입찰예산)은 대부분 졌습니다</b> — 얼핏 "당연한 결과"로 보이지만 <b>실제 원인은 카테고리가 아니라 실행 방식</b>이었습니다(Ⅱ막 참조). 검증된 축(SP-Auto·손데모×M3레이저)에 단계적으로 얹은 증액은 이겼고, 검증 안 된 신규 코호트에 즉시 걸린 입찰인상·대량 신설은 거의 다 졌습니다. "빼면 이긴다"가 아니라 "확인 안 된 곳에 급하게 넣으면 진다"가 정확한 교훈입니다.</div>
-    <div class="proof">🆕 <b>신규 고객 비중 92~100%</b>(SB 구매의 newToBrandPurchases 비율, 주차별 5/5~22/23) — 신규 획득 엔진은 확실히 작동 중입니다. 다만 재구매 고객은 6주째 0명(0%) — 성장투자 국면의 'LTV가 지금 적자를 회수한다'는 전제가 아직 실측되지 않았습니다(제품 사용주기 1~2개월 고려 시 이르지만, 9월 재측정 필요·결정큐 반영).</div>
+    <div class="proof">🆕 <b>신규 고객 비중 92~100%</b>(SB 구매의 newToBrandPurchases 비율, 주차별 5/5~22/23) — 신규 획득 엔진은 확실히 작동 중입니다. 다만 재구매 고객은 6주째 0명(0%) — 성장투자 국면의 'LTV가 지금 적자를 회수한다'는 전제가 아직 실측되지 않았습니다(제품 사용주기 1~2개월 고려 시 이르지만, 9월 재측정 필요).</div>
     <div class="proof">🔍 <b>SP 비브랜드 실질 ROAS는 낮습니다(0.46, 최근 실측)</b> — SP-Auto의 화려한 표시 ROAS 대부분이 브랜드 검색어였다는 뜻. 착시를 걷어낸 진짜 비브랜드 경쟁력은 아직 증명 전이고, 8월 첫 2주가 그 첫 순수 데이터가 됩니다.</div>
     <div class="flag good-flag">🟢 승자 구조는 <b>좁지만 뚜렷합니다.</b> 8월 전략의 절반은 이 2개 축(손데모×M3레이저, SP-Auto 확장)을 조심스럽게 넓히는 것 — Ⅴ막에서 시나리오로.</div>
   </section>
@@ -585,6 +602,8 @@
   <p class="lead">반전이 남긴 질문은 하나입니다 — <b>정상 가격에 산 트래픽이 왜 구매로 이어지지 않았나.</b> 여섯 갈래(★A~F)로 조사했습니다: 돈의 흐름(★A), 전환 사슬(★B), 소재 운영 구조(★C), 메타 채널(★D), 검색·랭크(★E), 외부 비교(★F). 각 조사의 세부는 다르지만 결론은 전부 같은 지점을 가리킵니다 — 막 끝의 종합 진단으로 이어집니다.</p>
   <section id="ba-deep"><div class="sec-head" style="margin-top:38px"><span class="sec-num">★A</span><h2>MER 워터폴 — 하락은 지출 주도, 회복은 매출 주도</h2><span class="note">6주 궤적 완전 분해</span></div>
 <p class="lead">주차별 MER은 U자형입니다(1.71→0.63→1.04→1.07→1.19→1.66→1.11). 하락과 회복의 메커니즘이 다릅니다.</p>
+    <div class="dflow"><div class="df good"><div class="df-t">1주</div><div class="df-v">1.71×</div><div class="df-s">런칭</div></div><div class="dfa">→</div><div class="df bad"><div class="df-t">2주</div><div class="df-v">0.63×</div><div class="df-s">과속 바닥</div></div><div class="dfa">→</div><div class="df bad"><div class="df-t">3주</div><div class="df-v">1.04×</div><div class="df-s">수습</div></div><div class="dfa">→</div><div class="df bad"><div class="df-t">4주</div><div class="df-v">1.07×</div><div class="df-s">정체</div></div><div class="dfa">→</div><div class="df bad"><div class="df-t">5주</div><div class="df-v">1.19×</div><div class="df-s">규칙 신설</div></div><div class="dfa">→</div><div class="df good"><div class="df-t">6주</div><div class="df-v">1.66×</div><div class="df-s">최고점</div></div><div class="dfa">→</div><div class="df bad"><div class="df-t">7주(5일)</div><div class="df-v">1.11×</div><div class="df-s">착시 제거</div></div></div>
+    <div class="dnote">초록 = 본전선(1.59) 이상. 내려갈 때는 지출(검증 안 된 대량 투입)이 원인이었고, 올라올 때는 매출(SP-Auto·A+ 리뉴얼)이 끌었습니다 — 아래에서 각각 분해합니다.</div>
 <div class="grid2">
   <div class="card"><span class="chan amz">🔻 2주차 바닥 (0.63)</span>
     <p style="font-size:14px;margin:8px 0">6/22~23 세럼·크림 M3 300캠을 일괄 런칭하고 6/23~25 입찰을 즉시 인상했습니다. 검증 안 된 신규 코호트(260622+260623)는 지출 $354.61에 매출 $159.68(<b>ROAS 0.45</b>) — 노출은 +229% 샀는데 ROAS 0.28을 받은 셈입니다. 기존 코호트(260610+260616)는 같은 기간 ROAS 1.48로 정상이었습니다.</p></div>
@@ -612,6 +631,7 @@
 <div class="oneline">💡 아마존 예산 규칙(요일별 예산 스케줄)만으로 재배분이 가능한, <b>설정 변경 비용이 사실상 0인 레버</b>다. 일·화에 나가던 지출 일부를 목·금으로 옮기는 규칙을 8월 1주차에 걸고, 요일당 관측치가 6~7개뿐이므로(🟡 패턴의 지속성은 추정) 4주 뒤 재검증합니다 — Ⅴ막 로드맵 반영.</div>
 <div class="sec-head" style="margin-top:38px"><span class="sec-num">★B</span><h2>CVR 사슬 — 클릭 매입은 카테고리 이상, 전환에서 샙니다</h2><span class="note">전환 병목의 정확한 위치</span></div>
 <p class="lead">퍼포먼스 3요소(CTR·CPC·CVR) 중 CVR만 유독 나쁩니다. 클릭까지는 잘 사고 있다는 뜻입니다.</p>
+    <div class="dflow"><div class="df good"><div class="df-t">① 광고 클릭률 (CTR)</div><div class="df-v">0.71% 🟢</div><div class="df-s">카테고리 기준 0.45~0.60% — 상회</div></div><div class="dfa">→</div><div class="df good"><div class="df-t">② 클릭 단가 (CPC)</div><div class="df-v">$0.93~1.04 🟢</div><div class="df-s">카테고리 범위 $0.73~2.47 — 정상</div></div><div class="dfa">→</div><div class="df bad"><div class="df-t">③ 도착 후 구매율 (CVR)</div><div class="df-v">3.1~3.9% 🔴</div><div class="df-s">카테고리 중앙값 11.84%의 약 1/3 — <b>사슬이 여기서 끊깁니다</b></div></div></div>
 <div class="tbl-scroll"><table class="tbl">
 <thead><tr><th>지표</th><th class="num">우리</th><th class="num">카테고리 벤치마크</th><th>판정</th></tr></thead>
 <tbody>
@@ -622,7 +642,7 @@
 </tbody></table></div>
 <div class="grid2" style="margin-top:16px">
   <div class="card"><span class="chan amz">📉 리스팅 CVR — 기준선은 낡았고, 대리 신호는 좋습니다</span>
-    <p style="font-size:14px;margin:8px 0">세럼 3.55%·<b>크림 1.11%</b>(뷰티 평균 ~10%)는 <b>6/26에 고정한 기준선</b>입니다. 7/3 재측정 예정이었으나 실행되지 않아 A+ 리뉴얼(7/23) 전후를 이 지표로는 직접 비교할 수 없습니다 — 인정할 구멍입니다. 대신 <b>광고 쪽은 이번에 실측 기준선이 생겼습니다</b> — 최근 2주(7/19~8/1) 광고 클릭→구매 전환율 3.69%(클릭 2,004·구매 74). 이걸로 계산한 본전 CPC는 $0.83인데 실제 CPC는 $0.96로 아직 15% 비쌉니다(7주차 주간보고 §1과 동일 기준).<br>
+    <p style="font-size:14px;margin:8px 0">세럼 3.55%·<b>크림 1.11%</b>(뷰티 평균 ~10%)는 <b>6/26에 고정한 기준선</b>입니다. 7/3 재측정 예정이었으나 실행되지 않아 A+ 리뉴얼(7/23) 전후를 이 지표로는 직접 비교할 수 없습니다 — 인정할 구멍입니다. 대신 <b>광고 쪽은 이번에 실측 기준선이 생겼습니다</b> — 최근 2주(7/19~8/1), 브랜드 검색 구매를 뺀 전환율 2.70%(클릭 1,742·구매 47 — 브랜드 구매는 7/29부터 광고비로 사지 않아 제외). 이걸로 계산한 본전 CPC는 $0.61인데 실제 CPC는 $0.94 — <b>본전의 1.5배</b>입니다(7주차 주간보고 §1과 동일 기준).<br>
     다만 <b>대리 신호는 뚜렷합니다.</b> 7주차 보고서 실측(리뉴얼 전후 검색결과 클릭률): 세럼 1.61%→2.11%, <b>크림 2.61%→4.33%(6.1배)</b>, 번들 2.30%→5.07%. 광고 CVR도 BOGO 한복판(W4) 1.97% 바닥 → A+ 리뉴얼 주(W6) 4.92% 정점. 클릭률·광고CVR 둘 다 리뉴얼 이후 개선됐다는 점에서 방향은 맞습니다 — 단 '얼마나'를 답할 리스팅 CVR 재측정 자체는 여전히 8월 과제로 남아있습니다.</p></div>
   <div class="card"><span class="chan meta">🎁 BOGO는 범인이 아니었습니다</span>
     <p style="font-size:14px;margin:8px 0">설정오류로 4주간 세럼 14건만 발동한, 사실상 작동하지 않은 프로모션이었습니다. <b>종료 후 12일이 프로모션 기간보다 주문 2.2배·MER 1.35배 좋았습니다.</b> 전환을 끄는 건 프로모션이 아니라 리스팅 콘텐츠였습니다 — 위 카드의 A+ 리뉴얼 반응과 같은 결론입니다.</p></div>
@@ -638,6 +658,7 @@
 </div>
 <div class="oneline">💡 이 발견은 크림 판정도 바꿉니다 — 크림 단독 CVR 1.11%만 보면 "최대 구멍"이지만, 크림은 이미 번들·세럼 광고를 <b>통해</b> 간접 판매되고 있습니다(교차 착지 크림 12건+). 크림 PDP 재작업의 기대효과는 "크림 직접 전환"보다 "세럼·번들 페이지에서 함께 담기는 확률"에 있습니다.</div>
 <div class="sec-head" style="margin-top:38px"><span class="sec-num">★C</span><h2>소재·서빙 함대 — 13배 성장, 노출 미달률도 함께 상승</h2><span class="note">가동률과 승자 구조</span></div>
+    <div class="dstat"><div class="ds b"><div class="ds-v">93.7%</div><div class="ds-l">노출 미달(&lt;100) 캠 비중<br>직전 실측 91%보다 악화</div></div><div class="ds b"><div class="ds-v">0.89</div><div class="ds-l">SB 함대 1,429캠 ROAS<br>$3,905 → $3,483 (본전 미달)</div></div><div class="ds g"><div class="ds-v">3.53</div><div class="ds-l">SP-Auto 단일캠 ROAS<br>$475 → $1,680 (착시 보정 전)</div></div><div class="ds b"><div class="ds-v">$43→$0</div><div class="ds-l">배치당 캠당 매출<br>대량생성 한계효용 붕괴</div></div></div>
 <div class="grid2">
   <div class="card"><span class="chan amz">📉 노출 미달 캠페인</span>
     <div class="be-val" style="font-size:32px;color:var(--bad)">93.7%</div>
@@ -650,7 +671,8 @@
 <p class="lead" style="margin-top:16px">멘트 최종 성적: <b>M5·M6 폐기 확정</b>(6주 누적 매출 $0), M2 폐기 타당(0.82), M4 표본부족. 소재 유형은 UGC 심사 압승(거절 4.9% vs B&A 39.6%)이나 전환은 대등 — 판별축은 '유형'이 아니라 '부위·씬'입니다.</p>
 <div class="flag">🚨 <b>오폐기 실측 발견:</b> 재현성 1위 승자(S4손등야외_base5)가 '매출0' 오판으로 7/13 PAUSED됐습니다 — 판정 근거가 원본 데이터와 정면 모순. 킬 게이트 로직 재점검 필요.</div>
 <div class="sec-head" style="margin-top:38px"><span class="sec-num">★D</span><h2>메타 후광 — 측정이 안 되는 것과 효과가 없는 것은 다릅니다</h2><span class="note">3법 추정 + 홀드아웃 스펙</span></div>
-<p class="lead">6주 지출 $1,672.38에 대해 측정 가능한 회수는 아마존 어트리뷰션 귀속 구매 18건 + D2C $49.92가 전부입니다. <b>최소·최대 밴드로 감싸 판정하면 결론이 선명해집니다</b> — 최소(어트리뷰션 실측) $988, 최대(전체 매출 − 아마존 광고 귀속분, 오가닉을 0으로 보는 극단값) $1,571 → <b>ROAS 0.58 ~ 0.92</b>로 <b>가장 관대하게 계산해도 본전(1.37) 미달</b>입니다(본전 필요매출 $2,336 · 현금손익 −$714~−$1,082). 단 "효과가 전혀 없다"고 단정할 근거는 아직 부족합니다 — 세 가지 추정법 전부 "약한 긍정 + 확정 불가"로 수렴했고, 그래서 아래 홀드아웃이 필요합니다.</p> <div class="callout" style="margin:10px 0">🔎 <b>덤으로 발견한 것 — 두 광고 시스템이 같은 주문을 겹쳐 세고 있습니다.</b> 이 기간 아마존 광고 귀속 매출과 메타 귀속(상한 기준)을 더하면 전체 매출의 98.9%가 되고, 어느 광고에도 안 잡힌 자연 유입 매출이 $72만 남습니다 — 현실적으로 불가능한 그림입니다. 두 시스템이 같은 주문을 각자 자기 공으로 집계하고 있다는 뜻이라, 메타의 실제 기여는 밴드의 아래쪽(최소값)에 가까울 가능성이 큽니다. 같은 주간에 리마케팅(SD) 지출·매출이 대시보드 주간 합계에서 통째로 빠지는 집계 결함도 확인돼 8월에 수정합니다 — 측정을 못 믿으면 판정 전체가 흔들리기 때문입니다.</div>
+<div class="dstat"><div class="ds w"><div class="ds-v">$1,672</div><div class="ds-l">6주 메타 지출<br>전체 지출의 27.8%</div></div><div class="ds b"><div class="ds-v">0.58~0.92</div><div class="ds-l">ROAS 밴드(최소~최대)<br>본전 1.37 — 상한도 미달</div></div><div class="ds b"><div class="ds-v">−$714~−$1,082</div><div class="ds-l">현금손익 밴드<br>6주 누적</div></div><div class="ds g"><div class="ds-v">$0</div><div class="ds-l">8/4~ 홀드아웃 비용<br>끈 채로 재는 실험 진행 중</div></div></div>
+    <p class="lead">6주 지출 $1,672.38에 대해 측정 가능한 회수는 아마존 어트리뷰션 귀속 구매 18건 + D2C $49.92가 전부입니다. <b>최소·최대 밴드로 감싸 판정하면 결론이 선명해집니다</b> — 최소(어트리뷰션 실측) $988, 최대(전체 매출 − 아마존 광고 귀속분, 오가닉을 0으로 보는 극단값) $1,571 → <b>ROAS 0.58 ~ 0.92</b>로 <b>가장 관대하게 계산해도 본전(1.37) 미달</b>입니다(본전 필요매출 $2,336 · 현금손익 −$714~−$1,082). 단 "효과가 전혀 없다"고 단정할 근거는 아직 부족합니다 — 세 가지 추정법 전부 "약한 긍정 + 확정 불가"로 수렴했고, 그래서 아래 홀드아웃이 필요합니다.</p> <div class="callout" style="margin:10px 0">🔎 <b>덤으로 발견한 것 — 두 광고 시스템이 같은 주문을 겹쳐 세고 있습니다.</b> 이 기간 아마존 광고 귀속 매출과 메타 귀속(상한 기준)을 더하면 전체 매출의 98.9%가 되고, 어느 광고에도 안 잡힌 자연 유입 매출이 $72만 남습니다 — 현실적으로 불가능한 그림입니다. 두 시스템이 같은 주문을 각자 자기 공으로 집계하고 있다는 뜻이라, 메타의 실제 기여는 밴드의 아래쪽(최소값)에 가까울 가능성이 큽니다. 같은 주간에 리마케팅(SD) 지출·매출이 대시보드 주간 합계에서 통째로 빠지는 집계 결함도 확인돼 8월에 수정합니다 — 측정을 못 믿으면 판정 전체가 흔들리기 때문입니다.</div>
 <div class="tbl-scroll"><table class="tbl">
 <thead><tr><th>추정법</th><th>결과</th><th>한계</th></tr></thead>
 <tbody>
@@ -678,6 +700,7 @@
   <section id="blockers-summary">
     <div class="sec-head"><span class="sec-num">6b</span><h2>병목 종합 진단 — 여섯 조사가 수렴하는 곳</h2>
       <span class="note">우선순위 순</span></div>
+    <div class="dflow"><div class="df bad"><div class="df-t">★D</div><div class="df-v">메타 미검증</div><div class="df-s">MER 부진 최대 단일 원인</div></div><div class="df bad"><div class="df-t">★C</div><div class="df-v">대량생성 붕괴</div><div class="df-s">노출 미달 93.7%</div></div><div class="df bad"><div class="df-t">★E</div><div class="df-v">랭크 자산 없음</div><div class="df-s">입찰 올려도 상단 점유 정지</div></div><div class="df bad"><div class="df-t">★B·F</div><div class="df-v">전환율 1/3</div><div class="df-s">크림 CVR 1.11%</div></div><div class="df bad"><div class="df-t">Ⅲ막</div><div class="df-v">재구매 0건</div><div class="df-s">LTV 전제 미실측</div></div><div class="dfa">⇒</div><div class="df good"><div class="df-t">공통 원인</div><div class="df-v">전환 자산 부족</div><div class="df-s">데려온 손님을 받아낼 자산(리뷰·PDP·인지·재구매)이 트래픽 성장을 못 따라감</div></div></div>
     <div class="flag">① <b>메타 지출의 미검증</b>(★D) — 블렌디드 MER 부진의 최대 단일 원인, 홀드아웃 결정이 최우선. ② <b>대량생성의 한계효용 붕괴</b>(★C) — 함대 노출 미달률 93.7%, 같은 예산이면 검증된 축을 넓히는 게 낫습니다. ③ <b>랭크 자산 부재</b>(★E) — 입찰을 올려도 TOS IS가 안 움직입니다, 관련성·배치입찰가산 손봐야 합니다. ④ <b>리스팅 전환율</b>(★B·F) — 클릭은 카테고리 이상으로 사고 있는데 크림 CVR 1.11%가 발목을 잡습니다. ⑤ <b>재구매 0건</b>(Ⅲ막) — 성장투자 국면의 LTV 전제가 아직 실측 전, 9월 재확인 예정.<br><br>💡 <b>다섯 병목은 사실 하나입니다</b> — 전부 "브랜드를 처음 접하는 손님을 구매로 전환시키는 자산(리뷰·PDP 신뢰·브랜드 인지·재구매 관계)이 트래픽 확보 규모의 성장 속도를 못 따라간다"는 같은 문장의 다른 단면입니다. 메타가 못 닫는 것도(★D), SB 함대가 노출을 못 받는 것도(★C), 랭크가 안 쌓이는 것도(★E), CVR이 1/3인 것도(★B·F) — 광고가 데려온 손님을 받아낼 전환 자산이 얇아서입니다. 그래서 Ⅴ막의 답은 채널별 각개전투가 아니라 전환 자산 집중입니다.</div>
   </section>
     <div class="tabfoot"><button class="prevbtn" data-go="t3">← 이전</button><span class="step">Ⅳ / Ⅵ · 무엇이 막고 있나</span><button class="nextbtn" data-go="t5">다음: 결 — 8월 전략 →</button></div>
@@ -773,25 +796,15 @@
     ③ <b>검증 전 증액</b> — 같은 실수 3회 반복 끝에 규칙화(누적 구매 8건+·반복 전환 확인 전 증액 금지), 이번 기간 역효과 판정 11건의 대부분이 이 위반<br>
     ④ <b>홀드아웃 기간(8/3~16) 아마존 설정 변경</b> — 실험 무효화(7/27 자연실험이 이렇게 오염됐습니다)</div>
   </section>
-    <div class="tabfoot"><button class="prevbtn" data-go="t4">← 이전</button><span class="step">Ⅴ / Ⅵ · MER 2.0 시나리오</span><button class="nextbtn" data-go="t6">다음: 결정·실행성적표 →</button></div>
+    <div class="tabfoot"><button class="prevbtn" data-go="t4">← 이전</button><span class="step">Ⅴ / Ⅵ · MER 2.0 시나리오</span><button class="nextbtn" data-go="t6">다음: 실행 성적표 →</button></div>
   </div><!-- /t5 -->
 
-  <!-- ══════════ Ⅵ. 결정큐 · 실행 성적표 ══════════ -->
+  <!-- ══════════ Ⅵ. 실행 성적표 · 할 일 ══════════ -->
   <div class="tabpanel" id="t6">
-  <section id="decq-sec">
-    <div class="sec-head"><span class="sec-num">9</span><h2>🚦 CEO 결정큐</h2>
-      <span class="note">팀이 자체 진행 불가 · CEO 결정 필요</span></div>
-    <p class="lead">아래 항목은 팀이 스스로 못 푸는 <b>블로커</b>입니다. Ⅴ막의 시나리오 채택 여부가 여기 상당수를 좌우합니다.</p>
-    <div class="decq">
-      <div class="dq-h">결정 대기 5건</div>
-      <div class="dq-sub">각 항목 = 무엇을 / 왜 막혔나 / CEO에게 필요한 것.</div>
-      <div class="dq-row"><span class="dq-dl urgent">긴급</span><div class="dq-body"><b>메타 홀드아웃 — 이미 시작됨(8/3~), 8/10 판정</b><br>6주 지출 $1,672 중 측정 가능한 회수는 $49.92뿐. 결제 문제로 멈춘 김에 재개하지 않기로 결정 — 추가 비용 0으로 실험이 진행 중입니다.<br><span class="need">필요: 8/10 판정까지 아마존 설정 동결 유지</span></div></div><div class="dq-row"><span class="dq-dl urgent">긴급</span><div class="dq-body"><b>MER 게이트 재정의 — 1.9(완전부하) vs 1.59(산식) 이중계보 정리</b><br>7/27과 7/29 결정이 미조정 상태로 공존 중. 환불 실측(1.35%)이 이미 1.9 요건에 못 미친다는 답을 냈습니다.<br><span class="need">필요: Marco 입력 3건(부대비 실측·목표 이익률·overall 최종 확정)</span></div></div><div class="dq-row"><span class="dq-dl soon">이번주</span><div class="dq-body"><b>SB 노출 미달 캠페인(93.7%) 정리 폭</b><br>유지비는 사실상 0이지만 관리 복잡도와 오폐기 리스크가 있습니다(★C 실측 사례).<br><span class="need">필요: 정리 대상 캠 목록 승인</span></div></div><div class="dq-row"><span class="dq-dl soon">이번주</span><div class="dq-body"><b>크림 PDP·A+ 재작업 리소스 배정</b><br>CVR 1.11%로 최대 구멍. 세럼 대비 낙후.<br><span class="need">필요: John/Sol 작업 우선순위 배정</span></div></div><div class="dq-row"><span class="dq-dl wait">대기</span><div class="dq-body"><b>UAE 소재 자산 US 이식(시나리오 C)</b><br>한계비용 0이지만 8월 3주차 SP-Auto 데이터 확인 후 판단.<br><span class="need">필요: 8월 3주차 재검토</span></div></div>
-      <div class="dq-note">* 미해결 시 전사 결정큐(ops_health)로 합류.</div>
-    </div>
-  </section>
+  
 
   <section id="actionlog">
-    <div class="sec-head"><span class="sec-num">10</span><h2>6주간 실행한 액션 전수 — 효과 판정</h2>
+    <div class="sec-head"><span class="sec-num">9</span><h2>6주간 실행한 액션 전수 — 효과 판정</h2>
       <span class="note">6/15~7/31 changelog 기반 · 154건 전수 · 판정가능 106건 승률 47%</span></div>
     <p class="lead">6주간 실행한 모든 변경을 카테고리별로 정리했습니다. 판정 범례: <span class="v-pill win">✅ 효과</span> <span class="v-pill lose">❌ 무효·역효과</span> <span class="v-pill pend">⏳ 판정중</span> <span class="v-pill infra">🛠 인프라</span></p>
     <div class="scorecard">
@@ -817,13 +830,13 @@
   </section>
 
   <section id="actions">
-    <div class="sec-head"><span class="sec-num">11</span><h2>8월 1주차 즉시 할 일</h2>
+    <div class="sec-head"><span class="sec-num">10</span><h2>8월 1주차 즉시 할 일</h2>
       <span class="note">즉시 착수 가능 항목만</span></div>
-    <p class="lead">8월 1주차(8/4~10)에 결정 없이 바로 시작할 수 있는 것들.</p>
+    <p class="lead">8월 1주차(8/4~10)에 바로 시작할 수 있는 것들입니다. <b>이번 주는 메타 중단 실험 판정 주간이라 아마존 설정(입찰·예산·네거티브·프로모션) 변경은 전부 8/10 판정 이후로 미룹니다</b> — 아래 목록은 설정을 건드리지 않는 작업(분석·준비·조사)만 "착수 가능"입니다. 상세 실행 목록·재발 방지 장치·흑자 도달 산수는 7주차 주간보고 ⑤탭과 같습니다.</p>
     <div class="tbl-scroll">
       <table class="tbl act">
         <thead><tr><th>구분</th><th>할 일</th><th>왜 하나</th><th>상태</th></tr></thead>
-        <tbody><tr><td><span class="p p-top">상</span></td><td class="first">SP-Auto 8/1 이후 순수 비브랜드 ROAS 기준선 재설정</td><td class="exp">착시 제거 후 진짜 숫자로 8월 증액 판단 근거를 만듭니다</td><td>착수 가능</td></tr><tr><td><span class="p p-top">상</span></td><td class="first">크림 PDP 콘텐츠 감사 — 세럼과의 격차 정리</td><td class="exp">CVR 1.11%의 정확한 원인 후보를 좁힙니다</td><td>착수 가능</td></tr><tr><td><span class="p p-hi">중</span></td><td class="first">SB 함대 노출 미달 캠 오폐기 재점검(폐기 판정 로직)</td><td class="exp">재현성 1위 승자가 오판으로 정지된 전례 재발 방지</td><td>착수 가능</td></tr><tr><td><span class="p p-hi">중</span></td><td class="first">7주차 SQP(주31) 발행 확인 — 브랜드 검색량 116회/주 KPI</td><td class="exp">7/29 결정의 안전장치, 발행되는 대로 확인</td><td>아마존 발행 대기</td></tr><tr><td><span class="p p-mid">하</span></td><td class="first">리뷰 velocity 회복 채널 조사</td><td class="exp">월 5~10개 벤치마크 대비 1/20 수준 회복 방안</td><td>착수 가능</td></tr></tbody>
+        <tbody><tr><td><span class="p p-top">상</span></td><td class="first">메타 홀드아웃 유지 · 8/10(월) 판정 — 아마존 설정 동결 포함</td><td>7주 미검증 지출($1,672)의 진짜 기여를 비용 0으로 판정하는 첫 실험</td><td>진행 중</td></tr><tr><td><span class="p p-top">상</span></td><td class="first">MER 게이트 이중계보(1.9 vs 1.59) 정리 — Marco에게 입력 3건(부대비 실측·목표 이익률·최종 확정) 요청</td><td>판정 기준선이 둘이면 이 보고서의 모든 흑자/미달 판정이 흔들립니다</td><td>이번 주</td></tr><tr><td><span class="p p-mid">중</span></td><td class="first">크림 PDP·A+ 재작업 준비(감사·시안까지만) — 반영은 8/10 판정 후</td><td>크림 CVR 1.11%가 최대 구멍, 단 실험 주간에는 매출 변수 동결</td><td>준비만</td></tr><tr><td><span class="p p-mid">중</span></td><td class="first">SB 노출 미달 캠(93.7%) 정리 폭 확정 — 집행은 8/17 이후</td><td>목록 확정은 분석 작업이라 지금, 정리 집행은 동결 해제 후</td><td>8/17 이후</td></tr><tr><td><span class="p p-mid">하</span></td><td class="first">UAE 소재 자산 US 이식 검토</td><td>한계비용 0 — 8월 3주차 SP-Auto 착시 제거 후 데이터를 보고 판단</td><td>8월 3주차</td></tr><tr><td><span class="p p-top">상</span></td><td class="first">SP-Auto 8/1 이후 순수 비브랜드 ROAS 기준선 재설정</td><td class="exp">착시 제거 후 진짜 숫자로 8월 증액 판단 근거를 만듭니다</td><td>착수 가능</td></tr><tr><td><span class="p p-top">상</span></td><td class="first">크림 PDP 콘텐츠 감사 — 세럼과의 격차 정리</td><td class="exp">CVR 1.11%의 정확한 원인 후보를 좁힙니다</td><td>착수 가능</td></tr><tr><td><span class="p p-hi">중</span></td><td class="first">SB 함대 노출 미달 캠 오폐기 재점검(폐기 판정 로직)</td><td class="exp">재현성 1위 승자가 오판으로 정지된 전례 재발 방지</td><td>착수 가능</td></tr><tr><td><span class="p p-hi">중</span></td><td class="first">7주차 SQP(주31) 발행 확인 — 브랜드 검색량 116회/주 KPI</td><td class="exp">7/29 결정의 안전장치, 발행되는 대로 확인</td><td>아마존 발행 대기</td></tr><tr><td><span class="p p-mid">하</span></td><td class="first">리뷰 velocity 회복 채널 조사</td><td class="exp">월 5~10개 벤치마크 대비 1/20 수준 회복 방안</td><td>착수 가능</td></tr></tbody>
       </table>
     </div>
   </section>
