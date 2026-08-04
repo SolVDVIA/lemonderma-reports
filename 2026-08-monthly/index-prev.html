@@ -313,6 +313,10 @@
   .scen .sc-risk{margin-top:12px;font-size:12.5px;background:var(--warn-bg);color:#7a5800;border-radius:10px;padding:9px 12px}
   @media(max-width:940px){.grid3{grid-template-columns:1fr 1fr}}
   @media(max-width:720px){.grid3{grid-template-columns:1fr}}
+
+  table.mini{width:100%;border-collapse:collapse;font-size:12.5px}
+  table.mini th,table.mini td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  table.mini th{background:#f4f3ec;font-weight:700;color:#46433c}
 </style>
 </head>
 <body>
@@ -363,7 +367,7 @@
     <tr><td>7</td><td>7/27~31</td><td>1.11</td><td>측정 기준 정비 3종 + 브랜드 검색어 분리(계획된 수순)</td></tr>
     </tbody></table></div>
   <div id="be">
-    <div class="sec-head"><span class="sec-num">1</span><h2>💰 흑자 기준선</h2>
+    <div class="sec-head"><span class="sec-num">§</span><h2>💰 흑자 기준선</h2>
       <span class="note">6주 누적 vs 손익분기 — 정의는 metrics.md 산식 정본</span></div>
     <p class="lead">"광고가 본전 이상 하려면 어디까지 써도 되는가"의 마지노선입니다. BEP는 산식이 정본이라 원가·판매가가 바뀌면 값도 바뀝니다(2026-07-27 John 확정) — 여기 숫자는 이 보고서 작성 시점 산출값입니다.</p>
     <div class="grid2">
@@ -372,14 +376,14 @@
         <div class="be-row"><span class="be-label">CPC (클릭 1번 비용)</span><span class="be-val">$0.68 이하<span class="pill line">본전선</span></span></div>
         <div class="be-row"><span class="be-label">ROAS (광고비 대비 매출)</span><span class="be-val">1.59배 이상<span class="pill line">본전선</span></span></div>
         <p style="font-size:12px;color:var(--muted);margin:8px 0 0">본전 CPC는 집계가 끝난 최근 주(7/19~25) 실측 광고 클릭 전환율 2.99%(브랜드 검색 구매 제외, 클릭 635·구매 19) 기준 — 과거 가정치(5%)로 계산하던 $1.13에서 8/4 실측 기준으로 교체했습니다.</p>
-        <div class="callout" style="margin-top:12px">⚠️ <b>현실 확인:</b> 6주 아마존 단독 ROAS는 <b>1.25</b>(BEP 1.59 미달)이지만, 오가닉 매출까지 포함한 '아마존 생태계 대비 광고비' 기준으로는 <b>1.547×</b>로 본전에 0.04 근접 — 격차는 크지 않습니다(★A 참조). 클릭 단가로는 실제 CPC $0.92(브랜드 제외) vs 본전 $0.68로 <b>본전의 1.35배</b>입니다(★B).</div>
+        <div class="callout" style="margin-top:12px">⚠️ <b>현실 확인:</b> 6주 아마존 단독 ROAS는 <b>1.25</b>(BEP 1.59 미달)이지만, 오가닉 매출까지 포함한 '아마존 생태계 대비 광고비' 기준으로는 <b>1.547×</b>로 본전에 0.04 근접 — 격차는 크지 않습니다. 클릭 단가로는 실제 CPC $0.92(브랜드 제외) vs 본전 $0.68로 <b>본전의 1.35배</b>입니다(아래 채널 분해표).</div>
       </div>
       <div class="card">
         <span class="chan meta">🔵 메타 광고</span>
         <div class="be-row"><span class="be-label">CPC (구매 버튼 클릭 1번 비용)</span><span class="be-val">$0.11 이하<span class="pill line">본전선</span></span></div>
         <div class="be-row"><span class="be-label">ROAS (광고비 대비 아마존 매출)</span><span class="be-val">1.37배 이상<span class="pill line">본전선</span></span></div>
         <p style="font-size:12px;color:var(--muted);margin:8px 0 0">본전 CPC는 실측 전환율 0.47%(구매 버튼 클릭→아마존 구매) 기준 — 과거 가정치(2%)로 계산하던 $0.80에서 8/4 실측 기준으로 교체했습니다.</p>
-        <div class="callout" style="margin-top:12px">🔴 <b>실측 기준 재판정:</b> 과거 가정(전환 2%)으로는 클릭 단가가 "본전 안"으로 보였지만, 실측 전환율 0.47%로 다시 계산하면 실제 CPC $0.69는 <b>본전($0.11)의 약 6배</b>입니다. 귀속 ROAS 밴드 0.58~0.92도 본전 1.37 미달(★D) — 이 판정으로 8/4 US 메타 광고를 전면 중단했습니다.</div>
+        <div class="callout" style="margin-top:12px">🔴 <b>실측 기준 재판정:</b> 과거 가정(전환 2%)으로는 클릭 단가가 "본전 안"으로 보였지만, 실측 전환율 0.47%로 다시 계산하면 실제 CPC $0.69는 <b>본전($0.11)의 약 6배</b>입니다. 귀속 ROAS 밴드 0.58~0.92도 본전 1.37 미달(§9 ⑦) — 이 판정으로 8/4 US 메타 광고를 전면 중단했습니다.</div>
       </div>
     </div>
     <div style="margin-top:18px"><h3 style="font-size:15px;font-weight:800;margin:0 0 4px">🔍 채널별 본전선 분해 — 합계 전환율이 3% 아래인 이유 (8/4 실측, 주간보고 §1과 동일)</h3>
@@ -390,8 +394,8 @@
     <tr><td>SB 영상광고</td><td>566</td><td>1.94%</td><td>$0.44</td><td>$0.91</td><td><span class="v-pill lose">🔴 본전의 2.1배</span></td></tr>
     <tr><td>SD 리마케팅</td><td>18</td><td>11.11%</td><td>$2.51</td><td>$0.61</td><td><span class="v-pill win">🟢 본전 아래</span></td></tr>
     </tbody></table></div>
-    <div class="dnote">같은 클릭인데 채널별 전환율이 <b>6배</b> 다릅니다 — 검색 결과에서 상품을 보고 누른 사람(SP)과 영상을 구경하다 누른 사람(SB)은 살 마음의 크기가 다르기 때문입니다. 합계(2.99%)는 클릭의 89%를 쓰는 SB가 끌어내린 평균이고, <b>SB→SP 예산 이동이 8월 1순위 레버</b>입니다. 상세페이지(리스팅) 전환율은 별개 지표로, 리뉴얼 전후 실측을 Ⅳ막 ★B에 실었습니다(전 2.66% → 후 2.99% 우상향 — 단 아직 우연 범위, 8월 말 재판정).</div></div>
-    <p class="lead" style="margin-top:14px;font-size:13.5px;color:var(--muted)">* 회사 공식 ROAS 기준(2026-05-23 확정 당시 흑자 1.9× — 2026-07-29 산식 정본화로 흑자선 1.59×로 갱신 / 검증완료 2.0× / 최우선 3.0×) 유래와 1.9 vs 1.59 이중계보 정리는 Ⅴ막에서 재검토. 세럼 판매가 $36.58 기준.</p>
+    <div class="dnote">같은 클릭인데 채널별 전환율이 <b>6배</b> 다릅니다 — 검색 결과에서 상품을 보고 누른 사람(SP)과 영상을 구경하다 누른 사람(SB)은 살 마음의 크기가 다르기 때문입니다. 합계(2.99%)는 클릭의 89%를 쓰는 SB가 끌어내린 평균이고, <b>SB→SP 예산 이동이 8월 1순위 레버</b>입니다. 상세페이지(리스팅) 전환율은 별개 지표로, 리뉴얼 전후 실측을 §9 ②에 실었습니다(전 2.66% → 후 2.99% 우상향 — 단 아직 우연 범위, 8월 말 재판정).</div></div>
+    <p class="lead" style="margin-top:14px;font-size:13.5px;color:var(--muted)">* 회사 공식 ROAS 기준(2026-05-23 확정 당시 흑자 1.9× — 2026-07-29 산식 정본화로 흑자선 1.59×로 갱신 / 검증완료 2.0× / 최우선 3.0×) 유래와 1.9 vs 1.59 이중계보 정리는 §11 계획의 전제 참조. 세럼 판매가 $36.58 기준.</p>
   </div>
   <details class="glossary">
     <summary class="g-h">📖 읽기 전에 — 핵심 용어 10가지</summary>
@@ -607,7 +611,7 @@
       ① 승자 축(손 데모·S4씬·손 B&A)만 확장 — 15~30초·무음 전달·카피에 가격/대상 명시(모르고 누르는 클릭 사전 선별)
       ② 무전환 검색어 네거티브(지출 97% 유출 차단) ③ 문구 스플릿테스트 정례화 — <b>소재·문구 테스트 리소스는 제약 아님</b>(기존 에셋+문구 조합으로 주 1만 개 여력).</p></div>
   </div>
-  <div class="dnote" style="margin-top:10px">전제 — 크림 PDP는 7/23 리뉴얼 완료·당분간 유지(재작업 아님, 재측정만) · 메타는 8/10 판정 결과에 따라 별도 분기 ·
+  <div class="dnote" style="margin-top:10px">전제 — 크림 PDP는 7/23 리뉴얼 완료·당분간 유지(재작업 아님, 재측정만) · 메타는 8/10 판정 결과에 따라 별도 분기 · 본전선 이중계보(Marco 완전부하 마진 기준 1.9 vs 산식 정본 1.59 — 환불 실측 1.35%로는 1.9가 정당화되지 않아 이 계획은 산식 1.59 사용, 부대비 실측은 Marco 입력 대기) ·
   4분기 재고는 10월 중 Marco와 정렬 확인 · 전문가 수치는 전부 외부 주장(🟡)이라 실측 대조 후 채택.</div>
 </section>
 <section id="appendix">
