@@ -372,9 +372,10 @@
   .mplan .tbl th,.mplan .tbl td{white-space:normal;text-align:left;line-height:1.75}
   .mplan .tbl td:first-child{white-space:nowrap}
 
-  html,body{margin:0;height:100%}
-  .deck{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;height:100vh;scroll-behavior:smooth}
-  .slide{flex:0 0 100vw;height:100vh;scroll-snap-align:start;overflow-y:auto;overflow-x:hidden;background:var(--bg,#fbfaf6)}
+  html,body{margin:0;height:100%;overflow:hidden}
+  .deck{overflow:hidden;height:100vh}
+  .dtrack{display:flex;height:100%;transition:transform .45s cubic-bezier(.22,.61,.36,1);will-change:transform}
+  .slide{flex:0 0 100vw;height:100vh;overflow-y:auto;overflow-x:hidden;background:var(--bg,#fbfaf6)}
   .sin{max-width:1080px;margin:0 auto;padding:64px 36px 110px}
   .skick{font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--lime-deep,#7a9a2e)}
   .stitle{font-size:27px;font-weight:800;margin:6px 0 4px;line-height:1.35}
@@ -459,7 +460,7 @@
 <nav class="dnav"><a href="#s0" data-s="s0">서장 · 산식</a><a href="#s1" data-s="s1">① 레버</a><a href="#s2" data-s="s2">② 가설</a><a href="#s3" data-s="s3">③ 여정</a><a href="#s4" data-s="s4">④ 판정</a><a href="#s5" data-s="s5">⑤ 재료</a><a href="#s6" data-s="s6">⑥ 전략</a><a href="#s7" data-s="s7">⑦ 엔진</a><a href="#s8" data-s="s8">부록</a></nav>
 <button class="arr left" id="arrL" aria-label="이전">‹</button>
 <button class="arr right" id="arrR" aria-label="다음">›</button>
-<div class="deck" id="deck">
+<div class="deck" id="deck"><div class="dtrack" id="dtrack">
 <section class="slide" id="s0"><div class="sin">
   <div class="skick">LEMONDERMA · US 퍼포먼스 마케팅 월간 보고서 · 2026.06.15 – 07.31 (47일)</div>
   <div class="stitle">47일의 실험 — 첫 미국 아마존, 알고리즘에 맡겨 보았습니다</div>
@@ -907,16 +908,20 @@ Lemonderma · VDVIA — US 퍼포먼스 마케팅 월간 보고서 · 성과기�
 정본: 계획 2026-h2-us-amazon-plan.md · 지표 metrics.md/metrics_config.json · 실행 이력 changelog.md
 </footer>
 </div></section>
-</div>
+</div></div>
 <script>
 (function(){
-  var deck=document.getElementById('deck');
-  var slides=[].slice.call(deck.children);
+  var track=document.getElementById('dtrack');
+  var slides=[].slice.call(track.children);
   var links=[].slice.call(document.querySelectorAll('.dnav a'));
   var cur=0;
-  function setCur(i){cur=i;links.forEach(function(a,j){a.classList.toggle('on',j===i);});}
-  function go(i){i=Math.max(0,Math.min(slides.length-1,i));deck.scrollTo({left:slides[i].offsetLeft,behavior:'smooth'});}
-  deck.addEventListener('scroll',function(){var i=Math.round(deck.scrollLeft/deck.clientWidth);if(i!==cur&&i>=0&&i<slides.length)setCur(i);});
+  function go(i){
+    i=Math.max(0,Math.min(slides.length-1,i));
+    cur=i;
+    track.style.transform='translateX(-'+(i*100)+'vw)';
+    links.forEach(function(a,j){a.classList.toggle('on',j===i);});
+  }
+  window.deckGo=go;
   document.getElementById('arrL').addEventListener('click',function(){go(cur-1);});
   document.getElementById('arrR').addEventListener('click',function(){go(cur+1);});
   document.addEventListener('keydown',function(e){
@@ -924,14 +929,17 @@ Lemonderma · VDVIA — US 퍼포먼스 마케팅 월간 보고서 · 성과기�
     if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(cur-1);}
   });
   links.forEach(function(a,j){a.addEventListener('click',function(e){e.preventDefault();go(j);});});
-  // 지도 막대(#w1~#w7) 등 슬라이드 내부 앵커: 여정 슬라이드로 이동 후 내부 스크롤
+  // 지도 막대(#w1~#w7) 등 슬라이드 간 앵커: 여정 슬라이드로 이동 후 내부 스크롤
   document.addEventListener('click',function(e){
     var a=e.target.closest('a[href^="#w"]');if(!a)return;
     var el=document.getElementById(a.getAttribute('href').slice(1));if(!el)return;
     e.preventDefault();go(3);
-    setTimeout(function(){var s=el.closest('.slide');s.scrollTo({top:el.offsetTop-s.offsetTop-70,behavior:'smooth'});},450);
+    setTimeout(function(){
+      var s=el.closest('.slide');
+      s.scrollTo({top:el.getBoundingClientRect().top-s.getBoundingClientRect().top+s.scrollTop-70,behavior:'smooth'});
+    },500);
   });
-  setCur(0);
+  go(0);
 })();
 </script>
 </body>
