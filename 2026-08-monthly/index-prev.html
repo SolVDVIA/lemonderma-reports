@@ -384,6 +384,11 @@
   .dnav a{font-size:14.5px;font-weight:800;color:#8a836f;text-decoration:none;padding:8px 17px;border-radius:99px;white-space:nowrap}
   .wdec{grid-template-columns:152px 1fr}
   @media(max-width:640px){.wdec{grid-template-columns:112px 1fr}}
+  .tbl.i2p{table-layout:fixed;width:100%}
+  .tbl.i2p th,.tbl.i2p td{white-space:normal;line-height:1.75;vertical-align:top;font-size:13px}
+  .tbl.i2p .evid{white-space:normal}
+  .tbl.i2p th:nth-child(1),.tbl.i2p td:nth-child(1){width:38%}
+  .tbl.i2p th:nth-child(2),.tbl.i2p td:nth-child(2){width:34%}
   .dnav a.on{background:#2a3d1e;color:#fff}
   .arr{position:fixed;top:50%;transform:translateY(-50%);z-index:90;width:42px;height:42px;border-radius:50%;border:1px solid var(--line,#e5e1d4);background:rgba(255,255,255,.92);font-size:20px;font-weight:800;color:#5a7017;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.08)}
   .arr:hover{background:#f0f4e0}
@@ -779,7 +784,7 @@
 <h3 style="margin-top:24px;font-size:15px;font-weight:800">이 전략이 인사이트·업계 통설과 맞는지 — 교차 대조</h3>
 
 <p class="lead" style="margin-top:2px">이 계획의 모든 항목은 앞 페이지들의 실측에서 나왔고, 업계 통설과 교차 검증했습니다. <b>배지 읽는 법</b> — <span class="evid">전문가 N곳 일치</span>는 아마존 광고 전문가 유튜브 98개 채널을 전수 조사해 같은 방법을 독립적으로 말한 채널 수입니다(숫자가 클수록 업계 통설에 가까움). 🟢는 검증을 통과한 합의, 🟡는 방향은 유효하나 세부 수치의 근거가 약한 합의 — 전부 외부 주장이라 우리 실측과 대조해서만 씁니다.</p>
-<div class="tbl-scroll"><table class="tbl prose" style="margin-top:6px">
+<div class="tbl-scroll"><table class="tbl i2p" style="margin-top:6px">
 <thead><tr><th>우리 실측 (§4 인사이트)</th><th>전문가 합의</th><th>계획 반영</th></tr></thead>
 <tbody>
 <tr><td>SP 전환율 11.76% vs SB 1.94% (6배) — 그런데 예산은 SP 14% : SB 83%로 거꾸로 <span class="evid">인사이트 ②</span></td><td>예산은 SP 중심 70~88% <span class="evid">전문가 3곳 일치 🟢</span> — 우리 배분은 정반대</td><td><b>8월 — SB→SP 트래픽 재배분 (최대 레버)</b></td></tr>
