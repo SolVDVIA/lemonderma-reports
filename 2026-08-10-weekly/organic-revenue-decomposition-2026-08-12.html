@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>US 오가닉 매출 28.5% 분해 보고</title>
+<link rel="stylesheet" href="https://use.typekit.net/ycy6gis.css">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+/* ===== LEMONDERMA 브랜드 SSOT (00_compass/identity/brand.md 2026-07-29 확정) ===== */
+:root{
+  --bg-top:#fefcd0; --bg-bottom:#ffffff;                 /* 배경 그라디언트(크림→화이트) */
+  --border:#ddea65;                                      /* 박스 테두리 강조 */
+  --derma:#E6EE7A;                                       /* 패키지 기준색 Derma Yellow */
+  --ink:#000000;                                         /* 본문·제목 순블랙 */
+  --headline:#4b612d;                                    /* 웹 헤드라인 그린 */
+  --accent:#025200;                                       /* 수치·짧은 강조(딥그린, 짧게만) */
+  --highlight:rgba(221,247,70,.32);                       /* 형광펜(글자 뒤) */
+  --mute:rgba(0,0,0,.65);                                 /* 비강조 텍스트 */
+  --mute-lo:rgba(0,0,0,.42);
+  --signal:#e23b3b;                                       /* 기능 신호(경고) — 브랜드 컬러 아님, 한정 사용 */
+  --serif:"adobe-caslon-pro", "Noto Serif KR", serif;
+  --sans:"Pretendard","neue-haas-grotesk-text","Apple SD Gothic Neo",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:var(--bg-bottom);overflow-x:hidden}
+body{overflow-x:hidden}
+body{font-family:var(--sans);color:var(--ink);line-height:1.68;font-size:15.5px;
+  word-break:keep-all;-webkit-font-smoothing:antialiased;letter-spacing:-.02em;
+  background:linear-gradient(180deg,var(--bg-top) 0%, var(--bg-bottom) 620px);}
+.wrap{max-width:1200px;margin:0 auto;padding:56px 24px 90px;position:relative}
+
+/* ---- 시트러스 단면 워터마크 (매크로 텍스처 모티프, 저채도 배경 장식) ---- */
+.citrus-mark{position:absolute;top:-40px;right:-60px;width:340px;height:340px;opacity:.16;pointer-events:none;z-index:0}
+header.hero{position:relative;z-index:1;margin-bottom:14px}
+
+.kicker{font-family:var(--serif);font-style:italic;font-weight:400;font-size:14px;color:var(--headline);
+  letter-spacing:.02em;margin-bottom:12px}
+.kicker b{font-style:normal;font-weight:600}
+h1{font-family:var(--sans);font-size:30px;font-weight:800;letter-spacing:-.03em;line-height:1.32;color:var(--ink)}
+.strap{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--headline);margin-top:8px}
+.meta{color:var(--mute);font-size:12.5px;margin-top:14px;line-height:1.8}
+
+section{background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:32px 34px;margin-top:20px;position:relative;z-index:1}
+h2{font-family:var(--sans);font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px;color:var(--ink)}
+h2 .no{font-family:var(--serif);font-style:italic;font-weight:600;color:var(--accent);margin-right:8px;font-size:20px}
+.lead{color:var(--mute);font-size:13.5px;margin-bottom:18px}
+p{margin:10px 0}
+b,strong{font-weight:700}
+.hl{background:linear-gradient(transparent 62%, var(--highlight) 62%);font-weight:700}
+
+/* ---- 히어로 밴드 ---- */
+.band{display:flex;gap:30px;align-items:center;background:#fff;border:1px solid var(--border);
+  border-radius:12px;padding:30px 34px;flex-wrap:wrap;position:relative;z-index:1}
+.band .big{font-family:var(--serif);font-size:48px;font-weight:600;letter-spacing:-.02em;line-height:1;color:var(--ink)}
+.band .big small{font-family:var(--sans);font-size:18px;color:var(--mute);font-weight:500;letter-spacing:0}
+.band .sub{color:var(--mute);font-size:13.5px;margin-top:8px;max-width:440px}
+.donut{flex:0 0 auto}
+.layers{flex:1;min-width:300px}
+.layer{display:flex;align-items:flex-start;gap:11px;padding:10px 0;border-bottom:1px solid #F1EFE2;font-size:14px}
+.layer:last-child{border-bottom:none}
+.layer .dot{width:11px;height:11px;border-radius:3px;flex:0 0 auto;margin-top:4px}
+.layer .amt{margin-left:auto;font-weight:700;font-size:12.5px;color:var(--accent);white-space:nowrap;padding-left:10px}
+
+/* ---- 표 ---- */
+table{width:100%;border-collapse:collapse;font-size:13.8px;margin:16px 0 4px}
+th{background:var(--bg-top);text-align:left;font-weight:700;padding:10px 13px;border:1px solid var(--border);font-size:12.5px;color:var(--ink)}
+td{padding:10px 13px;border:1px solid #ECE9DA;vertical-align:top}
+tr.hi td{background:var(--highlight);font-weight:600}
+
+/* ---- 판정 표기 (필박스 대신 아웃라인 — 약국 라벨 톤) ---- */
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;
+  padding:2px 10px;border-radius:20px;border:1px solid currentColor;white-space:nowrap;background:#fff}
+.t-good{color:var(--accent)}
+.t-caution{color:var(--mute);border-color:#C9C5AE}
+.t-gap{color:var(--signal)}
+.t-mute{color:var(--mute-lo);border-color:#D8D5C8}
+
+/* ---- 차트 박스 ---- */
+.chart-box{background:var(--bg-top);border:1px solid var(--border);border-radius:10px;padding:20px 20px 12px;margin:18px 0}
+.chart-box>svg{width:100%;height:auto}
+.chart-title{font-size:13px;font-weight:700;margin-bottom:2px;color:var(--ink)}
+.chart-src{font-size:11px;color:var(--mute);margin-top:8px;line-height:1.6}
+svg{display:block}
+.legend{display:flex;gap:18px;font-size:11.5px;color:var(--mute);margin-top:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+
+/* ---- 수식 박스 ---- */
+.eq{display:flex;align-items:stretch;gap:12px;justify-content:center;flex-wrap:wrap;margin:22px 0}
+.eq .box{border:1px solid var(--border);border-radius:10px;padding:18px 22px;text-align:center;min-width:150px;background:#fff}
+.eq .op{align-self:center;font-family:var(--serif);font-size:24px;font-weight:600;color:var(--mute-lo)}
+.eq .v{font-family:var(--serif);font-size:25px;font-weight:600;letter-spacing:-.01em;color:var(--accent)}
+.eq .l{font-size:12px;font-weight:700;margin-top:4px;color:var(--ink)}
+.eq .d{font-size:11px;color:var(--mute);margin-top:3px}
+
+/* ---- 카드 ---- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0}
+.card{border:1px solid var(--border);border-radius:10px;padding:17px 19px;background:#fff}
+.card h4{font-size:13.5px;font-weight:800;margin-bottom:6px}
+.card .n{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.01em;color:var(--accent)}
+.card .n small{font-family:var(--sans);font-size:12.5px;color:var(--mute);font-weight:500}
+.card p{font-size:12.5px;color:var(--mute);margin:7px 0 0}
+.chiptag{font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:12px;display:inline-block;margin-bottom:9px;
+  border:1px solid var(--border);color:var(--headline);background:var(--bg-top)}
+
+/* ---- 깔때기 ---- */
+.funnel{margin:20px 0 6px}
+.fstep{display:flex;align-items:center;gap:14px;margin:8px 0}
+.fbar-track{flex:1;height:32px;position:relative}
+.fbar{height:100%;background:var(--derma);border:1px solid #CFD65E;border-radius:6px;
+  display:flex;align-items:center;padding:0 12px;min-width:120px;
+  color:#33390f;font-weight:700;font-size:13px;white-space:nowrap}
+.fmeta{flex:0 0 200px;font-size:12px;color:var(--mute);text-align:left}
+.fdrop{margin-left:10px;font-size:11px;color:var(--signal);font-weight:700}
+
+/* ---- 두 바구니 ---- */
+.buckets{display:flex;gap:14px;flex-wrap:wrap;margin:16px 0}
+.bucket{flex:1;min-width:250px;border-radius:10px;padding:18px 20px;border:1px solid var(--border)}
+.bucket h4{font-size:13.5px;margin-bottom:5px}
+.bucket p{font-size:12.5px;margin:4px 0;color:var(--mute)}
+
+/* ---- 각주 ---- */
+.fn{font-size:12px;color:var(--mute);border-left:2px solid var(--signal);padding:7px 13px;margin:13px 0;
+  background:#FBEFEF;border-radius:0 8px 8px 0}
+ul{padding-left:20px;margin:8px 0}
+li{margin:8px 0}
+footer{margin-top:36px;color:var(--mute);font-size:12px;text-align:center;font-family:var(--serif);font-style:italic}
+a{color:var(--headline)}
+@media (max-width:640px){
+  .wrap{padding:32px 14px 64px}
+  section{padding:24px 18px}
+  h1{font-size:24px}
+  .band{padding:24px 18px}
+  .band .big{font-size:38px}
+  .fmeta{flex-basis:100%;order:2}
+  .citrus-mark{width:220px;height:220px;top:-20px;right:-40px}
+}
+@media print{ body{background:#fff} section{break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<svg class="citrus-mark" viewBox="0 0 200 200" aria-hidden="true">
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#4b612d" stroke-width="1.4"/>
+  <g stroke="#4b612d" stroke-width="1.1">
+    <line x1="100" y1="6" x2="100" y2="194"/>
+    <line x1="6" y1="100" x2="194" y2="100"/>
+    <line x1="30" y1="30" x2="170" y2="170"/>
+    <line x1="170" y1="30" x2="30" y2="170"/>
+    <line x1="100" y1="6" x2="46" y2="154"/>
+    <line x1="100" y1="6" x2="154" y2="154"/>
+    <line x1="100" y1="194" x2="46" y2="46"/>
+    <line x1="100" y1="194" x2="154" y2="46"/>
+  </g>
+  <circle cx="100" cy="100" r="14" fill="#E6EE7A" stroke="#4b612d" stroke-width="1.2"/>
+</svg>
+
+<header class="hero">
+  <div class="kicker"><b>LEMONDERMA</b> · US Performance Marketing</div>
+  <h1>US 오가닉 매출 28.5% 분해 보고</h1>
+  <div class="strap">Numbers first — certainty only where it's earned.</div>
+  <div class="meta">작성 2026-08-12 · John + Claude · 대상 기간 8주차(8/2~8/8) 및 직전 4주 · <b>전 항목 실측</b> (추정치는 본문에 별도 표기)<br>
+  출처: Seller Central 비즈니스 리포트 · 쿠폰/프로모션 대시보드 · 브랜드 애널리틱스(반복 구매) · 아마존 검색 성과 리포트(SQP) · Amazon Attribution API · H10(순위) · Instagram 인사이트 · Linktree · Google Trends</div>
+</header>
+
+<!-- ===== 요약 밴드 ===== -->
+<div class="band">
+  <div class="donut">
+    <svg width="150" height="150" viewBox="0 0 150 150" role="img" aria-label="오가닉 비중 28.5%">
+      <circle cx="75" cy="75" r="58" fill="none" stroke="#F1EFDD" stroke-width="18"/>
+      <circle cx="75" cy="75" r="58" fill="none" stroke="#E6EE7A" stroke-width="18"
+        stroke-dasharray="103.9 260.5" stroke-linecap="round" transform="rotate(-90 75 75)"/>
+      <text x="75" y="70" text-anchor="middle" font-family="adobe-caslon-pro, serif" font-size="24" font-weight="600" fill="#000">28.5%</text>
+      <text x="75" y="90" text-anchor="middle" font-family="Pretendard, sans-serif" font-size="10.5" fill="#666">광고 비경유</text>
+    </svg>
+  </div>
+  <div>
+    <div class="big">$638.90<small> / 주간 매출 $2,242</small></div>
+    <div class="sub">지난주(8/2~8/8) 아마존 매출 중 <b>광고를 클릭하지 않은 손님</b>에게서 나온 금액.<br>조사 결과, 하나의 원인이 아니라 <b>네 겹</b>이었습니다.</div>
+  </div>
+</div>
+
+<section>
+  <div class="layers">
+    <div class="layer"><span class="dot" style="background:#fff;border:1.5px solid #B9B49A"></span><span><b>① 회계상 재분류</b> — 브랜드 검색 광고를 끄면서 이름표만 "광고"→"오가닉"으로 이동 (매출은 그대로)</span><span class="amt">주 $100~200</span></div>
+    <div class="layer"><span class="dot" style="background:#E6EE7A;border:1.5px solid #CFD65E"></span><span><b>② 판촉이 만든 실제 구매 증가</b> — 5% 쿠폰이 주간 주문의 약 절반에 사용됨 <span class="hl">(이번 실측의 핵심 발견)</span></span><span class="amt">최대 버킷</span></div>
+    <div class="layer"><span class="dot" style="background:#025200"></span><span><b>③ 6월 첫 구매 고객의 재구매 도래</b> — 전기 대비 약 5배</span><span class="amt">주 $217 실측</span></div>
+    <div class="layer"><span class="dot" style="background:#fff;border:1.5px dashed #C9C5AE"></span><span><b>④ 광고의 지연 효과</b> — 광고를 본 뒤 시간이 지나 이름표 없이 구매. 원리상 존재, 정확 측정 불가</span><span class="amt" style="color:var(--signal)">측정 불가</span></div>
+  </div>
+  <p style="margin-top:16px">한편 <b>인스타그램·구글 등 외부 경로</b>는 손님 이동 경로를 끝까지 추적한 결과 <span class="hl">주간 수십 달러 이내로 확정</span>되어, 현재 오가닉 매출의 주역이 아닙니다.</p>
+</section>
+
+<!-- ===== 1. 정의 ===== -->
+<section>
+  <h2><span class="no">§1</span>질문의 정의 — "오가닉"이란 무엇인가</h2>
+  <p>아마존은 손님이 우리 광고를 클릭한 뒤 구매하면 그 매출에 "광고 귀속" 이름표를 붙입니다. <b>이름표가 없는 나머지 전부가 "오가닉(자연 유입)"으로 집계</b>됩니다.</p>
+  <div class="buckets">
+    <div class="bucket" style="background:#fff">
+      <h4>🏷️ 광고 귀속 $1,603</h4>
+      <p>광고 클릭 → 구매. 이름표가 붙은 매출.</p>
+    </div>
+    <div class="bucket" style="background:var(--bg-top)">
+      <h4>🧺 오가닉 바구니 $638.90</h4>
+      <p><b>"진짜 스스로 찾아온 손님"</b>과 <b>"광고·판촉 영향인데 이름표가 안 붙은 손님"</b>이 섞여 있음.</p>
+    </div>
+  </div>
+  <p>그래서 "오가닉 28.5%"를 그대로 "브랜드가 유명해졌다"로 읽으면 안 되고, 분해가 필요합니다.</p>
+</section>
+
+<!-- ===== 2. 시간축 ===== -->
+<section>
+  <h2><span class="no">§2</span>언제, 왜 늘었나 — 시간축</h2>
+  <div class="chart-box">
+    <div class="chart-title">주별 오가닉 잔차 (총매출 − 광고 귀속)</div>
+    <svg id="weeklyChart" width="880" height="240" viewBox="0 0 880 240"></svg>
+    <div class="chart-src">출처: 대시보드 history 증분 + 8주차 주간보고 정본. 앞 3주는 귀속 성숙 시차 노이즈 포함(방향 참고용).</div>
+  </div>
+  <table>
+    <tr><th style="width:110px">주간</th><th style="width:90px">총매출</th><th style="width:110px">오가닉 잔차</th><th>사건</th></tr>
+    <tr><td>7/12~</td><td>$903</td><td>+$423</td><td>메타 광고 가동 중(주 $265 지출) · 아마존 광고 귀속은 아직 주 $480뿐 — 아래 분해 참조</td></tr>
+    <tr><td>7/19~</td><td>$1,371</td><td>≈ 0</td><td>광고가 거의 모든 매출에 이름표를 붙이던 시기</td></tr>
+    <tr><td>7/26~</td><td>$1,332</td><td>≈ 0 (음수)</td><td><b>7/27 판촉 재개</b>(2+1 묶음 + 5% 쿠폰 3종) · <b>7/29 브랜드 검색 광고 차단</b></td></tr>
+    <tr class="hi"><td><b>8/2~ (8주차)</b></td><td><b>$2,242</b></td><td><b>+$639 (28.5%)</b></td><td><b>8/3~ 메타 정지</b> · 아마존 광고 정리</td></tr>
+  </table>
+  <p>오가닉이 0에서 $639로 뛴 시점이 세 사건(판촉 재개 · 브랜드 차단 · 광고 축소)과 정확히 겹칩니다. 각각의 기여를 아래에서 분해합니다.</p>
+
+  <div class="card" style="margin-top:16px;background:var(--bg-top)">
+    <h4>그럼 맨 앞 7/12주의 +$423은 뭐였나 — 같은 방법으로 분해한 결과</h4>
+    <p style="font-size:13.5px;color:var(--ink);margin-top:8px">그 주는 지금과 반대 상황이었습니다. <b>메타 광고가 켜져 있었고, 아마존 광고의 "이름표 기계"는 아직 덜 돌고 있었습니다.</b></p>
+    <ul style="font-size:13px;margin-top:6px">
+      <li><b>메타 광고발 구매 $183 — 실측.</b> 그 주 메타 클릭 487건 중 아마존 구매 3건·$182.90(Attribution API, 클릭일 기준). 메타발 구매는 아마존 광고 이름표가 없어 <b>전부 오가닉으로 집계</b>됩니다. 당시 메타 주간 지출 $265. 어트리뷰션이 앱·기기 이동을 놓치는 과소집계임을 감안하면 실제 메타 몫은 이보다 큽니다.</li>
+      <li><b>브랜드 검색 구매 ≈$70 + 재구매 ≈$37 — 실측.</b> 브랜드 검색 경유 주 2건(SQP)과 당시 재구매 수준(브랜드 애널리틱스 전기 실측 ≈$37) — 7/29 차단 전이지만 이때는 브랜드 광고의 이름표 점유가 약해 일부가 오가닉에 남아 있었습니다.</li>
+      <li><b>잔여 ≈$130 — 일반 오가닉 + 집계 노이즈.</b> 광고가 아직 청구하지 않던 구매들.</li>
+    </ul>
+    <p style="font-size:13px;color:var(--mute);margin-top:8px"><b>그리고 이 $423이 다음 주 0으로 무너진 이유가 이 보고서 전체의 핵심 증거입니다.</b> 7/19주에 아마존 광고 귀속이 $480→$1,382로 <span style="color:var(--accent);font-weight:700">2.9배</span> 뛰었는데 총매출은 1.5배($903→$1,371)만 늘었습니다 — 광고가 새 매출을 만든 것 이상으로, <b>이미 일어나던 구매에 이름표를 붙이기 시작한 것</b>입니다(브랜드 검색어 유료 점유 확대 등). 이 구조를 실측으로 확인한 것이 7/29 브랜드 검색 광고 차단 결정의 근거였습니다.</p>
+  </div>
+</section>
+
+<!-- ===== 3. 전환율 해부 ===== -->
+<section>
+  <h2><span class="no">§3</span>핵심 사건의 해부 — "전환율이 2배가 됐다"의 진짜 의미</h2>
+  <p class="lead">상품페이지 방문자 중 구매하는 비율(전환율)이 8/3 주간에 2.8% → 6.0%로 뛰었습니다. 전환율은 분수(구매 ÷ 방문)라서 둘로 쪼개 확인했습니다.</p>
+
+  <div class="eq">
+    <div class="box">
+      <div class="v">주문 +36%</div>
+      <div class="l">분자 — 진짜 개선</div>
+      <div class="d">주 47건 → 64건</div>
+    </div>
+    <div class="op">×</div>
+    <div class="box" style="background:var(--bg-top)">
+      <div class="v" style="color:var(--mute)">방문 −36%</div>
+      <div class="l">분모 — 착시(물 빠짐)</div>
+      <div class="d">주 1,683명 → 1,073명</div>
+    </div>
+    <div class="op">=</div>
+    <div class="box" style="border-color:#CFD65E;background:var(--highlight)">
+      <div class="v">2.1배</div>
+      <div class="l">전환율 2.8% → 6.0%</div>
+      <div class="d">1.36 ÷ 0.64 = 2.1 — 수치가 정확히 맞아떨어짐</div>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-title">일별 방문자(면) vs 주문 건수(막대) — 7/13 ~ 8/9</div>
+    <svg id="dailyChart" width="880" height="300" viewBox="0 0 880 300"></svg>
+    <div class="legend"><span><i style="background:#F1EFC9;border:1px solid #E3DFA0"></i>방문자(세션, 왼쪽 축)</span><span><i style="background:#E6EE7A;border:1px solid #CFD65E"></i>주문 건수(오른쪽 축)</span><span><i style="background:#e23b3b;width:2px;height:12px"></i>사건일</span></div>
+    <div class="chart-src">출처: Seller Central 비즈니스 리포트(일별). 방문은 8/5부터 반토막, 주문은 유지~증가 — 이 어긋남이 "전환율 2배"의 정체.</div>
+  </div>
+
+  <p><b>분자(주문 +36%)를 만든 것</b> — 후보별 실측:</p>
+  <div class="cards">
+    <div class="card">
+      <span class="chiptag">가장 큰 기여 후보</span>
+      <h4>5% 쿠폰</h4>
+      <div class="n">67건 <small>사용 · 결부매출 $2,281</small></div>
+      <p>7/27 발행 후 2주간 (세럼 47 · 세트 12 · 크림 8). 주간 주문의 <b>약 절반</b>이 쿠폰을 쓰고 구매 — 검색 결과·상품페이지의 초록 쿠폰 배지가 구매를 밀어주는 정황. <b>한계: 인과가 아닌 상관까지만</b> ("쿠폰을 쓴 구매" ≠ "쿠폰 때문에 산 구매").</p>
+    </div>
+    <div class="card">
+      <span class="chiptag">실측 확정</span>
+      <h4>재구매 도래</h4>
+      <div class="n">$216.58 <small>· 고객 4명 · 매출의 8.7%</small></div>
+      <p>전기 대비 <b>약 5배</b>. 6월 첫 구매 손님들의 재구매 주기(세럼 소진 1~2개월)가 8월 초 도래. 재구매는 광고를 안 거치므로 대부분 오가닉으로 집계.</p>
+    </div>
+    <div class="card">
+      <span class="chiptag">소수지만 실재</span>
+      <h4>2+1 묶음 (3개 담으면 1개 무료)</h4>
+      <div class="n">6건 <small>(세럼 4 · 크림 2)</small></div>
+      <p><b>한 번에 3개를 담아 2개 값만 치른 주문이 7/27 이후 총 6건</b>이라는 뜻. 8/3의 "주문 11건에 판매 수량 16개" 미스터리가 이것으로 설명. 건수 기여는 작지만 주문당 금액을 키움 (그날 평균 $53, 평소 $36).</p>
+    </div>
+  </div>
+
+  <p><b>분모(방문 −36%)</b>: 같은 주에 메타 광고 정지(8/3)와 아마존 광고 정리가 겹치며 "구경만 하고 안 사던" 광고발 방문이 빠졌습니다. 이 몫은 개선이 아니라 <b>통계에서 물이 빠진 것</b>입니다.</p>
+  <div class="fn">미해결 각주 — 방문자 급감이 8/5부터 나타나 메타 정지(8/3)와 이틀 어긋남. 집계 시간대 차이로 추정되나 확정하지 못함.</div>
+  <p><b>결론: 전환율 2배 = 진짜 개선(판촉+재구매로 주문 +36%) × 착시(저의도 방문 −36%)의 곱.</b></p>
+</section>
+
+<!-- ===== 4. 판정표 ===== -->
+<section>
+  <h2><span class="no">§4</span>후보 전수 판정표 — 어디까지 알고, 어디부터 모르는가</h2>
+  <table>
+    <tr><th style="width:26%">후보</th><th style="width:20%">판정</th><th>근거 (전부 실측)</th></tr>
+    <tr><td>아마존 내부 — 판촉(쿠폰·묶음)</td><td><span class="tag t-good">주범</span></td><td>쿠폰 사용 67건·$2,281 / 묶음 6건 / 주문 +36% 시점 일치</td></tr>
+    <tr><td>아마존 내부 — 순위·배지 상승</td><td><span class="tag t-good">동반 기여</span></td><td>카테고리 순위 약 2,500위→1,331위(7/25~) · Amazon's Choice 배지 보유. 판촉→판매↑→순위↑→노출↑ 선순환</td></tr>
+    <tr><td>브랜드 검색 광고 차단의 재분류</td><td><span class="tag t-good">부주범 (주 $100~200)</span></td><td>차단 전 브랜드·ASIN 유료 귀속 주 ≈$207 · 차단 후에도 브랜드 검색 구매 유지(주 2→3건) = 매출 손실 없이 이름표만 이동</td></tr>
+    <tr><td>재구매·정기배송</td><td><span class="tag t-good">실측 (주 $217, 커지는 중)</span></td><td>브랜드 애널리틱스 반복구매 리포트(8/2~8/8)</td></tr>
+    <tr><td>인스타그램 직접 경로</td><td><span class="tag t-good">월 1~8건으로 확정</span></td><td>깔때기 실측(§5): 조회 12.3만 → 프로필 방문 1,524 → 외부링크 클릭 115 → 링크트리 클릭 81 → 아마존행 일부. 가장 후하게 계산해도 주 $35~70</td></tr>
+    <tr><td>인스타그램 간접 경로(보고 나서 검색)</td><td><span class="tag t-caution">소액</span></td><td>20만 릴스(7/16) 직후 'lemonderma' 아마존 검색량 <b>74→232(3.1배)</b>로 뛰었으나, 브랜드 검색 경유 구매는 릴스 주 포함 4주 연속 <b>2·2·2·3건</b>(SQP 주별 실측, §5 차트) — 검색까지는 만들었지만 구매 단계에서 멈춤</td></tr>
+    <tr><td>구글 검색 경유</td><td><span class="tag t-good">미미로 확정</span></td><td>Google Trends 'lemonderma' 미국: 집계 문턱 미달("not enough data")</td></tr>
+    <tr><td>메타 광고 잔상</td><td><span class="tag t-good">주간 기여 ≤ $329</span></td><td>메타 클릭은 클릭 후 <b>14일까지의 구매가 "메타 장부"에 기록</b>됩니다(Attribution). "잔상" = 7월에 클릭한 사람이 8월 첫 주에 와서 산 경우인데, 그 구매도 14일 안이면 반드시 이 장부에 적혀 있습니다. 그런데 <b>최근 30일치 장부 전체를 합쳐도 $329(7건)</b> — 8월 첫 주에 떨어진 잔상은 이 장부에 적힌 구매의 일부이므로, <b>부분이 전체를 넘을 수 없다는 산수</b>로 아무리 크게 잡아도 $329 이내입니다. (14일 창을 넘겨 산 경우는 장부에 아예 안 적힘 — 그건 별도 항목 "광고의 지연 효과"로 분류) 보조 증거: 메타를 껐는데 오가닉 잔차가 오히려 상승(홀드아웃 실측) → "작다"로 판정</td></tr>
+    <tr><td>광고의 지연 효과(이름표 만료 후 구매)</td><td><span class="tag t-gap">측정 불가</span></td><td>원리상 존재. 크기를 잴 방법이 현재 없음 — 정직하게 "모른다"</td></tr>
+    <tr><td>입소문</td><td><span class="tag t-caution">근거 없음</span></td><td>브랜드 검색량 정체(릴스 거품 제외 시)</td></tr>
+    <tr><td>몽골 유통사 영향</td><td><span class="tag t-mute">무관</span></td><td>별개 마켓플레이스, 전이 경로 없음</td></tr>
+  </table>
+</section>
+
+<!-- ===== 5. 인스타그램 ===== -->
+<section>
+  <h2><span class="no">§5</span>인스타그램에 대한 정직한 평가</h2>
+  <p class="lead">인스타그램 인사이트 실측(7/12~8/10, 30일) 기준.</p>
+
+  <div class="cards">
+    <div class="card"><h4>조회</h4><div class="n">123,048<small>회</small></div><p>광고 비중 21.8% · 릴스가 90.9% · 조회의 95.1%가 비팔로워</p></div>
+    <div class="card"><h4>조회한 사람</h4><div class="n">9,756<small>명 (+96.6%)</small></div><p>미국 94.8% · 여성 88.4% · 45세+ 46.5%</p></div>
+    <div class="card"><h4>반응</h4><div class="n">5,368<small> (+공유 631)</small></div><p>릴스 93.5% · 반응층은 25-34가 최다(32.6%)</p></div>
+    <div class="card"><h4>팔로워</h4><div class="n">16,608<small>명 (30일 +216)</small></div><p>팔로워 국가: 미국 30.3% · 인도 19.1% · 터키 11.3%</p></div>
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-title">깔때기 실측 — 12.3만 조회가 아마존 구매가 되기까지</div>
+    <div class="funnel">
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:100%">조회 123,048회</div></div><div class="fmeta">미국 94.8% — 도달 자체는 진짜 미국</div></div>
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:62%">조회한 사람 9,756명</div></div><div class="fmeta">한 릴스(20만 조회)가 대부분을 만듦</div></div>
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:40%">프로필 방문 1,524명</div></div><div class="fmeta">조회자의 15.6% <span class="fdrop">−84%</span></div></div>
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:24%">외부 링크 클릭 115명</div></div><div class="fmeta">프로필 방문의 7.5% <span class="fdrop">−92%</span> ← 깔때기의 목</div></div>
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:17%">링크트리 클릭 81명</div></div><div class="fmeta">링크트리 뷰 120 ≈ IG 클릭 115 (교차 검증됨)</div></div>
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:11%">아마존 도착 ~40명</div></div><div class="fmeta">아마존 링크 몫 추정 (링크별 분리 확인 예정)</div></div>
+      <div class="fstep"><div class="fbar-track"><div class="fbar" style="width:8%;background:#000;color:#fff;border-color:#000">구매 월 1~8건</div></div><div class="fmeta">전환율을 후하게 잡아도 주 $35~70</div></div>
+    </div>
+    <div class="chart-src">출처: Instagram 인사이트 + Linktree(각 실측). "아마존 도착" 단계만 추정(링크트리 내 아마존 링크 비중 미분리) — 전 구간을 100%로 잡아도 결론 불변.</div>
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-title">릴스 자연실험 — "보게는 만들지만, 아직 사게는 못 만든다"</div>
+    <svg id="reelChart" width="880" height="260" viewBox="0 0 880 260"></svg>
+    <div class="legend"><span><i style="background:#F1EFC9;border:1px solid #E3DFA0"></i>'lemonderma' 주간 검색량 (아마존 SQP)</span><span><i style="background:#025200"></i>브랜드 검색 경유 구매 건수</span></div>
+    <div class="chart-src">릴스가 터진 주(W29) 대비 다음 주 검색량 3.1배 — 그러나 구매는 4주 내내 2~3건. SQP는 같은-세션 기준이라 소폭 과소집계 가능하나, 검색 급등에도 구매가 평평한 패턴 자체가 결론의 근거.</div>
+  </div>
+
+  <div class="chart-box">
+    <div class="chart-title">"팔로워 숫자"와 "실제 도달"은 다른 나라에 있다</div>
+    <svg id="geoChart" width="880" height="150" viewBox="0 0 880 150"></svg>
+    <div class="chart-src">조회(도달)의 95%는 비팔로워 — 진짜 자산은 팔로워 목록이 아니라 릴스가 미국 알고리즘 피드에 실리는 능력.</div>
+  </div>
+
+  <ul>
+    <li><b>도달은 진짜 미국입니다.</b> 30일 조회의 미국 94.8%. 조회 연령도 이번 달은 45세+가 46.5%로 실제 아마존 구매자 연령(45+ 44%)과 겹쳤습니다. 다만 이번 달 조회 대부분이 릴스 한 편에서 나왔으므로 이 연령 분포를 계정의 고정 성질로 일반화할 수는 없습니다.</li>
+    <li><b>문제는 타겟이 아니라 깔때기의 목입니다.</b> 보는 사람은 많은데 밖으로 나오는 사람이 월 100명 수준이라, 매출 기여는 구조적으로 월 수 건이 됩니다.</li>
+    <li><b>팔로워 16,608명은 숫자만큼의 자산이 아닙니다.</b> 팔로워 국가는 과거 글로벌 유입의 유산(미국 30%)인데 현재 조회의 95%는 비팔로워입니다.</li>
+  </ul>
+</section>
+
+<!-- ===== 6. 불확실성 ===== -->
+<section>
+  <h2><span class="no">§6</span>여기까지만 알 수 있다 — 남은 불확실성 3가지</h2>
+  <div class="cards">
+    <div class="card">
+      <span class="chiptag" style="color:var(--signal);border-color:#F0B8B8;background:#FBEFEF">불확실 1</span>
+      <h4>쿠폰의 인과</h4>
+      <p>"쿠폰 쓴 구매 절반"은 상관이며, 쿠폰이 없었어도 샀을 손님의 비율은 알 수 없습니다. 확인하려면 쿠폰을 꺼보는 실험이 필요한데, <b>쿠폰은 계속 유지할 것이므로 인과를 확정할 실익이 없다고 판단해 실험하지 않기로 결정</b>(8/12 John) — 이 항목은 "모른다"로 남겨둡니다.</p>
+    </div>
+    <div class="card">
+      <span class="chiptag" style="color:var(--signal);border-color:#F0B8B8;background:#FBEFEF">불확실 2</span>
+      <h4>광고의 지연 효과</h4>
+      <p>7월에 집행한 광고가 8월 오가닉에 남긴 꼬리의 크기.</p>
+    </div>
+    <div class="card">
+      <span class="chiptag" style="color:var(--signal);border-color:#F0B8B8;background:#FBEFEF">불확실 3</span>
+      <h4>방문자 급감의 이틀 시차</h4>
+      <p>메타 정지(8/3)와 방문 급감(8/5)의 어긋남 — 집계 기준 차이로 추정.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. 트래킹 조치 ===== -->
+<section>
+  <h2><span class="no">§7</span>앞으로의 트래킹 체계 — 일회성 분석을 상시 계기판으로</h2>
+  <p class="lead">이번 조사는 열흘치 데이터를 손으로 뒤져서 나왔습니다. 같은 질문을 다음 달에 또 손으로 풀지 않으려면, 이번에 찾은 데이터 소스들을 <b>매주 자동으로 돌아가는 계기판</b>으로 바꿔야 합니다. 설계 원칙: ① 오가닉을 매주 4조각으로 자동 분해한다 ② §6의 불확실성 3가지를 각각 좁히는 장치를 단다 ③ 측정 장치 자체가 죽지 않았는지 정기 확인한다.</p>
+
+  <h4 style="font-size:14.5px;margin:18px 0 4px">7-1. 핵심 신설 — <span class="hl">"오가닉 4분해" 주간 상시 산식</span></h4>
+  <p style="font-size:13.5px">이번 조사로 오가닉 바구니를 매주 데이터로 쪼갤 수 있게 됐습니다. 전 항목의 데이터 소스가 이미 존재하므로, 주간보고에 아래 한 줄을 상시 계산해 싣습니다:</p>
+  <div class="eq" style="margin:14px 0">
+    <div class="box" style="min-width:120px"><div class="v" style="font-size:18px">오가닉 잔차</div><div class="d">총매출 − 광고 귀속</div></div>
+    <div class="op">=</div>
+    <div class="box" style="min-width:110px"><div class="v" style="font-size:18px">재구매</div><div class="d">브랜드 애널리틱스<br>반복구매 리포트 (주간)</div></div>
+    <div class="op">+</div>
+    <div class="box" style="min-width:110px"><div class="v" style="font-size:18px">브랜드 검색</div><div class="d">SQP 구매 건수 × 단가<br>(주간, 1주 지연)</div></div>
+    <div class="op">+</div>
+    <div class="box" style="min-width:110px"><div class="v" style="font-size:18px">외부 경로</div><div class="d">메타 = 태그 실측<br>인스타 = 추정 (태그 설치 전까지)</div></div>
+    <div class="op">+</div>
+    <div class="box" style="background:var(--highlight);min-width:120px"><div class="v" style="font-size:18px">잔여</div><div class="d">판촉·광고 여운·진짜 신규<br>— <b>이 추세가 핵심 신호</b></div></div>
+  </div>
+  <p style="font-size:13px;margin-top:12px">계산은 <b>뺄셈</b>입니다. 오가닉 $639에서 "출처가 확인되는 구매"를 하나씩 빼 나가면, 마지막에 출처 미상의 덩어리가 남습니다. 이번 주(8/2~8/8) 값으로 처음 계산해 보면:</p>
+  <ul style="font-size:12.5px;margin:6px 0 10px">
+    <li>오가닉 전체 <b>$639</b>에서 시작</li>
+    <li><b>− 재구매 $217</b> — 반복구매 리포트가 "이번 주 매출 중 재구매 고객 몫 $216.58"이라고 직접 알려줌</li>
+    <li><b>− 브랜드 검색 ≈$110</b> — 브랜드 이름을 검색해 산 구매 3건(검색 리포트 실측) × 평균단가 $36.58</li>
+    <li><b>− 외부 경로 ≈$35 (추정)</b> — 메타는 태그가 있어 실측 $0(그 주 광고 꺼짐). 그 외(인스타→링크트리→아마존 등)는 <b>태그를 걸어두지 않아 장부에 잡힐 수 없는 상태</b>라, "장부 $0"을 근거로 쓰지 않고 §5 깔때기 산수(월 1~8건 = 주 $10~70)의 대표값 주 ≈$35를 추정으로 계상</li>
+    <li>= <b>잔여 ≈$277</b> — 판촉 배지 효과·광고 여운·진짜 신규 오가닉이 섞인 "출처 미상" 덩어리</li>
+  </ul>
+  <p style="font-size:12.5px;color:var(--mute)">이 잔여가 매주 커지는지 작아지는지가 "진짜 오가닉이 자라는가"의 단일 신호가 됩니다. <b>판정 규칙(사전 등록): 잔여가 2주 연속 하락하면 "오가닉 성장이 판촉 의존"으로 판정하고 원인 조사를 겁니다.</b> 항목 간 소액 겹침(재구매 고객이 브랜드 검색으로 들어오는 경우 등)과 외부 경로 추정치 때문에 잔여는 정밀값이 아니라 <b>추세 감시용 근사치</b>이며, 링크트리 태그 설치(아래 B1) 후에는 외부 추정이 실측으로 교체됩니다.</p>
+
+  <h4 style="font-size:14.5px;margin:22px 0 4px">7-2. 계층별 측정 장치 — 언제, 무엇을, 어떤 판정 규칙으로</h4>
+  <table>
+    <tr><th style="width:24%">장치</th><th style="width:30%">방법 · 주기</th><th style="width:28%">판정 규칙 (사전 등록)</th><th>닫는 구멍</th></tr>
+    <tr>
+      <td><b>A1. 오가닉 4분해 위클리</b><br><span style="font-size:11.5px;color:var(--mute)">즉시 · 비용 0</span></td>
+      <td>위 산식을 주간보고 파이프라인에 편입 (재구매·SQP·Attribution 3소스 — 수집 코드 전부 기존재)</td>
+      <td>잔여 2주 연속 하락 → 판촉 의존 경고</td>
+      <td>오가닉의 정체를 매주 자동 갱신</td>
+    </tr>
+    <tr>
+      <td><b>A2. 방문자·전환율 주간 수집</b><br><span style="font-size:11.5px;color:var(--mute)">즉시 · 주 5분</span></td>
+      <td>비즈니스 리포트 일별 세션·CVR — <b>이번 분석의 결정타였는데 상시 수집이 안 되고 있었음.</b> 당장은 브라우저 수동(주 5분), Marco에게 SP-API Reports 권한 추가 요청 시 자동화</td>
+      <td>세션↓ + 주문 유지 = 트래픽 질 개선(양호) / 세션↓ + 주문↓ = 실수요 감소 조기 경보</td>
+      <td>불확실성 3 (다음 광고 온·오프 때 시차 패턴 확정)</td>
+    </tr>
+    <tr>
+      <td><b>A3. 브랜드 검색 KPI 해석 규칙</b><br><span style="font-size:11.5px;color:var(--mute)">즉시 · 규칙만</span></td>
+      <td>주간보고 기존 KPI에 해석 규칙 추가: <b>"조회 10만+ 콘텐츠가 터진 주는 검색량 등락 판정을 1주 유예하고, 구매 건수로만 판정"</b></td>
+      <td>검색량 아닌 구매 건수 기준 — 이번에 116→74 하락을 광고 차단 탓으로 오판할 뻔한 실사례가 근거(실은 릴스 거품이 빠진 것)</td>
+      <td>릴스 거품 오판 재발 방지</td>
+    </tr>
+    <tr>
+      <td><b>A4. 재구매 코호트 추적</b><br><span style="font-size:11.5px;color:var(--mute)">즉시 · A1에 편승</span></td>
+      <td>재구매 매출 4주 이동평균 + 정기배송(S&S) 가입자 수(현재 세럼 5·크림 1) 월 1회</td>
+      <td>이동평균 우상향 유지 여부 — 재구매는 광고비 0의 구조적 성장분이라 이 곡선이 꺾이면 리텐션 문제</td>
+      <td>오가닉의 "복리 엔진" 감시</td>
+    </tr>
+    <tr>
+      <td><b>B1. 외부 경로 태그 설치 + 생존 점검</b><br><span style="font-size:11.5px;color:var(--mute)">1회 설치 · 이후 분기 점검</span></td>
+      <td><b>1순위: 링크트리 아마존 링크에 어트리뷰션 태그 설치</b> — 현재 메타 광고 외에는 외부 태그가 없어 인스타발 구매가 장부에 잡힐 수 없는 상태(30일 기록 0이 그 방증). 설치 후 직접 1회 클릭 → 24~48h 뒤 콘솔에 잡히는지 확인. 이후 분기 1회 전체 태그 같은 방법으로 생존 점검</td>
+      <td>설치 완료 시 4분해의 "인스타 추정 ≈$35"가 <b>실측으로 교체</b>됨 / 점검에서 클릭 미집계 → 태그 재발급</td>
+      <td>"측정 장치가 없는데 $0으로 읽는" 오독 방지 (오늘 그 사례를 직접 겪음)</td>
+    </tr>
+    <tr>
+      <td><b>B2. IG 오디언스 월간 기록</b><br><span style="font-size:11.5px;color:var(--mute)">월 1회 · 5분</span></td>
+      <td>앱 인사이트 스크린샷 루틴(국가·연령·외부링크 클릭) — 원하면 API 열쇠 1회 셋업으로 자동화(절차 문서 기존재)</td>
+      <td>미국 조회 비중·외부링크 클릭의 월별 추세</td>
+      <td>도달 자산의 방향 추적</td>
+    </tr>
+    <tr>
+      <td><b>B3. AMC로 광고 여운 근사</b><br><span style="font-size:11.5px;color:var(--mute)">9월 착수 · 셋업 완료됨</span></td>
+      <td>8/11에 열어둔 Amazon Marketing Cloud(US 포함 단일 인스턴스)로 <b>광고 노출→구매 시간 간격 분포</b>를 쿼리 — 귀속창(14일) 밖 구매 비중을 추정. 데이터 축적(lookback) 필요해 9월 중 Use cases 템플릿으로 소규모 시작</td>
+      <td>"14일 밖 전환 비중 N%" 첫 실측치 확보가 목표</td>
+      <td><b>불확실성 2</b> — 유일하게 "모른다"로 남은 광고 지연 효과를 "대략 잰다"로</td>
+    </tr>
+  </table>
+  <p style="font-size:12px;color:var(--mute);margin-top:10px">A1·A2의 주간보고 파이프라인 편입은 US 주간보고 스킬 수정이 필요한 항목이라 여기서는 설계까지만 확정하고, 반영은 별도 승인 후 진행합니다. (쿠폰 인과 준실험은 검토했으나 <b>쿠폰을 계속 유지할 것이므로 실익이 없어 하지 않기로 확정</b> — 8/12 John. §6 불확실성 1은 "모른다"로 남습니다)</p>
+</section>
+
+<footer>
+  "Where Nature Meets Science" — 근거 상세는 GitHub <a href="https://github.com/VDVIA/vdvia/blob/main/30_growth/marketing/us/performance/changelog.md">changelog.md</a> 2026-08-12 항목
+</footer>
+</div>
+
+<script>
+function el(n,attrs,parent,text){var e=document.createElementNS('http://www.w3.org/2000/svg',n);
+  for(var k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;parent.appendChild(e);return e;}
+
+/* ---------- 주별 오가닉 잔차 ---------- */
+(function(){
+  var svg=document.getElementById('weeklyChart');
+  var data=[{l:'7/12~',v:423},{l:'7/19~',v:0},{l:'7/26~',v:-84},{l:'8/2~ (8주차)',v:639}];
+  var W=880,H=240,pad=50,base=170,scale=0.22;
+  el('line',{x1:pad,y1:base,x2:W-20,y2:base,stroke:'#DCD8BE','stroke-width':1},svg);
+  var bw=110,gap=(W-pad-40-bw*4)/3;
+  data.forEach(function(d,i){
+    var x=pad+20+i*(bw+gap);
+    var h=Math.abs(d.v)*scale;
+    var y=d.v>=0?base-h:base;
+    var col=i===3?'#E6EE7A':(d.v<0?'#F1EFDD':'#F6F4E6');
+    var stroke=i===3?'#CFD65E':'#E6E2CC';
+    el('rect',{x:x,y:y,width:bw,height:Math.max(h,2),rx:5,fill:col,stroke:stroke,'stroke-width':1},svg);
+    el('text',{x:x+bw/2,y:d.v>=0?y-8:y+h+16,'text-anchor':'middle','font-family':'Pretendard','font-size':i===3?15:12.5,
+      'font-weight':i===3?800:600,fill:i===3?'#025200':'#000'},svg,(d.v>0?'+$':'$')+Math.abs(d.v)+(i===1?' ≈0':(i===2?' ≈0':'')));
+    el('text',{x:x+bw/2,y:base+34,'text-anchor':'middle','font-family':'Pretendard','font-size':12,fill:'#666'},svg,d.l);
+  });
+  var notes=[['7/27 판촉 재개 · 7/29 브랜드 차단',2],['8/3 메타 정지·광고 정리',3]];
+  notes.forEach(function(n){
+    var x=pad+20+n[1]*(bw+gap)+bw/2;
+    el('text',{x:x,y:56,'text-anchor':'middle','font-family':'Pretendard','font-size':10.5,fill:'#e23b3b','font-weight':700},svg,n[0]);
+    el('line',{x1:x,y1:62,x2:x,y2:88,stroke:'#e23b3b','stroke-width':1,'stroke-dasharray':'3 3',opacity:.6},svg);
+  });
+  // 7/12 막대 주석 — 메타발 실측
+  var x0=pad+20+bw/2;
+  el('text',{x:x0,y:56,'text-anchor':'middle','font-family':'Pretendard','font-size':10.5,fill:'#025200','font-weight':700},svg,'메타발 $183 실측 포함');
+  el('line',{x1:x0,y1:62,x2:x0,y2:72,stroke:'#025200','stroke-width':1,'stroke-dasharray':'3 3',opacity:.6},svg);
+})();
+
+/* ---------- 일별 방문 vs 주문 ---------- */
+(function(){
+  var svg=document.getElementById('dailyChart');
+  var sessions=[169,156,121,101,144,158,172,215,219,219,237,247,246,263,264,241,250,268,293,168,199,206,292,125,108,92,122,128];
+  var orders=[1,3,4,3,6,2,4,4,5,9,12,4,13,8,3,4,6,13,11,5,5,11,14,7,7,8,8,9];
+  var labels=['7/13','','','','','','7/19','7/20','','','','','','7/26','7/27','','','','','','8/2','8/3','','','','','','8/9'];
+  var W=880,H=300,L=48,R=40,T=18,B=44;
+  var pw=W-L-R,ph=H-T-B,n=sessions.length,step=pw/(n-1);
+  var sMax=300,oMax=15;
+  function sy(v){return T+ph-(v/sMax)*ph;}
+  function oy(v){return T+ph-(v/oMax)*ph;}
+  [0,100,200,300].forEach(function(g){
+    el('line',{x1:L,y1:sy(g),x2:W-R,y2:sy(g),stroke:'#EFEBD5','stroke-width':1},svg);
+    el('text',{x:L-8,y:sy(g)+4,'text-anchor':'end','font-family':'Pretendard','font-size':10.5,fill:'#9C9880'},svg,g);
+  });
+  [5,10,15].forEach(function(g){
+    el('text',{x:W-R+8,y:oy(g)+4,'text-anchor':'start','font-family':'Pretendard','font-size':10.5,fill:'#6b7a10'},svg,g);
+  });
+  var pts='';
+  sessions.forEach(function(v,i){pts+=(L+i*step)+','+sy(v)+' ';});
+  el('polygon',{points:L+','+(T+ph)+' '+pts+(L+(n-1)*step)+','+(T+ph),fill:'#F1EFC9',opacity:.75},svg);
+  el('polyline',{points:pts,fill:'none',stroke:'#C9C48A','stroke-width':2},svg);
+  orders.forEach(function(v,i){
+    var x=L+i*step-5;
+    el('rect',{x:x,y:oy(v),width:10,height:(T+ph)-oy(v),rx:2,fill:'#E6EE7A',stroke:'#CFD65E','stroke-width':.7},svg);
+  });
+  [[14,'7/27 판촉'],[16,'7/29 차단'],[21,'8/3 메타 정지']].forEach(function(ev,k){
+    var x=L+ev[0]*step;
+    el('line',{x1:x,y1:T,x2:x,y2:T+ph,stroke:'#e23b3b','stroke-width':1.1,'stroke-dasharray':'4 3',opacity:.7},svg);
+    el('text',{x:x+4,y:T+12+k*14,'font-family':'Pretendard','font-size':10.5,fill:'#e23b3b','font-weight':700},svg,ev[1]);
+  });
+  labels.forEach(function(t,i){ if(t) el('text',{x:L+i*step,y:H-14,'text-anchor':'middle','font-family':'Pretendard','font-size':10.5,fill:'#666'},svg,t);});
+  el('text',{x:L-8,y:12,'font-family':'Pretendard','font-size':10.5,fill:'#9C9880','text-anchor':'start'},svg,'방문자/일');
+  el('text',{x:W-R+8,y:12,'font-family':'Pretendard','font-size':10.5,fill:'#6b7a10'},svg,'주문/일');
+})();
+
+/* ---------- 릴스 자연실험 ---------- */
+(function(){
+  var svg=document.getElementById('reelChart');
+  var weeks=['W29 (7/13~19)\n릴스 게시 주','W30 (7/20~26)','W31 (7/27~8/2)','W32 (8/3~9)'];
+  var vol=[74,232,148,150], buy=[2,2,2,3];
+  var W=880,H=260,L=54,R=46,T=30,B=48;
+  var pw=W-L-R,ph=H-T-B,bw=90,gap=(pw-bw*4)/3;
+  var vMax=250,bMax=5;
+  function vy(v){return T+ph-(v/vMax)*ph;}
+  function by(v){return T+ph-(v/bMax)*ph;}
+  [0,100,200].forEach(function(g){
+    el('line',{x1:L,y1:vy(g),x2:W-R,y2:vy(g),stroke:'#EFEBD5'},svg);
+    el('text',{x:L-8,y:vy(g)+4,'text-anchor':'end','font-family':'Pretendard','font-size':10.5,fill:'#9C9880'},svg,g);
+  });
+  var centers=[];
+  vol.forEach(function(v,i){
+    var x=L+i*(bw+gap);centers.push(x+bw/2);
+    el('rect',{x:x,y:vy(v),width:bw,height:(T+ph)-vy(v),rx:5,fill:'#F1EFC9',stroke:'#E3DFA0','stroke-width':1},svg);
+    el('text',{x:x+bw/2,y:vy(v)-8,'text-anchor':'middle','font-family':'Pretendard','font-size':13,'font-weight':700,fill:'#6b7a10'},svg,v);
+    var wl=weeks[i].split('\n');
+    el('text',{x:x+bw/2,y:T+ph+20,'text-anchor':'middle','font-family':'Pretendard','font-size':11.5,fill:'#666'},svg,wl[0]);
+    if(wl[1])el('text',{x:x+bw/2,y:T+ph+35,'text-anchor':'middle','font-family':'Pretendard','font-size':10.5,'font-weight':700,fill:'#e23b3b'},svg,wl[1]);
+  });
+  var pts='';buy.forEach(function(v,i){pts+=centers[i]+','+by(v)+' ';});
+  el('polyline',{points:pts,fill:'none',stroke:'#025200','stroke-width':2.5},svg);
+  buy.forEach(function(v,i){
+    el('circle',{cx:centers[i],cy:by(v),r:5,fill:'#025200'},svg);
+    el('text',{x:centers[i]+10,y:by(v)+4,'font-family':'Pretendard','font-size':12.5,'font-weight':800,fill:'#025200'},svg,v+'건');
+  });
+  el('text',{x:centers[1],y:vy(232)-26,'text-anchor':'middle','font-family':'Pretendard','font-size':12,'font-weight':800,fill:'#e23b3b'},svg,'검색 3.1배 ↑');
+  el('text',{x:W-R,y:12,'text-anchor':'end','font-family':'Pretendard','font-size':10.5,fill:'#025200'},svg,'구매 건수(오른쪽 눈금 0~5)');
+})();
+
+/* ---------- 조회 vs 팔로워 국가 ---------- */
+(function(){
+  var svg=document.getElementById('geoChart');
+  var rows=[
+    {label:'조회(도달) 국가',y:34,segs:[['미국 94.8%',94.8,'#E6EE7A','#33390f'],['한국 1.8%',1.8,'#F1EFDD','#555'],['기타 3.4%',3.4,'#F8F6EA','#777']]},
+    {label:'팔로워 국가',y:96,segs:[['미국 30.3%',30.3,'#E6EE7A','#33390f'],['인도 19.1%',19.1,'#DEDACB','#333'],['터키 11.3%',11.3,'#E7E2CE','#333'],['인니 7.6%',7.6,'#EFEBDA','#333'],['기타 31.7%',31.7,'#F8F6EA','#777']]}
+  ];
+  var L=150,W=700;
+  rows.forEach(function(r){
+    el('text',{x:L-12,y:r.y+20,'text-anchor':'end','font-family':'Pretendard','font-size':13,'font-weight':700,fill:'#000'},svg,r.label);
+    var x=L;
+    r.segs.forEach(function(s){
+      var w=W*s[1]/100;
+      el('rect',{x:x,y:r.y,width:Math.max(w-2,1),height:30,rx:4,fill:s[2]},svg);
+      if(w>56)el('text',{x:x+8,y:r.y+20,'font-family':'Pretendard','font-size':11.5,'font-weight':700,fill:s[3]},svg,s[0]);
+      x+=w;
+    });
+  });
+  el('text',{x:L,y:20,'font-family':'Pretendard','font-size':11,fill:'#666'},svg,'같은 계정인데 — 도달은 미국에 집중, 팔로워 명부는 글로벌 잡동사니 (과거 유입의 유산)');
+})();
+</script>
+</body>
+</html>
