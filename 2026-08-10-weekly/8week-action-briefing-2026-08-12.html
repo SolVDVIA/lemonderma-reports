@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>8주차 액션 브리핑 — 근거·실행·기대효과</title>
+<style>
+  :root{
+    --paper:#FAF7EC;
+    --paper-raised:#F1ECD8;
+    --paper-raised-2:#E9E2C7;
+    --ink:#211F16;
+    --ink-dim:#6B6A55;
+    --accent:#4B612D;
+    --accent-2:#7C8F3A;
+    --line:#DED6B8;
+    --highlight:#E6EE7A;
+    --highlight-ink:#3B4A1E;
+    --good:#2E7D4F;
+    --good-bg:#E3EEE1;
+    --watch:#93650C;
+    --watch-bg:#F3E9D2;
+    --hold:#7C7867;
+    --hold-bg:#EDE8D8;
+    --white:#FFFFFF;
+    --shadow: 0 1px 2px rgba(33,31,22,0.06), 0 4px 14px rgba(33,31,22,0.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#17160F;
+      --paper-raised:#201E14;
+      --paper-raised-2:#2A2818;
+      --ink:#F1EEDD;
+      --ink-dim:#A9A48C;
+      --accent:#C7DA7C;
+      --accent-2:#9BB04A;
+      --line:#3A371F;
+      --highlight:#4B612D;
+      --highlight-ink:#E6EE7A;
+      --good:#7FD9A4;
+      --good-bg:#1E3327;
+      --watch:#E8B857;
+      --watch-bg:#3A2E12;
+      --hold:#B3AD93;
+      --hold-bg:#2A2818;
+      --white:#17160F;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 18px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#17160F;
+    --paper-raised:#201E14;
+    --paper-raised-2:#2A2818;
+    --ink:#F1EEDD;
+    --ink-dim:#A9A48C;
+    --accent:#C7DA7C;
+    --accent-2:#9BB04A;
+    --line:#3A371F;
+    --highlight:#4B612D;
+    --highlight-ink:#E6EE7A;
+    --good:#7FD9A4;
+    --good-bg:#1E3327;
+    --watch:#E8B857;
+    --watch-bg:#3A2E12;
+    --hold:#B3AD93;
+    --hold-bg:#2A2818;
+    --white:#17160F;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 18px rgba(0,0,0,0.35);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;
+    letter-spacing:-0.012em;
+    line-height:1.62;
+    margin:0;
+    padding:56px 20px 90px;
+  }
+  .page{ max-width:840px; margin:0 auto; }
+  ::selection{ background:var(--highlight); color:var(--highlight-ink); }
+
+  .eyebrow{
+    font-size:12.5px;
+    font-weight:700;
+    color:var(--accent);
+    letter-spacing:0.06em;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:16px; height:2px;
+    background:var(--accent);
+    display:inline-block;
+  }
+
+  header.hero{ margin-bottom:40px; }
+  h1{
+    font-size:clamp(26px,4vw,34px);
+    line-height:1.32;
+    margin:14px 0 12px;
+    font-weight:800;
+    text-wrap:balance;
+    letter-spacing:-0.02em;
+  }
+  .sub{ font-size:15.5px; color:var(--ink-dim); max-width:62ch; }
+
+  .statbar{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:26px;
+  }
+  .stat{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:10px 16px;
+    min-width:128px;
+    flex:1 1 128px;
+  }
+  .stat .n{
+    font-size:22px;
+    font-weight:800;
+    font-variant-numeric:tabular-nums;
+    color:var(--ink);
+  }
+  .stat .l{ font-size:12px; color:var(--ink-dim); margin-top:2px; }
+
+  .diagnosis{
+    margin-top:30px;
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-left:4px solid var(--accent);
+    border-radius:10px;
+    padding:20px 22px;
+  }
+  .diagnosis h2{
+    margin:0 0 10px;
+    font-size:16px;
+    font-weight:800;
+  }
+  .diagnosis p{ margin:0 0 10px; font-size:14.5px; color:var(--ink); }
+  .diagnosis p:last-child{ margin-bottom:0; }
+  .diagnosis b{ font-variant-numeric:tabular-nums; }
+
+  section.group{ margin-top:52px; }
+  .group-head{ margin-bottom:16px; }
+  .group-head h2{
+    font-size:20px;
+    font-weight:800;
+    margin:10px 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .group-head p{
+    font-size:14px;
+    color:var(--ink-dim);
+    margin:0;
+    max-width:60ch;
+  }
+
+  .card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px 18px;
+    margin-top:14px;
+    box-shadow:var(--shadow);
+  }
+  .card-top{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:14px;
+  }
+  .card-title{
+    font-size:16px;
+    font-weight:800;
+    line-height:1.4;
+    margin:0;
+  }
+  .chip{
+    flex:none;
+    font-size:12px;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:999px;
+    white-space:nowrap;
+    letter-spacing:-0.01em;
+  }
+  .chip.done{ background:var(--good-bg); color:var(--good); }
+  .chip.watch{ background:var(--watch-bg); color:var(--watch); }
+  .chip.hold{ background:var(--hold-bg); color:var(--hold); }
+
+  .kv{ margin-top:14px; display:grid; gap:10px; }
+  .kv-row{ display:grid; grid-template-columns:76px 1fr; gap:12px; align-items:start; }
+  .kv-row .k{
+    font-size:12px;
+    font-weight:700;
+    color:var(--ink-dim);
+    padding-top:2px;
+    letter-spacing:0.01em;
+  }
+  .kv-row .v{ font-size:14.5px; color:var(--ink); }
+  .kv-row .v em{ font-style:normal; color:var(--accent); font-weight:700; }
+  .kv-row.effect .v{ color:var(--ink); }
+  .kv-row.effect .k{ color:var(--accent); }
+
+  .verify{
+    margin-top:14px;
+    padding-top:12px;
+    border-top:1px dashed var(--line);
+    font-size:12.5px;
+    color:var(--ink-dim);
+    display:flex;
+    gap:6px;
+    align-items:center;
+  }
+  .verify .dot{
+    width:6px;height:6px;border-radius:50%;
+    background:var(--watch);
+    flex:none;
+  }
+  .verify.done .dot{ background:var(--good); }
+
+  .hold-box{
+    margin-top:52px;
+    background:var(--paper-raised-2);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 24px;
+  }
+  .hold-box h2{ font-size:16px; font-weight:800; margin:0 0 6px; }
+  .hold-box > p{ font-size:13.5px; color:var(--ink-dim); margin:0 0 14px; }
+  .hold-list{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+  .hold-list li{
+    font-size:14px;
+    padding-left:18px;
+    position:relative;
+    color:var(--ink);
+  }
+  .hold-list li::before{
+    content:"—";
+    position:absolute; left:0; top:0;
+    color:var(--hold);
+  }
+  .hold-list b{ font-weight:700; }
+
+  .timeline{ margin-top:52px; }
+  .timeline h2{ font-size:20px; font-weight:800; margin:10px 0 16px; }
+  .tl-list{ list-style:none; margin:0; padding:0; display:grid; gap:0; }
+  .tl-item{
+    display:grid;
+    grid-template-columns:96px 1fr;
+    gap:16px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .tl-item:last-child{ border-bottom:1px solid var(--line); }
+  .tl-date{
+    font-size:14px;
+    font-weight:800;
+    font-variant-numeric:tabular-nums;
+    color:var(--accent);
+  }
+  .tl-date span{
+    display:block;
+    font-size:11px;
+    font-weight:600;
+    color:var(--ink-dim);
+    margin-top:2px;
+  }
+  .tl-desc{ font-size:14px; color:var(--ink); }
+
+  footer.close{
+    margin-top:56px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--ink-dim);
+  }
+
+  @media (max-width:520px){
+    .kv-row{ grid-template-columns:1fr; gap:2px; }
+    .kv-row .k{ padding-top:0; }
+    .tl-item{ grid-template-columns:1fr; gap:4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="hero">
+    <div class="eyebrow">US 퍼포먼스 · 8주차 보고서(8/2–8/8) 기반</div>
+    <h1>이번 주 우리가 뭘 했고, 왜 했고, 뭘 기대하는지</h1>
+    <p class="sub">8/11 밤부터 8/12까지 실행한 액션 10건을 "무슨 데이터를 봤는지 → 뭘 바꿨는지 → 뭘 기대하는지" 순서로 전부 정리했다. 어제오늘 한 일이 많아 복잡하게 느껴질 수 있는데, 실제로는 8주차 보고서가 짚은 문제 몇 개를 순서대로 처리한 것뿐이다.</p>
+
+    <div class="statbar">
+      <div class="stat"><div class="n">10건</div><div class="l">이번 주 실행 액션</div></div>
+      <div class="stat"><div class="n">6건</div><div class="l">결과 검증 대기 중</div></div>
+      <div class="stat"><div class="n">8/18</div><div class="l">가장 빠른 다음 확인일</div></div>
+      <div class="stat"><div class="n">4건</div><div class="l">일부러 손 안 댄 것</div></div>
+    </div>
+  </header>
+
+  <div class="diagnosis">
+    <h2>먼저, 8주차 보고서가 보여준 그림</h2>
+    <p>8주차는 지출을 <b>45% 줄였는데 매출은 오히려 34.6% 늘어난</b> 첫 주였다(MER 1.17 → 2.79, 역대 최고). 계정 최초로 "확실히 잘 팔리는 소재"(김보은C1)도 확정됐다. 문제는 <b>이 좋은 결과가 아직 볼륨이 작다</b>는 것 — 그래서 8월 방침은 "흑자를 유지한 채로 볼륨을 키우자"다.</p>
+    <p>구체적으로 세 가지가 짚혔다: ① SP 광고에서 검색 상단(TOS) 자리만 유일하게 흑자인데 노출이 전체의 1.7%뿐이었다 ② SB 광고 30개 캠페인 중 17개가 노출 자체가 0이었다 ③ 사소해 보이지만 새고 있던 광고비(차단 안 된 검색어)와, 이미 관심을 보인 고객(장바구니에 담고 안 산 사람들)을 놓치고 있었다.</p>
+  </div>
+
+  <!-- GROUP A -->
+  <section class="group">
+    <div class="group-head">
+      <div class="eyebrow">그룹 A</div>
+      <h2>이미 검증된 흑자 자리 — 볼륨만 키우면 되는 것</h2>
+      <p>새로 뭔가를 시도한 게 아니라, "여기가 이긴다"는 게 이미 숫자로 확인된 자리에 더 태운 것.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">메타 광고, 계속 꺼둔다</h3>
+        <span class="chip done">승인 완료</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">8/3~8/9 일주일 동안 메타를 완전히 끄고 실측했더니, <em>매출이 줄지 않고 오히려 하루 평균 +$78 늘었다.</em> "메타를 끄면 그 매출이 사라질 것"이란 걱정이 틀렸다는 뜻.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">John 최종 승인 — 지금 형태로는 재개하지 않고 계속 정지.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">주당 <em>$265</em> 광고비를 그냥 아낀다. 매출 손실 없이 순수 절감이라 MER(효율 지표)이 그만큼 좋아진다.</div></div>
+      </div>
+      <div class="verify done"><span class="dot"></span>추가 확인 불필요 — 이미 판정 끝난 사안</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">검색 결과 맨 위(TOS) 자리에 광고비를 더 태운다</h3>
+        <span class="chip watch">집행 완료 · 검증 대기</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">광고가 노출되는 자리를 3곳(맨 위·나머지 검색결과·상품 상세페이지)으로 쪼개서 봤더니, <em>맨 위 자리만 흑자</em>(ROAS 2.07, 손익분기 1.59보다 높음)였다. 근데 이 흑자 자리의 노출이 전체의 <em>1.7%뿐</em>이었다. 반대로 상품 상세페이지 자리는 $15 써서 매출이 0이었다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">이미 이기고 있는 그 자리(TOS)만 골라서 배율을 올렸다 — All-SKU 25%→50%, 세럼/크림 0%→25%(3개 캠페인).</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">이미 검증된 흑자 자리의 노출량 자체를 키워서 매출 볼륨을 늘린다. (참고: 7/30에 "모든 자리 일괄" 인상을 시도했다가 실패한 적 있는데, 이번엔 "이기는 자리만 선택" 인상이라 다른 방식이다.)</div></div>
+      </div>
+      <div class="verify"><span class="dot"></span>8/19 확인 — 맨 위 자리 노출 비중이 실제로 늘었는지, 흑자가 유지되는지</div>
+    </div>
+  </section>
+
+  <!-- GROUP B -->
+  <section class="group">
+    <div class="group-head">
+      <div class="eyebrow">그룹 B</div>
+      <h2>구조가 잘못됐던 것을 고침</h2>
+      <p>"입찰가가 낮아서 문제"라고 처음엔 생각했는데, 실제로 뜯어보니 원인이 달랐던 두 건.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">SB 광고 30개 캠페인 → 10개로 통합</h3>
+        <span class="chip watch">집행 완료 · 검증 대기</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">캠페인 30개 중 17개가 나흘 연속 노출 자체가 0이었다. 처음엔 "입찰가가 낮아서"라고 의심했는데, <em>노출 있는 캠페인과 없는 캠페인의 입찰가가 완전히 같았다</em> — 즉 입찰 문제가 아니었다. 전문가 자료를 찾아보니 캠페인 하나에 하루 $3씩 30개로 쪼갠 게 원인이었다 — 캠페인이 최소 $10~20/일은 돼야 광고 시스템이 데이터를 쌓고 정상적으로 경매에 참여시켜준다는 게 업계 공통된 이야기였다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">실제로 노출이 꾸준히 나던(단발성 아님, 5일 중 3~5일 활동 확인) 10개만 남기고 하루 예산을 $10로 올렸다. 나머지 20개는 정지.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">남은 10개 캠페인이 최소 예산선을 넘어서 정상적으로 경매에 참여 → 노출·클릭이 회복될 것으로 기대.</div></div>
+      </div>
+      <div class="verify"><span class="dot"></span>8/19 확인 — 통합 전(30캠 합산)과 통합 후(10캠) 노출·클릭 비교</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">SD(리마케팅) 광고, 대상을 넓힌다</h3>
+        <span class="chip watch">집행 완료 · 관찰 중</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">SD는 "우리 제품을 본 사람"에게만 보여주는 리마케팅 광고라, 이런 유형은 <em>입찰가를 올려도 대상 자체가 늘지 않는다</em>(7/29에 입찰만 크게 올렸다가 효과 없었던 전례 있음). 진짜 레버는 "누구에게 보여줄지"의 범위다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">"우리 제품을 본 사람"에서 "비슷한 제품을 본 사람"까지 대상을 넓혔다. 입찰가도 $0.50→$0.55로 아주 소폭만 올림(대폭 인상 재발 방지).</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">보여줄 수 있는 사람 자체(모수)가 늘어나서, 리마케팅 노출 기회가 늘어난다.</div></div>
+      </div>
+      <div class="verify"><span class="dot"></span>계속 관찰 — 별도 D+N 판정일 없음, 다음 주간보고서에서 확인</div>
+    </div>
+  </section>
+
+  <!-- GROUP C -->
+  <section class="group">
+    <div class="group-head">
+      <div class="eyebrow">그룹 C</div>
+      <h2>새는 돈 막기</h2>
+      <p>클릭은 계속 나는데 한 번도 안 팔린 검색어 2개를 확정해서 차단.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">'skin', 'substitutes' 검색어 차단</h3>
+        <span class="chip done">완료</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">'skin'이라는 단어가 걸린 검색어들이 21개 캠페인에서 클릭 78번·비용 $72.61을 쓰는 동안 <em>매출 0</em>이었다. 'substitutes'(자동광고가 알아서 잡은 "대체상품" 타겟팅)도 클릭 23번·$27.58 쓰고 매출 0이었다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">'skin'은 SB 광고 55개 캠페인 전체에 네거티브(차단) 등록. 'substitutes'는 일반 키워드가 아니라 자동광고 내장 타겟팅이라 해당 타겟을 정지시켰다.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">팔리지 않는 자리에 나가던 돈이 줄어든다 — 같은 예산으로 실제 전환되는 검색어에 더 태울 여지가 생긴다.</div></div>
+      </div>
+      <div class="verify done"><span class="dot"></span>등록 직후 재조회로 실제 차단 상태까지 확인 완료</div>
+    </div>
+  </section>
+
+  <!-- GROUP D -->
+  <section class="group">
+    <div class="group-head">
+      <div class="eyebrow">그룹 D</div>
+      <h2>이미 관심 보인 고객에게 다시 손 내밀기</h2>
+      <p>신규 광고가 아니라, 장바구니까지 왔다가 안 산 사람들에게만 보내는 할인 쿠폰.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">장바구니 이탈 고객 대상 10% 할인 프로모션 2건 발송</h3>
+        <span class="chip done">제출 완료</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">신규 구매 건수보다 "장바구니에 담고 결제 직전 이탈한" 건수가 훨씬 많다는 게 확인됐다. 이 사람들은 이미 제품에 관심을 보인 상태라, 새 고객을 광고로 끌어오는 것보다 훨씬 적은 비용으로 전환시킬 수 있다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">아마존 셀러센터의 "맞춤형 프로모션" 기능으로 두 그룹에 각각 10% 할인 발송 — ① 브랜드 장바구니 유기자(90일, 1,641명) ② 높은 의도를 가진 고객(장바구니·위시리스트 60일, 974명). 기간은 나중에 조정하기 쉽도록 최대(약 90일, 11월 초까지)로 설정.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">이미 관심 있던 사람만 노려서 전환시키는 것이라, 신규 광고 대비 훨씬 저비용·고효율로 매출이 늘어날 것으로 기대.</div></div>
+      </div>
+      <div class="verify"><span class="dot"></span>진행 관찰 — 종료일(11/9~11/10)까지 언제든 소진 현황 확인 가능</div>
+    </div>
+  </section>
+
+  <!-- GROUP E -->
+  <section class="group">
+    <div class="group-head">
+      <div class="eyebrow">그룹 E</div>
+      <h2>아마존 AI 쇼핑(Rufus)이 우리를 정확히 읽게 하기</h2>
+      <p>아마존이 최근 "키워드 검색"에서 "AI가 문장을 이해해서 추천"하는 방식으로 바뀌는 중이라, 리스팅 문구가 사실과 다르면 AI도 잘못된 정보로 손님에게 우리 제품을 설명하게 된다.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">세럼·크림 리스팅의 임상수치·오탈자 정정</h3>
+        <span class="chip done">완료</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">지난주 감사에서 리스팅 안에 <em>서로 다른 숫자와 기간</em>이 동시에 적혀 있는 걸 발견했다(한 곳은 "10일 만에 21.4%", 다른 곳은 "3주 만에 27.4%" 등). 회사 정본 기준(브랜드 문서에 확정된 실측값)과도 안 맞았고, "Vegenderma"라는 오타도 5곳에 퍼져 있었다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">세럼·크림 양쪽의 불릿(상품 특징 목록)과 상품 설명 전체를 회사 정본 수치(브라이트닝 27.4%·탄력 29.7%·모공 31.8%, 3주 기준)로 통일하고 오탈자 5곳을 고쳤다.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">직접적인 매출 효과를 숫자로 예측하긴 어렵지만, AI 쇼핑이 우리 제품을 정확하게 이해하고 추천할 확률이 올라간다. 최소한 "우리 페이지 안에서 서로 다른 말을 하는" 신뢰도 문제는 없앴다.</div></div>
+      </div>
+      <div class="verify done"><span class="dot"></span>저장 후 서버에서 재조회해 실제 반영까지 확인 완료</div>
+    </div>
+  </section>
+
+  <!-- GROUP F -->
+  <section class="group">
+    <div class="group-head">
+      <div class="eyebrow">그룹 F</div>
+      <h2>눈에 안 보이지만 중요한 정비</h2>
+      <p>매출에 직접 영향은 없지만, 안 고치면 계속 같은 실수가 반복되거나 숫자를 잘못 읽게 되는 것들.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">대시보드에서 SD 광고비가 매일 누락되던 버그 수정</h3>
+        <span class="chip watch">코드 수정 완료 · 실측 검증 대기</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">일별 매출·비용 표에서 SD 광고비만 계속 빠지고 있었다. 원인은 "한 달치 데이터를 하루 단위로 한 번에" 요청하는 방식이 너무 무거워서 아마존 시스템이 제때 응답을 못 주고 있었던 것.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">"하루 단위 상세용"과 "한 달 요약용" 요청을 분리해서 가볍게 만들었다.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">매일 아침 보는 대시보드 숫자가 더 정확해진다(효율 지표가 실제보다 좋게 보이던 착시 제거). 매출 자체엔 영향 없음.</div></div>
+      </div>
+      <div class="verify"><span class="dot"></span>다음 정기 실행에서 자동 확인 — 오늘은 아마존 쪽 응답 지연으로 실측 재현은 못 함</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">같은 실수가 반복되지 않도록 안전장치 3종 코드화</h3>
+        <span class="chip done">완료</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">최근에 반복된 세 가지 실수 — ① 대량 작업 결과를 기록으로 안 남겨서 나중에 뭘 했는지 확인 불가능했던 일 ② 막 만든 신규 캠페인이 오래된 데이터 기준으로 잘못 정지됐던 일 ③ 클릭 1번짜리 표본을 유의미한 결과로 오판했던 일이 8/6·8/7·8/9 세 번이나 반복됐던 것.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">① 대량 작업은 항상 실행 전후 목록을 파일로 저장하게 표준화 ② 만든 지 7일 안 된 캠페인은 자동으로 정지 대상에서 제외 ③ 클릭 5번 미만인 검색어는 판단 대상에서 자동 제외.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">앞으로 같은 종류의 실수가 코드 차원에서 원천 차단된다.</div></div>
+      </div>
+      <div class="verify done"><span class="dot"></span>실제 데이터로 재실행해 정상 작동 확인 완료</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">제조사(COSMAX) 표기, 계속 유지하기로 확정</h3>
+        <span class="chip done">결정 확정</span>
+      </div>
+      <div class="kv">
+        <div class="kv-row"><div class="k">근거</div><div class="v">리스팅 감사 중 "Manufacturer: COSMAX Inc."가 상품 페이지에 그대로 노출된 걸 발견 — 예전에 "다른 제조사로 옮길 예정이니 표기를 지우자"고 결정했던 것과 배치되는 상태였다.</div></div>
+        <div class="kv-row"><div class="k">액션</div><div class="v">John이 "COSMAX와 계속 간다, 표기 문제 삼지 않는다"고 재확정 — 예전 결정 기록을 최신 상태로 갱신.</div></div>
+        <div class="kv-row effect"><div class="k">기대효과</div><div class="v">직접적 효과는 없지만, 앞으로 다른 세션이 이 표기를 또 문제로 착각해서 재작업하는 걸 막는다.</div></div>
+      </div>
+      <div class="verify done"><span class="dot"></span>결정 문서 갱신 완료</div>
+    </div>
+  </section>
+
+  <div class="hold-box">
+    <h2>일부러 손 안 댄 것</h2>
+    <p>"눈에 띄었지만 지금은 건드리지 않기로 한 것들" — 나중에 다시 판단할 여지를 남겨둔 항목이라 헷갈리지 않게 따로 적어둔다.</p>
+    <ul class="hold-list">
+      <li><b>상품 타이틀 길이</b> — 아마존이 75자 규정을 만들었지만, 경쟁 브랜드들도 여전히 훨씬 긴 타이틀을 쓰고 있어서 줄이지 않기로 함.</li>
+      <li><b>리스팅 문구 일부(상표 리스크·과장 표현 등)</b> — "Microneedling-Inspired" 같은 타사 상표 인접 표현, "EWG Green-certified" 같은 과장 표현, "Korea's First" 같은 근거 없는 최상급 표현은 이번엔 안 고침. 임상수치·오탈자만 정정 범위로 한정.</li>
+      <li><b>메타 광고 재개 여부</b> — 정지는 유지하되, 재개할 경우 필요한 후속 결정(소재 정책 등)은 아직 확정 안 함.</li>
+      <li><b>빅 프로모션(BDD, 10월 초 추정) 준비</b> — 재고·소재 준비가 필요한 일이라 8/18 주에 착수 예정, 아직 시작 전.</li>
+    </ul>
+  </div>
+
+  <div class="timeline">
+    <h2>다음 확인 일정</h2>
+    <ul class="tl-list">
+      <li class="tl-item">
+        <div class="tl-date">8/18<span>6일 후</span></div>
+        <div class="tl-desc">SD 리마케팅 새 타겟(비슷한 상품 조회자)의 실제 반응 · 김보은C1 예산 인상($20→$30) 효과 확인</div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">8/19<span>7일 후</span></div>
+        <div class="tl-desc">SB 캠페인 30→10 통합 결과 · 검색 상단(TOS) 배율 인상 효과, 두 건 동시 판정</div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">8/18 주<span>다음 주</span></div>
+        <div class="tl-desc">빅 프로모션(BDD) 준비 착수 — 재고 인바운드 판단부터 시작</div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">9/8<span>4주 후</span></div>
+        <div class="tl-desc">SP 자동광고 입찰방식 실험(Up&Down vs 기존방식) 최종 판정</div>
+      </li>
+      <li class="tl-item">
+        <div class="tl-date">11/9<span>~11/10</span></div>
+        <div class="tl-desc">장바구니 프로모션 2건 종료일 — 그 전까지는 언제든 소진 현황 확인 가능, 조기 종료도 가능</div>
+      </li>
+    </ul>
+  </div>
+
+  <footer class="close">
+    8주차 주간보고서(2026-08-02~08-08 성과기간, 2026-08-11 발행) + 2026-08-11~08-12 changelog 기준으로 정리. 모든 항목의 원 출처(정확한 수치·집행 스크립트·재조회 검증 결과)는 <code>30_growth/marketing/us/performance/changelog.md</code>에 시간순으로 기록돼 있다.
+  </footer>
+
+</div>
+
+</body>
+</html>
