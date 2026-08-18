@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>마녀공장(Manyo) 완전판 — 회사·성장공식·광고 시스템 전부 (2026-08-18)</title>
+<link rel="stylesheet" href="https://use.typekit.net/ycy6gis.css">
+<style>
+:root{
+  --y:#E6EE7A;            /* Derma Yellow — 브랜드 기준색 (PANTONE 379 U) */
+  --y-bg:#fefcd0;         /* 배경 그라디언트 상단 (크림) */
+  --line-y:#ddea65;       /* 박스 테두리 강조선 */
+  --hl:#ddf746;           /* 형광펜 — 글자 뒤에 30%로 깐다 */
+  --olive:#4b612d;        /* 웹 제목글 */
+  --pkg:#59653c;          /* 패키지 글자색 */
+  --num:#025200;          /* 수치·짧은 강조 (문단 단위 사용 금지) */
+  --ink:#000;
+  --mute:rgba(0,0,0,.65); /* 타사·비강조 */
+  --line:#e6e2cf;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:"neue-haas-grotesk-text","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;
+  --serif:"adobe-caslon-pro",'Apple Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:400;color:var(--ink);
+  background:linear-gradient(180deg,var(--y-bg) 0,#fff 620px) no-repeat #fff;
+  line-height:1.68;font-size:15px;letter-spacing:-.02em;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px 100px}
+
+/* 표지 */
+header.cover{padding:64px 22px 40px;background:linear-gradient(170deg,var(--y) 0,var(--y-bg) 78%,transparent);
+  border-bottom:2px solid var(--ink)}
+.cover-in{max-width:1020px;margin:0 auto}
+.mark{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:.01em;color:var(--pkg)}
+.eyebrow{margin-top:26px;font-size:12px;font-weight:700;letter-spacing:.11em;color:var(--olive);text-transform:uppercase}
+.cover h1{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4.6vw,46px);line-height:1.2;
+  margin-top:12px;letter-spacing:-.015em}
+.cover h1 em{font-style:normal;background:linear-gradient(transparent 62%,rgba(221,247,70,.75) 62%)}
+.cover .sub{margin-top:18px;font-size:16px;line-height:1.72;max-width:64ch;color:#2a2a1e}
+.chips{margin-top:24px;display:flex;flex-wrap:wrap;gap:7px}
+.chips span{background:var(--ink);color:var(--y);font-size:11.5px;font-weight:600;
+  padding:5px 11px;border-radius:99px;letter-spacing:.01em}
+.meta-line{margin-top:20px;font-size:12.5px;color:var(--pkg);line-height:1.85}
+
+/* 목차 */
+nav.toc{background:var(--ink);color:#fff;position:sticky;top:0;z-index:60;
+  padding:10px 22px;font-size:12.5px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc .in{max-width:1020px;margin:0 auto}
+nav.toc b{color:var(--y);margin-right:9px;font-weight:700}
+nav.toc a{color:#bdbdb2;text-decoration:none;margin-right:13px;display:inline-block}
+nav.toc a:hover{color:var(--y)}
+
+/* 파트 구분 */
+.part{margin:78px 0 0;padding:26px 0 0;border-top:2px solid var(--ink)}
+.part .roman{font-family:var(--serif);font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--olive)}
+.part h2.pt{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.28;margin-top:5px;letter-spacing:-.01em}
+.part .desc{margin-top:9px;font-size:14px;color:#3a3a30;max-width:70ch}
+
+/* 섹션 */
+section.sec{margin-top:46px;scroll-margin-top:56px}
+h2.sh{font-size:21px;font-weight:700;line-height:1.36;letter-spacing:-.03em;
+  padding-bottom:9px;border-bottom:2px solid var(--line-y);display:flex;align-items:baseline;gap:10px}
+h2.sh .n{flex:none;font-family:var(--mono);font-size:12px;font-weight:700;background:var(--ink);color:var(--y);
+  border-radius:99px;padding:3px 9px;letter-spacing:0}
+.tagnew{flex:none;font-size:11px;font-weight:700;letter-spacing:.02em;background:var(--hl);
+  border:1px solid var(--ink);border-radius:99px;padding:2px 8px;align-self:center}
+.srcline{margin-top:7px;font-size:11.5px;color:var(--mute);font-family:var(--mono);letter-spacing:0}
+.secbody{margin-top:16px}
+
+/* 접힌 원본 판본 */
+details.alt{margin:20px 0 0;border:1px dashed rgba(0,0,0,.32);border-radius:11px;background:#fcfcf4}
+details.alt>summary{cursor:pointer;padding:11px 15px;font-size:13px;font-weight:500;color:var(--olive);
+  list-style:none;display:flex;align-items:center;gap:8px}
+details.alt>summary::-webkit-details-marker{display:none}
+details.alt>summary::marker{content:""}
+details.alt>summary::before{content:"▸";font-size:11px;transition:transform .15s}
+details.alt[open]>summary::before{transform:rotate(90deg)}
+details.alt>summary:hover{background:var(--y-bg);border-radius:10px}
+.alt-in{padding:4px 16px 18px;border-top:1px dashed rgba(0,0,0,.18)}
+
+/* 신규 집필 블록 */
+.n-lead{font-size:15.5px;line-height:1.78;background:var(--y-bg);border-left:4px solid var(--ink);
+  padding:15px 18px;margin:0 0 18px;border-radius:0 10px 10px 0}
+.n-lead b{font-weight:700}
+.secbody>h3,.alt-in>h3{font-size:17px;font-weight:700;letter-spacing:-.03em;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line-y)}
+.hl{background:linear-gradient(transparent 60%,rgba(221,247,70,.7) 60%)}
+.big{color:var(--num);font-weight:700;font-variant-numeric:tabular-nums}
+.n-tbl{overflow-x:auto;margin:18px 0}
+.n-tbl table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:620px}
+.n-tbl th{background:var(--ink);color:#fff;text-align:left;padding:9px 11px;font-weight:600;white-space:nowrap}
+.n-tbl td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top;line-height:1.6}
+.n-tbl tr:hover td{background:var(--y-bg)}
+.n-tbl td.r,.n-tbl th.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:12.5px}
+.n-tbl caption{caption-side:bottom;text-align:left;font-size:12px;color:var(--mute);padding-top:8px}
+.n-grid{display:grid;gap:12px;margin:18px 0}
+.c2{grid-template-columns:repeat(2,1fr)}.c3{grid-template-columns:repeat(3,1fr)}.c4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:720px){.c2,.c3,.c4{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.c2,.c3,.c4{grid-template-columns:1fr}}
+.n-card{border:1.5px solid var(--ink);border-radius:12px;padding:15px 16px;background:#fff}
+.n-card.y{background:var(--y-bg)}
+.n-card .v{font-size:23px;font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--num)}
+.n-card .l{font-size:12.5px;line-height:1.5;margin-top:4px}
+.n-card h4{font-size:14px;font-weight:700;margin-bottom:6px}
+.n-card p{font-size:13.5px;line-height:1.66}
+.phase{border:1.5px solid var(--ink);border-radius:12px;padding:15px 17px;margin:12px 0;background:#fff}
+.phase .ph{font-family:var(--mono);font-size:11.5px;font-weight:700;color:var(--olive);letter-spacing:.06em}
+.phase h4{font-size:15.5px;font-weight:700;margin:3px 0 7px;letter-spacing:-.02em}
+.phase p{font-size:14px;line-height:1.72}
+.take{border:2px solid var(--ink);border-radius:13px;padding:17px 19px;margin:20px 0;background:var(--y)}
+.take .t{font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--pkg);text-transform:uppercase}
+.take .b{font-size:17px;font-weight:700;line-height:1.5;margin-top:7px;letter-spacing:-.03em}
+.take .b em{font-style:normal;background:#fff;padding:0 5px;border-radius:3px}
+.avoid{border:1.5px solid #c0392b;border-radius:12px;padding:15px 17px;margin:16px 0;background:#fff8f7}
+.avoid b:first-child{color:#c0392b}
+.wedge2{border:1.5px solid var(--olive);border-radius:12px;padding:15px 17px;margin:16px 0;background:#f7fbf3}
+.wedge2 b:first-child{color:var(--olive)}
+.n-list{margin:16px 0;padding:0;list-style:none;counter-reset:q}
+.n-list>li{counter-increment:q;position:relative;padding:13px 16px 13px 48px;border:1.5px solid var(--ink);
+  border-radius:11px;margin-bottom:9px;background:#fff;font-size:14px;line-height:1.66}
+.n-list>li::before{content:counter(q);position:absolute;left:14px;top:12px;width:23px;height:23px;
+  background:var(--ink);color:var(--y);border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700}
+.n-list>li b:first-child{display:block;margin-bottom:2px}
+.quote-o{border-left:4px solid var(--olive);background:#fafaf2;border-radius:0 9px 9px 0;
+  padding:13px 17px;margin:14px 0;font-size:14px;line-height:1.74}
+.quote-o .who{display:block;font-size:11px;font-weight:700;color:var(--olive);letter-spacing:.05em;margin-bottom:6px}
+.mono{font-family:var(--mono);font-size:.9em;background:var(--y-bg);padding:1px 5px;border-radius:4px;letter-spacing:0}
+.note-s{font-size:12.5px;color:var(--mute);margin-top:9px;line-height:1.65}
+footer.end{margin-top:80px;padding:26px 0 0;border-top:2px solid var(--ink);font-size:12.5px;
+  color:#4a4a3e;line-height:1.85}
+footer.end b{color:var(--ink)}
+.up{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--ink);color:var(--y);
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;text-decoration:none;
+  font-size:16px;box-shadow:0 3px 14px rgba(0,0,0,.22)}
+@media print{nav.toc,.up{display:none}details.alt{border:none}details.alt>summary{display:none}}
+
+.s-td{
+    --yellow:#F7DE5A; --yellow-bg:#FEF8D9; --yellow-panel:#FBE96B;
+    --data-gold:#A8871C; --ink:#1f1f1f; --ink-2:#555; --ink-3:#8a8a8a;
+    --surface:#fff; --line:#e8e4d8; --red:#e23b3b; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  }.s-td *{box-sizing:border-box;margin:0;padding:0}.s-td{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--surface);line-height:1.65;font-size:15px}.s-td .wrap{max-width:980px;margin:0 auto;padding:0 20px 80px}.s-td header.hero{background:var(--yellow);padding:44px 20px 36px}.s-td .hero-in{max-width:980px;margin:0 auto}.s-td .hero h1{font-size:27px;line-height:1.3;letter-spacing:-.3px}.s-td .hero .sub{margin-top:10px;font-size:14.5px;color:#3a3208}.s-td .badges{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}.s-td .badge{background:var(--ink);color:#fff;font-size:12px;padding:4px 10px;border-radius:99px}.s-td nav.toc{background:var(--ink);color:#fff;padding:12px 20px;position:sticky;top:0;z-index:50;font-size:12.5px;overflow-x:auto;white-space:nowrap}.s-td nav.toc .in{max-width:980px;margin:0 auto}.s-td nav.toc a{color:#ddd;text-decoration:none;margin-right:14px;display:inline-block}.s-td nav.toc a:hover{color:var(--yellow)}.s-td h2{font-size:20px;margin:54px 0 6px;padding-top:14px;border-top:3px solid var(--ink);letter-spacing:-.2px;scroll-margin-top:56px}.s-td h2 .no{display:inline-block;background:var(--ink);color:var(--yellow);font-size:13px;padding:1px 9px;border-radius:99px;margin-right:8px;vertical-align:3px}.s-td h3{font-size:15.5px;margin:26px 0 8px}.s-td p{margin:8px 0}.s-td .lead{font-size:15.5px;background:var(--yellow-bg);border-left:4px solid var(--ink);padding:14px 16px;margin:18px 0;border-radius:0 8px 8px 0}.s-td .decision{background:var(--yellow);padding:16px 18px;border-radius:12px;margin:18px 0;font-size:14.5px;border:2px solid var(--ink)}.s-td .decision b.t{display:block;font-size:15.5px;margin-bottom:4px}.s-td .muted{color:var(--ink-2);font-size:13.5px}.s-td .small{font-size:12.5px;color:var(--ink-3)}.s-td .grid{display:grid;gap:12px;margin:16px 0}.s-td .g2{grid-template-columns:repeat(2,1fr)}.s-td .g3{grid-template-columns:repeat(3,1fr)}.s-td .g4{grid-template-columns:repeat(4,1fr)}@media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr 1fr}}.s-td .card{border:1.5px solid var(--ink);border-radius:12px;padding:14px 15px;background:#fff}.s-td .card.y{background:var(--yellow-bg)}.s-td .stat .v{font-size:24px;font-weight:800;letter-spacing:-.5px}.s-td .stat .l{font-size:12.5px;color:var(--ink-2);margin-top:2px;line-height:1.45}.s-td .warn{border:1.5px solid var(--red);border-radius:12px;padding:14px 16px;margin:14px 0;background:#fff7f7}.s-td .warn b:first-child{color:var(--red)}.s-td .frames{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}@media(max-width:560px){.frames{grid-template-columns:1fr}}.s-td .frames figure{border:1.5px solid var(--ink);border-radius:10px;overflow:hidden;background:#fff}.s-td .frames img{width:100%;display:block}.s-td .frames figcaption{padding:8px 11px;font-size:12.5px;color:var(--ink-2);border-top:1px solid var(--line)}.s-td .player{border:1.5px solid var(--ink);border-radius:12px;overflow:hidden;background:#111;margin:16px 0}.s-td .player video{width:100%;display:block;max-height:70vh;background:#111}.s-td .player .bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;padding:9px 12px;background:var(--yellow);font-size:12.5px;color:#3a3208}.s-td .player .bar b{font-size:13px;color:var(--ink)}.s-td .player .bar .meta{font-family:var(--mono);font-size:11.5px}.s-td table{border-collapse:collapse;width:100%;font-size:13.5px;margin:12px 0}.s-td .tbl-scroll{overflow-x:auto;margin:12px 0}.s-td .tbl-scroll table{min-width:560px;margin:0}.s-td th{background:var(--ink);color:#fff;text-align:left;padding:8px 10px;font-weight:600;white-space:nowrap}.s-td td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top}.s-td tr:hover td{background:var(--yellow-bg)}.s-td .arch{display:grid;grid-template-columns:330px 1fr;gap:18px;border:1.5px solid var(--ink);border-radius:14px;padding:16px;margin:16px 0;background:#fff}@media(max-width:760px){.arch{grid-template-columns:1fr}}.s-td .arch .imgs{display:flex;flex-direction:column;gap:9px}.s-td .arch img{width:100%;border-radius:8px;border:1px solid var(--line);display:block}.s-td .arch .cap{font-size:11.5px;color:var(--ink-3);margin-top:-5px;font-family:var(--mono)}.s-td .arch h3{font-size:16.5px;margin:0 0 6px}.s-td .arch h3 .k{display:inline-block;background:var(--yellow);border:1.5px solid var(--ink);border-radius:7px;padding:0 8px;margin-right:7px;font-size:13px}.s-td .blk{margin:9px 0}.s-td .blk .lbl{font-size:11.5px;font-weight:800;letter-spacing:.1em;color:var(--ink-2)}.s-td .quote{font-family:var(--mono);font-size:12.5px;background:#f6f4ec;border-left:3px solid var(--ink);padding:8px 11px;border-radius:0 7px 7px 0;margin:5px 0;white-space:pre-wrap}.s-td .adapt{background:var(--yellow-bg);border:1.5px dashed var(--ink);border-radius:10px;padding:11px 13px;margin-top:10px;font-size:13.5px}.s-td .adapt .lbl{color:#7a6410}.s-td .steps{display:flex;flex-direction:column;margin:16px 0}.s-td .step{display:flex;gap:14px}.s-td .step .dot{width:34px;min-width:34px;display:flex;flex-direction:column;align-items:center}.s-td .step .dot .c{min-width:30px;height:26px;padding:0 4px;border-radius:99px;background:var(--yellow);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:800}.s-td .step .dot .bar{width:2px;flex:1;background:var(--ink);min-height:14px}.s-td .step:last-child .dot .bar{display:none}.s-td .step .body{padding-bottom:18px}.s-td .step .t{font-weight:700;font-size:14.5px}.s-td .step .d{font-size:13.5px;color:var(--ink-2);margin-top:2px}.s-td .chart{margin:14px 0 6px}.s-td .chart .title{font-weight:700;font-size:14px;margin-bottom:8px}.s-td .brow{display:flex;align-items:center;gap:10px;margin:5px 0}.s-td .brow .yl{width:64px;min-width:64px;font-size:12.5px;color:var(--ink-2);text-align:right}.s-td .brow .track{flex:1;display:flex;align-items:center;gap:8px}.s-td .brow .bar{height:20px;border-radius:0 4px 4px 0;transition:opacity .15s}.s-td .brow:hover .bar{opacity:.75}.s-td .brow .val{font-size:12.5px;font-weight:700;white-space:nowrap}.s-td .bar.gold{background:var(--data-gold)}.s-td .bar.black{background:var(--ink)}.s-td .bar.part{background:repeating-linear-gradient(45deg,var(--data-gold),var(--data-gold) 4px,#d9c896 4px,#d9c896 8px)}.s-td .bar.partb{background:repeating-linear-gradient(45deg,var(--ink),var(--ink) 4px,#9a9a9a 4px,#9a9a9a 8px)}.s-td .adid{font-family:var(--mono);font-size:13px;background:var(--ink);color:#fff;padding:12px 14px;border-radius:10px;overflow-x:auto;white-space:nowrap;margin:10px 0}.s-td .adid .hl{color:var(--yellow)}.s-td .copybox{font-family:var(--mono);font-size:12.5px;background:var(--yellow-bg);border:1.5px dashed var(--ink);border-radius:10px;padding:12px 14px;margin:10px 0;white-space:pre-wrap}.s-td .flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:14px 0}.s-td .flow .fbox{border:1.5px solid var(--ink);border-radius:10px;padding:9px 12px;font-size:13px;background:#fff;flex:1;min-width:150px}.s-td .flow .fbox b{display:block;font-size:13.5px}.s-td .flow .arr{align-self:center;font-weight:800;font-size:16px}.s-td ul.tight{margin:8px 0 8px 18px}.s-td ul.tight li{margin:5px 0}.s-td ol.tight{margin:8px 0 8px 20px}.s-td ol.tight li{margin:7px 0}.s-td .tag{display:inline-block;background:var(--yellow-panel);border:1px solid var(--ink);border-radius:6px;font-size:11.5px;padding:1px 7px;margin:1px 2px;font-weight:600}.s-td .prio{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.s-td .prio .p{border:1.5px solid var(--ink);border-radius:10px;padding:10px 13px;flex:1;min-width:175px;font-size:13.5px;background:#fff}.s-td .prio .p b{display:block;font-size:14px;margin-bottom:2px}.s-td .prio .p .n{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--yellow);text-align:center;line-height:22px;font-size:12px;font-weight:800;margin-right:6px}.s-td code{font-family:var(--mono);font-size:12.5px;background:#f6f4ec;padding:1px 6px;border-radius:5px}.s-td .kicker{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--ink-2);text-transform:uppercase;margin-top:44px}.s-td .src{font-size:12px;color:var(--ink-3);line-height:1.8;margin-top:10px}.s-full{--y:#E6EE7A;--y-bg:#fefcd0;--ink:#000;--ink-2:#3f3f36;--ink-3:#7a7a6e;--olive:#4b612d;
+    --gold:#a8871c;--red:#c0392b;--line:#e6e2cf;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}.s-full *{box-sizing:border-box;margin:0;padding:0}.s-full{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",Segoe UI,Roboto,sans-serif;
+    color:var(--ink);background:#fff;line-height:1.66;font-size:15px;letter-spacing:-.01em}.s-full .wrap{max-width:1000px;margin:0 auto;padding:0 20px 90px}.s-full header.hero{background:linear-gradient(180deg,var(--y),var(--y-bg));padding:46px 20px 34px}.s-full .hero-in{max-width:1000px;margin:0 auto}.s-full .eyebrow{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.06em}.s-full .hero h1{font-size:29px;line-height:1.28;margin-top:10px;letter-spacing:-.5px}.s-full .hero .sub{margin-top:12px;font-size:15px;color:#39381f;max-width:72ch}.s-full .badges{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}.s-full .badge{background:var(--ink);color:var(--y);font-size:12px;padding:5px 11px;border-radius:99px;font-weight:600}.s-full nav.toc{background:var(--ink);color:#fff;padding:11px 20px;position:sticky;top:0;z-index:50;font-size:12.5px;
+    overflow-x:auto;white-space:nowrap}.s-full nav.toc .in{max-width:1000px;margin:0 auto}.s-full nav.toc a{color:#ccc;text-decoration:none;margin-right:14px;display:inline-block}.s-full nav.toc a:hover{color:var(--y)}.s-full h2{font-size:21px;margin:56px 0 8px;padding-top:15px;border-top:3px solid var(--ink);scroll-margin-top:54px;letter-spacing:-.3px}.s-full h2 .no{display:inline-block;background:var(--ink);color:var(--y);font-size:13px;padding:1px 10px;border-radius:99px;
+    margin-right:9px;vertical-align:3px}.s-full h3{font-size:16px;margin:28px 0 8px}.s-full p{margin:9px 0}.s-full .lead{font-size:15.5px;background:var(--y-bg);border-left:4px solid var(--ink);padding:14px 17px;margin:18px 0;border-radius:0 9px 9px 0}.s-full .verdict{background:var(--y);border:2px solid var(--ink);border-radius:13px;padding:18px 20px;margin:20px 0}.s-full .verdict .t{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.05em}.s-full .verdict .b{font-size:18px;font-weight:800;margin-top:6px;line-height:1.45;letter-spacing:-.3px}.s-full .grid{display:grid;gap:12px;margin:16px 0}.s-full .g2{grid-template-columns:repeat(2,1fr)}.s-full .g3{grid-template-columns:repeat(3,1fr)}.s-full .g4{grid-template-columns:repeat(4,1fr)}@media(max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr 1fr}}.s-full .card{border:1.5px solid var(--ink);border-radius:12px;padding:15px 16px;background:#fff}.s-full .card.y{background:var(--y-bg)}.s-full .stat .v{font-size:24px;font-weight:800;letter-spacing:-.6px;font-variant-numeric:tabular-nums}.s-full .stat .l{font-size:12.5px;color:var(--ink-2);margin-top:3px;line-height:1.45}.s-full .chart{width:100%;height:auto;display:block;margin:6px 0 2px;background:#fff;border:1.5px solid var(--ink);border-radius:12px;padding:4px}.s-full .chart .grid{stroke:var(--line);stroke-width:1}.s-full .chart .ax{font-size:11px;fill:var(--ink-3);font-family:var(--mono)}.s-full .chart .peak{font-size:12px;font-weight:800;fill:var(--ink)}.s-full .cap{font-size:12.5px;color:var(--ink-2);margin:4px 0 20px}.s-full .tbl-scroll{overflow-x:auto;margin:14px 0}.s-full table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:600px}.s-full th{background:var(--ink);color:#fff;text-align:left;padding:9px 11px;font-weight:600;white-space:nowrap}.s-full td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}.s-full tr:hover td{background:var(--y-bg)}.s-full td.num,.s-full th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}.s-full .ladder{border:1.5px solid var(--ink);border-radius:12px;padding:16px 18px;margin:16px 0;background:#fbfaf0;
+    font-family:var(--mono);font-size:12.5px;line-height:2;overflow-x:auto;white-space:pre}.s-full .vs{display:grid;grid-template-columns:1fr auto 1fr;border:2px solid var(--ink);border-radius:13px;overflow:hidden;margin:18px 0}.s-full .vs .col{padding:16px 18px}.s-full .vs .col.a{background:#fbfaf0}.s-full .vs .col.m{background:var(--y-bg)}.s-full .vs .mid{background:var(--ink);color:#fff;display:grid;place-items:center;padding:0 12px;font-size:12px;font-weight:800}.s-full .vs h4{font-size:14px;margin-bottom:8px}.s-full .vs ul{margin:0;padding-left:17px;font-size:13.5px;line-height:1.72}@media(max-width:640px){.vs{grid-template-columns:1fr} .vs .mid{padding:6px}}.s-full .frames{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}.s-full .frames.f3{grid-template-columns:repeat(3,1fr)}@media(max-width:760px){.frames,.frames.f3{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.frames,.frames.f3{grid-template-columns:1fr}}.s-full figure{border:1.5px solid var(--ink);border-radius:11px;overflow:hidden;background:#fff}.s-full figure img{width:100%;display:block}.s-full figcaption{padding:8px 10px;font-size:12px;color:var(--ink-2);border-top:1px solid var(--line);line-height:1.5}.s-full .player{border:2px solid var(--ink);border-radius:12px;overflow:hidden;background:#111;margin:16px 0}.s-full .player video{width:100%;display:block;max-height:64vh;background:#111}.s-full .player .bar{padding:9px 13px;background:var(--y);font-size:12.5px;color:#39381f}.s-full .player .bar b{color:var(--ink)}.s-full blockquote{background:#fafaf3;border:1px solid var(--line);border-left:4px solid var(--olive);border-radius:0 9px 9px 0;
+    padding:14px 17px;margin:14px 0;font-size:14px;line-height:1.75}.s-full blockquote .who{display:block;font-size:11.5px;font-weight:800;color:var(--olive);letter-spacing:.04em;margin-bottom:7px}.s-full pre.code{background:#1c1c18;color:#e9e6d5;border-radius:11px;padding:15px 17px;margin:14px 0;font-family:var(--mono);
+    font-size:12.5px;line-height:1.75;overflow-x:auto}.s-full pre.code b{color:var(--y)}.s-full .score{display:grid;grid-template-columns:auto 1fr auto;gap:10px 14px;align-items:center;margin:14px 0;font-size:14px}.s-full .score .bar{height:9px;background:var(--line);border-radius:99px;overflow:hidden}.s-full .score .bar i{display:block;height:100%;background:var(--olive);border-radius:99px}.s-full .score .n{font-weight:800;font-variant-numeric:tabular-nums}.s-full ol.steal{margin:14px 0;padding-left:0;list-style:none;counter-reset:s}.s-full ol.steal li{counter-increment:s;position:relative;padding:13px 15px 13px 46px;border:1.5px solid var(--ink);
+    border-radius:11px;margin-bottom:10px;background:#fff;font-size:14px;line-height:1.62}.s-full ol.steal li::before{content:counter(s);position:absolute;left:13px;top:12px;width:23px;height:23px;background:var(--ink);
+    color:var(--y);border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:800}.s-full ol.steal li b{display:block;margin-bottom:2px}.s-full .chip{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--y);
+    border:1px solid var(--ink);margin-left:6px;vertical-align:1px}.s-full .warn{border:1.5px solid var(--red);border-radius:12px;padding:15px 17px;margin:16px 0;background:#fff7f6}.s-full .warn b:first-child{color:var(--red)}.s-full .wedge{border:2px solid var(--olive);border-radius:12px;padding:15px 17px;margin:16px 0;background:#f6faf2}.s-full .wedge b:first-child{color:var(--olive)}.s-full .unk{border:1px dashed var(--ink-3);border-radius:10px;padding:13px 16px;margin:14px 0;font-size:13px;color:var(--ink-2)}.s-full footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);line-height:1.7}.s-full code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 5px;border-radius:4px}.s-up{--y:#E6EE7A;--y-bg:#fefcd0;--ink:#000;--ink-2:#3f3f36;--ink-3:#7a7a6e;--olive:#4b612d;
+    --gold:#a8871c;--red:#c0392b;--line:#e6e2cf;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}.s-up *{box-sizing:border-box;margin:0;padding:0}.s-up{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",Segoe UI,Roboto,sans-serif;
+    color:var(--ink);background:#fff;line-height:1.66;font-size:15px;letter-spacing:-.01em}.s-up .wrap{max-width:1000px;margin:0 auto;padding:0 20px 90px}.s-up header.hero{background:linear-gradient(180deg,var(--y),var(--y-bg));padding:46px 20px 34px}.s-up .hero-in{max-width:1000px;margin:0 auto}.s-up .eyebrow{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.06em}.s-up .hero h1{font-size:29px;line-height:1.28;margin-top:10px;letter-spacing:-.5px}.s-up .hero .sub{margin-top:12px;font-size:15px;color:#39381f;max-width:72ch}.s-up .badges{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}.s-up .badge{background:var(--ink);color:var(--y);font-size:12px;padding:5px 11px;border-radius:99px;font-weight:600}.s-up nav.toc{background:var(--ink);color:#fff;padding:11px 20px;position:sticky;top:0;z-index:50;font-size:12.5px;
+    overflow-x:auto;white-space:nowrap}.s-up nav.toc .in{max-width:1000px;margin:0 auto}.s-up nav.toc a{color:#ccc;text-decoration:none;margin-right:15px;display:inline-block}.s-up nav.toc a:hover{color:var(--y)}.s-up h2{font-size:21px;margin:56px 0 8px;padding-top:15px;border-top:3px solid var(--ink);scroll-margin-top:54px;letter-spacing:-.3px}.s-up h2 .no{display:inline-block;background:var(--ink);color:var(--y);font-size:13px;padding:1px 10px;border-radius:99px;
+    margin-right:9px;vertical-align:3px}.s-up h3{font-size:16px;margin:26px 0 8px}.s-up p{margin:9px 0}.s-up .lead{font-size:15.5px;background:var(--y-bg);border-left:4px solid var(--ink);padding:14px 17px;margin:18px 0;border-radius:0 9px 9px 0}.s-up .verdict{background:var(--y);border:2px solid var(--ink);border-radius:13px;padding:18px 20px;margin:20px 0}.s-up .verdict .t{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.05em}.s-up .verdict .b{font-size:18px;font-weight:800;margin-top:6px;line-height:1.45;letter-spacing:-.3px}.s-up .grid{display:grid;gap:12px;margin:16px 0}.s-up .g2{grid-template-columns:repeat(2,1fr)}.s-up .g4{grid-template-columns:repeat(4,1fr)}@media(max-width:680px){.g2,.g4{grid-template-columns:1fr 1fr}}.s-up .card{border:1.5px solid var(--ink);border-radius:12px;padding:15px 16px;background:#fff}.s-up .card.y{background:var(--y-bg)}.s-up .stat .v{font-size:25px;font-weight:800;letter-spacing:-.6px;font-variant-numeric:tabular-nums}.s-up .stat .l{font-size:12.5px;color:var(--ink-2);margin-top:3px;line-height:1.45}.s-up .chart{width:100%;height:auto;display:block;margin:6px 0 2px;background:#fff;border:1.5px solid var(--ink);
+    border-radius:12px;padding:4px}.s-up .chart .grid{stroke:var(--line);stroke-width:1}.s-up .chart .ax{font-size:11px;fill:var(--ink-3);font-family:var(--mono)}.s-up .chart .peak{font-size:12px;font-weight:800;fill:var(--ink)}.s-up .cap{font-size:12.5px;color:var(--ink-2);margin:4px 0 20px}.s-up .tbl-scroll{overflow-x:auto;margin:14px 0}.s-up table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:600px}.s-up th{background:var(--ink);color:#fff;text-align:left;padding:9px 11px;font-weight:600;white-space:nowrap}.s-up td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}.s-up tr:hover td{background:var(--y-bg)}.s-up td.num,.s-up th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}.s-up .vs{display:grid;grid-template-columns:1fr auto 1fr;gap:0;border:2px solid var(--ink);border-radius:13px;
+    overflow:hidden;margin:18px 0}.s-up .vs .col{padding:16px 18px}.s-up .vs .col.a{background:#fbfaf0}.s-up .vs .col.m{background:var(--y-bg)}.s-up .vs .mid{background:var(--ink);color:#fff;display:grid;place-items:center;padding:0 12px;font-size:12px;font-weight:800}.s-up .vs h4{font-size:14px;margin-bottom:8px;letter-spacing:-.2px}.s-up .vs ul{margin:0;padding-left:17px;font-size:13.5px;line-height:1.72}@media(max-width:640px){.vs{grid-template-columns:1fr} .vs .mid{padding:6px}}.s-up .frames{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}@media(max-width:760px){.frames{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.frames{grid-template-columns:1fr}}.s-up figure{border:1.5px solid var(--ink);border-radius:11px;overflow:hidden;background:#fff}.s-up figure img{width:100%;display:block}.s-up figcaption{padding:9px 11px;font-size:12.5px;color:var(--ink-2);border-top:1px solid var(--line);line-height:1.5}.s-up blockquote{background:#fafaf3;border:1px solid var(--line);border-left:4px solid var(--olive);
+    border-radius:0 9px 9px 0;padding:14px 17px;margin:14px 0;font-size:14px;line-height:1.75}.s-up blockquote .who{display:block;font-size:11.5px;font-weight:800;color:var(--olive);letter-spacing:.04em;margin-bottom:7px}.s-up .score{display:grid;grid-template-columns:auto 1fr auto;gap:10px 14px;align-items:center;margin:14px 0;font-size:14px}.s-up .score .bar{height:9px;background:var(--line);border-radius:99px;overflow:hidden}.s-up .score .bar i{display:block;height:100%;background:var(--olive);border-radius:99px}.s-up .score .n{font-weight:800;font-variant-numeric:tabular-nums}.s-up ol.steal{margin:14px 0;padding-left:0;list-style:none;counter-reset:s}.s-up ol.steal li{counter-increment:s;position:relative;padding:13px 15px 13px 46px;border:1.5px solid var(--ink);
+    border-radius:11px;margin-bottom:10px;background:#fff;font-size:14px;line-height:1.62}.s-up ol.steal li::before{content:counter(s);position:absolute;left:13px;top:12px;width:23px;height:23px;background:var(--ink);
+    color:var(--y);border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:800}.s-up ol.steal li b{display:block;margin-bottom:2px}.s-up .chip{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--y);
+    border:1px solid var(--ink);margin-left:6px;vertical-align:1px}.s-up .warn{border:1.5px solid var(--red);border-radius:12px;padding:15px 17px;margin:16px 0;background:#fff7f6}.s-up .warn b:first-child{color:var(--red)}.s-up .wedge{border:2px solid var(--olive);border-radius:12px;padding:15px 17px;margin:16px 0;background:#f6faf2}.s-up .wedge b:first-child{color:var(--olive)}.s-up footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);line-height:1.7}.s-up code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 5px;border-radius:4px}.s-sw *{box-sizing:border-box;margin:0;padding:0}.s-sw{font-family:Pretendard,"Noto Sans KR",-apple-system,sans-serif;letter-spacing:-.02em;
+ color:#000;background:linear-gradient(#fefcd0,#fff 700px) #fff;line-height:1.72;
+ padding:0 20px 100px;-webkit-font-smoothing:antialiased}.s-sw .wrap{max-width:1060px;margin:0 auto}.s-sw header{padding:72px 0 40px}.s-sw .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#4b612d;font-weight:700}.s-sw h1{font-size:clamp(30px,4.4vw,46px);line-height:1.24;margin:14px 0 20px;letter-spacing:-.035em}.s-sw .lede{font-size:19px;max-width:760px;color:#000}.s-sw .verdict{margin:30px 0;padding:24px 28px;background:#fff;border:2px solid #ddea65;border-radius:14px;font-size:17px}.s-sw .verdict.small{font-size:16px;margin:26px 0 0}.s-sw .verdict b{background:linear-gradient(transparent 58%,rgba(221,247,70,.55) 58%)}.s-sw .meta{margin-top:22px;font-size:13px;color:rgba(0,0,0,.65)}.s-sw .meta code,.s-sw .inv code,.s-sw footer code{font-size:12px;background:rgba(0,0,0,.05);padding:2px 6px;border-radius:4px}.s-sw .toc{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 10px;padding:16px 0;border-top:1px solid rgba(0,0,0,.12);border-bottom:1px solid rgba(0,0,0,.12)}.s-sw .toc a{font-size:13.5px;text-decoration:none;color:#000;padding:6px 13px;border:1px solid rgba(0,0,0,.18);border-radius:999px;white-space:nowrap}.s-sw .toc a:hover{background:#ddea65;border-color:#ddea65}.s-sw section{padding:56px 0;border-top:1px solid rgba(0,0,0,.1)}.s-sw h2{font-size:clamp(23px,3vw,31px);letter-spacing:-.03em;display:flex;gap:14px;align-items:baseline}.s-sw .num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:34px;height:34px;
+ background:#E6EE7A;border-radius:9px;font-size:16px;font-weight:800;color:#000}.s-sw h3{font-size:20px;margin:44px 0 10px;letter-spacing:-.03em;color:#4b612d}.s-sw h4{font-size:16px;margin:0 0 8px}.s-sw .sub{margin:12px 0 0 48px;font-size:15.5px;color:rgba(0,0,0,.7)}.s-sw p{margin:12px 0}.s-sw ul,.s-sw ol{margin:10px 0 10px 22px}.s-sw li{margin:5px 0}.s-sw .tag{font-size:11px;background:rgba(0,0,0,.08);padding:3px 9px;border-radius:999px;vertical-align:middle;letter-spacing:0;font-weight:600}.s-sw .tag.prio{background:#e23b3b;color:#fff}.s-sw figure{margin:0}.s-sw figure img,.s-sw figure video{width:100%;height:auto;display:block;border-radius:10px;background:#f4f4f4;border:1px solid rgba(0,0,0,.1)}.s-sw figcaption{font-size:13px;color:rgba(0,0,0,.72);margin-top:9px;line-height:1.6}.s-sw .two,.s-sw .three{display:grid;gap:20px;margin:22px 0}.s-sw .two{grid-template-columns:repeat(2,1fr)}.s-sw .three{grid-template-columns:repeat(3,1fr)}.s-sw .wide{margin:24px 0}.s-sw table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14.5px}.s-sw th,.s-sw td{border:1px solid rgba(0,0,0,.14);padding:11px 13px;text-align:left;vertical-align:top}.s-sw th{background:rgba(230,238,122,.4);font-weight:700}.s-sw .brief th{width:150px;background:rgba(0,0,0,.04);white-space:nowrap}.s-sw .gap .them{color:rgba(0,0,0,.72)}.s-sw .gap .us{font-weight:700}.s-sw .why,.s-sw .ours,.s-sw .anat,.s-sw .gate{margin:22px 0;padding:20px 24px;border-radius:12px}.s-sw .why{background:rgba(230,238,122,.28)}.s-sw .ours{background:#fff;border:2px solid #ddea65}.s-sw .anat{background:rgba(0,0,0,.035)}.s-sw .gate{background:#fff;border:2px solid #e23b3b}.s-sw .gate b{color:#e23b3b}.s-sw .key{font-weight:600}.s-sw .note{font-size:14px;color:rgba(0,0,0,.7)}.s-sw .copy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:22px 0}.s-sw .copy-grid>div{background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:12px;padding:18px 20px}.s-sw .copy-grid h4{color:#4b612d;font-size:14px;margin-bottom:6px}.s-sw .copy-grid ul{margin-left:16px;font-size:14px}.s-sw .copy-grid li{margin:6px 0;line-height:1.5}.s-sw .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0}.s-sw .gal figcaption{font-size:11.5px}.s-sw footer{padding:40px 0;border-top:1px solid rgba(0,0,0,.12);font-size:13px;color:rgba(0,0,0,.65)}.s-sw footer a{color:#025200}.s-sw .ts{margin-top:6px;font-size:12px}@media(max-width:860px){.three,.two,.copy-grid{grid-template-columns:1fr}.gal{grid-template-columns:repeat(2,1fr)}}
+/* 각 원본의 body 배경이 스코프 래퍼로 내려와 섹션마다 다시 칠해진다 — 페이지 배경 하나로 통일 */
+.s-td,.s-full,.s-up,.s-sw{background:none;background-color:transparent}
+.s-sw .sub{margin-left:0}
+.s-sw section{padding:0;border-top:none}
+
+/* 원본 4종의 서로 다른 h3·표 서식을 한 목소리로 맞춘다 */
+.s-td h3,.s-full h3,.s-up h3,.s-sw h3{font-family:var(--sans);font-weight:700;letter-spacing:-.03em}
+.s-td table,.s-full table,.s-up table,.s-up td,.s-sw table{letter-spacing:-.02em}
+.s-td,.s-full,.s-up,.s-sw{font-family:var(--sans);letter-spacing:-.02em}
+</style>
+</head><body>
+
+<header class="cover"><div class="cover-in">
+  <div class="mark">Lemonderma</div>
+  <div class="eyebrow">US 퍼포먼스 · 경쟁사 해부 · 완전판</div>
+  <h1>마녀공장 —<br>클렌징오일 하나로 3,700억까지 간 회사가<br><em>지금 우리 카테고리에서 하는 일</em></h1>
+  <p class="sub">이 회사가 어떻게 컸는지(재무 공시 3개년·채널 사다리), 그 공식을 글루타티온 신제품에 어떻게 다시 걸었는지,
+  그리고 <b>광고를 실제로 어떻게 찍어내는지</b>(메타 111건·SB 영상 실물·브리지 LP·틱톡 군단)를 한 편에 모았다.
+  마지막은 우리가 오늘 가져올 것들.</p>
+  <div class="chips"><span>재무 공시 3개년</span><span>메타 광고 111건</span><span>SB 영상 실물</span>
+    <span>키워드 2,246개</span><span>PDP 6장</span><span>BSR 5개월 궤적</span><span>ARENCIA 대조</span>
+    <span>카피 원문 전량</span></div>
+  <p class="meta-line">
+  <b>28장 · 5부</b> —
+기존 게시물 4편(2026-07-21 딥리서치 · 2026-08-13 통합 해부 · 정량 업그레이드 · 소재 스와이프)을
+  하나로 합치고, 한 번도 게시되지 않았던 <b>재무제표 역추적·제품 클레임 구조·US 운영 주체·클레임 결정</b>을 더했다.<br>
+  작성 2026-08-18 · 실측 스냅샷 2026-07-21 / 2026-08-13 · 내부 문서 · 검색엔진 비공개</p>
+</div></header>
+
+<nav class="toc"><div class="in"><a href="#s0">00 요약</a><b>Ⅰ</b><a href="#s1">01 회사·재무 궤적 6년</a><a href="#s2">02 재무제표 역추적</a><a href="#s3">03 성장 공식</a><a href="#s4">04 글루타티온7 이식</a><a href="#s5">05 제품·클레임 구조</a><a href="#s6">06 US 운영 구조</a><b>Ⅱ</b><a href="#s7">07 정량 궤적</a><a href="#s8">08 아마존 지형</a><a href="#s9">09 아마존 광고 키워드</a><a href="#s10">10 PDP 소재</a><b>Ⅲ</b><a href="#s11">11 확보한 소재 목록</a><a href="#s12">12 우리가 후킹당한 그 SB 영상</a><a href="#s13">13 아마존 SB 문법</a><a href="#s14">14 메타 광고 111건</a><a href="#s15">15 메타 이미지</a><a href="#s16">16 메타 영상</a><a href="#s17">17 소재 아키타입 11종</a><a href="#s18">18 브리지 LP와 틱톡 군단</a><a href="#s19">19 부록</a><b>Ⅳ</b><a href="#s20">20 카피 원문 라이브러리</a><a href="#s21">21 실제로 쓰고 있는 문구 전량</a><b>Ⅴ</b><a href="#s22">22 ARENCIA vs Manyo</a><a href="#s23">23 우리와의 격차</a><a href="#s24">24 클레임 결정</a><a href="#s25">25 레몬더마 즉시 제작 브리프</a><a href="#s26">26 우리가 할 것</a><a href="#s27">27 미확인으로 남긴 것</a><a href="#s28">28 출처와 검증 방법 · 이 페이지가 대체하는 것</a></div></nav>
+
+<div class="wrap">
+<section class="sec" id="s0"><h2 class="sh"><span class="n">00</span>한눈 요약 — 이 회사를 왜 보고 있나<span class="tagnew">통합</span></h2><div class="srcline">4편 요약 통합</div><div class="secbody">
+<div class="take"><div class="t">한 줄 결론</div>
+<div class="b">마녀공장은 <em>히어로 SKU 1개 + 채널 사다리 + 1위 뱃지 스택 + 소재 곱집합 시스템</em>으로 큰 회사이고,<br>
+그 공식의 최신 반복(글루타티온 다크스팟 라인)이 지금 <span class="hl">우리 다크스팟 세럼 바로 옆</span>에서 돌아가고 있다.<br>
+소재 하나가 잘 만들어진 게 아니라 — <b>소재를 찍어내는 시스템</b>이 경쟁력이다.</div></div>
+
+<div class="n-grid c4">
+<div class="n-card y"><div class="v">2,200만병</div><div class="l">클렌징오일 누적 판매<br>회사를 끌고 온 히어로 SKU 하나</div></div>
+<div class="n-card y"><div class="v">3,700억</div><div class="l">2025년 사모펀드 매각 시<br>인정받은 기업가치</div></div>
+<div class="n-card y"><div class="v">111건</div><div class="l">동시 집행 중이던 메타 광고<br>담당자 4명 태깅 체계로 운영</div></div>
+<div class="n-card y"><div class="v">4,257 → 164위</div><div class="l">미국 런칭 5개월 만의<br>세럼 카테고리 순위</div></div>
+</div>
+
+<div class="n-grid c3">
+<div class="n-card"><h4>① 정면 경쟁자다</h4><p>글루타티온 다크스팟 라인이 2026년 2월 한국 출시,
+3월 미국 상륙. 이미 아마존 월 3천+ 구매. <b>브랜드 컬러까지 옐로우</b>다.</p></div>
+<div class="n-card"><h4>② 검증된 성장 공식의 표본</h4><p>클렌징오일 하나로 한국 → 일본 → 미국을 뚫고
+기업가치 3,700억 매각까지 갔다. <b>따라 읽을 수 있는 교재</b>다.</p></div>
+<div class="n-card"><h4>③ 동시에 반면교사</h4><p>공격적 마케팅이 이익을 잠식해
+2025년 영업이익 −43.7%. <b>재무 증거가 공개돼 있는</b> 드문 경우다.</p></div>
+</div>
+
+<h3>이 문서를 읽는 법</h3>
+<p>다섯 부분으로 나뉜다. <b>Ⅰ부</b>는 이 회사가 어떻게 여기까지 왔는지(재무·성장 공식),
+<b>Ⅱ부</b>는 지금 실제로 어떤 숫자가 나오고 있는지(순위·가격·리뷰·광고 키워드),
+<b>Ⅲ부</b>는 광고를 어떻게 찍어내는지(실물 영상·이미지 전량),
+<b>Ⅳ부</b>는 그들이 쓰는 문장 원문,
+<b>Ⅴ부</b>는 우리가 무엇을 할 것인지다.
+급하면 <b>Ⅴ부만</b> 읽어도 실행은 된다.</p>
+<p class="note-s">본문 중간중간 <b>▸ 접힌 블록</b>은 같은 주제를 다르게 서술한 원본 판본이다.
+합치는 과정에서 어느 문장도 버리지 않기 위해 원문 그대로 넣어 두었다 — 평소엔 접어 두고 읽으면 된다.</p>
+<details class="alt"><summary>▸ 원본 3편의 요약 원문</summary><div class="alt-in"><h3 style="margin-top:14px">2026-07-21 딥리서치 리드</h3><div class="s-td"><p class="lead"><b>한 줄 결론 — Manyo는 "히어로 SKU 1개 + 채널 사다리 + 1위 뱃지 스택 + 소재 곱집합 시스템"으로 크는 회사이고, 그 공식의 최신 반복(글루타티온 다크스팟 라인)이 지금 우리 다크스팟 세럼 바로 옆 카테고리에서 돌아가고 있다.</b> 소재 하나가 잘 만든 게 아니라, 소재를 찍어내는 시스템이 경쟁력이다.</p>
+
+<div class="decision"><b class="t">📌 John 결정 (2026-07-21) — 광고 클레임은 Manyo 동등 이상으로 간다</b>
+빅브랜드도 이렇게 플레이하는데 신생 브랜드가, 특히 퍼포먼스 영역에서 안 할 이유가 없다. <b>광고가 리스팅보다 세도 된다</b> — 비교 수치("3X"류)·타임 클레임("7 Days")·시술 메타포 리뷰 인용("thought I got laser")·함량성 표현("99% Pure") 전부 허용. 벤치마킹 범위 밖은 딱 둘: <b>플랫폼이 기계적으로 대조하는 마켓플레이스 사실 조작</b>(미달성 랭킹·판매량·별점 — Manyo도 안 함, 그들의 No.1은 전부 실제 딴 랭킹)과 <b>실존 인물·기관 조작 인용</b>. 이 둘은 클레임 강도가 아니라 계정 정지·소송 벡터라 제외.
+<div class="small" style="margin-top:6px;color:#5c4f12">결정 정본: 00_compass/decisions/2026-07-21-퍼포먼스광고-클레임-Manyo동등이상-벤치마킹.md</div></div>
+
+<div class="grid g4">
+  <div class="card stat y"><div class="v">월 1만+</div><div class="l">클렌징오일 아마존 월 구매<br>(리뷰 6,786개 · 4.6★ · $13)</div></div>
+  <div class="card stat y"><div class="v">월 3천+</div><div class="l">글루타티온 세럼 월 구매<br>US 출시 4개월 · $14.89</div></div>
+  <div class="card stat y"><div class="v">111건</div><div class="l">현재 집행 중인 메타 광고<br>(담당자 4명 태깅 시스템)</div></div>
+  <div class="card stat y"><div class="v">3,700억</div><div class="l">2025년 사모펀드 매각 시<br>인정받은 기업가치(EV)</div></div>
+</div>
+
+<!-- ============================================================ --></div><h3 style="margin-top:22px">2026-08-13 통합 해부 §0</h3><div class="s-full"><div class="verdict"><div class="t">이 시스템의 정체</div>
+  <div class="b">소재 하나가 잘난 게 아니라 <b>시스템이 경쟁력</b>이다 —<br>
+  히어로 SKU의 리테일 신뢰 + 신제품의 크리에이터 물량 + 주간 딜 사이클, 세 엔진을<br>
+  담당자 4명이 <b>곱집합 매트릭스</b>로 찍어 전부 아마존에 꽂는다.</div></div>
+<div class="grid g4">
+  <div class="card y stat"><div class="v">2,200만병</div><div class="l">클렌징오일 누적 — 회사를 끌고 온 단일 SKU</div></div>
+  <div class="card stat"><div class="v">3,700억</div><div class="l">2025 PEF 인수 기업가치(EV) — 근거는 “미국 성장 스토리”</div></div>
+  <div class="card stat"><div class="v">4,257→164</div><div class="l">글루타티온 세럼 랭킹, 런칭 4개월</div></div>
+  <div class="card y stat"><div class="v">−43.7%</div><div class="l">2025 영업이익 — 공격 마케팅의 청구서</div></div>
+</div>
+<p class="lead">우리가 봐야 하는 이유는 셋이다. ① <b>글루타티온 다크스팟 라인이 우리 세럼과 정면 경쟁</b>이고
+브랜드 컬러까지 옐로우다. ② <b>"히어로 1개 + 채널 사다리 + 1위 뱃지"</b>라는 검증된 공식의 살아있는 표본이다.
+③ 동시에 <b>반면교사</b> — 마케팅비가 이익을 반토막 내고 결국 매각으로 이어진 재무 증거가 공개돼 있다.</p></div><h3 style="margin-top:22px">2026-08-13 정량 업그레이드 §0</h3><div class="s-up"><div class="verdict"><div class="t">이 시스템의 정체</div>
+  <div class="b">광고로 트래픽을 사는 게 아니라, <b>“글루타티온”이라는 카테고리를 통째로 만들고</b><br>그 검색의 오가닉 1위를 차지한 다음 광고는 최소한만 얹는다.</div></div>
+<p class="lead">아마존 광고 키워드가 <b>단 100개</b>다(ARENCIA는 835개). 대신 <code>glutathione serum</code>·<code>glutathione skincare</code>에서
+<b>오가닉 1~2위</b>를 잡고 있다. 한국·일본에서 만든 1위 뱃지를 미국 리스팅에 그대로 붙여 신뢰를 이식하고,
+Prime Day 같은 이벤트에만 $14.89로 떨어뜨려 순위를 밀어올린다.</p>
+<div class="grid g4">
+  <div class="card y stat"><div class="v">4,257→164</div><div class="l">세럼 랭킹, 런칭 4개월 만에 (7/25 최고점)</div></div>
+  <div class="card stat"><div class="v">100개</div><div class="l">광고 키워드 — ARENCIA의 <b>1/8</b></div></div>
+  <div class="card stat"><div class="v">218개</div><div class="l">누적 리뷰(5개월) — 여전히 얇다</div></div>
+  <div class="card y stat"><div class="v">4.8→4.2</div><div class="l">같은 기간 평점 <b>하락</b> — 볼륨의 대가</div></div>
+</div></div></div></details></div></section><div class="part" id="pⅠ"><div class="roman">PART Ⅰ</div><h2 class="pt">이 회사는 누구인가</h2><p class="desc">클렌징오일 하나로 기업가치 3,700억까지 간 경로와, 그 대가로 치른 청구서. 그리고 같은 공식을 신제품에 어떻게 다시 걸었는지.</p></div><section class="sec" id="s1"><h2 class="sh"><span class="n">01</span>회사·재무 궤적 6년 — 성장과 청구서가 같이 보인다</h2><div class="srcline">2026-08-13 통합 해부 §1</div><div class="secbody"><div class="s-full"><svg viewBox="0 0 900 240" class="chart" role="img"><rect x="52" y="9" width="9" height="9" fill="#4b612d" opacity=".35"/><text x="66" y="17" class="ax">연결 매출</text><rect x="162" y="9" width="9" height="9" fill="#c0392b"/><text x="176" y="17" class="ax">영업이익 — 2025 −43.7%</text><rect x="91.8" y="118.9" width="86.3" height="87.1" fill="#4b612d" opacity=".25" rx="3"/><text x="135.0" y="112.9" class="ax" text-anchor="middle">626억</text><rect x="257.8" y="64.3" width="86.3" height="141.7" fill="#4b612d" opacity=".25" rx="3"/><text x="301.0" y="58.3" class="ax" text-anchor="middle">1,018억</text><rect x="423.8" y="59.9" width="86.3" height="146.1" fill="#4b612d" opacity=".25" rx="3"/><text x="467.0" y="53.9" class="ax" text-anchor="middle">1,050억</text><rect x="589.8" y="28.0" width="86.3" height="178.0" fill="#4b612d" opacity=".25" rx="3"/><text x="633.0" y="22.0" class="ax" text-anchor="middle">1,279억</text><rect x="755.8" y="48.7" width="86.3" height="157.3" fill="#4b612d" opacity=".25" rx="3"/><text x="799.0" y="42.7" class="ax" text-anchor="middle">1,130억</text><polyline points="135.0,77.4 301.0,28.0 467.0,90.5 633.0,70.9 799.0,129.7" fill="none" stroke="#c0392b" stroke-width="2.4"/><circle cx="135.0" cy="77.4" r="3.4" fill="#c0392b"/><circle cx="301.0" cy="28.0" r="3.4" fill="#c0392b"/><circle cx="467.0" cy="90.5" r="3.4" fill="#c0392b"/><circle cx="633.0" cy="70.9" r="3.4" fill="#c0392b"/><circle cx="799.0" cy="129.7" r="3.4" fill="#c0392b"/><text x="135.0" y="68.4" class="peak" text-anchor="middle" fill="#c0392b">177</text><text x="301.0" y="19.0" class="peak" text-anchor="middle" fill="#c0392b">245</text><text x="467.0" y="81.5" class="peak" text-anchor="middle" fill="#c0392b">159</text><text x="633.0" y="61.9" class="peak" text-anchor="middle" fill="#c0392b">186</text><text x="799.0" y="120.7" class="peak" text-anchor="middle" fill="#c0392b">105</text><text x="135.0" y="222" class="ax" text-anchor="middle">2021</text><text x="301.0" y="222" class="ax" text-anchor="middle">2022</text><text x="467.0" y="222" class="ax" text-anchor="middle">2023</text><text x="633.0" y="222" class="ax" text-anchor="middle">2024</text><text x="799.0" y="222" class="ax" text-anchor="middle">2025</text></svg>
+<p class="cap">연결 매출(막대) vs 영업이익(선) · 단위 억원 · 2026-07-21 적대검증 통과분</p>
+<p>2022년 영업이익 245억으로 정점을 찍은 뒤 <b>매출은 늘어도 이익은 계속 깎였다.</b>
+2023년 −35.2%, 2025년 −43.7%. 원인은 명확하다 — 광고선전비가 2023 1Q 26억에서 2024 1Q 56억으로 <b>1년 만에 2배</b>,
+판관비는 2019년 166억에서 2023년 510억으로 늘었다. 대표가 2024년 “연 200억대 공격 마케팅”을 공언한 결과다.</p>
+<div class="tbl-scroll"><table>
+<thead><tr><th>시점</th><th>사건</th></tr></thead><tbody>
+<tr><td>2012</td><td>설립 — 자연주의 발효 클린뷰티</td></tr>
+<tr><td>2018</td><td>L&amp;P코스메틱(메디힐)이 70% 인수 — 당시 매출 29억, 인수가 150~200억</td></tr>
+<tr><td>2022-01</td><td>유근직 대표 선임(스킨푸드·더페이스샵 출신) — 마케팅 드라이브 시작</td></tr>
+<tr><td>2023-06</td><td>코스닥 IPO “따상” — 공모가 16,000원, 수요예측 1,800:1</td></tr>
+<tr><td>2025</td><td><b>사모펀드 케이엘앤파트너스가 51.87%를 1,900억에 인수(EV 3,700억)</b> — L&amp;P는 7년 만에 ~10배 회수</td></tr>
+<tr><td>2026 Q1</td><td>인수 후 첫 분기 — 이익률 5.3%→<b>22.5%</b>. 그만큼 비용에 살이 많았다는 방증</td></tr>
+</tbody></table></div>
+<div class="warn"><b>초도물량 착시</b> — 2024 3Q 미국 매출이 54억에서 19억으로 <b>−64.8% QoQ</b> 빠졌다.
+코스트코·얼타 초도 입고가 끝나자 드러난 숫자다. <b>리테일 입점 매출과 실제 소비자 소진(sell-through)은 다르다</b>는
+공개 교훈 — 우리 히어로 판정 원칙(누적 n≥8·반복 전환)이 같은 이유로 존재한다.</div></div><details class="alt"><summary>▸ 7월판 원문 — 지배구조 연혁과 초도물량 착시 상세</summary><div class="alt-in"><div class="s-td"><p class="muted">전 수치 적대검증 통과분만 기재. 단위: 억원(연결 기준). 2026은 1분기만 공개.</p>
+
+<div class="chart">
+  <div class="title">연결 매출</div>
+  <div class="brow" title="2021년 매출 626억원"><div class="yl">2021</div><div class="track"><div class="bar gold" style="width:49%"></div><div class="val">626</div></div></div>
+  <div class="brow" title="2022년 매출 1,018억원 — 해외 55.3%, 그중 일본 76%"><div class="yl">2022</div><div class="track"><div class="bar gold" style="width:80%"></div><div class="val">1,018</div></div></div>
+  <div class="brow" title="2023년 매출 1,050억원 — 6월 코스닥 상장(따상)"><div class="yl">2023</div><div class="track"><div class="bar gold" style="width:82%"></div><div class="val">1,050 <span class="small">IPO</span></div></div></div>
+  <div class="brow" title="2024년 매출 1,279억원 — 코스트코·얼타 입점 효과"><div class="yl">2024</div><div class="track"><div class="bar gold" style="width:100%"></div><div class="val">1,279</div></div></div>
+  <div class="brow" title="2025년 매출 1,130억원 — 첫 역성장(-11.7%)"><div class="yl">2025</div><div class="track"><div class="bar gold" style="width:88%"></div><div class="val">1,130 <span class="small">▼11.7%</span></div></div></div>
+  <div class="brow" title="2026년 1분기 매출 269억원 (1개 분기)"><div class="yl">2026 Q1</div><div class="track"><div class="bar part" style="width:21%"></div><div class="val">269 <span class="small">Q1만</span></div></div></div>
+</div>
+<div class="chart">
+  <div class="title">영업이익</div>
+  <div class="brow" title="2021년 영업이익 177억원"><div class="yl">2021</div><div class="track"><div class="bar black" style="width:72%"></div><div class="val">177</div></div></div>
+  <div class="brow" title="2022년 영업이익 245억원 — 역대 최대, 아직 갱신 안 됨"><div class="yl">2022</div><div class="track"><div class="bar black" style="width:100%"></div><div class="val">245 <span class="small">역대 최대</span></div></div></div>
+  <div class="brow" title="2023년 영업이익 159억원 — 일본 온라인 부진"><div class="yl">2023</div><div class="track"><div class="bar black" style="width:65%"></div><div class="val">159</div></div></div>
+  <div class="brow" title="2024년 영업이익 186억원"><div class="yl">2024</div><div class="track"><div class="bar black" style="width:76%"></div><div class="val">186</div></div></div>
+  <div class="brow" title="2025년 영업이익 105억원 — 마케팅비·일회성 비용으로 -43.7%"><div class="yl">2025</div><div class="track"><div class="bar black" style="width:43%"></div><div class="val">105 <span class="small">▼43.7%</span></div></div></div>
+  <div class="brow" title="2026년 1분기 영업이익 60.5억원 — 이익률 5.3%→22.5% 급등"><div class="yl">2026 Q1</div><div class="track"><div class="bar partb" style="width:25%"></div><div class="val">60.5 <span class="small">이익률 22.5%</span></div></div></div>
+</div>
+
+<h3>지배구조 타임라인</h3>
+<div class="steps">
+  <div class="step"><div class="dot"><div class="c">12</div><div class="bar"></div></div><div class="body"><div class="t">2012 설립</div><div class="d">자연유래 발효 기반 클린뷰티로 시작. 2018년 인수 당시 매출 29억원의 작은 브랜드.</div></div></div>
+  <div class="step"><div class="dot"><div class="c">18</div><div class="bar"></div></div><div class="body"><div class="t">2018 L&amp;P코스메틱(메디힐)이 70% 인수 — 150~200억원</div><div class="d">대기업 유통·자본에 올라타며 해외 확장 본격화.</div></div></div>
+  <div class="step"><div class="dot"><div class="c">22</div><div class="bar"></div></div><div class="body"><div class="t">2022-01 유근직 대표 선임</div><div class="d">스킨푸드·더페이스샵 출신 마케터 CEO. "연 200억대 공격 마케팅" 공언(2024 인터뷰).</div></div></div>
+  <div class="step"><div class="dot"><div class="c">23</div><div class="bar"></div></div><div class="body"><div class="t">2023-06-08 코스닥 상장 (따상)</div><div class="d">공모가 16,000원 · 기관 수요예측 1,800:1.</div></div></div>
+  <div class="step"><div class="dot"><div class="c">25</div><div class="bar"></div></div><div class="body"><div class="t">2025 사모펀드 케이엘앤파트너스에 51.87% 매각 — 1,900억원 (EV 3,700억)</div><div class="d">1월 합의 → 3/20 계약 → 5월 완료. L&amp;P는 7년 만에 약 10배 회수. <b>매각 밸류에이션의 근거가 "미국 성장 스토리"였음이 보도에 명시.</b> 인수 후 첫 분기에 이익률 4배 급등 = 그만큼 비용에 살이 많았다는 방증.</div></div></div>
+</div>
+
+<div class="warn"><b>⚠ 반면교사 ① — 마케팅비가 이익을 잠식.</b> 광고선전비 2023년 1분기 26억 → 2024년 1분기 56억(+115%). 판매관리비 2019년 166억 → 2023년 510억. 성장은 만들었지만 2025년 영업이익 반토막의 핵심 원인이고, 결말이 사모펀드 매각이었다.</div>
+<div class="warn"><b>⚠ 반면교사 ② — 초도물량 스파이크는 성장이 아니다.</b> 2024년 3분기 미국 매출 54억 → 19억(<b>-64.8%</b>). 코스트코·얼타 첫 입고 물량이 빠지자 급감했다. 리테일에 '넣은' 매출과 소비자가 '사간' 매출은 다르다 — 우리 히어로 판정 원칙(누적 n≥8·반복 전환)과 정확히 같은 이유.</div></div></div></details></div></section><section class="sec" id="s2"><h2 class="sh"><span class="n">02</span>재무제표 역추적 — 공시가 말하는 전략<span class="tagnew">NEW</span></h2><div class="srcline">10_strategy/market-intel · 2026-07-24 · 미게시</div><div class="secbody">
+<p class="n-lead">게시된 보고서들은 <b>매출과 영업이익 두 줄</b>만 봤다. 여기서는 금융감독원 공시(DART)에
+올라온 <b>재무제표 전체</b>를 편다 — 원가·판관비·재고·현금까지. 숫자에서 전략을 거꾸로 읽으면,
+마케팅 실측만으로는 안 보이던 <span class="hl">"왜 저렇게까지 하는가"</span>가 나온다.</p>
+
+<div class="n-tbl"><table>
+<caption>연결 기준·억원 · 출처 KIND FY2025 사업보고서(2026-03-23 접수)·FnGuide·하나증권 2024-07-25 · 작성 2026-07-24 전략기획 HQ</caption>
+<tr><th>항목</th><th class="r">2023</th><th class="r">2024</th><th class="r">2025</th><th>이 줄이 말하는 것</th></tr>
+<tr><td><b>매출액</b></td><td class="r">1,050</td><td class="r">1,279<br>+21.8%</td><td class="r">1,130<br>−11.7%</td>
+    <td>성장하다가 <b>역성장으로 전환</b>. 창사 후 첫 매출 감소</td></tr>
+<tr><td>매출총이익 <span class="mono">GPM</span></td><td class="r">669<br>63.7%</td><td class="r">789<br>61.7%</td><td class="r">678<br>60.0%</td>
+    <td>원가율이 매년 조금씩 나빠진다 — <b>오프라인 채널을 늘린 값</b></td></tr>
+<tr><td>판매관리비</td><td class="r">511<br>48.7%</td><td class="r">604<br>47.2%</td><td class="r">573<br>50.7%</td>
+    <td>매출이 12% 빠질 때 판관비는 5%만 줄었다 — <b>한번 늘린 고정비는 잘 안 줄어든다</b></td></tr>
+<tr><td><b>영업이익</b> <span class="mono">OPM</span></td><td class="r">159<br>15.1%</td><td class="r">186<br>14.5%</td><td class="r">105<br><b>9.3%</b></td>
+    <td>−43.7%. <b>이익률이 반토막</b></td></tr>
+<tr><td>당기순이익</td><td class="r">116</td><td class="r">164</td><td class="r">91<br>−44.2%</td><td>영업이익과 같은 폭으로 하락</td></tr>
+<tr><td>재고자산</td><td class="r">175</td><td class="r">216</td><td class="r"><b>155</b></td>
+    <td>2025 급감 = <b>채널을 정리하고 재고를 털었다</b>는 신호</td></tr>
+<tr><td>현금성자산</td><td class="r">455</td><td class="r">434</td><td class="r">387</td>
+    <td>줄고는 있지만 차입금은 100억뿐 — <b>재무 자체는 튼튼하다</b></td></tr>
+</table></div>
+
+<p><b>지역 구성</b>(2023, 하나증권 추정·십억원) — 국내 45.4 · 일본 33.9 · 중국 11.7 · 미국 5.7 · 기타 8.3.
+해외가 57%이고 <b>그 해외의 절반 이상이 일본</b>이었다. 이듬해 미국이 <b class="big">+153%</b>로 뛰면서
+무게중심이 일본에서 미국으로 넘어간다.</p>
+<p class="note-s">⚠ 미국 매출의 2023년 기준선은 소스마다 다르게 잡힌다(하나증권 지역구성 57억 vs 별도 인용 37억).
+성장률의 방향은 여러 소스가 일치하지만 <b>절대 금액은 미확정</b>으로 남긴다.</p>
+
+<div class="phase"><div class="ph">PHASE 1 · 2021–2023</div>
+<h4>일본 큐텐 역직구 엔진 — 가장 돈을 잘 벌던 시기</h4>
+<p>2021년 영업이익률 <b class="big">28%</b>. 비결은 단순하다. 한국에서 이미 팔리는 것이 검증된 클렌징 오일 하나를,
+일본 온라인 마켓(큐텐)에 <b>역직구</b>로 태웠다. 매장에 들어가는 입점비·진열비가 0원이니
+매출총이익률 65%가 그대로 남는다. <span class="hl">제품 하나 × 시장 하나 × 채널 하나</span>의 극단적 집중.</p></div>
+
+<div class="phase"><div class="ph">PHASE 2 · 2024</div>
+<h4>미국 오프라인 대공세 — 매출은 얻고 마진은 내줬다</h4>
+<p>일본이 12% 꺾이자 축을 미국으로 옮긴다. 순서가 중요하다 — <b>아마존에서 베스트셀러를 먼저 만들고</b>,
+그 실적을 명함 삼아 코스트코·얼타·타겟 매대에 들어갔다. 광고선전비를 분기당 25억씩 더 태우는 것도 감수했다
+(2024년 2분기 판관비 122억→147억). 매출 +21.8%는 얻었지만 GPM·OPM은 이미 이때부터 내려가기 시작한다.
+<b>오프라인 볼륨은 마진을 깎아 먹으며 산다.</b></p></div>
+
+<div class="phase"><div class="ph">PHASE 3 · 2025</div>
+<h4>집중의 역습 — 히트 하나에 기댄 구조가 무너진 해</h4>
+<p>공시가 직접 밝힌 원인 네 가지: ① 주력인 클렌징 카테고리에 경쟁자가 몰리며 온라인 가격 경쟁 심화,
+② 일본 정체 지속, ③ 경영진·대주주 교체 과정의 채널 정리(재고 216억→155억이 그 흔적),
+④ <b>매출 대비 연구개발비를 0.4%에서 0.2%로 줄여 후속 제품이 없었다.</b>
+히트작 하나로 버티는 구조는 경쟁자가 들어온 순간 그대로 흔들린다.</p></div>
+
+<div class="take"><div class="t">역추적이 맞았다는 확인</div>
+<div class="b">재무제표만 보면 “2025년 실적을 지키려고 마케팅을 공격적으로 바꿨을 것”이 예측된다 —<br>
+실제로 <em>메타 활성 광고 111건</em>과 <em>“3X Better Than Vitamin C”</em>처럼 공식 리스팅에 없는 클레임이 현장에서 관측됐다.<br>
+숫자와 현장이 같은 이야기를 한다.</div></div>
+
+<h3>우리 궤도를 재는 잣대 — 상장사 실측 기준선</h3>
+<p>마녀공장은 우리가 광고 실측과 재무 공시를 <b>동시에</b> 확보한 유일한 회사다. 그래서 우리 숫자를 얹어볼 자가 된다.</p>
+<div class="n-tbl"><table>
+<tr><th>지표</th><th>마녀공장 실측</th><th>VDVIA (2026-07-24 기준)</th><th>판정</th></tr>
+<tr><td>매출총이익률</td><td>60~65%</td><td>FBA 기준 <b>73.5%</b></td><td>🟢 구조는 우리가 낫다 — 문제는 마진이 아니라 규모</td></tr>
+<tr><td>판관비율</td><td>47~51% (성숙기)</td><td>산출 불가 (광고비만 보면 MER 1.14)</td><td>🔴 깜깜 — 전사 판관비율 산출이 다음 숙제</td></tr>
+<tr><td>해외 비중</td><td>55~57%</td><td>사실상 100%</td><td>참고 — 마녀공장도 해외가 성장 엔진이었다</td></tr>
+<tr><td>R&amp;D / 매출</td><td>0.2~0.4% (축소가 곧 경고였다)</td><td>해당 없음 (위탁 개발)</td><td>신제품 파이프라인 속도로 대체 측정</td></tr>
+</table></div>
+
+<div class="wedge2"><b>가져올 것</b> —
+① <b>“아마존에서 증명하고 그 다음 오프라인”</b>이라는 순서. 미국 +153%를 만든 공식이고,
+우리 현재 순서(아마존 성장 → Amazon's Choice → 오프라인 논의)와 정확히 같다. ② <b>온라인 우선으로 마진 지키기</b> —
+마녀공장의 최전성기는 오프라인에 들어가기 전이었다. 우리 73.5%를 서둘러 희석할 이유가 없다.
+③ <b>가격 포지션 확인</b> —
+마녀공장 미국 주력가는 $18~31.5, 우리 세럼 $36.58은 그 위다. 볼륨 경쟁을 피하는 자리에 서 있다.</div>
+
+<div class="avoid"><b>피할 것</b> —
+① <b>단일 히트 + 연구개발 중단의 조합.</b> 2025년 급락의 근본 원인이다.
+우리로 치환하면 세럼 하나에 얹혀 가는 동안 후속(드라잉로션·마스크팩 등)이 늦어지는 그림이 정확히 같다.
+② <b>판관비 경직성.</b> 고정비를 태우기 시작하면 되돌리기 어렵다 — 우리는 아직 고정비가 거의 없고,
+<b>그 가벼움 자체가 자산</b>이다.</div>
+
+<p class="note-s">📄 원 문서: <span class="mono">10_strategy/market-intel/2026-07-마녀공장-재무역추적.md</span> ·
+재무 역추적 시리즈 1호 · 다음 후보 = 아이패밀리에스씨(롬앤)·브이티(리들샷)</p>
+</div></section><section class="sec" id="s3"><h2 class="sh"><span class="n">03</span>성장 공식 — 히어로 1개 + 채널 사다리 + 1위 뱃지</h2><div class="srcline">2026-07-21 딥리서치 §9</div><div class="secbody"><div class="s-td"><p>퓨어 클렌징 오일 <b>단일 SKU가 회사를 끌었다</b> (누적 2,200만 병, 2025-08 기준 — 8개월 전 1,400만에서 +800만). 각 단계에서 딴 "1위 뱃지"가 다음 채널의 입장권이 된다.</p>
+<div class="steps">
+  <div class="step"><div class="dot"><div class="c">韓</div><div class="bar"></div></div><div class="body"><div class="t">올리브영 클렌징 1위 (2021~2025 연속)</div><div class="d">국내 검증 → 해외 피칭 카드.</div></div></div>
+  <div class="step"><div class="dot"><div class="c">日</div><div class="bar"></div></div><div class="body"><div class="t">큐텐 메가와리 1위 · 라쿠텐/큐텐 한국 화장품 1위 → 돈키호테 등 오프라인 ~5,000개 매장</div><div class="d">팬데믹기 온라인 장악(2022년 일본이 해외 매출의 76%) → 엔데믹 후 오프라인 전환으로 방어. 해외 수출 2019년 50억 → 2022년 563억(연평균 +124%).</div></div></div>
+  <div class="step"><div class="dot"><div class="c">美1</div><div class="bar"></div></div><div class="body"><div class="t">아마존 선진입 → 코스트코 온라인(2023-06) → 코스트코·얼타 오프라인 동시(2024-07)</div><div class="d">미국 매출 2022년 21억 → 2023년 57억(+169%) → 2024년 상반기 +298%(2분기 아마존만 +244%).</div></div></div>
+  <div class="step"><div class="dot"><div class="c">美2</div><div class="bar"></div></div><div class="body"><div class="t">얼타 650→1,392개 2배 확장 + 타겟 1,778개 일괄 입점(2025) → Olive Young US 동시 오픈 편승(2026-05)</div><div class="d">타겟 "Fan Favorites" 섹션 배치. 미국 법인은 확인 안 됨 — 서울 본사 해외영업팀 '아마존(북미) MD' 직채용으로 직접 운영하는 정황.</div></div></div>
+  <div class="step"><div class="dot"><div class="c">반복</div><div class="bar"></div></div><div class="body"><div class="t">신제품(글루타티온)에 같은 공식 재적용 — §10</div><div class="d">"한국 검증 → 뱃지 달고 미국 이식"을 1개월 만에 압축 반복.</div></div></div>
+</div>
+<p>2026-04-06 창사 최대 리브랜딩(로고 ma:nyo→manyo, "Everyday magic for your skin"): 방향은 <b>클린뷰티→액티브뷰티, 클렌징→일상 스킨케어 전반</b> — 클렌징 원툴 탈피 시도이고, 글루타티온 라인이 그 첫 증명 카드다.</p></div><details class="alt"><summary>▸ 8월판 원문 — 같은 사다리의 압축 서술</summary><div class="alt-in"><div class="s-full"><p>퓨어 클렌징 오일(PCO) <b>단일 SKU</b>가 회사를 끌었다. 누적 2,200만 병(2025-08), 8개월간 +800만 병.
+그리고 각 단계의 <b>“1위 뱃지”가 다음 채널의 입장권</b>이 됐다.</p>
+<div class="ladder">韓 올리브영 클렌징 1위 (2021~2025 연속)
+  ↓  <b>그 뱃지를 들고</b>
+日 큐텐 메가와리 1위 · 라쿠텐 한국화장품 1위 (2022년 일본이 해외의 76%)
+  ↓
+日 오프라인 전환 — 돈키호테·로프트 등 ~5,000개 매장
+  ↓
+美 아마존 (온라인 선진입)
+  ↓  <b>“22M sold”를 미국 소비자 카피로</b>
+美 코스트코 온라인(2023-06) → 글로벌 전략상품(2023-10) → 코스트코·얼타 오프라인 동시(2024-07)
+  ↓
+美 얼타 1,392개 2배 확장 + 타겟 1,778개 일괄 (2025-02~03 “Fan Favorites”)
+  ↓
+美 Olive Young US 파사데나 오픈에 편승 (2026-05-29)</div>
+<p><b>TikTok 오가닉이 소재 R&amp;D 엔진</b>이다 — 필링젤 영상이 3일 만에 1,000만뷰를 찍자 해당 제품 매출이 3배 뛰었다(글로벌마케팅팀장 자기공개).
+오가닉에서 검증된 앵글을 유료 광고와 리스팅으로 확산한다.</p>
+<p>2026-04-06에는 <b>창사 최대 리브랜딩</b>을 했다 — 로고 ma:nyo→manyo, 방향은 <b>클린뷰티→액티브뷰티, 클렌징→일상 스킨케어 전반</b>.
+클렌징 원툴에서 벗어나려는 시도이고, <b>글루타티온 라인이 그 첫 번째 증명 카드</b>다.</p></div></div></details></div></section><section class="sec" id="s4"><h2 class="sh"><span class="n">04</span>글루타티온7 이식 — 한국 검증 한 달 만에 미국으로</h2><div class="srcline">2026-08-13 통합 해부 §3</div><div class="secbody"><div class="s-full"><div class="tbl-scroll"><table>
+<thead><tr><th>시점</th><th>이벤트</th></tr></thead><tbody>
+<tr><td>2026-02-09</td><td>네이버 선론칭 — 오픈 30분 내 완판</td></tr>
+<tr><td>2026-02-23</td><td>올리브영 정식 판매 · <b>큐텐재팬 뷰티 종합 1위</b>(복수 언론)</td></tr>
+<tr><td>2026-03-15</td><td>US TikTok Shop 오픈</td></tr>
+<tr><td>2026-03-23</td><td>US 런칭 — “Ranked #1 at Olive Young… finally in the US”, 아마존 동시</td></tr>
+<tr><td>2026-03-25~30</td><td>LA 인플루언서 브런치 · <b>USC·UCLA 캠퍼스 부스</b>(테스트존·셀피존·본품 증정)</td></tr>
+<tr><td>2026-06</td><td>크리에이터 GMV 챌린지 · 댈러스/뉴욕 틱톡샵 행사</td></tr>
+<tr><td>2026-07</td><td>Prime Day 연계 → 7/20–26 주간딜 메타 물량 ~70건 일제 투하</td></tr>
+</tbody></table></div>
+<p><b>한국 출시에서 미국 상륙까지 약 한 달.</b> 한국에서 뱃지를 따고 그 뱃지를 그대로 미국 카피로 쓰는 구조다.</p>
+<div class="grid g3">
+  <div class="card"><b>3-SKU 구성</b><div style="font-size:13px;color:var(--ink-2);margin-top:5px">
+    세럼 $14.89(아마존)/$28(공홈)/$21(얼타) + 패치 $21.90 + 듀오 $39.70 — <b>단품은 미끼가, 듀오로 AOV 상향</b></div></div>
+  <div class="card"><b>성분 스토리</b><div style="font-size:13px;color:var(--ink-2);margin-top:5px">
+    “7 core” 나열 + 나노 글루타티온. <b>세럼 함량은 전 소스 비공개</b>(패치만 5ppm) — 함량이 아니라 <b>전달 기술</b>로 프레이밍</div></div>
+  <div class="card"><b>임상</b><div style="font-size:13px;color:var(--ink-2);margin-top:5px">
+    n=20, 1일 2회 · 1주 표면 색소 ▼21.95% · 2주 톤 균일 +23.44%. <b>임상기관·대조군 비공개</b></div></div>
+</div></div><details class="alt"><summary>▸ 7월판 원문 — 타임라인과 제품 구조</summary><div class="alt-in"><div class="s-td"><div class="steps">
+  <div class="step"><div class="dot"><div class="c">2/9</div><div class="bar"></div></div><div class="body"><div class="t">한국: 네이버 선론칭 — 오픈 30분 내 완판</div><div class="d">2/23 올리브영 정식 판매(선론칭과 같은 날 아님 — 검증 과정에서 정정) · 큐텐재팬 뷰티 종합 1위. "올리브영 1위"는 카테고리·기간 미확인.</div></div></div>
+  <div class="step"><div class="dot"><div class="c">3월</div><div class="bar"></div></div><div class="body"><div class="t">미국 상륙 — 출시 후 딱 1개월</div><div class="d">3/15 틱톡샵 오픈 → 3/23 "한국 올영 1위 그 세럼" 런칭 → 3/25 LA 인플루언서 브런치 → 3/26·30 USC·UCLA 캠퍼스 부스(테스트존·셀피존·게임·본품 증정).</div></div></div>
+  <div class="step"><div class="dot"><div class="c">6~7월</div><div class="bar"></div></div><div class="body"><div class="t">물량전 개시</div><div class="d">6월 GMV 챌린지·틱톡샵 행사 → 7월 Prime Day → 7/20–26 메타 주간딜 ~70건 일제 투하. 현재 아마존 월 3천+ 구매.</div></div></div>
+</div>
+<div class="grid g2">
+  <div class="card"><b>제품·가격 구조</b><ul class="tight"><li>3-SKU: 세럼($14.89 아마존 / $28 자사몰 / $21 얼타) + 패치($21.90) + 듀오($39.70)</li><li>단품 미끼가 → 듀오로 객단가 상향</li><li>한국가 20,900~28,000원</li></ul></div>
+  <div class="card"><b>성분·클레임 구조</b><ul class="tight"><li>"7 core"(글루타티온·나이아신아마이드·NAG·알부틴·알파알부틴·비타민C·코직애시드)</li><li>"나노 글루타티온 — 모공보다 6,024배 작음"</li><li><b>세럼의 글루타티온 함량은 어디에도 비공개</b>(패치만 5ppm) — 함량이 아니라 '전달 기술'로 프레이밍</li><li>임상 n=20 · 기관 비공개 (§1 클레임 갭 참조)</li></ul></div>
+</div></div></div></details></div></section><section class="sec" id="s5"><h2 class="sh"><span class="n">05</span>제품·클레임 구조 — 사양서와, 말하지 않는 것<span class="tagnew">NEW</span></h2><div class="srcline">manyo-teardown.md §4 · 미게시</div><div class="secbody">
+<p class="n-lead">경쟁 제품의 <b>사양서</b>다. 무엇을 넣었다고 말하는지, 무엇을 말하지 않는지,
+그리고 임상시험을 어떻게 설계했는지 — <span class="hl">말하지 않는 쪽</span>에서 우리 자리가 보인다.</p>
+
+<h3>3개 SKU로 객단가를 올린다</h3>
+<div class="n-tbl"><table>
+<tr><th>제품</th><th class="r">아마존</th><th class="r">자사몰</th><th class="r">얼타</th><th>역할</th></tr>
+<tr><td><b>Glutathione 7 Dark Spot Serum</b></td><td class="r">$14.89</td><td class="r">$28</td><td class="r">$21</td>
+    <td><b>미끼가.</b> 채널마다 가격이 두 배 가까이 벌어진다 — 아마존은 랭킹용, 자사몰은 마진용</td></tr>
+<tr><td>Glutathione Serum Patch</td><td class="r">$21.90</td><td class="r">—</td><td class="r">—</td><td>업셀 축. 세럼과 묶어 판다</td></tr>
+<tr><td>Glutathione Duo (세럼+패치)</td><td class="r">$39.70</td><td class="r">—</td><td class="r">—</td><td>객단가 상향. 브랜드 검색어에 SB 광고로 노출</td></tr>
+</table></div>
+<p>같은 제품에 채널별로 다른 가격을 붙이는 건 흔한 일이지만, <b>아마존 가격을 자사몰의 절반 수준으로 내리는</b> 것은 선택이다.
+아마존 랭킹을 사는 대가로 마진을 포기한 것이고, 이 선택이 앞 장의 영업이익률 하락과 같은 방향을 가리킨다.</p>
+
+<h3>성분 서사 — “7가지 핵심”과 “6,024배”</h3>
+<div class="n-grid c2">
+<div class="n-card"><h4>내세우는 것</h4>
+<p><b>7 core</b> —
+Glutathione · Niacinamide · NAG · Arbutin · Alpha-Arbutin · Vitamin C · Kojic Acid.
+미백·잡티 계열에서 이름값 있는 성분을 한 줄로 늘어놓는 방식이다.<br><br>
+여기에 <b>“나노 글루타티온 — 모공보다 6,024배 작다”</b>는 크기 비교를 얹는다.
+농도 대신 <b>크기</b>로 말하는 것이 핵심 기술이다.</p></div>
+<div class="n-card y"><h4>말하지 않는 것 <span class="mono">← 우리 자리</span></h4>
+<p><b>세럼의 글루타티온 함량은 어느 소스에도 없다.</b> 공개된 수치는 패치의 5ppm 하나뿐이다.<br><br>
+즉 “글루타티온이 얼마나 들었나”가 아니라 <b>“얼마나 잘 들어가나”</b>로 프레임을 옮겨 놓은 것이다.
+성분 이름으로 파는 전형이고, <span class="hl">우리가 “성분이 아니라 전달이 문제”라는 축으로
+정면 충돌 없이 우회할 수 있는 지점</span>이기도 하다.</p></div>
+</div>
+
+<h3>임상 설계 — 숫자는 세고, 근거는 얇다</h3>
+<div class="n-tbl"><table>
+<tr><th>구분</th><th>공개된 값</th><th>공개되지 않은 것</th></tr>
+<tr><td>피험자 수</td><td><b>n=20</b> · 1일 2회 사용</td><td rowspan="5">임상 <b>수행 기관</b>과 <b>대조군</b> 설계.<br>
+두 가지가 없으면 수치의 신뢰도를 외부에서 검증할 방법이 없다.<br>
+그럼에도 이 수치들은 리스팅·LP·광고에 각주와 함께 전면 배치된다.</td></tr>
+<tr><td>1주 — 표면 색소</td><td>▼ 21.95%</td></tr>
+<tr><td>1주 — 표면 아래 색소</td><td>▼ 4.61% <span class="mono">← 광고의 “3X” 차트에 쓰인 값</span></td></tr>
+<tr><td>2주 — 붉은기</td><td>▼ 35.98%</td></tr>
+<tr><td>2주 — 톤 균일도</td><td>+ 23.44%</td></tr>
+</table></div>
+
+<div class="take"><div class="t">여기서 나오는 결론</div>
+<div class="b">이들의 무기는 <em>임상의 질</em>이 아니라 <em>수치를 배치하는 솜씨</em>다.<br>
+n=20에 기관 비공개인 데이터를 각주 하나로 방어하면서 화면 전면에 띄운다.<br>
+구조는 훔치되, <span class="hl">숫자는 우리 실측으로 채운다</span>는 원칙이 여기서 나온다.</div></div>
+</div></section><section class="sec" id="s6"><h2 class="sh"><span class="n">06</span>US 운영 구조 — 누가 이걸 돌리고 있나<span class="tagnew">NEW</span></h2><div class="srcline">manyo-teardown.md §3 · 미게시</div><div class="secbody">
+<p class="n-lead">이 물량을 <b>누가 돌리고 있는가</b>. 미국에 큰 조직이 있을 것 같지만,
+확인해 보면 <span class="hl">서울 본사가 직접 돌리고 나머지는 플랫폼·에이전시 프로그램에 얹는</span> 구조다.
+우리 규모에서도 따라 할 수 있는 형태라는 뜻이다.</p>
+
+<div class="n-grid c2">
+<div class="n-card"><h4>아마존 — 본사 직영으로 보인다</h4>
+<p>셀러명 <span class="mono">ma:nyo</span>로 자체 스토어프론트 + FBA 운영.
+현지 법인 채용공고나 링크드인 페이지가 없는 대신, <b>서울 본사 해외영업팀이 “아마존(북미) MD”를 직접 채용</b>한 정황이 있다.
+미국 법인 존재 여부는 <b>미확인</b> —
+캘리포니아 Cerritos 주소 단서 하나뿐이고 물류창고일 가능성이 높다.</p></div>
+<div class="n-card"><h4>조직 — 국내팀과 글로벌팀을 나눴다</h4>
+<p>국내마케팅팀과 <b>글로벌마케팅팀을 분리</b>해 운영한다(오혜성 팀장, 인터뷰 확인).
+미국 마케팅 인력도 “인플루언서(북미) 마케터”처럼 본사 채용으로 뽑는 정황.
+<b>현지 대행사에 통째로 맡기지 않고 본사가 쥐고 있다.</b></p></div>
+</div>
+
+<h3>직접 만들지 않고 “올라타는” 방식</h3>
+<div class="n-tbl"><table>
+<tr><th>시점</th><th>무엇에 올라탔나</th><th>규모·성격</th></tr>
+<tr><td>2026-03-15</td><td><b>US TikTok Shop 오픈</b></td><td>자체 인스타 공지로 확인. 미국 진입 3주 만</td></tr>
+<tr><td>2026-05-23~31</td><td>한국 숏폼커머스 에이전시 <b>‘윗유’ Trip to Korea</b></td>
+    <td>미국 메가 어필리에이터 10인을 한국으로 역초청하는 프로그램. 합산 팔로워 <b>763만</b>,
+    30일 거래액 <b>$98.5만</b>. 참여 6개 브랜드 중 하나로 이름만 올렸다</td></tr>
+<tr><td>2026-06-05~07</td><td>틱톡샵 주최 <b>댈러스 K-Beauty Collective</b></td><td>20개 이상 브랜드 참가, 방문객 5천명 규모 기획</td></tr>
+<tr><td>2026-06-10</td><td><b>뉴욕 시티 투어</b> (에이전시 Puff Media 공동)</td><td>플랫폼 행사에 자사 부스로 참여</td></tr>
+<tr><td>2026-03-25~30</td><td>LA 인플루언서 브런치 · USC·UCLA 캠퍼스 부스</td><td>테스트존·셀피존·게임 + 본품 증정. 미국 런칭 직후 2주에 집중</td></tr>
+</table></div>
+
+<div class="take"><div class="t">우리가 가져갈 수 있는 부분</div>
+<div class="b">크리에이터 엔진을 <em>전부 자체 구축하지 않았다</em>.<br>
+틱톡샵·에이전시가 이미 만들어 둔 프로그램에 <span class="hl">참가비를 내고 이름을 올리는 방식</span>으로<br>
+763만 팔로워짜리 네트워크에 접근했다 — 3인 회사도 쓸 수 있는 경로다.</div></div>
+<p class="note-s">📄 원 문서: <span class="mono">30_growth/marketing/us/market-research/manyo-teardown.md</span> §3 —
+본 페이지의 다른 장(브리지 LP·틱톡 군단)은 채널을, 이 장은 <b>운영 주체</b>를 다룬다.</p>
+</div></section><div class="part" id="pⅡ"><div class="roman">PART Ⅱ</div><h2 class="pt">지금 실제로 어떻게 되고 있나</h2><p class="desc">주장이 아니라 실측. 런칭일부터 오늘까지의 순위·가격·리뷰·평점 궤적과, 광고를 실제로 얼마나 사고 있는지.</p></div><section class="sec" id="s7"><h2 class="sh"><span class="n">07</span>정량 궤적 — 런칭 5개월, 수직 상승과 그 대가</h2><div class="srcline">2026-08-13 정량 업그레이드 §1</div><div class="secbody"><div class="s-up"><p>3/15 미국 런칭 시점 세럼 카테고리 <b>4,257위</b>에서 시작해 4/7에 552위, 7/25에 <b>164위</b>까지 올랐다.
+5개월 만에 카테고리 상위 1%에 진입한 것이다.</p>
+<svg viewBox="0 0 900 240" class="chart" role="img"><line x1="50" y1="26" x2="882" y2="26" class="grid"/><line x1="50" y1="86" x2="882" y2="86" class="grid"/><line x1="50" y1="146" x2="882" y2="146" class="grid"/><line x1="50" y1="206" x2="882" y2="206" class="grid"/><polygon points="50,206 50.0,181.8 98.9,206.0 147.9,119.7 196.8,63.5 245.8,40.8 294.7,34.6 343.6,32.4 392.6,29.7 441.5,27.9 490.5,29.8 539.4,29.2 588.4,29.2 637.3,28.6 686.2,28.8 735.2,26.0 784.1,29.6 833.1,27.7 882.0,27.5 882,206" fill="#4b612d" opacity=".12"/><polyline points="50.0,181.8 98.9,206.0 147.9,119.7 196.8,63.5 245.8,40.8 294.7,34.6 343.6,32.4 392.6,29.7 441.5,27.9 490.5,29.8 539.4,29.2 588.4,29.2 637.3,28.6 686.2,28.8 735.2,26.0 784.1,29.6 833.1,27.7 882.0,27.5" fill="none" stroke="#4b612d" stroke-width="2.4" stroke-linejoin="round"/><circle cx="50.0" cy="181.8" r="3.1" fill="#4b612d"/><circle cx="98.9" cy="206.0" r="3.1" fill="#4b612d"/><circle cx="147.9" cy="119.7" r="3.1" fill="#4b612d"/><circle cx="196.8" cy="63.5" r="3.1" fill="#4b612d"/><circle cx="245.8" cy="40.8" r="3.1" fill="#4b612d"/><circle cx="294.7" cy="34.6" r="3.1" fill="#4b612d"/><circle cx="343.6" cy="32.4" r="3.1" fill="#4b612d"/><circle cx="392.6" cy="29.7" r="3.1" fill="#4b612d"/><circle cx="441.5" cy="27.9" r="3.1" fill="#4b612d"/><circle cx="490.5" cy="29.8" r="3.1" fill="#4b612d"/><circle cx="539.4" cy="29.2" r="3.1" fill="#4b612d"/><circle cx="588.4" cy="29.2" r="3.1" fill="#4b612d"/><circle cx="637.3" cy="28.6" r="3.1" fill="#4b612d"/><circle cx="686.2" cy="28.8" r="3.1" fill="#4b612d"/><circle cx="735.2" cy="26.0" r="3.1" fill="#4b612d"/><circle cx="784.1" cy="29.6" r="3.1" fill="#4b612d"/><circle cx="833.1" cy="27.7" r="3.1" fill="#4b612d"/><circle cx="882.0" cy="27.5" r="3.1" fill="#4b612d"/><line x1="735.2" y1="26.0" x2="735.2" y2="21" stroke="#4b612d" stroke-width="1" stroke-dasharray="3 3" opacity=".55"/><text x="735.2" y="17" class="peak" text-anchor="middle">164위 · 7/25</text><text x="50.0" y="222" class="ax" text-anchor="middle">3/15</text><text x="196.8" y="222" class="ax" text-anchor="middle">4/2</text><text x="343.6" y="222" class="ax" text-anchor="middle">4/23</text><text x="490.5" y="222" class="ax" text-anchor="middle">5/22</text><text x="637.3" y="222" class="ax" text-anchor="middle">6/29</text><text x="784.1" y="222" class="ax" text-anchor="middle">8/1</text><text x="882.0" y="222" class="ax" text-anchor="middle">8/12</text><text x="42" y="31" class="ax" text-anchor="end">164위</text><text x="42" y="206" class="ax" text-anchor="end">4893위</text></svg>
+<p class="cap">아마존 세럼 카테고리 랭킹(낮을수록 좋음) · 2026-03-15 US 런칭일부터</p>
+
+<p>가격은 평시 <b>$19.90</b>에 두고, 이벤트에만 <b>$14.89~14.90</b>으로 떨어뜨린다.
+6/28·7/20(프라임데이 주간)의 딜 시점이 위 랭킹 급등 시점과 정확히 겹친다 — <b>딜로 랭킹을 밀어올리는 운영</b>이다.</p>
+<svg viewBox="0 0 900 240" class="chart" role="img"><line x1="50" y1="26" x2="882" y2="26" class="grid"/><line x1="50" y1="86" x2="882" y2="86" class="grid"/><line x1="50" y1="146" x2="882" y2="146" class="grid"/><line x1="50" y1="206" x2="882" y2="206" class="grid"/><polygon points="50,206 50.0,26.0 119.3,58.4 188.7,205.7 258.0,58.4 327.3,205.7 396.7,58.4 466.0,149.7 535.3,58.4 604.7,205.7 674.0,58.4 743.3,206.0 812.7,58.4 882.0,180.7 882,206" fill="#a8871c" opacity=".12"/><polyline points="50.0,26.0 119.3,58.4 188.7,205.7 258.0,58.4 327.3,205.7 396.7,58.4 466.0,149.7 535.3,58.4 604.7,205.7 674.0,58.4 743.3,206.0 812.7,58.4 882.0,180.7" fill="none" stroke="#a8871c" stroke-width="2.4" stroke-linejoin="round"/><circle cx="50.0" cy="26.0" r="3.1" fill="#a8871c"/><circle cx="119.3" cy="58.4" r="3.1" fill="#a8871c"/><circle cx="188.7" cy="205.7" r="3.1" fill="#a8871c"/><circle cx="258.0" cy="58.4" r="3.1" fill="#a8871c"/><circle cx="327.3" cy="205.7" r="3.1" fill="#a8871c"/><circle cx="396.7" cy="58.4" r="3.1" fill="#a8871c"/><circle cx="466.0" cy="149.7" r="3.1" fill="#a8871c"/><circle cx="535.3" cy="58.4" r="3.1" fill="#a8871c"/><circle cx="604.7" cy="205.7" r="3.1" fill="#a8871c"/><circle cx="674.0" cy="58.4" r="3.1" fill="#a8871c"/><circle cx="743.3" cy="206.0" r="3.1" fill="#a8871c"/><circle cx="812.7" cy="58.4" r="3.1" fill="#a8871c"/><circle cx="882.0" cy="180.7" r="3.1" fill="#a8871c"/><line x1="50.0" y1="26.0" x2="50.0" y2="21" stroke="#a8871c" stroke-width="1" stroke-dasharray="3 3" opacity=".55"/><text x="50.0" y="17" class="peak" text-anchor="start">$21.00 · 3/15</text><text x="50.0" y="222" class="ax" text-anchor="middle">3/15</text><text x="188.7" y="222" class="ax" text-anchor="middle">3/26</text><text x="327.3" y="222" class="ax" text-anchor="middle">4/5</text><text x="466.0" y="222" class="ax" text-anchor="middle">5/23</text><text x="604.7" y="222" class="ax" text-anchor="middle">6/28</text><text x="743.3" y="222" class="ax" text-anchor="middle">7/20</text><text x="882.0" y="222" class="ax" text-anchor="middle">8/4</text><text x="42" y="31" class="ax" text-anchor="end">$21.00</text><text x="42" y="206" class="ax" text-anchor="end">$14.89</text></svg>
+<p class="cap">실판가 세그먼트 · 평시 $19.90 ↔ 이벤트 $14.89 이원 운영</p>
+
+<div class="lead"><b>주목할 대가</b> — 리뷰는 5개월에 218개(월 40여 개)로 여전히 얇은데,
+<b>평점이 4.8에서 4.2까지 내려왔다.</b> 볼륨을 밀면서 만족하지 않는 고객이 함께 들어온 것이다.
+7일 만에 효과를 약속한 소구가 기대치를 올린 것과 무관하지 않아 보인다.</div>
+<svg viewBox="0 0 900 240" class="chart" role="img"><line x1="50" y1="26" x2="882" y2="26" class="grid"/><line x1="50" y1="86" x2="882" y2="86" class="grid"/><line x1="50" y1="146" x2="882" y2="146" class="grid"/><line x1="50" y1="206" x2="882" y2="206" class="grid"/><rect x="50" y="8" width="9" height="9" fill="#4b612d"/><text x="64" y="16" class="ax">리뷰 수 1 → 218</text><rect x="200" y="8" width="9" height="9" fill="#c0392b"/><text x="214" y="16" class="ax">평점 4.8 → 4.2</text><polyline points="50.0,206.0 105.5,195.2 160.9,174.5 216.4,165.4 271.9,157.9 327.3,147.9 382.8,131.3 438.3,115.6 493.7,101.5 549.2,89.0 604.7,77.4 660.1,70.0 715.6,60.0 771.1,55.0 826.5,43.4 882.0,26.0" fill="none" stroke="#4b612d" stroke-width="2.4" stroke-linejoin="round"/><polyline points="50.0,26.0 216.4,56.0 382.8,146.0 549.2,176.0 715.6,206.0 882.0,176.0" fill="none" stroke="#c0392b" stroke-width="2.4" stroke-dasharray="5 3"/><circle cx="50.0" cy="206.0" r="3" fill="#4b612d"/><circle cx="105.5" cy="195.2" r="3" fill="#4b612d"/><circle cx="160.9" cy="174.5" r="3" fill="#4b612d"/><circle cx="216.4" cy="165.4" r="3" fill="#4b612d"/><circle cx="271.9" cy="157.9" r="3" fill="#4b612d"/><circle cx="327.3" cy="147.9" r="3" fill="#4b612d"/><circle cx="382.8" cy="131.3" r="3" fill="#4b612d"/><circle cx="438.3" cy="115.6" r="3" fill="#4b612d"/><circle cx="493.7" cy="101.5" r="3" fill="#4b612d"/><circle cx="549.2" cy="89.0" r="3" fill="#4b612d"/><circle cx="604.7" cy="77.4" r="3" fill="#4b612d"/><circle cx="660.1" cy="70.0" r="3" fill="#4b612d"/><circle cx="715.6" cy="60.0" r="3" fill="#4b612d"/><circle cx="771.1" cy="55.0" r="3" fill="#4b612d"/><circle cx="826.5" cy="43.4" r="3" fill="#4b612d"/><circle cx="882.0" cy="26.0" r="3" fill="#4b612d"/><circle cx="50.0" cy="26.0" r="3" fill="#c0392b"/><circle cx="216.4" cy="56.0" r="3" fill="#c0392b"/><circle cx="382.8" cy="146.0" r="3" fill="#c0392b"/><circle cx="549.2" cy="176.0" r="3" fill="#c0392b"/><circle cx="715.6" cy="206.0" r="3" fill="#c0392b"/><circle cx="882.0" cy="176.0" r="3" fill="#c0392b"/><text x="50.0" y="222" class="ax" text-anchor="middle">4/8</text><text x="216.4" y="222" class="ax" text-anchor="middle">5/5</text><text x="382.8" y="222" class="ax" text-anchor="middle">6/9</text><text x="549.2" y="222" class="ax" text-anchor="middle">7/1</text><text x="715.6" y="222" class="ax" text-anchor="middle">7/23</text><text x="882.0" y="222" class="ax" text-anchor="middle">8/9</text></svg>
+<p class="cap">리뷰 수(실선, 증가) vs 평점(점선, 하락) — 같은 기간 반대로 움직인다</p></div></div></section><section class="sec" id="s8"><h2 class="sh"><span class="n">08</span>아마존 지형 — 카탈로그·볼륨·리뷰 속도</h2><div class="srcline">2026-07-21 딥리서치 §6</div><div class="secbody"><div class="s-td"><div class="tbl-scroll"><table>
+  <tr><th>제품</th><th>가격</th><th>리뷰</th><th>별점</th><th>월 구매</th><th>비고</th></tr>
+  <tr><td>Pure Cleansing Oil (히어로)</td><td>$13.00</td><td>6,786</td><td>4.6</td><td><b>1만+</b></td><td>ASIN 2017년생 — 최소 월 $13만 규모</td></tr>
+  <tr><td><b>Glutathione 7 Dark Spot Serum</b></td><td><b>$14.89</b></td><td>171</td><td>4.3</td><td><b>3천+</b></td><td>2026-03 US 출시 · BSR 페이셜세럼 #263</td></tr>
+  <tr><td>Glutathione Serum Patch</td><td>$21.90</td><td>수백</td><td>4.3</td><td>—</td><td>세럼과 묶는 업셀 축</td></tr>
+  <tr><td>Glutathione Duo (세럼+패치)</td><td>$39.70</td><td>0</td><td>—</td><td>—</td><td>신규 번들 — 브랜드 검색어에 SB로 푸시 중</td></tr>
+  <tr><td>Bifida 앰플 / 클렌징폼 / 필링젤 / 토너 / 선크림 등</td><td>$8~25</td><td>다수</td><td>4.4~4.7</td><td>—</td><td>풀 카탈로그, 상시 10% 쿠폰</td></tr>
+</table></div>
+<ul class="tight">
+  <li><b>가격 설계:</b> 단품을 미끼가($14.89)로 깔고 패치·듀오로 객단가를 올린다. 우리 세럼($36.58)과 <b>2.5배 갭</b> — 가격으로 정면 대응하면 지는 판.</li>
+  <li><b>리뷰 속도:</b> 글루타티온 세럼 월 ~30건 적립(최근 100건이 4/7~7/18 분포). 월 3천+ 구매 대비 리뷰가 매우 적다 = <b>리뷰 자산이 아니라 광고·딜로 볼륨을 만드는 초기 단계.</b> Ulta 온라인은 아직 리뷰 0건 — 성과는 사실상 아마존+틱톡에 집중.</li>
+  <li><b>SERP 관찰:</b> "dark spot serum"·"glutathione serum"에서 Manyo는 오가닉 상위 노출. 글루타티온 검색어는 TOSOWOONG("20,000ppm")·Arencia·Skin&amp;LAB 등 <b>K-뷰티 스폰서 격전지로 형성 중</b> — 다크스팟 카테고리에 '글루타티온'이 새 성분 키워드로 부상하고 있다.</li>
+  <li>자사 브랜드 검색어("manyo")는 자사 SP 4개로 방어 + 신제품 듀오를 SB로 노출 — 신제품을 브랜드 트래픽에 얹는 런칭 공식.</li>
+</ul></div></div></section><section class="sec" id="s9"><h2 class="sh"><span class="n">09</span>아마존 광고 키워드 — 놀랄 만큼 적게 쓴다</h2><div class="srcline">2026-08-13 정량 업그레이드 §2</div><div class="secbody"><div class="s-up"><p>키워드 2,246개를 역추적했더니 <b>스폰서 노출은 100개뿐</b>이고, 그중 자사 브랜드 방어는 5개에 불과했다.
+ARENCIA가 835개(경쟁 브랜드어만 718개)를 사는 것과 완전히 다른 그림이다.</p>
+<div class="tbl-scroll"><table>
+<thead><tr><th>광고 매수 검색어</th><th class="num">월 검색량</th><th class="num">스폰서</th><th class="num">오가닉</th><th>성격</th></tr></thead>
+<tbody>
+<tr><td>niacinamide serum</td><td class="num">135,952</td><td class="num">9위</td><td class="num">138위</td><td>카테고리 최대어 — 오가닉이 약해서 광고로 보완</td></tr>
+<tr><td>celimax dark spot cream</td><td class="num">15,918</td><td class="num"><b>1위</b></td><td class="num">99위</td><td>경쟁 브랜드 상단 탈취</td></tr>
+<tr><td>musely dark spot remover</td><td class="num">14,912</td><td class="num">4위</td><td class="num">120위</td><td>Rx 경쟁사 컨퀘스팅</td></tr>
+<tr><td><b>glutathione serum</b></td><td class="num">5,015</td><td class="num">3위</td><td class="num"><b>2위</b></td><td>자기가 만든 카테고리 — 오가닉·광고 동시</td></tr>
+<tr><td>manyo glutathione 7 dark spot serum</td><td class="num">5,854</td><td class="num"><b>1위</b></td><td class="num"><b>1위</b></td><td>자사 방어(5개 중 하나)</td></tr>
+<tr><td>glutathione skincare</td><td class="num">543</td><td class="num">5위</td><td class="num"><b>1위</b></td><td>카테고리 오너십</td></tr>
+</tbody></table></div>
+<p><b>핵심은 마지막 두 줄이다.</b> “glutathione serum/skincare”에서 <b>오가닉 1~2위</b>를 이미 차지했다.
+광고를 적게 쓰는 게 아니라, <b>광고가 덜 필요한 자리를 먼저 만든 것</b>이다.</p></div></div></section><section class="sec" id="s10"><h2 class="sh"><span class="n">10</span>PDP 소재 — 리스팅에서도 자극적이다</h2><div class="srcline">2026-08-13 정량 업그레이드 §3</div><div class="secbody"><div class="s-up"><p class="lead">ARENCIA의 리스팅이 임상수치 0의 컴플라이언스형이었다면, <b>Manyo는 정반대다.</b>
+“200%+ 더 효과적”, “7일”, “6,024배”, “한국·일본 1위” — 숫자와 최상급을 전면에 쓰되
+<b>각주로 근거를 붙여 방어</b>한다.</p>
+<div class="frames"><figure><img src="a/037b34b905b7.jpg" alt="" loading="lazy"><figcaption>②&nbsp; <b>“#1 KOREA &amp; JAPAN”</b> 월계관 + 올리브영·큐텐 1위 뱃지 2개 — 각주로 날짜까지 박아 방어</figcaption></figure><figure><img src="a/ae1d92ccfcb8.jpg" alt="" loading="lazy"><figcaption>③&nbsp; <b>“Dark Spots, Why Wait for Weeks?”</b> — 질문형 도발 + “A week” 형광펜 + Day1→Day7 게이지</figcaption></figure><figure><img src="a/6eeccfc89c33.jpg" alt="" loading="lazy"><figcaption>④&nbsp; <b>“K-Clinic Shot in a Bottle” · “200%+ More Effective”</b> + PREVENT/BLOCK/ERASE 3단</figcaption></figure><figure><img src="a/a1cf0b8a5e9a.jpg" alt="" loading="lazy"><figcaption>⑤&nbsp; 피부 단면 3층 × STEP1·2·3 — 성분별 역할을 “예방·차단·삭제” 동사로</figcaption></figure><figure><img src="a/6f3e37151956.jpg" alt="" loading="lazy"><figcaption>⑥&nbsp; <b>“6,024x Smaller than a Pore”</b> — 크기 비교 도식으로 전달 기술을 시각화</figcaption></figure><figure><img src="a/13af5387dc07.jpg" alt="" loading="lazy"><figcaption>①&nbsp; 히어로 — 옐로 세럼 실물(우리 브랜드 컬러와 같은 계열)</figcaption></figure></div>
+
+<blockquote><span class="who">불릿 첫 줄 (실제 인용)</span>
+<b>[7-Day Dark Spot Care]</b> High-performance serum that delivers noticeable results on discoloration in just one week<br>
+<b>[Triple-Action Targeting]</b> Nano-Glutathione, Niacinamide, NAG로 prevent, block, visibly fade<br>
+<b>[Exclusive Nano-Solution]</b> Active ingredients are <b>6,024x smaller than pores</b></blockquote>
+
+<p>구조를 뜯으면 3개 장치가 반복된다 — <b>①시간 압축</b>(7일·Day1→Day7 게이지) <b>②비교 우위 숫자</b>(비타민C 대비 200%+, 모공 대비 6,024배)
+<b>③권위 이식</b>(올리브영·큐텐 1위 뱃지를 미국 리스팅에 그대로). 셋 다 각주가 달려 있다.</p></div></div></section><div class="part" id="pⅢ"><div class="roman">PART Ⅲ</div><h2 class="pt">광고를 어떻게 찍어내나</h2><p class="desc">이 회사의 진짜 경쟁력. 실물 영상·이미지를 전부 저장소에 받아 두고 하나씩 뜯었다 — 광고 CDN 링크는 만료되지만 파일은 남는다.</p></div><section class="sec" id="s11"><h2 class="sh"><span class="n">11</span>확보한 소재 목록 — 무엇을 어디까지 받아 뒀나</h2><div class="srcline">2026-08-13 소재 스와이프 §1</div><div class="secbody"><div class="s-sw"><p class="sub">실물 파일이 전부 저장소에 들어와 있다. 아래 모든 이미지·영상은 캡처한 원본이다.</p>
+<table class="inv">
+<thead><tr><th>채널</th><th>수집일</th><th>개수</th><th>내용</th><th>저장 위치</th></tr></thead>
+<tbody>
+<tr><td><b>아마존 SB 비디오</b></td><td>08-13</td><td>2</td><td>마녀공장 글루타치온 세럼 SB + 같은 카테고리 경쟁사(inyoe) SB</td><td><code>assets/manyo/amazon-sb-0813/</code></td></tr>
+<tr><td><b>메타 이미지</b></td><td>08-13</td><td>7</td><td>리뷰인용·B&amp;A증거·권위이식 템플릿 실물</td><td><code>assets/manyo/meta-0813/</code></td></tr>
+<tr><td><b>메타 영상</b></td><td>08-13</td><td>3</td><td>Day 0→7 다이어리, 모델 3인 병렬 버전</td><td><code>assets/manyo/meta-0813/</code></td></tr>
+<tr><td>메타 이미지</td><td>07-21</td><td>11</td><td>주간딜 폭격형·리테일 권위형</td><td><code>assets/manyo/meta/</code></td></tr>
+<tr><td>메타 영상</td><td>07-21</td><td>5</td><td>크리에이터 화이트리스팅 UGC</td><td><code>assets/manyo/meta/</code></td></tr>
+</tbody></table>
+<p class="note">※ 7월 수집분 16개는 그동안 저장만 되고 어떤 보고서에도 안 올라가 있었다. 이번에 전부 지면에 올린다.</p>
+</div></div></section><section class="sec" id="s12"><h2 class="sh"><span class="n">12</span>우리가 후킹당한 그 SB 영상 — 23초 해부</h2><div class="srcline">2026-07-21 딥리서치 §1</div><div class="secbody"><div class="s-td"><p>Manyo <b>Glutathione 7 Dark Spot Serum + Patch</b>의 아마존 SB 비디오(SB = Sponsored Brands, 검색결과 상단 브랜드 광고). 아래가 <b>실제 광고 영상 전체</b>이고, 그 밑이 4단계 구조 해부다.</p>
+
+<div class="player">
+  <video controls playsinline preload="metadata" poster="a/bb67b06322c8.jpg">
+    <source src="a/39e269b11fd8.mp4" type="video/mp4">
+    이 브라우저는 영상 재생을 지원하지 않습니다. 원본: swipe-file/assets/manyo/
+  </video>
+  <div class="bar">
+    <b>▶ Manyo Glutathione 7 Dark Spot Serum — 아마존 SB 비디오 (전체 23초)</b>
+    <span class="meta">2026-07 집행분 · 무음 · 화면녹화 원본</span>
+  </div>
+</div>
+
+<div class="frames">
+  <figure><img src="a/bb67b06322c8.jpg" alt="훅 — CAN THIS ERASE DARK SPOTS OFF A QUAIL EGG?"><figcaption><b>① 훅 (0–3초)</b> — "이 세럼이 메추리알의 반점도 지울 수 있을까?" 스킨케어 광고인데 얼굴이 아니라 계란으로 시작. 썸네일부터 이질적이다(패턴 인터럽트).</figcaption></figure>
+  <figure><img src="a/20f31fa84205.jpg" alt="데모 — Wet Wipes vs Glutathione Serum"><figcaption><b>② 데모 (3–9초)</b> — 계란 반쪽은 물티슈, 반쪽은 세럼. 세럼 쪽만 하얘진다. 효능을 말이 아니라 <b>실험</b>으로 증명. 사람 피부 B&A가 아니라 심사·불신을 동시에 피한다.</figcaption></figure>
+  <figure><img src="a/288627e4888a.jpg" alt="클레임 카드 — 3X Better Results Than Vitamin C"><figcaption><b>③ 클레임 카드 (9초~)</b> — 왼쪽에 "비타민C보다 3배 효과" + 수치 바차트(4.61% vs 1.38%) 고정. "ASK THE EGG"로 훅 회수. 오른쪽엔 실사용 영상 릴레이.</figcaption></figure>
+  <figure><img src="a/5b0dd582300f.jpg" alt="UGC 증거 — Day 7"><figcaption><b>④ 증거 (후반)</b> — "Day 7" 자막의 실사용자 컷·텍스처 드립·도포 샷. 사물 실험(계란)에서 사람(UGC)으로 신뢰 사다리를 타고 내려온다.</figcaption></figure>
+</div>
+
+<p><b>왜 후킹되나:</b> ① 썸네일 단계에서 이미 다르고 ② 효능이 눈으로 증명되고 ③ 비교 기준(비타민C)이 소비자가 이미 아는 것이라 "3배"가 즉시 해석되고 ④ 훅→데모→수치→사람 증언이 23초 안에 완결되기 때문.</p>
+
+<div class="warn"><b>⚠ 핵심 발견 — 광고가 공식 리스팅보다 세다.</b><br>
+"3X Better Than Vitamin C"와 "4.61% vs 1.38%" 비교 차트는 <b>Ulta·자사몰 공식 페이지 어디에도 없는 문구·수치다</b>(적대검증 확인). 공식 페이지의 실제 클레임은 "비타민C의 superior alternative" + 자체 임상(20명, 1일 2회): 1주차 표면 색소 ▼21.95%·표면하 ▼4.61%, 2주차 붉은기 ▼35.98%. 임상기관·대조군은 비공개. <b>즉 광고 레이어에서 리스팅보다 센 클레임을 지르는 플레이이고, 심사·규제가 실질 제약이 아님이 확인됐다 → 우리도 동등 이상으로 간다(위 결정).</b></div></div><details class="alt"><summary>▸ 8월판 원문 — 같은 영상의 압축 해부</summary><div class="alt-in"><div class="s-full"><div class="player">
+  <video controls preload="metadata" playsinline src="a/39e269b11fd8.mp4"></video>
+  <div class="bar"><b>Glutathione 7 Dark Spot Serum + Patch Set</b> · 23초 · 아마존 SB 비디오 (2026-07 캡처, 무음 압축본)</div>
+</div>
+<div class="frames"><figure><img src="a/bb67b06322c8.jpg" alt="" loading="lazy"><figcaption>훅 0–3s&nbsp;· “CAN THIS ERASE DARK SPOTS OFF A QUAIL EGG?”</figcaption></figure><figure><img src="a/20f31fa84205.jpg" alt="" loading="lazy"><figcaption>데모 3–9s&nbsp;· 반쪽은 물티슈, 반쪽은 세럼</figcaption></figure><figure><img src="a/288627e4888a.jpg" alt="" loading="lazy"><figcaption>클레임&nbsp;· “3X Better Results Than Vitamin C” + 바차트</figcaption></figure><figure><img src="a/5b0dd582300f.jpg" alt="" loading="lazy"><figcaption>회수&nbsp;· “DARK SPOTS DON’T STAND A CHANCE. ASK THE EGG”</figcaption></figure></div>
+<p><b>왜 먹히나</b> — ① SERP 썸네일 단계에서 이미 이질적이다(스킨케어 판에 계란). ② 효능을 말이 아니라 <b>실험</b>으로 보여준다.
+③ 비교군(비타민C)이 소비자가 아는 기준이라 “3X”가 즉시 해석된다. ④ 훅–데모–클레임–UGC가 한 영상에서 완결된다.</p>
+<div class="lead"><b>핵심 발견 — 광고와 리스팅의 클레임 갭.</b> 이 영상의 “3X Better Results Than Vitamin C”와
+“4.61% vs 1.38%” 비교 차트는 <b>공식 얼타·자사몰 어디에도 없는 문구</b>다(공식은 “superior alternative”, 일부 리테일에 “2x”만).
+<b>광고 레이어에서 리스팅보다 센 클레임을 지르는 플레이</b>이며, 심사가 실질 제약이 아님이 확인됐다.
+→ 이 발견이 <b>2026-07-21 John 결정(“우리도 동등 이상으로 간다”)</b>의 근거가 됐다.</div></div></div></details></div></section><section class="sec" id="s13"><h2 class="sh"><span class="n">13</span>아마존 SB 문법 — 화면을 좌우로 나누는 게 규칙이다</h2><div class="srcline">2026-08-13 소재 스와이프 §2</div><div class="secbody"><div class="s-sw"><p class="sub">우리가 지금 SB에 올린 소재와 가장 크게 어긋나는 지점. 여기부터 고치면 효과가 가장 빠르다.</p>
+<div class="two">
+  <figure class=""><video src="a/SB_manyo.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><b>마녀공장 SB</b> — 글루타치온 세럼. 검색어 “glutathione serum for face”에서 실제 노출 중. 23초</figcaption></figure>
+  <figure class=""><video src="a/SB_inyoe.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><b>경쟁사 inyoe SB</b> — 클렌징오일. 검색어 “korean cleansing oil”. 27초</figcaption></figure>
+</div>
+<figure class="wide"><img src="a/SB_manyo_sheet.jpg" loading="lazy" alt=""><figcaption>마녀공장 SB 8컷 — 앞부분은 <b>메추리알 데모</b>(반점 지우기), 중반부터 화면이 좌우로 갈린다.</figcaption></figure>
+<figure class="wide"><img src="a/SB_inyoe_sheet.jpg" loading="lazy" alt=""><figcaption>경쟁사 SB 8컷 — 27초 내내 왼쪽 패널이 <b>한 번도 안 바뀐다</b>. 오른쪽만 UGC로 계속 움직인다.</figcaption></figure>
+
+<h3>두 브랜드가 똑같이 쓰는 구조</h3>
+<table>
+<thead><tr><th></th><th>왼쪽 (고정)</th><th>오른쪽 (계속 바뀜)</th></tr></thead>
+<tbody>
+<tr><td>마녀공장</td><td>“3X Better Results Than Vitamin C” + 임상 막대그래프 + 제품샷 + NEW 뱃지 + “Serum &amp; Patch Set”</td><td>피부 비포애프터 → Day 7 도포 → Day 3 패치</td></tr>
+<tr><td>inyoe</td><td>“MELTS MAKEUP, NOT YOUR SKIN” + 제품 뷰티샷</td><td>크리에이터 UGC (모공 지목 → 세안 → 마무리)</td></tr>
+</tbody></table>
+
+<div class="why">
+<h4>왜 이렇게 만드나</h4>
+<p>아마존 검색결과에서 SB 영상은 <b>작게, 소리 없이, 사용자가 스크롤하는 도중에</b> 재생된다.
+끝까지 보는 사람이 거의 없다. 그래서 <b>어느 순간에 멈춰도 팔 말이 화면에 남아 있어야 한다.</b>
+왼쪽 고정 패널이 그 역할이다 — 영상을 광고가 아니라 <b>움직이는 배너</b>로 쓰는 것.
+메타 영상(세로 전체화면, 자막만)과는 설계가 완전히 다르다.</p>
+</div>
+
+<div class="ours">
+<h4>우리 현황과 대조</h4>
+<p>우리가 미국 SB에 올린 히어로 소재(김보은 C1)는 <b>전체화면 UGC 한 컷</b>이다. 멈추면 남는 정보가 없다.
+같은 영상을 그대로 두고 <b>왼쪽 35%에 고정 패널만 덧붙이면</b> 이 구조가 된다 — 재촬영 없이 편집만으로 가능하다.
+구체 제안은 <a href="#x6">6장</a>.</p>
+</div>
+</div></div></section><section class="sec" id="s14"><h2 class="sh"><span class="n">14</span>메타 광고 111건 — 소재를 ‘시스템’으로 찍는 법</h2><div class="srcline">2026-08-13 통합 해부 §5</div><div class="secbody"><div class="s-full"><div class="ladder">Always-on 트랙 (인플루언서 화이트리스팅)        BD 트랙 (주간 딜 · 7/20–26에만 ~70건)
+├─ 크리에이터 개인 페이지 명의 branded content   ├─ 자사 페이지 명의 이미지/비디오 대량
+├─ 랜딩: Shopify 브리지 → Amazon                ├─ 랜딩: Shopify 브리지 → Amazon
+└─ adid: Alwz_{SKU}_vdo_{크리에이터}-p          └─ adid: BD_{SKU}_{img|vdo}_{소재컨셉}_{담당자}
+
+리테일 트랙: Olive Young US(DPA 카탈로그) + Ulta(이미지)</div>
+<p><b>adid 네이밍이 그대로 노출된다</b> — 운영 인텔이 공짜로 읽힌다:</p>
+<pre class="code">BD_GS_img_BDreviewGS_<b>Phoebe</b>
+= [캠페인 BD/Alwz]_[SKU]_[포맷]_[소재컨셉]_[<b>담당자</b>]
+
+담당자 4명: Phoebe · Sarah · Iris · Lina
+소재 컨셉 라이브러리: NeonSign · YellowTape · MagazineStyle · PosterType ·
+                      LineUp · SmallWindow · 3Banners · 8Grid · bear · tiktokviral · OB{크리에이터명}</pre>
+<p>즉 <b>{5 SKU} × {이미지/영상} × {컨셉 템플릿 N} × {담당자 4}</b>의 곱집합으로 주간 딜마다 수십 개를 일제 투하한다.
+우리 “에셋×문구 곱집합”과 같은 사상인데, <b>이들은 담당자 단위 소유권까지 태깅</b>해 승자 컨셉의 SKU 간 이식을 빠르게 만든다.</p>
+<h3>BD 카피 공식 — 전 SKU 동일 틀</h3>
+<pre class="code">🔥 LIMITED STOCK — Don't Miss Out (on Amazon)
+{효능 한 줄} ✨
+✔️ BEST DEAL: {29|28|43|40|23}% OFF — Limited Time Only
+✔️ {제품 기능 클레임}
+✔️ {제품 기능 클레임}
+{액션} for just ${가격} 💛
+📅 July 20–26   🛒 Shop now on Amazon</pre>
+<p>정량 클레임을 적극적으로 쓴다 — <b>“22M sold”</b>(Shopify URL 슬러그에도 박음), “99% of impurities”,
+<b>“69.6% of dead skin in just 1 use”</b>, “Korea’s No.1 Cleansing Oil Brand”.
+그리고 <b>가격을 카피에 명시</b>($8.40~$15.90) — 저가 앵커로 클릭 전에 구매 결정 절반을 끝낸다.</p>
+<h3>화이트리스팅 크리에이터 7인 (2026-07 활성)</h3>
+<div class="tbl-scroll"><table>
+<thead><tr><th>크리에이터</th><th>대상 SKU</th><th>캡션 톤 (실제 인용)</th></tr></thead><tbody>
+<tr><td>nicoletazmau</td><td>PCO·GPG</td><td>“didn’t expect THIS much sebum 😭” — 충격 후기형</td></tr>
+<tr><td>Elnaz Golrokh <span class="chip">메가</span></td><td>세럼+패치 듀오</td><td>Prime Day 연계 “restock”</td></tr>
+<tr><td>Lauren Brittany</td><td>패치</td><td>“life saver for my dark spots” — 고백형</td></tr>
+<tr><td>Sophienicolemichelle</td><td>패치</td><td>“lightened up in literally two days 🥹”</td></tr>
+<tr><td>Dani (danicolexx)</td><td>세럼+패치</td><td>“Not filter.. it’s glutathione bb”</td></tr>
+</tbody></table></div>
+<p>전원 <code>#manyopartner</code>, 랜딩은 개인별 adid가 붙은 브리지.
+<b>신제품은 크리에이터 얼굴로 밀고, 히어로(PCO)는 리테일·딜로 미는 분업</b>이 선명하다.</p></div><details class="alt"><summary>▸ 7월판 원문 — 이원 운영 × 3트랙 목적지 상세</summary><div class="alt-in"><div class="s-td"><p>Meta 광고 라이브러리(공개 조회 서비스)에서 Manyo 계정 활성 광고 111건을 전수 수집했다. 광고 자체보다 <b>운영 체계가 그대로 노출된 것</b>이 최대 수확이다.</p>
+
+<h3>이원 운영 × 3트랙 목적지</h3>
+<div class="grid g2">
+  <div class="card"><b>Always-on 트랙 — 인플루언서 화이트리스팅</b><p class="muted">화이트리스팅 = 크리에이터 개인 계정 명의로 브랜드가 광고를 집행하는 방식. 광고인데 지인 추천처럼 보인다.</p><ul class="tight"><li>크리에이터 7인+ 개인 페이지 명의로 상시 집행</li><li>전원 #manyopartner 표기, 두바이 기반 520만 팔로워급(Elnaz Golrokh) 메가 포함</li><li>신제품(글루타티온)에 물량 집중 — 신제품은 크리에이터 얼굴로 민다</li></ul></div>
+  <div class="card"><b>BD 트랙 — 주간 딜 일제 투하</b><ul class="tight"><li>7/20 하루에만 ~70건 일제 개시 (7/20–26 딜 주간)</li><li>5개 SKU × 이미지/비디오 × 컨셉 템플릿 × 담당자 4명의 <b>곱집합 매트릭스</b></li><li>히어로(클렌징오일)는 리테일·딜로, 신제품은 크리에이터로 — 역할 분업</li></ul></div>
+</div>
+<div class="flow">
+  <div class="fbox"><b>목적지 A</b>Olive Young US 리테일 (카탈로그 광고)</div>
+  <div class="fbox"><b>목적지 B</b>Ulta 리테일 (이미지 광고)</div>
+  <div class="fbox"><b>목적지 C</b>노브랜드 Shopify 브리지 → <b>아마존</b> (물량 대부분)</div>
+</div>
+
+<h3>adid 네이밍 체계 — 운영 인텔이 그대로 노출됨</h3>
+<div class="adid">BD_<span class="hl">GS</span>_img_<span class="hl">BDreviewGS</span>_<span class="hl">Phoebe</span> &nbsp;=&nbsp; [캠페인 BD/Alwz] _ [SKU] _ [포맷] _ [소재컨셉] _ [담당자]</div>
+<ul class="tight">
+  <li><b>담당자 4명</b>이 각자 소재를 생산해 이름으로 태깅: <span class="tag">Phoebe</span><span class="tag">Sarah</span><span class="tag">Iris</span><span class="tag">Lina</span></li>
+  <li><b>소재 컨셉에 이름을 붙여 템플릿 라이브러리화</b>: <span class="tag">NeonSign</span><span class="tag">YellowTape</span><span class="tag">MagazineStyle</span><span class="tag">PosterType</span><span class="tag">LineUp</span><span class="tag">8Grid</span><span class="tag">3Banners</span><span class="tag">SmallWindow</span><span class="tag">tiktokviral</span><span class="tag">OB{크리에이터}</span> — 승자 컨셉을 다른 SKU로 즉시 이식하는 구조</li>
+  <li>OB 접두 = 오가닉에서 이긴 크리에이터 콘텐츠의 유료 재활용으로 추정</li>
+</ul>
+
+<h3>BD 카피 공식 (전 SKU 동일 틀)</h3>
+<div class="copybox">🔥 LIMITED STOCK — Don't Miss Out (on Amazon)
+{효능 한 줄} ✨
+✔️ BEST DEAL: {29|28|43|40|23}% OFF — Limited Time Only
+✔️ {기능 클레임}  ✔️ {기능 클레임}
+{액션} for just ${가격} 💛
+📅 July 20–26   🛒 Shop now on Amazon</div>
+<p>정량 클레임을 적극 사용: <b>"22M sold"</b>(클렌징오일 — Shopify URL 주소에까지 박음), "99% of impurities", "69.6% of dead skin in 1 use", "Korea's No.1 Cleansing Oil Brand". 가격($8.40~15.90)을 카피에 명시해 클릭 전에 구매 결정의 절반을 끝낸다.</p></div></div></details></div></section><section class="sec" id="s15"><h2 class="sh"><span class="n">15</span>메타 이미지 — 마스터 템플릿 4개가 전부다</h2><div class="srcline">2026-08-13 소재 스와이프 §3</div><div class="secbody"><div class="s-sw"><p class="sub">아래 실물들을 나란히 보면 같은 판에 내용만 바뀐 게 눈에 보인다.</p>
+<h3>템플릿 A — 리뷰 인용형 <span class="tag">가장 많이 쓰임</span></h3>
+<p>고객 리뷰 문장을 <b>광고 헤드라인 자리에 통째로</b> 올린다. 브랜드가 하는 말이 아니라 산 사람이 한 말이라 방어가 쉽고, 규제도 덜 걸린다.</p>
+<div class="three">
+  <figure class=""><img src="a/PCO_img_8review8pco.jpg" loading="lazy" alt=""><figcaption>클렌징오일 · “My blackheads are gone — friends thought I got a facial!”</figcaption></figure>
+  <figure class=""><img src="a/GPG_img_8reviewgpg8.jpg" loading="lazy" alt=""><figcaption>필링젤 · “My skin is so smooth — friends thought I got a facial!”</figcaption></figure>
+  <figure class=""><img src="a/DCO_img_OYreview8.jpg" loading="lazy" alt=""><figcaption>올리브영 공동 브랜딩 버전 — 같은 판, 로고만 교체</figcaption></figure>
+</div>
+<div class="anat">
+<h4>구성 요소 (위→아래 순서 고정)</h4>
+<ol>
+<li><b>브랜드 × amazon 로고 락업</b> — 오렌지 크롬 질감. “아마존에서 산다”를 이미지 맨 위에 박음</li>
+<li><b>리뷰 인용 헤드라인</b> — 큰따옴표 포함, 화면 절반을 먹는 초대형 굵은 산세리프, 왼쪽 정렬</li>
+<li><b>— Verified Amazon Customer</b> — 출처 한 줄. 이게 있어야 인용이 성립</li>
+<li><b>가격</b> — 정가에 취소선 + 할인가를 오렌지 아웃라인 대형 숫자로</li>
+<li><b>검정 블록 뱃지 2줄</b> — “KOREA NO.1” / “22M+ SOLD”</li>
+<li><b>별 5개 + amazon 로고</b> — 맨 아래 마감</li>
+</ol>
+<p class="key">핵심: 세 장의 <b>인용 문장이 사실상 같다</b>(“friends thought I got a facial”). 제품이 달라도 문장은 재사용한다.
+즉 이건 리뷰를 고른 게 아니라 <b>먹히는 문장 하나를 찾아서 전 제품에 이식</b>한 것이다.</p>
+</div>
+
+<h3>템플릿 B — 비포애프터 증거형</h3>
+<p>실제 피부 매크로 사진을 쓴다. 보정한 모델컷이 아니라 <b>모공·피지가 그대로 보이는</b> 사진이다.</p>
+<div class="two">
+  <figure class=""><img src="a/PCO_img_longba3usp01.jpg" loading="lazy" alt=""><figcaption>“People thought I got a facial” + 실사 모공 Before/After + 파란 알약 USP 3개</figcaption></figure>
+  <figure class=""><img src="a/PCO_img_15sec.jpg" loading="lazy" alt=""><figcaption>“BLACKHEADS ARE GONE, after <b>15 seconds</b> of massaging!” — Amazon’s Choice 뱃지 차용 + ▼58% 원형 수치</figcaption></figure>
+</div>
+<div class="anat">
+<p class="key">두 가지가 눈에 띈다.</p>
+<ul>
+<li><b>시간을 초 단위로 못 박는다</b> — “빠르게”가 아니라 “15초 마사지 후”. 검증 가능한 형태로 말해서 오히려 더 믿긴다.</li>
+<li><b>아마존 공식 뱃지를 이미지에 그려 넣는다</b> — “Amazon’s Choice” 라벨을 소재 안에 재현. 플랫폼 신뢰를 소재로 끌어온다.</li>
+</ul>
+</div>
+
+<h3>템플릿 C — 딜 폭격형 (주간 딜 기간에만)</h3>
+<div class="three">
+  <figure class=""><img src="a/j_pco_postertype.jpg" loading="lazy" alt=""><figcaption>“SHOP NOW” 초대형 아웃라인 타이포 + 43% OFF 빨간 원 + Add to Cart 버튼 그래픽</figcaption></figure>
+  <figure class=""><img src="a/j_gs_bdreview.jpg" loading="lazy" alt=""><figcaption>테두리 사방에 “29% OFF” 반복 타일링 + BEFORE VS AFTER 2분할 + Shop Now 버튼</figcaption></figure>
+  <figure class=""><img src="a/j_pco_bdreview.jpg" loading="lazy" alt=""><figcaption>템플릿 A에 “amazon best deals JULY 20–26” 날짜 띠만 덧댄 버전</figcaption></figure>
+</div>
+<p class="note">딜 기간에 새 소재를 만드는 게 아니라 <b>기존 템플릿에 날짜·할인율 띠만 덧댄다.</b> 그래서 딜마다 수십 개를 하루에 낼 수 있다.</p>
+
+<h3>템플릿 D — 권위 이식형</h3>
+<div class="three">
+  <figure class=""><img src="a/GS_img_MagazineStar.jpg" loading="lazy" alt=""><figcaption>잡지 별점 스타일 + “#1 Dark Spot Serum in Korea &amp; Japan” + “Shop Now On amazon →” 알약 CTA</figcaption></figure>
+  <figure class=""><img src="a/j_pco_ulta_retail.jpg" loading="lazy" alt=""><figcaption>제품 9병 반복 배열 + ULTA 로고 + “NO.1 Cleansing Oil Brand’s … is now at Ulta”</figcaption></figure>
+  <figure class=""><img src="a/j_gs_neonsign.jpg" loading="lazy" alt=""><figcaption>네온사인 컨셉 — 같은 주장을 다른 시각 장치로</figcaption></figure>
+</div>
+<p>자기가 좋다고 말하는 대신 <b>남의 권위를 화면에 얹는다</b> — 잡지·리테일러 로고·국가 1위·판매량. 주장 자체는 매번 같다.</p>
+</div></div></section><section class="sec" id="s16"><h2 class="sh"><span class="n">16</span>메타 영상 — 스크립트 1개, 얼굴 3개</h2><div class="srcline">2026-08-13 소재 스와이프 §4</div><div class="secbody"><div class="s-sw"><p class="sub">세 영상을 나란히 재생해보면 대사와 컷 순서가 같다.</p>
+<div class="three">
+  <figure class=""><video src="a/GS_vdo_koreanASMR7.mp4" controls muted loop playsinline preload="metadata"></video><figcaption>한국인 모델 · 여드름 자국</figcaption></figure>
+  <figure class=""><video src="a/GS_vdo_NicoletaASMR7.mp4" controls muted loop playsinline preload="metadata"></video><figcaption>중동계 모델 · 색소침착</figcaption></figure>
+  <figure class=""><video src="a/GS_vdo_Itsedonna.mp4" controls muted loop playsinline preload="metadata"></video><figcaption>백인 모델 · 다크스팟</figcaption></figure>
+</div>
+<figure class="wide"><img src="a/GS_vdo_koreanASMR7_sheet.jpg" loading="lazy" alt=""><figcaption>한국인 버전 6컷 — “acne scars gone in 7 days?!” → Day 0 → Day 1 → Day 3 → Day 7 → 성분 설명</figcaption></figure>
+<figure class="wide"><img src="a/GS_vdo_NicoletaASMR7_sheet.jpg" loading="lazy" alt=""><figcaption>중동계 버전 6컷 — “Before” → Day 1 → Day 4 → “Dark Spot Where?” → “Glass Skin ✨” → 성분 설명. <b>컷 순서가 위와 동일하다</b></figcaption></figure>
+<figure class="wide"><img src="a/GS_vdo_Itsedonna_sheet.jpg" loading="lazy" alt=""><figcaption>백인 버전 6컷 — “No more dark spots?” → Before → Day 3 → Day 5 → Day 7 → “3X more effective than Vitamin C”</figcaption></figure>
+
+<h3>공통 스크립트 (720×1280 세로 · 30fps · 19~21초)</h3>
+<table>
+<thead><tr><th>구간</th><th>내용</th><th>실제 자막</th></tr></thead>
+<tbody>
+<tr><td>0–2초</td><td><b>의문형 훅</b> — 단정하지 않고 물어본다</td><td>“acne scars gone in 7 days?!” · “No more dark spots?”</td></tr>
+<tr><td>2–4초</td><td><b>Before 매크로</b> — 결점을 미화 없이 크게. 손가락으로 지목</td><td>“Day 0” · “Before”</td></tr>
+<tr><td>4–14초</td><td><b>Day 1 → 3 → 5 → 7 진행</b> — 매 컷 제품 도포 장면(스포이드에서 액체 흐르는 샷)</td><td>“Day 1 / for sensitive skin” · “Day 3 / low-irritation formula” · “Day 5” · “Day 7”</td></tr>
+<tr><td>14–17초</td><td><b>결과 감탄</b> — 짧게 한 마디</td><td>“Dark Spot Where?” · “Glass Skin ✨” · “hyperpigmentation &amp; acne marks gone?!”</td></tr>
+<tr><td>17–20초</td><td><b>성분 메커니즘 한 줄</b> — 왜 되는지로 마감</td><td>“nano glutathione targets dark spots at the root” · “Glutathione 6,000× smaller than pores for 100% absorption” · “3X more effective than Vitamin C”</td></tr>
+</tbody></table>
+
+<div class="why">
+<h4>세 가지 제작 규칙</h4>
+<ul>
+<li><b>자막은 흰 산세리프, 배경 박스 없음.</b> 화면 중앙~중하단. 그림자만 살짝.</li>
+<li><b>얼굴만 바꿔 병렬 집행.</b> 인종·피부톤이 다른 3인 이상. 같은 스크립트라 제작비가 거의 안 늘고, 어느 얼굴이 먹히는지 데이터로 가른다.</li>
+<li><b>파일명에 ASMR.</b> 도포·텍스처 소리를 의도적으로 살린 버전을 따로 만든다.</li>
+</ul>
+</div>
+
+<h3>7월 크리에이터 UGC (화이트리스팅 트랙)</h3>
+<div class="three">
+  <figure class=""><video src="a/j_vid_gsp_elnaz.mp4" controls muted loop playsinline preload="metadata"></video><figcaption>Elnaz Golrokh · 패치 제품</figcaption></figure>
+  <figure class=""><video src="a/j_vid_gsp_laurenbrittany.mp4" controls muted loop playsinline preload="metadata"></video><figcaption>Lauren Brittany · “Day 1” 패치 부착</figcaption></figure>
+  <figure class=""><video src="a/j_vid_pco_nicoletazmau.mp4" controls muted loop playsinline preload="metadata"></video><figcaption>nicoletazmau · 코 모공 극단 매크로 “Natural oils dissolve sebum”</figcaption></figure>
+</div>
+<p class="note">이쪽은 크리에이터 개인 계정 명의로 나가는 branded content다. 자사 제작 영상(위)과 <b>트랙이 분리</b>돼 있다.</p>
+</div></div></section><section class="sec" id="s17"><h2 class="sh"><span class="n">17</span>소재 아키타입 11종 — 실물 + 레몬더마 이식안</h2><div class="srcline">2026-07-21 딥리서치 §3</div><div class="secbody"><div class="s-td"><p>활성 광고 111건 중 <b>아키타입 대표 16개(정적 11 + 영상 5)를 CDN에서 원본 다운로드</b>해 직접 열어봤다(광고 CDN 링크는 만료되므로 저장소에 영구 보존: <code>swipe-file/assets/manyo/meta/</code>). 아래가 Manyo가 <b>지금 돈을 벌고 있는 소재의 전체 문법</b>이고, 각 카드 하단이 레몬더마 이식안이다.</p>
+
+<div class="arch">
+  <div class="imgs"><img src="a/81d9c8463865.jpg" alt="리뷰 인용형 세럼"><div class="cap">BD_GS_img_BDreviewGS_Phoebe</div><img src="a/503fa6cdc117.jpg" alt="리뷰 인용형 클렌징오일"><div class="cap">BD_PCO_img_BDreviewPCO_Phoebe — 같은 템플릿, SKU만 치환</div></div>
+  <div>
+    <h3><span class="k">A</span>리뷰 인용형 (BDreview)</h3>
+    <div class="blk"><div class="lbl">구성</div>아마존 BEST DEAL 스탬프 → 대형 인용문(시술 메타포) → "— Verified Amazon Customer" → 취소선 가격 → NO.1 뱃지 → ★5 + 아마존 로고. 텍스처 스월 배경 + 제품 컷아웃.</div>
+    <div class="blk"><div class="lbl">왜 작동</div>"laser"·"facial" 같은 시술 메타포를 브랜드가 아니라 소비자 입으로 말하게 해서 부담을 흡수. 동일 템플릿을 SKU 곱집합으로 반복 — 제작비 대비 물량 최상.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>
+      <div class="quote">"My dark spots faded — friends thought I got laser." — Verified Customer</div>
+      <div class="quote">"Everyone asks if I got a facial. It's this serum." — Verified Customer</div>
+      가격 <s>$42</s> <b>$36.58</b> · 뱃지 "100M EXOSOME PARTICLES" / "K-PHARMACY GRADE". 우리 실제 아마존 리뷰에 유사 원문이 있으면 그걸 우선 인용(더 진짜 + 더 안전). 정적 템플릿 1장 → 인용문 곱집합. 컨셉명 <code>Review</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/ca55a0e79925.jpg" alt="네온사인형 B&A"><div class="cap">BD_GS_img_NeonSign_Lina — B&amp;A + "*images taken from UGC content"</div></div>
+  <div>
+    <h3><span class="k">B</span>네온사인형 (NeonSign) — 우리 브랜드 컬러와 동일 계열</h3>
+    <div class="blk"><div class="lbl">구성</div>블랙 배경 + 옐로 네온 딜 타이포("29% OFF") + <b>B&amp;A 2컷(before 색소 뺨 → after 1 week)</b> + "*images taken from UGC content" 각주 + #1 뱃지 + 가격.</div>
+    <div class="blk"><div class="lbl">왜 작동</div>노랑↔블랙 대비가 피드 정지력 최상. B&amp;A를 임상 주장이 아니라 'UGC 인용'으로 프레이밍해 심사 부담을 낮추면서 효과는 그대로 가져간다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div><b>노랑+블랙은 우리 브랜드 3색 그 자체 — 사실상 우리 옷이다.</b> 기존 B&amp;A 파이프라인 산출물(fair~tan 톤 원칙)에 네온 딜 프레임 + UGC 각주 기법을 씌우면 즉시 완성. 컨셉명 <code>NeonSign</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/35eafafe10e8.jpg" alt="YellowTape 프레임 도포 컷"><div class="cap">BD_GS_vdo_YellowTape_Lina — "7 DAY COMPILATION"</div><img src="a/4c2d28555fb2.jpg" alt="YellowTape BEFORE VS AFTER"><div class="cap">같은 영상 — "BEFORE VS AFTER" 컷</div></div>
+  <div>
+    <h3><span class="k">C</span>YellowTape 컨테이너 (영상) — 가성비 1위</h3>
+    <div class="blk"><div class="lbl">구성</div>사방을 "29% OFF" 옐로 테이프가 두른 프레임. 안에는 UGC 영상("7 DAY COMPILATION" · "LET THE RESULTS SPEAK FOR THEMSELVES" · BEFORE VS AFTER 뺨 클로즈업). 상단에 amazon best deals 날짜 바.</div>
+    <div class="blk"><div class="lbl">왜 작동</div><b>컨테이너 템플릿에 UGC만 갈아끼우는 구조</b> — 영상 1개 = 템플릿 1 + 내용물 N. 딜 정보는 상시 노출되면서 내용은 신뢰 콘텐츠라 광고 피로도가 낮다. 소재 시스템화의 정수.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식 — 1순위</div>오버레이 템플릿 1개만 만들면(우리 %OFF·"7 DAY" 텍스트, 옐로 테이프는 브랜드 컬러 그대로) <b>기존 UGC 파이프라인 산출물 전량에 일괄 적용</b> 가능. 컨셉명 <code>TapeFrame</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/5ad0e51b86b0.jpg" alt="매거진형 3D 오브제"><div class="cap">BD_GS_img_BDMagazineStyle_Lina — 3D 렌더 오브제(#1, 7)</div><img src="a/93a2c03d328c.jpg" alt="패치 제형 소구"><div class="cap">BD_GSP_img_LopsidedSerumMagazine_Lina — 모양별 용도 매핑</div></div>
+  <div>
+    <h3><span class="k">D</span>매거진형 (Magazine) + 제형 소구</h3>
+    <div class="blk"><div class="lbl">구성</div>파스텔 프레임 + 제품 + <b>3D 렌더 오브제</b>(거대한 #1·숫자 7) + "THE SOLUTION TO HYPERPIGMENTATION" + 딜 박스. 패치 버전은 "Customizable Patches, 3 Shapes"로 모양별 용도(Clover=넓은 색소, Cloud=눈가, Heart=여드름 자국)를 매핑.</div>
+    <div class="blk"><div class="lbl">왜 작동</div>AI·3D로 대량생산 가능한 포맷인데 수치·뱃지 밀도가 '딜 전단' 이상으로 보이게 만든다. 제형 소구는 "왜 이 형태여야 하나"를 설명해 가격 저항을 낮춘다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>3D 오브제를 우리 자산으로 — 거대한 <b>"100M"</b>(엑소좀 입자 수), 레몬 단면, 마이크로 크리스탈 로드. 카피는 "THE SOLUTION TO HYPERPIGMENTATION" 그대로. 제형 소구 대응물 = <b>Vegan Microcrystal 전달 다이어그램</b>("성분이 아니라 전달이 문제") + "Feel the active" 틴글 정직 소구(세럼 전용 어휘 룰 준수). Higgsfield/Magnific 생성 → 컨셉명 <code>Magazine</code>·<code>Crystal</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/16529e0e6bad.jpg" alt="대기줄 실사형"><div class="cap">BD_GS_img_LineUp_Lina — 팝업 대기줄 실사</div><img src="a/e9992c71e87f.jpg" alt="틱톡 바이럴형"><div class="cap">BD_GS_img_bsdtiktokviral_Iris — "99% Pure Glutathione"</div></div>
+  <div>
+    <h3><span class="k">E</span>현장 실사 소셜프루프형 (LineUp · tiktokviral)</h3>
+    <div class="blk"><div class="lbl">구성</div>오프라인 행사 실사진을 광고 소재로 재활용 — "The Serum People Are <b>Lining Up Hours</b> For" / "TikTok's <b>Viral</b> Dark Spot Serum" + 손글씨 어노테이션("99% Pure Glutathione", "Fades Dark Spots") + 딜.</div>
+    <div class="blk"><div class="lbl">왜 작동</div>진짜 군중 사진은 합성으로 못 만드는 소셜프루프다. 행사 투자비를 소재로 회수하는 구조 — 캠퍼스·팝업 이벤트를 하는 진짜 이유가 여기 있다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>행사가 없는 동안의 대체 실사: 써클 발송 패키지 물량 샷("Restock day. Again."), 리뷰 스크린샷 월. "TikTok's Viral—" 카피는 써클 물량이 돌기 시작하면 사용. 오프라인 이벤트가 생기면 이 포맷 즉시 가동.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/7d12b96cc399.jpg" alt="AI 카툰 밈"><div class="cap">BD_GSP_img_gspbear_Iris — 광고 티 제로</div></div>
+  <div>
+    <h3><span class="k">F</span>밈 카툰형 (bear)</h3>
+    <div class="blk"><div class="lbl">구성</div>AI 생성 카툰(곰이 모니터 앞) + 밈 텍스트("LOOK AT THE EYES / TEETH / HAND") — 패치 붙일 위치 개그. 하단에만 제품·딜.</div>
+    <div class="blk"><div class="lbl">왜 작동</div>피드에서 광고로 안 읽힌다 → 순수 CTR 소재. 생산비 거의 0인데 브랜드 톤도 만든다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div><b>레몬 캐릭터 밈</b> — 갈변을 걱정하는 레몬, "POV: your dark spots seeing Lemonshot in the cart". AI 카툰 1장 × 문구 곱집합. 임상·인체 주장이 아니라 AI 임상근거 금지와 무관. 컨셉명 <code>LemonMeme</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/c25e10a6e821.jpg" alt="포스터 타이포형"><div class="cap">BD_PCO_img_PosterType_Lina</div><img src="a/e19748be960d.jpg" alt="문제 도발형"><div class="cap">BD_OTC_img_SSS005_Sarah — 문제 피부 스플릿</div></div>
+  <div>
+    <h3><span class="k">G·H</span>포스터 타이포형 + 문제 도발형</h3>
+    <div class="blk"><div class="lbl">구성</div>G: 블랙 + 초대형 "SHOP NOW" 타이포 + 43% OFF 서클 + 수치 뱃지(#1 · 99% Deep Pore Cleanse). H: "Still letting UV damage your skin?" + 문제 피부 클로즈업(before) / 맑은 피부(after) 세로 스플릿 + Limited Stock.</div>
+    <div class="blk"><div class="lbl">왜 작동</div>G는 카피보다 타이포 위계가 전부라 제작 30분. H는 질문형으로 현상 유지의 비용을 자각시킨 뒤 즉시 해결책을 붙인다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>G: 동일 문법, 뱃지만 "100M Particles" / "2% Niacinamide" / 딜%. H: "Still covering dark spots with concealer?" / "Still waiting for them to fade on their own?" + 우리 B&amp;A 세로 스플릿 — 기존 다크스팟 이미지 광고 v1과 합류. 컨셉명 <code>Poster</code>·<code>Problem</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/6ec7e8bebd91.jpg" alt="문제 클로즈업 영상"><div class="cap">BD_GS_vdo_ATCmissoutds2_Iris</div></div>
+  <div>
+    <h3><span class="k">I</span>문제 클로즈업 + 딜 (영상)</h3>
+    <div class="blk"><div class="lbl">구성</div>다크스팟 가득한 뺨 극단 클로즈업 + "dark spots" / "redness" 증상 라벨 + 제품 PIP + 하단 딜 바 "ONLY $14.90 — DON'T MISS OUT".</div>
+    <div class="blk"><div class="lbl">왜 작동</div>첫 프레임이 문제 그 자체라 타겟이 자기 얘기로 인식. 라벨로 문제를 언어화해주면 검색 의도와 연결된다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>우리 B&amp;A before 클립에 증상 라벨 + $36.58 딜 오버레이 + UGC 각주. 컨셉명 <code>Problem-vdo</code>.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/ee70e2b19d3e.jpg" alt="프로덕션급 화이트리스팅"><div class="cap">Alwz_GSP_vdo_elnaz_golrokh — 브랜드 옐로 풀 스타일링</div><img src="a/89d725101dd1.jpg" alt="데모 UGC"><div class="cap">Alwz_PCO_vdo_nicoletazmau — 클렌징 데모</div></div>
+  <div>
+    <h3><span class="k">J·K</span>화이트리스팅 — 프로덕션급 &amp; 데모 UGC</h3>
+    <div class="blk"><div class="lbl">구성</div>J: 크리에이터 개인 계정 명의인데 <b>브랜드 옐로로 풀 스타일링(헤어밴드·손목밴드·의상)된 스튜디오 촬영</b> — UGC처럼 보이는 광고를 프로덕션 품질로. K: 전형적 클로즈업 데모("Double cleanse with Manyo foam") + 충격 후기 캡션("didn't expect THIS much sebum 😭").</div>
+    <div class="blk"><div class="lbl">왜 작동</div>지인 추천의 형식 + 광고의 완성도. 브랜드 컬러 소품이 크리에이터 영상마다 브랜드를 각인시킨다.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>써클 상위 크리에이터에 <b>레몬 옐로 소품 킷</b>(헤어밴드·손목밴드) 동봉 → 화이트리스팅 확보. VIKI 로스터 7인 우선. 소품 킷 자체가 저비용 브랜딩 장치. 캡션 공식: 고백형("This has been a life saver for my dark spots") + #partner.</div>
+  </div>
+</div>
+
+<div class="arch">
+  <div class="imgs"><img src="a/0adb84d91493.jpg" alt="리테일 채널 공지형"><div class="cap">Ulta 입점 공지 소재</div></div>
+  <div>
+    <h3><span class="k">L</span>리테일 채널 공지형 (참고)</h3>
+    <div class="blk"><div class="lbl">구성</div>제품 다수 배열 + "NO.1 The Cleansing Oil Brand's Deep Cleansing Oil is <b>now at Ulta</b>" — 채널 확장 자체를 뉴스로 소재화.</div>
+    <div class="adapt"><div class="lbl">레몬더마 이식</div>우리는 아마존 단일이라 현재 해당 없음. <b>신제품·번들 출시나 신규 채널 진입 시</b> "Now on Amazon" 공지형으로 사용. 리테일 입점이 생기면 그때 정식 가동.</div>
+  </div>
+</div>
+
+<h3>아마존 SB — quail egg의 우리 버전</h3>
+<p><b>"Can this erase dark spots off a browned lemon?"</b> — 갈변 레몬 반쪽 물티슈 vs 반쪽 세럼 데모(23초) → 클레임 카드(코스맥스 사내임상 수치 확보 전엔 "Fades dark spots in 7 days" + 100M 뱃지, 확보 후엔 수치 차트) → <b>"Ask the lemon."</b> 훅 회수 → UGC 릴레이. 갈변=산화=다크스팟 은유가 정확하고 레몬이 우리 시그니처라 브랜드 각인까지 동시 해결. 컨셉명 <code>BrownedLemon</code>.</p></div></div></section><section class="sec" id="s18"><h2 class="sh"><span class="n">18</span>브리지 LP와 틱톡 군단</h2><div class="srcline">2026-08-13 통합 해부 §6</div><div class="secbody"><div class="s-full"><h3>노브랜드 Shopify 브리지 — 우리와 같은 구조, 다른 디테일</h3>
+<p>스토어명이 그대로 <b>“My Store”</b>, 도메인도 myshopify.com 기본이다. 브랜드 LP가 아니라 <b>순수 컨버전 브리지</b>로만 쓴다.</p>
+<div class="ladder">[KOREA &amp; JAPAN NO.1] 헤더
+ → “🛍️ Over 3K+ orders placed last month”
+ → “NO MORE DARK SPOTS IN 7 DAYS”
+ → <b>Shop Now at Amazon →</b>
+ → 번들 업셀 (Single $21→$14.89 / +Patch $43→$34)
+ → 뱃지 스트립 (🏆 Olive Young No.1 · 🥇 Qoo10 No.1 · ⏱️ 7 Days · 표면색소 ▼21.95%)
+ → 실사용 리뷰 인용</div>
+<div class="lead"><b>리뷰 인용으로 경쟁사를 때린다</b> — “tried soooo many products like <b>eqqualberry</b>, The Ordinary, Inkey —
+none of them worked”. 브랜드가 직접 비교하면 소송감인 것을 <b>소비자 목소리 인용으로 우회</b>한다.</div>
+<h3>TikTok — 팔로워 4.2만인데 영상이 884개</h3>
+<p>팔로워 대비 영상 수가 비정상적이다. 오가닉 도달용이 아니라 <b>소재 공장 + 커뮤니티 허브</b>다. 일 1회 이상 발행하며 3축으로 돈다 —
+①오피스 휴먼 브랜딩(팀원 캐릭터화) ②채널·딜 공지 ③<b>크리에이터 리크루팅</b>.</p>
+<div class="grid g3">
+  <div class="card y"><b>GMV 챌린지 보상</b><div style="font-size:13px;margin-top:5px">
+    10K+ = $2K 현금 · 30K+ = 서울 여행/$6K · <b>50K+ = 샤넬백/$10K</b><br>+ 선착 50명 업로드 $150 · Top5 콘텐츠 $200</div></div>
+  <div class="card"><b>모집이 곧 최대 바이럴</b><div style="font-size:13px;color:var(--ink-2);margin-top:5px">
+    이 모집 영상이 채널 유일한 <b>100만뷰</b>. 제품 콘텐츠가 아니라 <b>크리에이터 모집</b>이 가장 멀리 갔다</div></div>
+  <div class="card"><b>Discord로 군단 관리</b><div style="font-size:13px;color:var(--ink-2);margin-top:5px">
+    당첨자 발표·신제품 선리뷰 모집(“Be the first to review it”)</div></div>
+</div></div><details class="alt"><summary>▸ 7월판 원문 — Shopify 브리지 해부 · 틱톡 채널 분석</summary><div class="alt-in"><div class="s-td"><p>메타 광고 대부분의 랜딩은 <b>노브랜드 Shopify 페이지</b>(스토어명이 그냥 "My Store", 도메인도 myshopify.com 기본값)다. 브랜드 사이트가 아니라 <b>순수 전환용 다리</b>로만 쓴다. 우리 메타→브리지→아마존 구조와 동일 아키텍처.</p>
+<div class="flow">
+  <div class="fbox"><b>① 메타 광고</b>adid 파라미터 부착</div><div class="arr">→</div>
+  <div class="fbox"><b>② 프리셀 LP</b>[KOREA &amp; JAPAN NO.1] · "월 3천+ 주문" · 7일 수치 · 번들 업셀(단품 $14.89 / +패치 $34) · 뱃지 스트립(올영 1위·큐텐 1위) · 실리뷰 인용</div><div class="arr">→</div>
+  <div class="fbox"><b>③ "Shop Now at Amazon"</b>어트리뷰션 체인 유지</div>
+</div>
+<div class="warn"><b>⚠ 발견:</b> LP의 리뷰 인용에 <b>"eqqualberry도, The Ordinary도, Inkey도 다 써봤지만 효과 없었다"</b>는 소비자 원문이 그대로 실려 있다. 브랜드가 직접 경쟁사를 비교하면 소송감인 걸 <b>소비자 목소리 인용으로 우회</b>하는 수법. (EQQUALBERRY는 우리가 이미 teardown한 그 브랜드다.)</div></div><div class="s-td"><div class="grid g3">
+  <div class="card stat"><div class="v">4.16만</div><div class="l">@manyo_official 팔로워</div></div>
+  <div class="card stat"><div class="v">884개</div><div class="l">누적 영상 — 팔로워 대비 비정상적으로 많음 = 도달용이 아니라 <b>소재 공장 + 커뮤니티 허브</b></div></div>
+  <div class="card stat"><div class="v">100만뷰</div><div class="l">채널 유일 밀리언 영상 = <b>크리에이터 모집 공고</b>(GMV 챌린지)</div></div>
+</div>
+<p>콘텐츠 3축: ① 오피스 휴먼 브랜딩(팀원 캐릭터화·사내 유머·크리에이터 HQ 초청) ② 채널·딜 공지(Prime Day·틱톡샵 딜·Ulta 20%) ③ <b>크리에이터 리크루팅</b>. 오가닉이 소재 R&amp;D 역할도 한다 — 필링젤 영상이 3일 만에 1,000만뷰, 해당 제품 매출 3배(글로벌마케팅팀장 인터뷰, 검증 confirmed).</p>
+<h3>GMV 챌린지 보상 구조 <span class="small">(GMV = 크리에이터가 일으킨 판매액. 본계정 공식 게시물에서 직접 관찰 — 웹 출처 없음)</span></h3>
+<div class="grid g3">
+  <div class="card"><b>GMV $10K+</b><p>현금 $2,000</p></div>
+  <div class="card"><b>GMV $30K+</b><p>서울 여행 or $6,000</p></div>
+  <div class="card y"><b>GMV $50K+</b><p><b>샤넬백 or $10,000</b></p></div>
+</div>
+<p class="muted">+ 선착 50명 5영상 업로드 $150 · Top5 콘텐츠 $200 · Discord로 군단 관리 · 무료 PR 지급. 자체 구축만이 아니라 틱톡샵 공식 행사(댈러스 K-Beauty Collective, 뉴욕 시티 투어)와 에이전시 프로그램('윗유' Trip to Korea — 미국 메가 어필리에이터 10인 한국 초청)에도 적극 편승한다.</p></div></div></details></div></section><section class="sec" id="s19"><h2 class="sh"><span class="n">19</span>부록 — 수집 자산 전량</h2><div class="srcline">2026-08-13 소재 스와이프 §8</div><div class="secbody"><div class="s-sw"><p class="sub">위 본문에 인용하지 않은 것까지 하나도 빼지 않고 올린다.</p><div class="gal"><figure class=""><img src="a/DCO_img_OY19xbno1.jpg" loading="lazy" alt=""><figcaption><code>DCO_img_OY19xbno1</code></figcaption></figure><figure class=""><img src="a/j_gs_lineup.jpg" loading="lazy" alt=""><figcaption><code>gs_lineup</code></figcaption></figure><figure class=""><img src="a/j_gs_magazine.jpg" loading="lazy" alt=""><figcaption><code>gs_magazine</code></figcaption></figure><figure class=""><img src="a/j_gs_tiktokviral.jpg" loading="lazy" alt=""><figcaption><code>gs_tiktokviral</code></figcaption></figure><figure class=""><img src="a/j_gsp_bear.jpg" loading="lazy" alt=""><figcaption><code>gsp_bear</code></figcaption></figure><figure class=""><img src="a/j_gsp_lopsided_magazine.jpg" loading="lazy" alt=""><figcaption><code>gsp_lopsided_magazine</code></figcaption></figure><figure class=""><img src="a/j_otc_sss005.jpg" loading="lazy" alt=""><figcaption><code>otc_sss005</code></figcaption></figure><figure class=""><video src="a/j_vid_gs_atcmissout.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><code>vid_gs_atcmissout</code></figcaption></figure><figure class=""><video src="a/j_vid_gs_yellowtape.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><code>vid_gs_yellowtape</code></figcaption></figure></div></div></div></section><div class="part" id="pⅣ"><div class="roman">PART Ⅳ</div><h2 class="pt">그들이 쓰는 문장 원문</h2><p class="desc">번역해서 그대로 쓰라는 목록이 아니라, 어떤 종류의 문장을 어느 자리에 놓는지 보는 목록이다.</p></div><section class="sec" id="s20"><h2 class="sh"><span class="n">20</span>카피 원문 라이브러리 — 소구 레이어별</h2><div class="srcline">2026-07-21 딥리서치 §2</div><div class="secbody"><div class="s-td"><p class="muted">광고 소재·브리지 LP에서 실측 수집한 원문. 각 레이어가 어떤 역할을 하는지와 함께.</p>
+<div class="tbl-scroll"><table>
+<tr><th>소구 레이어</th><th>Manyo 원문</th><th>메커니즘</th></tr>
+<tr><td>시술 메타포<br>(리뷰 인용)</td><td>"My acne scars are gone — friends thought I got <b>laser</b>!"<br>"My blackheads are gone — friends thought I got <b>a facial</b>!"<br><span class="small">— Verified Amazon Customer</span></td><td>브랜드가 아니라 '검증된 소비자'가 지르는 구조 — 메타포의 부담을 인용 포맷이 흡수</td></tr>
+<tr><td>카테고리 선언</td><td>"THE SOLUTION TO HYPERPIGMENTATION"</td><td>단정형 — 경쟁이 아니라 정답 포지션</td></tr>
+<tr><td>타임 클레임</td><td>"NO MORE DARK SPOTS IN <b>7 DAYS</b>" / "Visible Results in 7 Days" / "7 DAY COMPILATION"</td><td>전 소재 공통 축 — 기대 시점을 브랜드가 고정</td></tr>
+<tr><td>함량성<br>(광고 전용)</td><td>"<b>99% Pure Glutathione</b>"</td><td>리스팅엔 없는 표현 — 광고&gt;리스팅의 실례</td></tr>
+<tr><td>비교 수치<br>(광고 전용)</td><td>"<b>3X Better Results Than Vitamin C</b>" + 4.61% vs 1.38% 차트</td><td>공식 페이지에 없음. 소비자가 아는 기준과 붙여 해석 비용 0</td></tr>
+<tr><td>소셜프루프</td><td>"The Serum People Are <b>Lining Up Hours</b> For" / "TikTok's <b>Viral</b> Dark Spot Serum" / "Over 3K+ orders placed last month"</td><td>행사 실사·판매 수치 — 만들 수 없는 증거</td></tr>
+<tr><td>B&amp;A 면책</td><td>"BEFORE VS AFTER" + "<b>*images taken from UGC content</b>"</td><td>임상 주장이 아니라 'UGC 인용'으로 프레이밍</td></tr>
+<tr><td>문제 도발</td><td>"Still letting UV damage your skin?"</td><td>질문형 어그로 — 현상 유지 비용을 자각시킴</td></tr>
+<tr><td>뱃지</td><td>"#1 in Korea &amp; Japan" / "KOREA NO.1 · JAPAN NO.1" / "No.1 for 5 Years"</td><td>전 소재 상시 노출 (실제 딴 랭킹)</td></tr>
+<tr><td>LP 수치</td><td>"Surface Pigmentation ▼21.95%" / "0.00 Irritation" / "Concentration from No.1 Dark Spot Serum"</td><td>브리지 LP 뱃지 스트립</td></tr>
+</table></div></div></div></section><section class="sec" id="s21"><h2 class="sh"><span class="n">21</span>실제로 쓰고 있는 문구 전량</h2><div class="srcline">2026-08-13 소재 스와이프 §5</div><div class="secbody"><div class="s-sw"><p class="sub">번역해서 쓰라는 게 아니라, 어떤 종류의 문장을 쓰는지 보라는 목록이다.</p>
+<div class="copy-grid">
+<div><h4>헤드라인 (리뷰 인용)</h4><ul>
+<li>“My blackheads are gone — friends thought I got a facial!”</li>
+<li>“My skin is so smooth — friends thought I got a facial!”</li>
+<li>“BLACKHEADS ARE GONE, after 15 seconds of massaging!”</li>
+<li>“People thought I got a facial”</li>
+</ul></div>
+<div><h4>순위·규모 뱃지</h4><ul>
+<li>KOREA NO.1 / 22M+ SOLD</li>
+<li>KOREA NO.1 / 900K+ SOLD</li>
+<li>#1 Dark Spot Serum in Korea &amp; Japan</li>
+<li>#1 Best Selling Cleansing Oil</li>
+<li>NO.1 in Korea for 7 Years</li>
+<li>KOREA NO.1 CLEANSING OIL BRAND</li>
+</ul></div>
+<div><h4>수치 클레임</h4><ul>
+<li>▼58% blackheads</li>
+<li>99% Deep Pore Cleanse</li>
+<li>3X Better Results Than Vitamin C</li>
+<li>Glutathione 6,000× smaller than pores for 100% absorption</li>
+<li>69.6% of dead skin in just 1 use</li>
+</ul></div>
+<div><h4>영상 훅</h4><ul>
+<li>acne scars gone in 7 days?!</li>
+<li>No more dark spots?</li>
+<li>Dark Spot Where?</li>
+<li>Glass Skin ✨</li>
+<li>CAN THIS ERASE DARK SPOTS OFF A QUAIL EGG?</li>
+</ul></div>
+<div><h4>CTA</h4><ul>
+<li>Shop Now On amazon →</li>
+<li>SHOP NOW</li>
+<li>Add to Cart 🛒</li>
+<li>DON’T MISS OUT</li>
+</ul></div>
+<div><h4>신뢰 장치</h4><ul>
+<li>— Verified Amazon Customer</li>
+<li>Amazon’s Choice (뱃지 그래픽 재현)</li>
+<li>별 5개 + amazon 로고</li>
+<li>브랜드 × amazon 로고 락업</li>
+<li>ULTA / OLIVE YOUNG 로고 병기</li>
+</ul></div>
+</div>
+<p class="note">문장 길이가 전부 짧다. 가장 긴 헤드라인도 10단어 안쪽이고, 대부분 <b>주어가 “나”이거나 숫자로 시작</b>한다.</p>
+</div></div></section><div class="part" id="pⅤ"><div class="roman">PART Ⅴ</div><h2 class="pt">우리에게 무엇을 뜻하나</h2><p class="desc">여기부터가 실행이다. 급하면 이 부분만 읽어도 된다.</p></div><section class="sec" id="s22"><h2 class="sh"><span class="n">22</span>ARENCIA vs Manyo — 정반대 두 전략, 그리고 채점</h2><div class="srcline">2026-08-13 정량 업그레이드 §4·§5</div><div class="secbody"><div class="s-up"><div class="vs">
+  <div class="col a"><h4>ARENCIA — 트래픽을 산다</h4><ul>
+    <li>광고 키워드 <b>835개</b>(경쟁 브랜드어 718)</li>
+    <li>celimax·medicube·cerave·dove까지 이웃 이름 매수</li>
+    <li>리스팅은 <b>클린</b>(임상수치 0·각주 2중)</li>
+    <li>자극은 전부 <b>메타</b>(활성 229개·매일 투입)</li>
+    <li>메타 → 자사몰 → 브랜드 검색 스필오버</li>
+  </ul></div>
+  <div class="mid">VS</div>
+  <div class="col m"><h4>Manyo — 카테고리를 만든다</h4><ul>
+    <li>광고 키워드 <b>100개</b>(자사 방어는 5개)</li>
+    <li>“glutathione” 검색 <b>오가닉 1~2위</b> 선점</li>
+    <li>리스팅이 <b>자극적</b>(200%·7일·6,024배)</li>
+    <li>권위는 <b>한국·일본 1위 뱃지</b> 이식</li>
+    <li>딜($14.89)로 랭킹을 밀어올리는 운영</li>
+  </ul></div>
+</div>
+<p class="lead"><b>둘 다 통한다.</b> 다만 전제가 다르다 — ARENCIA는 살 트래픽이 있어야 하고,
+Manyo는 <b>남이 안 만든 카테고리 이름</b>이 있어야 한다. 우리에게 중요한 질문은 이거다:
+<b>우리에게도 “글루타티온” 같은, 우리가 오너가 될 수 있는 단어가 있는가?</b></p></div><div class="s-up"><div class="score">
+  <div>직관성</div><div class="bar"><i style="width:100%"></i></div><div class="n">5</div>
+  <div>자극성</div><div class="bar"><i style="width:100%"></i></div><div class="n">5</div>
+  <div>AI 클론 가능성</div><div class="bar"><i style="width:80%"></i></div><div class="n">4</div>
+  <div>우리 정합성</div><div class="bar"><i style="width:60%"></i></div><div class="n">3</div>
+</div>
+<p><b>자극성 5</b> — 리스팅에서 이만큼 밀어붙이고도 살아남는 표본은 드물다. 다만 <b>정합성 3</b>인 이유는,
+이들의 무기가 “1위 뱃지”와 “비교 우위 수치”인데 <b>둘 다 우리는 아직 없다</b>(각주로도 못 방어).
+구조는 훔치되 내용물은 우리 것으로 바꿔야 한다.</p></div><details class="alt"><summary>▸ 8월 통합본판 원문 — 같은 대조의 다른 서술</summary><div class="alt-in"><div class="s-full"><div class="vs">
+  <div class="col a"><h4>ARENCIA — 트래픽을 산다</h4><ul>
+    <li>광고 키워드 <b>835개</b>(경쟁 브랜드어 718)</li>
+    <li>celimax·medicube·cerave·dove까지 매수</li>
+    <li>리스팅은 <b>클린</b>(임상수치 0)</li>
+    <li>자극은 전부 <b>메타</b>(활성 229개)</li>
+  </ul></div>
+  <div class="mid">VS</div>
+  <div class="col m"><h4>Manyo — 카테고리를 만든다</h4><ul>
+    <li>광고 키워드 <b>100개</b>(자사 방어 5개)</li>
+    <li>“glutathione” 오가닉 <b>1~2위</b> 선점</li>
+    <li>리스팅도 <b>자극적</b>(200%·7일·6,024배)</li>
+    <li>자극이 <b>전 채널</b>에 고르게(SB·메타·LP·PDP)</li>
+  </ul></div>
+</div>
+<p class="lead"><b>둘 다 통한다. 전제가 다를 뿐이다.</b> ARENCIA는 살 트래픽이 있어야 하고,
+Manyo는 <b>남이 안 만든 카테고리 이름</b>이 있어야 한다.
+우리에게 남는 질문 — <b>우리가 오너가 될 수 있는 단어는 무엇인가?</b></p></div></div></details></div></section><section class="sec" id="s23"><h2 class="sh"><span class="n">23</span>우리와의 격차 — 숫자로</h2><div class="srcline">2026-08-13 소재 스와이프 §7</div><div class="secbody"><div class="s-sw"><table class="gap">
+<thead><tr><th></th><th>마녀공장</th><th>레몬더마 (현재)</th><th>차이의 정체</th></tr></thead>
+<tbody>
+<tr><td>메타 활성 광고 수</td><td class="them">111건 (7월 실측)</td><td class="us">소수</td><td>템플릿 재사용으로 양을 만든다</td></tr>
+<tr><td>소재 제작 방식</td><td class="them">마스터 템플릿 4개 × SKU × 담당자 4명 곱집합</td><td class="us">건별 제작</td><td>같은 노력으로 나오는 개수가 다르다</td></tr>
+<tr><td>영상 얼굴 수</td><td class="them">스크립트 1개당 3인 이상 병렬</td><td class="us">히어로 1인</td><td>어느 얼굴이 먹히는지 <b>데이터로</b> 가른다</td></tr>
+<tr><td>SB 영상 구조</td><td class="them">좌우 분할 (고정 패널 + 데모)</td><td class="us">전체화면 UGC</td><td>멈췄을 때 남는 정보량</td></tr>
+<tr><td>가격</td><td class="them">세럼 $14.89</td><td class="us">세럼 $36.58</td><td>2.5배 — 가격으로 붙으면 진다</td></tr>
+<tr><td>리뷰 수</td><td class="them">세럼 224건 / 클렌징오일 6,786건</td><td class="us">축적 중</td><td>“Verified Customer” 인용의 원재료</td></tr>
+</tbody></table>
+
+<div class="verdict small">
+<p><b>이 표에서 우리가 당장 좁힐 수 있는 건 4개 중 3개다.</b>
+소재 제작 방식(템플릿화)·영상 얼굴 수(AI 모델 로스터 보유)·SB 구조(편집만으로 가능)는 <b>돈이 아니라 방식의 문제</b>라 이번 주에 바꿀 수 있다.
+가격과 리뷰 수는 시간이 필요하다. <b>가격으로 붙지 않는 것</b>이 전제다.</p>
+</div>
+</div></div></section><section class="sec" id="s24"><h2 class="sh"><span class="n">24</span>클레임 결정 — 마녀공장 동등 이상으로 간다<span class="tagnew">NEW</span></h2><div class="srcline">00_compass/decisions/2026-07-21 · 미게시</div><div class="secbody">
+<p class="n-lead">이 리서치가 낳은 <b>가장 큰 결과물</b>은 소재 한 장이 아니라 결정 하나였다.
+2026-07-21, 마녀공장의 광고가 자기네 공식 상세페이지보다 센 문구를 쓰고 있다는 것을 실측으로 확인한 날
+— <span class="hl">우리도 동등 이상으로 간다</span>가 확정됐다.</p>
+
+<div class="quote-o"><span class="who">결정 · 2026-07-21 · John (마케팅 오너)</span>
+퍼포먼스 광고(메타·아마존 SB/SP, 미국·UAE)의 클레임 강도를 <b>마녀공장 동등 이상</b>으로 가져간다.
+“광고가 공식 리스팅보다 센 클레임을 쓴다”는 플레이를 회피 대상이 아니라 <b>벤치마킹 대상</b>으로 삼는다.
+빅브랜드도 이렇게 플레이하는데 신생 브랜드가, 특히 퍼포먼스 영역에서 안 할 이유가 없다.</div>
+
+<div class="n-grid c2">
+<div class="n-card y"><h4>✅ 이제 허용</h4>
+<p>· 광고 소재의 클레임이 리스팅·공식 페이지보다 세도 된다<br>
+&nbsp;&nbsp;<span class="mono">예: “3X Better Than Vitamin C”류 비교 수치 카드, “99% Pure”류 함량 표현</span><br>
+· <b>타임 클레임</b> —
+“NO MORE DARK SPOTS IN 7 DAYS”, “Visible Results in 7 Days”<br>
+· <b>시술 메타포를 소비자 리뷰 인용 형식으로</b> —
+“friends thought I got laser!” — Verified Customer<br>
+· 비포애프터를 <span class="mono">*images taken from UGC content</span> 각주로 처리하는 기법</p></div>
+<div class="n-card"><h4>🚫 여전히 밖 — 강도 문제가 아니라 계정 정지 벡터</h4>
+<p>· <b>플랫폼이 기계적으로 대조 가능한 마켓플레이스 사실 조작</b><br>
+&nbsp;&nbsp;미달성 “Amazon #1 Best Seller”·판매량·별점.
+<span class="mono">마녀공장도 이건 안 한다 — 그들의 No.1 뱃지는 전부 실제로 딴 랭킹이다</span><br>
+· <b>실존 인물·기관을 조작해 인용하는 것</b><br><br>
+이 둘은 클레임이 세서 걸리는 게 아니라 <b>계정과 소송이 걸린다.</b> 그래서 강도와 무관하게 제외.</p></div>
+</div>
+
+<p>이 결정은 갑자기 나온 것이 아니라 <b>2026-06-09 마케팅카피 공격적 허용</b> → <b>2026-07-18 UAE 다크스팟 소재에 미국 공격적 클레임 그대로 적용</b>의 연장이자 한 단계 상향이다.
+브랜드 가이드(<span class="mono">brand.md</span> §카피 정책)의 “구체 임상수치 메타 금지”·“검증가능 허위” 항목 중
+<b>퍼포먼스 광고에 한해서는 이 결정이 우선</b>한다.</p>
+
+<p class="note-s">📄 결정 정본: <span class="mono">00_compass/decisions/2026-07-21-퍼포먼스광고-클레임-Manyo동등이상-벤치마킹.md</span> ·
+실행 정본: <span class="mono">30_growth/marketing/us/performance/swipe-file/manyo-benchmark-map.md</span></p>
+</div></section><section class="sec" id="s25"><h2 class="sh"><span class="n">25</span>레몬더마 즉시 제작 브리프</h2><div class="srcline">2026-08-13 소재 스와이프 §6</div><div class="secbody"><div class="s-sw"><p class="sub">위 템플릿을 우리 제품·우리 규정에 맞춰 옮긴 것. 이대로 발주하면 된다.</p>
+<div class="gate">
+<b>지켜야 할 우리 규정 3가지</b>
+<ul>
+<li><b>구체 임상수치는 아마존(PDP·A+·SB)에서만.</b> 메타 광고에는 쓰지 않는다 — 마녀공장도 “3X vs Vitamin C” 카드는 아마존 SB에서만 쓴다.</li>
+<li><b>메타 카피에 이모지 금지</b> (우리 룰). 마녀공장은 이모지를 많이 쓰지만 우리는 안 쓴다.</li>
+<li><b>성분 표기는 “비건 마이크로 크리스탈”</b>. 브랜드명은 “레몬더마”.</li>
+</ul>
+</div>
+
+<h3>브리프 1 — 아마존 SB 영상에 왼쪽 고정 패널 붙이기 <span class="tag prio">최우선</span></h3>
+<table class="brief">
+<tr><th>무엇을</th><td>지금 돌리는 히어로 영상(김보은 C1)을 재촬영 없이 편집만</td></tr>
+<tr><th>어떻게</th><td>화면을 좌 35% / 우 65%로 분할. 오른쪽에 기존 영상 그대로, 왼쪽에 <b>영상 내내 안 바뀌는 패널</b></td></tr>
+<tr><th>왼쪽 패널에 넣을 것</th><td>① 제품 컷 ② 핵심 주장 한 줄 ③ 임상 막대그래프 ④ 제품명. 아마존이라 수치 사용 가능</td></tr>
+<tr><th>왜</th><td>SB는 음소거·소형·스크롤 중 재생. 아무 프레임에서 멈춰도 팔 말이 남아야 한다</td></tr>
+<tr><th>검증</th><td>영상 아무 지점이나 정지 → 제품·주장이 읽히면 통과</td></tr>
+</table>
+
+<h3>브리프 2 — 리뷰 인용형 이미지 세트</h3>
+<table class="brief">
+<tr><th>무엇을</th><td>우리 아마존 실제 리뷰에서 <b>가장 구체적인 문장 3개</b>를 뽑아 헤드라인으로</td></tr>
+<tr><th>레이아웃</th><td>레몬더마 × amazon 락업(상단) → 큰따옴표 인용문(화면 절반) → “— Verified Amazon Customer” → 가격 → 검정 뱃지 2줄 → 별 + amazon 로고</td></tr>
+<tr><th>우리 뱃지로 쓸 것</th><td>실측으로 뒷받침되는 것만. 판매량·순위를 아직 못 쓰면 <b>“Vegan Microcrystal” · “Dermatologist-Tested”</b> 같은 사실 뱃지로 대체</td></tr>
+<tr><th>가격 표기</th><td>세럼 $36.58 / 크림 $36. 할인 표기 시 <b>세럼 $26 · 크림 $24 아래로는 내리지 않는다</b></td></tr>
+<tr><th>먼저 할 일</th><td>리뷰에서 인용 후보 뽑기 — 아직 안 했다</td></tr>
+</table>
+
+<h3>브리프 3 — Day 0→7 다이어리 영상, 얼굴 3인 병렬</h3>
+<table class="brief">
+<tr><th>구조</th><td>의문형 훅 → Before 매크로 → Day 1·3·5·7 → 결과 한 마디 → 성분 메커니즘 한 줄</td></tr>
+<tr><th>규격</th><td>720×1280 세로 · 19~21초 · 흰 자막(배경 박스 없음) · 도포 소리 살린 ASMR 버전 별도</td></tr>
+<tr><th>우리 자산</th><td>AI 인물 모델 로스터가 이미 있다 (<code>us/performance/ai-models/</code>) — 얼굴 3인 병렬이 바로 가능</td></tr>
+<tr><th>주의</th><td>AI 생성 이미지로 임상 근거를 만드는 건 금지(2026-07-06 결정). <b>Day 표기는 사용 경과 표시일 뿐 임상 결과 주장이 아니어야</b> 한다</td></tr>
+</table>
+
+<h3>브리프 4 — 사물 데모 (메추리알 자리에 무엇을 놓을 것인가)</h3>
+<table class="brief">
+<tr><th>왜 좋은가</th><td>사람 피부 비포애프터가 아니라 <b>사물 실험</b>이라 규제·불신을 동시에 피하면서 효능을 보여준다</td></tr>
+<tr><th>우리 후보</th><td>“비건 마이크로 크리스탈”이 흡수를 돕는다는 걸 <b>눈에 보이게</b> 만드는 실험 — 물질이 표면을 통과하는 장면</td></tr>
+<tr><th>상태</th><td><b>아이디어 단계.</b> 무엇을 놓을지는 아직 정해지지 않았다 — 여기가 이번 리서치의 진짜 숙제</td></tr>
+</table>
+</div></div></section><section class="sec" id="s26"><h2 class="sh"><span class="n">26</span>우리가 할 것 — 통합 실행 목록<span class="tagnew">NEW</span></h2><div class="srcline">4편 실행 섹션 통합 · 원문 보존</div><div class="secbody">
+<p class="n-lead">네 편에 흩어져 있던 실행 항목을 <b>한 목록</b>으로 정리했다.
+원본 세 편의 실행 섹션은 아래 접힌 블록에 원문 그대로 보존한다 — 서술이 달라 놓치는 문장이 없도록.</p>
+
+<h3>즉시 이식 — 소재 문법 6가지</h3>
+<ol class="n-list">
+<li><b>사물 데모 “갈변 레몬”</b>
+메추리알 문법을 우리 시그니처로. “Can this erase dark spots off a browned lemon?”
+반쪽은 물티슈, 반쪽은 세럼. 회수 훅은 “Ask the lemon.” 갈변(산화)이 다크스팟의 은유로 정확하고,
+레몬이 우리 상징이라 브랜드 각인까지 같이 된다. 변형: 갈변 사과 · 반점 바나나 · 얼룩 도자기.
+<b>사람 비포애프터가 아니어서 심사와 불신을 동시에 피한다.</b></li>
+<li><b>시간 압축 게이지</b>
+“Day 1 → Day 7” 도식을 우리 임상 기간에 맞춰 <b>Day 1 → Week 3</b>로 변환.
+각주에 실측 근거(브라이트닝 27.4%)를 붙이면 방어 구조까지 같아진다.</li>
+<li><b>질문형 도발 헤드라인</b>
+“Dark Spots, Why Wait for Weeks?” 문법.
+우리 버전은 “Actives That Work. Without the Burn.” 계열의 통념 반박형.
+형광펜 강조(<span class="mono">#ddf746 30%</span>)는 우리 브랜드 가이드에 이미 있는 장치다.</li>
+<li><b>3단 동사 구조</b>
+PREVENT / BLOCK / ERASE처럼 성분마다 동사 하나.
+우리 버전 <b>OPEN(비건 마이크로 크리스탈) → DELIVER(전달) → CALM(진정)</b>.
+성분 나열이 역할 서사로 바뀐다.</li>
+<li><b>크기 비교 도식</b>
+“6,024x smaller than a pore”는 추상적인 기술을 그림 한 장으로 만든 장치다.
+우리 비건 마이크로 크리스탈(75~150μm)도 같은 방식이 가능하다 — 단 <b>우리 수치는 검증된 값만</b>.</li>
+<li><b>권위 이식, 우리 버전</b>
+이들은 “올리브영·큐텐 1위”를 쓴다.
+우리가 지금 쓸 수 있는 검증 가능한 권위는 <b>MFDS 이중 기능성 등록</b>과 <b>한국 약국 유통 자격</b>이다.
+뱃지의 <b>디자인 문법</b>(월계관·원형 스탬프)만 가져온다.</li>
+</ol>
+
+<h3>제작 우선순위 — 제작비 대비 효과 순</h3>
+<div class="n-tbl"><table>
+<tr><th class="r">순위</th><th>컨셉</th><th>왜 이 순서인가</th></tr>
+<tr><td class="r"><b>1</b></td><td><span class="mono">TapeFrame</span></td><td>오버레이 템플릿 <b>1개</b>를 만들면 기존 UGC 전량에 씌울 수 있다. 가성비 최상</td></tr>
+<tr><td class="r"><b>2</b></td><td><span class="mono">Review</span> 인용형</td><td>정적 1템플릿 × 인용문 곱집합. 브랜드가 아니라 소비자가 말하는 구조라 방어까지 된다</td></tr>
+<tr><td class="r"><b>3</b></td><td><span class="mono">NeonSign</span></td><td>노랑↔블랙 대비가 우리 브랜드 정체성 그 자체. 기존 비포애프터를 그대로 재활용</td></tr>
+<tr><td class="r"><b>4</b></td><td><span class="mono">BrownedLemon</span> SB</td><td>후킹당한 그 포맷의 우리 버전. 영상이라 제작 기간이 붙는다</td></tr>
+<tr><td class="r">5</td><td><span class="mono">Magazine · Poster · LemonMeme</span></td><td>곱집합 라이브러리 확장</td></tr>
+<tr><td class="r">6</td><td>옐로 소품 킷 화이트리스팅</td><td>써클 연계 — 준비 기간이 필요하다</td></tr>
+</table></div>
+<p>태깅 체계(오늘부터): <span class="mono">{Alwz|BD}_{DS|CR|번들}_{img|vdo}_{컨셉명}_{제작자}</span><br>
+컨셉 라이브러리: <span class="mono">TapeFrame · Review · NeonSign · Magazine · Poster · LemonMeme · Problem · Crystal · BrownedLemon</span></p>
+
+<h3>시스템으로 훔칠 것</h3>
+<div class="n-grid c2">
+<div class="n-card"><h4>뱃지 스택 수집 시작</h4><p>마녀공장은 “1위 뱃지”가 다음 채널로 가는 <b>입장권</b>이었다.
+지금 우리가 딸 수 있는 것부터 — 아마존 New Release·카테고리 랭킹, 별점, 소비자 투표형 어워즈 응모.
+뱃지가 없는 동안은 <b>“100M Lemon Exosome Particles”</b> 같은 정량 자산이 뱃지를 대신한다.</p></div>
+<div class="n-card"><h4>브리지 LP 강화</h4><p>실제 리뷰 인용 블록(경쟁사 언급은 소비자 원문 그대로만) + 번들 업셀 + 뱃지 스트립을
+우리 전환 LP <span class="mono">0611-meta-us-ds-serum-v1</span>에 추가.</p></div>
+<div class="n-card"><h4>써클 GMV 티어 보상 실험</h4><p>핵심 발견은 <b>모집 콘텐츠 자체가 최대 바이럴</b>이었다는 것.
+우리 스케일 버전 — 소액 현금 + 한정판 굿즈 마일스톤, 선착 업로드 보상.
+(신규 계정 velocity 원칙 안에서.)</p></div>
+<div class="n-card"><h4>이벤트 딜로 랭킹 밀기 검토</h4><p>평시 정가 + 이벤트에만 큰 폭 할인.
+우리 마지노선(세럼 $26)이 있으니 그 안에서 설계 — 10월 블랙프라이데이 준비와 함께 판단.</p></div>
+<div class="n-card"><h4>glutathione 키워드 소액 수확</h4><p>“glutathione serum” 검색 결과에 우리가 없다.
+DS 세럼 SP 캠페인에 글루타티온 계열 키워드를 <b>소액으로</b> 넣어 전환이 나오는지부터 확인
+— 히어로 판정 원칙(누적 n≥8·반복 전환) 적용.</p></div>
+<div class="n-card y"><h4>“우리 카테고리 단어” 정하기 <span class="mono">← 가장 큰 숙제</span></h4>
+<p>마녀공장이 <b>“글루타티온”</b>을 가진 것처럼, 우리가 오너가 될 단어가 필요하다.
+후보: <b>vegan microcrystal · exosome serum · K-pharmacy</b>.
+검색량과 경쟁 강도를 재서 하나를 고르고 오가닉·광고·리스팅을 그 단어에 정렬하는 것이 다음 단계.</p></div>
+</div>
+
+<div class="avoid"><b>피할 것 4가지</b><br>
+① <b>가격 정면 대응</b> —
+세럼 $14.89 대 우리 $36.58(2.5배). 이들은 물량·최저가 게임이고 그 대가가 이익 반토막이었다.
+싸움터를 ‘가격’이 아니라 <b>‘자극 없는 효능’</b>으로.<br>
+② <b>형식만 베끼기</b> —
+“200%+”·“No.1”은 이들이 임상 각주(n=20)와 랭킹 날짜를 박아 방어하는 것이다.
+근거 없이 형식만 가져오면 그대로 계정 리스크. <b>구조만 가져오고 숫자는 우리 실측으로.</b><br>
+③ <b>초도물량·딜 스파이크를 성장으로 오독</b> —
+2024년 3분기 −64.8%가 남긴 교훈. 누적·반복 전환 기준을 유지한다.<br>
+④ <b>마케팅비 무한 증액</b> —
+“연 200억 공격 마케팅” 공언의 결말은 영업이익 −43.7%와 매각이었다.
+성장투자 국면에도 MER 추적은 유지.</div>
+
+<div class="wedge2"><b>차별화 쐐기 — 이들이 비워 둔 자리</b><br>
+· <b>함량 비공개.</b> 세럼의 글루타티온 함량은 전 소스 비공개다(패치만 5ppm). 성분 ‘이름’ 마케팅의 전형.
+우리는 반대로 <b>“성분이 아니라 전달이 문제”</b>라는 비건 마이크로 크리스탈 앵글로 우회한다(경쟁사 직접 언급 없이).<br>
+· <b>무자극 주장이 없다.</b> 클렌징 브랜드가 트리트먼트로 확장하는 초기 단계다 →
+우리 <b>“No retinol. No AHA·BHA. No burn”</b> 네거티브 축과 K-Pharmacy 신뢰가 방어벽이 된다.<br>
+· <b>평점이 4.8 → 4.2로 내려가는 중.</b> “7일 만에”가 기대치를 올린 결과로 보인다.
+우리 <b>“3주”</b>는 약점이 아니라 <span class="hl">리뷰 평점을 지키면서 볼륨을 키울 수 있는 자리</span>다.</div>
+<details class="alt"><summary>▸ 원본 3편의 실행 섹션 원문 (중복 포함 · 한 문장도 버리지 않기 위해)</summary><div class="alt-in"><h3 style="margin-top:14px">2026-08-13 통합 해부 §11</h3><div class="s-full"><ol class="steal">
+  <li><b>사물 데모 — “갈변 레몬” <span class="chip">최우선</span></b>
+    메추리알 문법을 우리 시그니처로: <b>“Can this erase dark spots off a browned lemon?”</b>
+    갈변(산화)=다크스팟 은유가 정확하고 레몬이 우리 상징이라 브랜드 각인까지 동시에 된다.
+    반쪽 물티슈 vs 반쪽 세럼, 회수 훅은 <b>“Ask the lemon.”</b><br>
+    변형: 갈변 사과 · 반점 바나나 · 얼룩 도자기. <b>사람 비포애프터가 아니라 안전한 visual proof</b>다.</li>
+  <li><b>시간 압축 게이지 <span class="chip">즉시</span></b>
+    Day1→Day7 게이지를 우리 임상 기간으로 변환 — <b>Day 1 → Week 3</b>. 각주에 실측(브라이트닝 27.4%)을 붙이면 방어 구조까지 동일.</li>
+  <li><b>질문형 도발 헤드라인 <span class="chip">즉시</span></b>
+    “Dark Spots, Why Wait for Weeks?” 문법 → 우리 버전 <b>“Actives That Work. Without the Burn.”</b> 계열.
+    형광펜 강조는 우리 브랜드 가이드에 이미 있는 장치다.</li>
+  <li><b>3단 동사 구조 <span class="chip">즉시</span></b>
+    PREVENT/BLOCK/ERASE → 우리 <b>OPEN(마이크로크리스탈) → DELIVER(전달) → CALM(진정)</b>.
+    성분 나열이 역할 서사로 바뀐다.</li>
+  <li><b>뱃지 스택 수집 시작</b>
+    Manyo는 1위 뱃지가 채널 사다리의 연료였다. 우리가 지금 딸 수 있는 것부터 —
+    Amazon New Release/카테고리 랭킹, 소비자투표형 어워즈. 뱃지가 없는 단계에선
+    <b>“100M exosome particles”·MFDS 이중 기능성</b> 같은 정량 자산이 대체재다.</li>
+  <li><b>브리지 LP에 리뷰 인용 블록</b>
+    경쟁사 실패담을 <b>소비자 원문 그대로</b> 인용(브랜드가 직접 비교하지 않음) + 번들 업셀.</li>
+  <li><b>소재 태깅 체계 업그레이드</b>
+    adid에 <code>[캠페인]_[SKU]_[포맷]_[컨셉템플릿]_[제작자]</code>. 컨셉에 <b>이름을 붙여 라이브러리화</b>하면
+    승자 컨셉의 SKU 간 이식이 빨라진다.</li>
+  <li><b>“우리 카테고리 단어” 정하기 <span class="chip">전략</span></b>
+    이 리서치의 가장 큰 숙제. 후보: <b>vegan microcrystal · exosome serum · K-pharmacy</b>.
+    검색량·경쟁 강도를 재서 하나 고르고 오가닉·광고·리스팅을 그 단어에 정렬하는 것이 다음 단계.</li>
+</ol>
+
+<div class="warn"><b>피할 것 4가지</b><br>
+① <b>가격 정면 대응 금지</b> — 세럼 $14.89 vs 우리 $36.58(2.5배). 이들은 물량·최저가 게임이고 그 대가가 이익 반토막이다.
+싸움터를 ‘가격’이 아니라 <b>‘자극 없는 효능’</b>으로.<br>
+② <b>“200%+”·“No.1” 형식만 베끼기 금지</b> — 이들은 임상 각주(n=20)와 랭킹 날짜를 박아 방어한다. 근거 없이 형식만 가져오면 계정 리스크다.<br>
+③ <b>초도물량·딜 스파이크를 성장으로 오독 금지</b> — −64.8% QoQ가 남긴 교훈.<br>
+④ <b>마케팅비 무한 증액 금지</b> — “연 200억” 공언의 결말은 이익 −43.7%와 매각이었다.</div>
+
+<div class="wedge"><b>우리 쐐기</b> — Manyo 세럼은 <b>글루타티온 함량이 전 소스 비공개</b>다(패치만 5ppm).
+성분 ‘이름’ 마케팅의 전형이다. 우리는 반대로 갈 수 있다 — <b>“성분이 아니라 전달이 문제”</b>라는
+Vegan Microcrystal 앵글로 우회 공격(경쟁사 직접 언급 없이).<br><br>
+그리고 이들의 평점이 <b>4.8→4.2로 내려가는 중</b>이다. “7일”이 기대치를 올린 결과로 보인다.
+우리 <b>“3주”</b>는 약점이 아니라 <b>평점을 지키면서 볼륨을 키울 수 있는 자리</b>다.</div>
+
+<div class="unk"><b>여전히 모르는 것</b> — 세럼 글루타티온 함량(전 소스 비공개) · Manyo US 법인 존재 여부(Cerritos CA 주소 단서만) ·
+“올리브영 1위”의 정확한 카테고리·기간(1차 소스 없음) · quail egg SB 제작 주체(웹 흔적 전무) · 아마존 최초 진출 연도.</div></div><h3 style="margin-top:22px">2026-07-21 딥리서치 §12</h3><div class="s-td"><h3>제작 우선순위 (제작비 대비 효과)</h3>
+<div class="prio">
+  <div class="p"><b><span class="n">1</span>TapeFrame</b>오버레이 템플릿 1개로 기존 UGC 전량 재무장</div>
+  <div class="p"><b><span class="n">2</span>Review 인용형</b>정적 1템플릿 × 인용문 곱집합</div>
+  <div class="p"><b><span class="n">3</span>NeonSign</b>브랜드 컬러 그대로 + 기존 B&amp;A 재활용</div>
+  <div class="p"><b><span class="n">4</span>BrownedLemon SB</b>후킹당한 그 포맷의 우리 버전</div>
+  <div class="p"><b><span class="n">5</span>Magazine·Poster·LemonMeme</b>곱집합 라이브러리 확장</div>
+  <div class="p"><b><span class="n">6</span>옐로 소품 킷 화이트리스팅</b>써클 연계(준비 기간 필요)</div>
+</div>
+<p>태깅 체계(오늘부터): <code>{Alwz|BD}_{DS|CR|번들}_{img|vdo}_{컨셉명}_{제작자}</code> — 컨셉 라이브러리: TapeFrame · Review · NeonSign · Magazine · Poster · LemonMeme · Problem · Crystal · BrownedLemon</p>
+
+<h3>시스템으로 훔칠 것</h3>
+<ol class="tight">
+  <li><b>뱃지 스택 수집 시작.</b> Manyo는 1위 뱃지가 채널 사다리의 연료였다. 지금 만들 수 있는 것부터: 아마존 New Release·카테고리 랭킹, 별점, 소비자투표형 어워즈 응모. 뱃지가 없는 동안은 "100M Lemon Exosome Particles" 정량 자산이 뱃지를 대신한다.</li>
+  <li><b>브리지 LP 강화.</b> 실리뷰 인용 블록(경쟁사 언급은 소비자 원문 그대로만) + 번들 업셀 + 뱃지 스트립을 우리 전환 LP에 추가.</li>
+  <li><b>소재 태깅·컨셉 라이브러리.</b> 컨셉에 이름을 붙여 관리하면 승자 컨셉의 SKU 간 이식이 빨라진다 — 우리 곱집합 방식의 다음 단계.</li>
+  <li><b>써클 GMV 티어 보상 실험.</b> 모집 콘텐츠 자체가 최대 바이럴이 된다는 게 핵심 발견. 우리 스케일 버전: 소액 현금+한정판 굿즈 마일스톤, 선착 업로드 보상. (신규 계정 velocity 원칙 안에서.)</li>
+</ol>
+
+<h3>피할 것</h3>
+<ul class="tight">
+  <li><b>가격 정면 대응</b> — $14.89 vs $36.58. Manyo는 물량·최저가 게임이고 그 대가가 이익 반토막이었다. 우리 싸움터는 가격이 아니라 "자극 없는 효능"(K-Pharmacy 프리미엄·민감피부·비건).</li>
+  <li><b>마켓플레이스 사실 조작만 제외</b> — 미달성 "Amazon #1"·판매량·별점 조작은 계정 정지 벡터(Manyo의 No.1 뱃지는 전부 실제 딴 랭킹). 그 외 클레임 강도 제한은 2026-07-21 결정으로 해제.</li>
+  <li><b>스파이크를 성장으로 오독</b> — 초도물량·딜 스파이크의 -64.8% 교훈. 누적·반복 전환 기준 유지.</li>
+  <li><b>마케팅비 무한 증액</b> — "연 200억 공격 마케팅"의 결말을 봤다. 성장투자국면에도 MER 추적은 유지.</li>
+</ul>
+
+<h3>차별화 쐐기 — 글루타티온 웨이브 대응</h3>
+<ul class="tight">
+  <li>다크스팟 카테고리에 '글루타티온'이 새 성분 키워드로 부상 중(Manyo·TOSOWOONG·Arencia 등 스폰서 격전). 유행 편승 대신 — Manyo 세럼은 <b>함량 비공개</b>라는 성분 '이름' 마케팅의 전형. 우리는 "성분이 아니라 <b>전달</b>이 문제"라는 Vegan Microcrystal delivery 앵글로 우회(경쟁사 직접 언급 없이).</li>
+  <li>그들의 빈 곳 = 무자극 주장 없음 · 클렌징 브랜드의 트리트먼트 확장 초기 → 우리의 "No retinol. No AHA·BHA. No burn" 네거티브 축이 방어벽.</li>
+  <li>실행 후보: DS 세럼 SP 캠페인에 glutathione 계열 키워드 소액 수확 테스트(전환 확인 후 확장 — 히어로 판정 원칙 적용).</li>
+</ul>
+
+
+<div class="kicker">방법론 · 출처</div>
+<p class="src">
+<b>1차 실사(2026-07-21 스냅샷):</b> Meta Ad Library 활성 111건(Apify) + <b>아키타입 대표 소재 16개 CDN 원본 다운로드</b>(정적 11·영상 5, 저장소 보존) · Amazon US SERP/PDP 브라우저 실사(배송지 NY 10001) · TikTok @manyo_official 최근 100포스트(Apify) · 아마존 리뷰 200건(Apify) · SB 원본 영상(John 녹화).<br>
+<b>웹 딥리서치:</b> 5개 영역(재무IR·성장사·US채널·글루타티온·마케팅) 병렬 조사 + 영역별 적대검증(refute-default) — 리서치 5 + 검증 5 에이전트, 83개 finding 중 검증 통과분만 기재. 정정 4건·미확인 6건 명시.<br>
+<b>주요 출처:</b> DART 공시 인용 기사(newspim·digitaltoday·acrofan) · thebell/dealsite(지분·판관비) · alphabiz(수출 CAGR) · AccessNewswire/PRNewswire(얼타·타겟·OY US 보도자료) · Ulta·manyo.us 공식 제품페이지(임상·성분) · bizwatch/hankyung 인터뷰(조직·마케팅비) · cosinkorea·cosmorning(출시·이벤트).<br>
+<b>저장소 정본:</b> 30_growth/marketing/us/market-research/manyo-teardown.md · us/performance/swipe-file/manyo-benchmark-map.md · swipe-file/assets/manyo/ (소재 원본) · 00_compass/decisions/2026-07-21-퍼포먼스광고-클레임-Manyo동등이상-벤치마킹.md
+</p>
+
+</div><h3 style="margin-top:22px">2026-08-13 정량 업그레이드 §6</h3><div class="s-up"><ol class="steal">
+  <li><b>시간 압축 소구 <span class="chip">즉시</span></b>
+    “Day 1 → Day 7” 게이지 도식은 그대로 이식 가능하다. 우리는 <b>“After 3 Weeks”</b>라는 자체 임상 기간이 있으니
+    <b>Day 1 → Week 3</b> 게이지로 변환. 각주에 실측 근거(브라이트닝 27.4%)를 붙이면 방어까지 동일 구조.</li>
+  <li><b>“질문형 도발” 헤드라인 <span class="chip">즉시</span></b>
+    “Dark Spots, Why Wait for Weeks?” 문법 — 우리 버전: <b>“Actives That Work. Without the Burn.”</b> 계열의
+    통념 반박형. 형광펜 강조는 우리 브랜드 가이드에도 이미 있는 장치(#ddf746 30%).</li>
+  <li><b>3단 동사 구조 <span class="chip">즉시</span></b>
+    PREVENT / BLOCK / ERASE처럼 성분마다 동사 하나. 우리: <b>OPEN(마이크로크리스탈) → DELIVER(전달) → CALM(진정)</b>.
+    성분 나열이 아니라 역할 서사로 바뀐다.</li>
+  <li><b>크기 비교 도식</b>
+    “6,024x smaller than a pore” = 추상적 기술을 그림 한 장으로. 우리 마이크로크리스탈(75~150μm)도
+    같은 방식으로 시각화 가능 — 단 우리 수치는 검증된 값만.</li>
+  <li><b>권위 이식 <span class="chip">우리 버전</span></b>
+    이들은 “올리브영·큐텐 1위”. 우리가 쓸 수 있는 검증 가능한 권위는 <b>MFDS 이중 기능성 등록</b>과
+    <b>한국 약국 유통 자격</b>이다. 뱃지 디자인 문법(월계관·원형 스탬프)만 가져온다.</li>
+  <li><b>이벤트 딜로 랭킹 밀기 <span class="chip">검토</span></b>
+    평시 정가 + 이벤트만 큰 폭 할인. 우리 마지노선(세럼 $26)이 있으니 그 안에서 설계 — BDD(10월) 준비와 함께 판단.</li>
+  <li><b>“우리 카테고리 단어” 찾기 <span class="chip">전략</span></b>
+    이 리서치의 가장 큰 숙제. Manyo가 “글루타티온”을 가진 것처럼 우리가 오너가 될 단어 후보:
+    <b>vegan microcrystal · exosome serum · K-pharmacy</b>. 검색량과 경쟁 강도를 재서 하나를 고르고,
+    오가닉·광고·리스팅을 그 단어에 정렬하는 것이 다음 단계.</li>
+</ol>
+
+<div class="warn"><b>피할 것</b> — “200%+ More Effective”류 비교 우위 수치와 “No.1” 뱃지는
+우리에게 <b>근거가 없다</b>. 이들은 임상 각주(마리메드, n=20)와 랭킹 날짜를 박아 방어하는데,
+근거 없이 형식만 베끼면 그대로 계정 리스크다. <b>구조만 가져오고 숫자는 우리 실측으로 채운다.</b></div>
+
+<div class="wedge"><b>그리고 하나 더</b> — 이들의 평점이 4.8→4.2로 내려가는 중이다.
+“7일 만에”라는 약속이 기대치를 올렸고 일부 고객이 실망한 결과로 보인다.
+우리 소구는 <b>“3주”</b>라는 더 정직한 기간을 갖고 있다 — 이건 약점이 아니라
+<b>리뷰 평점을 지키면서 볼륨을 키울 수 있는 자리</b>다.</div></div></div></details></div></section><section class="sec" id="s27"><h2 class="sh"><span class="n">27</span>미확인으로 남긴 것 — 정직 공시</h2><div class="srcline">2026-07-21 딥리서치 §11</div><div class="secbody"><div class="s-td"><div class="tbl-scroll"><table>
+  <tr><th>항목</th><th>상태</th></tr>
+  <tr><td>GMV 챌린지 보상 티어</td><td>본계정 공식 게시물로 직접 관찰 — 웹 출처 없음(앱 내부 캠페인으로 추정)</td></tr>
+  <tr><td>Manyo 미국 법인 존재</td><td>미확인 (캘리포니아 Cerritos 주소 단서만 — 물류창고일 가능성)</td></tr>
+  <tr><td>"올리브영 1위"의 카테고리·기간</td><td>1차 소스 없음 (잡티세럼 카테고리 추정)</td></tr>
+  <tr><td>세럼 글루타티온 함량</td><td>전 소스 비공개</td></tr>
+  <tr><td>quail egg SB 제작 주체 (인하우스 vs 대행사)</td><td>웹 흔적 전무 — 우리가 저장한 영상이 유일한 증거</td></tr>
+  <tr><td>아마존 최초 진출 연도</td><td>어느 소스에서도 미확인</td></tr>
+</table></div></div></div></section><section class="sec" id="s28"><h2 class="sh"><span class="n">28</span>출처와 검증 방법 · 이 페이지가 대체하는 것<span class="tagnew">NEW</span></h2><div class="srcline">방법론</div><div class="secbody">
+<p class="n-lead">이 문서의 모든 수치는 <b>1차 실사</b>(직접 수집)와 <b>공시·언론</b> 두 갈래에서 왔고,
+2026-07-21 딥리서치 당시 영역별 <b>적대 검증</b>(주장을 반박하는 쪽으로 먼저 검증)을 통과한 것만 실었다.
+검증에서 정정되거나 확인되지 않은 것은 <span class="hl">본문에 그대로 “미확인”으로 표시</span>했다.</p>
+
+<div class="n-tbl"><table>
+<tr><th>갈래</th><th>무엇을</th><th>어떻게·언제</th></tr>
+<tr><td rowspan="4"><b>1차 실사</b></td><td>메타 활성 광고 111건</td><td>Meta 광고 라이브러리 전수 수집(Apify) · 2026-07-21<br>대표 16개(정적 11 + 영상 5)는 CDN 원본 다운로드해 영구 보존</td></tr>
+<tr><td>아마존 SB 영상 2건 · PDP 이미지 6장</td><td>브라우저 화면 녹화·다운로드 · 2026-07 / 2026-08-13</td></tr>
+<tr><td>틱톡 100포스트 · 아마존 리뷰 200건</td><td>Apify · 2026-07-21 스냅샷</td></tr>
+<tr><td>BSR·가격·리뷰 히스토리 · 키워드 2,246개</td><td>Helium10 4콜(런칭일부터) + Cerebro · 2026-08-13<br><span class="mono">h10-mining/raw/manyo_glut7_cerebro_2026-08-13.json</span></td></tr>
+<tr><td rowspan="3"><b>공시·재무</b></td><td>3개년 P&amp;L·재무상태</td><td>KIND FY2025 사업보고서(2026-03-23 접수) · FnGuide</td></tr>
+<tr><td>지역별 매출·전망</td><td>하나증권 2024-07-25 리포트</td></tr>
+<tr><td>지분·판관비·매각</td><td>thebell · dealsite · bizwatch · newspim · digitaltoday · acrofan · alphadistill</td></tr>
+<tr><td rowspan="3"><b>언론·인터뷰</b></td><td>성장·일본 채널</td><td>alphabiz(수출 CAGR) · smedaily · theguru(메가와리) · cosinkorea(누적 2,200만병)</td></tr>
+<tr><td>미국 채널 확장</td><td>AccessNewswire · Yahoo Finance(얼타 1,392·타겟 1,778) · PRNewswire(올리브영 US) · cosmorning · joongangenews</td></tr>
+<tr><td>조직·마케팅 전략</td><td>bizwatch 인터뷰(조직 분리·필링젤 1,000만뷰) · hankyung(연 200억 마케팅) · 한경매거진(윗유 Trip to Korea)</td></tr>
+</table></div>
+
+<h3>이 페이지가 대체하는 것</h3>
+<p>2026-07-21 딥리서치, 2026-08-13 통합 해부·정량 업그레이드·소재 스와이프 — <b>네 편이 이 한 편에 들어와 있다.</b>
+기존 URL은 그대로 살아 있으니 예전 링크가 깨지지는 않는다. 앞으로의 갱신은 이 페이지에서 한다.</p>
+<div class="n-tbl"><table>
+<tr><th>기존 페이지</th><th>작성</th><th>이 문서에서의 위치</th></tr>
+<tr><td><span class="mono">2026-07-21-manyo-teardown</span></td><td>2026-07-21</td><td>Ⅰ·Ⅲ·Ⅳ부 전반 — 카피 라이브러리·아키타입 11종·브리지·틱톡</td></tr>
+<tr><td><span class="mono">2026-08-13-manyo-full</span></td><td>2026-08-13</td><td>Ⅰ·Ⅲ부 — 재무 차트·성장공식·메타 운영 체계</td></tr>
+<tr><td><span class="mono">2026-08-13-manyo-upgrade</span></td><td>2026-08-13</td><td>Ⅱ·Ⅴ부 — 정량 궤적·광고 키워드·PDP·ARENCIA 대조·채점</td></tr>
+<tr><td><span class="mono">2026-08-13-manyo-creative-swipe</span></td><td>2026-08-13</td><td>Ⅲ·Ⅳ·Ⅴ부 — 실물 소재 전량·문구 전량·제작 브리프</td></tr>
+<tr><td colspan="3"><b>+ 이번에 처음 지면에 올라간 것</b> —
+재무제표 역추적(DART 공시) · 제품/클레임 구조 ·
+US 운영 주체 · 클레임 결정 전문 · 통합 실행 목록</td></tr>
+</table></div>
+</div></section>
+<footer class="end">
+  <b>마녀공장(Manyo) 완전판</b> —
+2026-08-18 통합 · Lemonderma / VDVIA 내부 문서<br>
+  빌드 <span class="mono">30_growth/marketing/us/market-research/_build_manyo_master.py</span> ·
+  소재 원본 <span class="mono">us/performance/swipe-file/assets/manyo/</span> ·
+  실행 정본 <span class="mono">swipe-file/manyo-benchmark-map.md</span><br>
+  같은 양식의 다른 브랜드 —
+  <a href="https://vdvia.github.io/lemonderma-reports/2026-08-13-arencia-teardown/">ARENCIA 퍼포먼스 광고 해부</a>
+</footer>
+</div>
+<a class="up" href="#" aria-label="맨 위로">↑</a>
+</body></html>
