@@ -75,6 +75,20 @@ ol.steal li::before{content:counter(s);position:absolute;left:13px;top:12px;widt
 ol.steal li b{display:block;margin-bottom:2px}
 footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);line-height:1.7}
 code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 5px;border-radius:4px}
+.hcard{display:grid;grid-template-columns:210px 1fr;gap:16px;border:1.5px solid var(--ink);border-radius:12px;
+  padding:14px 16px;margin:14px 0;background:#fff}
+.hcard figure{margin:0;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.hcard figure img,.hcard figure video{max-height:260px;width:100%;object-fit:cover;display:block;background:#111}
+.hcard-body .cat-tag{font-size:11px;font-weight:800;color:var(--olive);letter-spacing:.03em}
+.hcard-body h4{font-size:15px;margin:3px 0 7px}
+.hcard-body .copy{font-size:13px;color:var(--ink-2);font-style:italic;line-height:1.6}
+.hcard-body .oc{font-size:12.5px;background:var(--y-bg);border-radius:8px;padding:7px 10px;margin-top:7px;line-height:1.6}
+.hcard-body .why{margin-top:9px;font-size:13.5px;line-height:1.62}
+.hcard-body .why b{color:var(--olive)}
+.hcard-body .lemon{margin-top:7px;font-size:13px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:7px;line-height:1.6}
+.hcard-body .lemon b{color:var(--ink)}
+@media(max-width:680px){.hcard{grid-template-columns:1fr}.hcard figure video,.hcard figure img{max-height:340px}}
+.cat-h{font-size:14px;font-weight:800;margin:26px 0 4px;padding-bottom:4px;border-bottom:2px solid var(--y-line)}
 </style></head><body>
 
 <header class="hero"><div class="hero-in">
@@ -150,6 +164,31 @@ After 4 weeks — Skin tone clarity +32%, Tightened pores +23%"</b>를 직접 �
 <p>독일 리뷰어가 직접 찾아낸 정보: <b>"0.01% Retinal(100ppm)"</b> — PDP엔 함량이 명시돼 있지 않다. 마녀공장의
 "함량 비공개" 패턴과 동일. Subscribe &amp; Save 10%(정기구독) 운영 확인.</p>
 
+<h3>아마존 Sponsored Brands 광고 소재 — 실물 2건 (organic PDP와 구분)</h3>
+<p>PDP 안 "20 VIDEOS" 갤러리는 브랜드가 올린 오가닉 리스팅 콘텐츠일 뿐 유료 광고가 아니다 — 실제 SB 유닛은
+SERP 스폰서 지면에서 별도 확인했다(<code>retinal skin booster serum</code>/<code>meditherapy</code>/<code>dark spot serum</code> 키워드, NY 10001 고정).</p>
+<div class="frames">
+  <figure><video src="a/sb_amz_sb_bodyfilm.mp4" controls muted loop playsinline preload="metadata"></video>
+    <figcaption><b>브랜드 필름(9.6초)</b> · "Beyond skin types and races" — 다인종 4인 모델</figcaption></figure>
+  <figure><img src="a/sb_sb_carousel_hero1.jpg" loading="lazy">
+    <figcaption>캐러셀 히어로 — Retinal Skin Booster Serum</figcaption></figure>
+  <figure><img src="a/sb_sb_carousel_hero2.jpg" loading="lazy">
+    <figcaption>캐러셀 히어로 — Hyaluronic Acid "Entry Boost" First Serum</figcaption></figure>
+</div>
+<div class="verdict"><div class="t">핵심 발견</div>
+<div class="b">Meta의 공격적 소구(시술메타포·"10년 젊어짐"·"sun damage cleared")가 아마존 SB엔 하나도 없다.</div></div>
+<p>ARENCIA teardown에서 확인한 "자극 소재는 정지 위험 없는 메타로, 아마존은 규제 우등생으로"와 정확히 같은 채널 분리 전략 —
+브랜드 한정 특이점이 아니라 <b>K뷰티 퍼포먼스 마케팅의 업계 공통 플레이북</b>일 가능성이 두 브랜드 교차 확인으로 높아졌다.</p>
+<div class="tbl-scroll"><table>
+  <thead><tr><th></th><th>Meta(16개 대표 소재 기준)</th><th>Amazon SB(2건)</th></tr></thead>
+  <tbody>
+    <tr><td>시술메타포</td><td>시린지 소품·"필러 없이" 문구</td><td>없음</td></tr>
+    <tr><td>극적 변화 클레임</td><td>"10년 젊어짐"·"sun damage cleared"·"laser 오해"</td><td>없음 — "complete care" 수준</td></tr>
+    <tr><td>리뷰/후기 인용</td><td>실명·연령 귀속 리뷰카드 다수(고지 혼재)</td><td>없음</td></tr>
+    <tr><td>메시지 성격</td><td>구매 전환 훅(문제→해결→긴급성)</td><td>브랜드 신뢰·포용성</td></tr>
+  </tbody>
+</table></div>
+
 <h2 id="s4"><span class="no">4</span>메타 광고 — 490건 실사 + 유니크 소재 40개 아카이브</h2>
 <p>Meta Ad Library 전수 수집(2026-08-19, 활성 510건 중 490건/96% 수집). 카피 기준 유니크 컨셉 <b>187개</b>로
 재정리, 경과일수 상위 40개(65~758일 운영)를 실물 다운로드 — "오래 도는 소재 = 이긴 소재" 원칙.</p>
@@ -164,10 +203,203 @@ After 4 weeks — Skin tone clarity +32%, Tightened pores +23%"</b>를 직접 �
     <tr><td>시술 메타포(레이저)</td><td class="num">4</td><td>"Laser Effect", "Liquid Laser"</td></tr>
   </tbody>
 </table></div>
-<div class="frames">
-<figure><video src="a/01_vdo_758d_425216433312138.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><b>758일 운영</b> · 💧Overnight Blue Hydrogel Mask💧 Discover the hydrating benefits of Bluelayer Water Dome Mas</figcaption></figure><figure><img src="a/02_img_129d_2170816383755968.jpg" loading="lazy" alt=""><figcaption><b>129일 운영</b> · Real Review Series on Amazon #2 “Taken 10 years off my looks - even my friends noticed!” -</figcaption></figure><figure><video src="a/03_vdo_129d_1228512282468053.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><b>129일 운영</b> · No needles required. Just one drop of this K-beauty secret to erase all my fine lines. (Lo</figcaption></figure><figure><img src="a/04_img_129d_1373802991441712.jpg" loading="lazy" alt=""><figcaption><b>129일 운영</b> · Elbows, underarms, inner thighs — the spots we hide without talking about. This serum visi</figcaption></figure><figure><video src="a/05_vdo_129d_954247610299377.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><b>129일 운영</b> · Okay, I have to tell you about this — Meditherapy's Retinal Skin Booster Serum is seriousl</figcaption></figure><figure><video src="a/06_vdo_129d_2026604468068999.mp4" controls muted loop playsinline preload="metadata"></video><figcaption><b>129일 운영</b> · Okay, you NEED to hear about this — Meditherapy's Retinal Skin Booster Serum is seriously </figcaption></figure>
+
+<h3>히어로 소재 해부 — 8유형 × 2, "왜 잘되는지" 전량 분석</h3>
+<p>187개 유니크 컨셉을 8개 콘텐츠 포맷으로 재분류 → 포맷별 최장수 소재 2개씩 총 16개를 실물 재생·프레임 단위로 전수 분석했다.
+카피(광고 하단 텍스트)와 온스크린 캡션(영상 안 자막)이 다른 경우가 실제로 있다 — 실수가 아니라
+<b>"같은 영상을 여러 카피로 갈아끼우며 테스트하는" 구조의 증거</b>다.</p>
+<div class="hcard">
+  <figure><video src="a/01_vdo_758d_425216433312138.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">① 제품데모/성분형 · 758일(전체 최장수)</div>
+    <h4>Overnight Blue Hydrogel Mask <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Overnight Blue Hydrogel Mask — nano hyaluronic acid로 모공·건조 해결, 자고 일어나면 촉촉"</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 490건 중 압도적 최장수(2위 대비 6배+) — "잘 만든 광고"가 아니라 "안 질리는 광고". 자극 없는 튜토리얼은 반복 노출에도 스킵률이 안 오르는 볼륨 러너(evergreen filler) 역할.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 세럼 하나에 예산을 몰지 말고 회전율 낮은 "잔잔한 튜토리얼형" 1개를 evergreen으로 상시 켜두는 실험 가치. 훅 강도와 수명은 반비례할 수 있다는 가설.</p>
+  </div>
 </div>
-<p class="cap">경과일수 상위 6개 (전체 40개는 <code>swipe-file/meditherapy-creatives.md</code>) · 최장수 소재 758일(2년+) 운영 중</p>
+<div class="hcard">
+  <figure><video src="a/14_vdo_111d_1499996945058116.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">① 제품데모/성분형 · 111일</div>
+    <h4>"Wipe away rough texture" <span class="chip">🟡 가설</span></h4>
+    <p class="copy">"Wipe away rough texture for a silky-smooth, even tone. ✨ SHOP NOW ON AMAZON"</p>
+    <p class="oc"><b>온스크린 실제 훅(카피와 다름)</b> — 수건 헤어밴드 여성이 과장된 놀란 표정 반복 — "Started using Korean Botox and suddenly I look 20 again (I'm 39 btw)🥵" 자막, 마지막 제품 들고 엄지척</p>
+    <p class="why"><b>왜 잘되는지</b> — 카피와 영상이 따로 논다는 것 자체가 발견 — 같은 "Korean Botox" 훅 영상이 다른 ad ID(카피도 동일한 유닛 존재)로 재사용된 것으로 보인다. 영상 하나 제작 → 카피만 갈아끼워 여러 ID로 복제 배포하는 구조.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 영상 1개 = 문구 N개 조합 재사용 구조. Higgsfield 원본 소재 하나를 여러 훅 카피로 재태깅해 배포 물량을 늘리는 실험.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/26_vdo_83d_965420823038902.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">② 비포애프터 클로즈업형 · 83일</div>
+    <h4>"your skin looks so good" <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"When someone says 'your skin looks so good' unprompted. That compliment hits different when it's unsolicited."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 명시적 Before/After 라벨 없이 거울 셀카(암묵적 비포)와 화창한 차 안 셀카(애프터)의 맥락 대비로 변화를 암시. "제3자가 먼저 알아챔"(unprompted) 프레임이 진짜 후기처럼 읽힌다.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 직접 좌우 비포애프터가 부담스러우면 사진 두 장의 "상황 차이"만으로 변화를 암시하는 안전한 대안.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/36_vdo_76d_1320026809500640.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">② 비포애프터 클로즈업형 · 76일</div>
+    <h4>"everyone asks if I got work done" <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"My skin is so tight everyone asks if I got work done. Hundreds of 5-star reviews say the same thing."</p>
+    <p class="oc"><b>온스크린 실제 훅(카피와 다름)</b> — "WARNING! PSA to all inquirers — Sun Damage, DELETED! Everyone literally thinks I got laser done! — Haemily R." + 단어별 캡션 플래시 + 우측 고정 후기카드 좌우 스플릿</p>
+    <p class="why"><b>왜 잘되는지</b> — ARENCIA teardown에서 확인한 "좌우 스플릿"(토크+리뷰카드 동시 노출) 공식과 동일 문법 — 경쟁 K뷰티 카테고리 전체의 표준 포맷이라는 교차 확인. 단어 단위 캡션 플래시는 무음 시청 환경에서 완독률을 강제로 끌어올리는 장치.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 좌우 스플릿은 ARENCIA에 이어 두 번째 확증 사례라 우리 B&A 파이프라인 이식 우선순위를 올릴 근거.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/15_vdo_105d_1308343764572683.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">③ 스페인어 트랙 · 105일</div>
+    <h4>스페인어 데모 <span class="chip">🟡 가설</span></h4>
+    <p class="copy">"¡Siente el poder del Retinal en tu piel! Mira la diferencia. ✨ [COMPRA AHORA EN AMAZON]"</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 경쟁사 어디서도 못 본 트랙 — 새 소재가 아니라 기존 영어 튜토리얼 포맷을 스페인어로 재녹화. 미국 히스패닉 인구(19%)가 K뷰티 마케팅에서 구조적으로 방치돼 있다는 방증.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — UAE 아랍어권 세그먼트에 "언어 재녹화" 전술을 먼저 적용 검토(US보다 UAE가 메인 시장).</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><img src="a/25_img_89d_2431653044021001.jpg" loading="lazy" alt=""></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">③ 스페인어 트랙 · 89일</div>
+    <h4>스페인어 후기 카드 <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"'Se fueron mis manchas — ¡todos pensaron que usé láser!' — Sofía, usuaria de Retinal"</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 영어 리뷰카드(⑬⑭)와 완전히 동일한 템플릿 — 텍스트만 치환. "광고 40개"가 아니라 "템플릿 4~5개 × 조합 폭발"에 가깝다는 확증.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 후기카드 템플릿 1개 확정 후 언어·제품별로 텍스트만 바꿔 디자인 비용 없이 소재 수를 스케일.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/37_vdo_76d_766776736458210.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">④ 딜/세일 배너형 · 76일</div>
+    <h4>"NEVER or NOT" <span class="chip">🟡 가설</span></h4>
+    <p class="copy">"Seriously, NEVER or NOT — that's the question right now. 3D Hyaluronic Acid + Ectoin locks in moisture all day."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 본문 카피의 "NEVER or NOT"은 광고 타이틀("Now or never")과 따로 관리된 자막 QC 갭 — 그럼에도 76일 생존. 딜 배너형은 문법 완성도가 성과에 거의 영향 없다는 뜻(긴급성 배지+병 무더기 비주얼이 카피 품질을 압도).</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 딜 배너는 카피 완성도보다 "재고감+타이머+뱃지" 3요소가 중요하다는 가설 — QC 리소스를 비포애프터·UGC에 더 투입.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/33_vdo_78d_4136001640030934.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">④ 딜/세일 배너형 · 78일</div>
+    <h4>"sale ends tonight" <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Pure hyaluronic acid goodness — this deal won't last. ⏰ Don't wait — check the price on Amazon now."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 사실상 정지사진에 배지만 얹은 수준(저모션)인데 78일 생존 — 딜 배너형은 창작 노력과 무관하게 할인율/타이머 신선도만으로 수명이 결정된다는 결론 재확인. 라벨이 읽힐 만큼 클로즈업된 건 재타겟팅(이미 브랜드를 아는 유저) 용도 가능성.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 재타겟팅 전용 소재는 신규 소재보다 제작비를 훨씬 낮게 잡아도 된다는 벤치마크.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/03_vdo_129d_1228512282468053.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑤ 시술메타포형 · 129일(이 유형 최장수)</div>
+    <h4>시린지 프롭 <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"No needles required. Just one drop of this K-beauty secret to erase all my fine lines."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — "보톡스/필러 대체"라는 2025~26 스킨케어 광고 지배적 장르를 문구가 아니라 소품(바늘 없는 의료용 시린지를 이마에 대는 연출)으로 시각화 — 텍스트 클레임보다 훨씬 강한 인터럽트. 시술을 직접 언급하지 않으면서 시각적으로만 차용해 클레임 리스크를 낮췄다.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 마이크로니들 계열 소구와 정확히 참고 가능한 지점 — "시술 없이 시술 느낌"을 소품으로 보여주는 문법은 임상수치 없이도 강한 훅을 만드는 안전한 우회로.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><img src="a/07_img_129d_955244986910445.jpg" loading="lazy" alt=""></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑤ 시술메타포형 · 129일</div>
+    <h4>"FRIENDS ASKED IF I GOT FILLER" <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Dry skin = more wrinkles. But deep hydration from Hyaluronic Acid fills them back in—no needles, no appointments."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 레티날(다크스팟) 라인뿐 아니라 HA(보습) 라인까지 "니들/필러 대체" 프레임이 그대로 적용 — 시술메타포가 브랜드 전체의 마스터 내러티브로 굳어 있다는 방증. "plumps up every wrinkle"은 필러의 효능 언어를 보습 세럼에 이식.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 마스터 내러티브 하나를 SKU 전체에 재사용하면 카피 개발 리소스 절약 — 우리도 톤 안에서 SKU 횡단 마스터 훅 1~2개 검토.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/17_vdo_103d_4268742586774999.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑥ 바디파트 클로즈업형 · 103일</div>
+    <h4>다리 도포 <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Uneven skin tone on your legs? Same. 👀 Retinal + Niacinamide + Centella work together."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — "얼굴 세럼"을 몸 전체 세럼으로 재정의 — 경쟁사 전원이 "얼굴 다크스팟" 클레임에서 정면 충돌하는 동안 이 각도로 그 경쟁을 회피한다. 150mL 대용량이 "몸까지 쓰니까 딱 맞는 병"으로 재해석됨. 젤이 흘러내리는 텍스처 샷은 클레임 없이 감각적 만족(ASMR)만으로 129일급 소재와 비슷한 수명.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 우리 세럼·크림도 바디 확장 각도를 하나 만들면 완전히 다른 경쟁 세트(바디로션 카테고리)로 진입 가능 — 저비용 고효율 차별화 후보.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><img src="a/18_img_98d_1645277806730146.jpg" loading="lazy" alt=""></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑥ 바디파트 클로즈업형 · 98일</div>
+    <h4>팔꿈치 비포애프터 <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Bro, your sun spots don't have to stay forever 👀 Face, elbows, legs — one bottle. $24.99 on Amazon."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — "Bro"라는 캐주얼·성중립 호칭으로 전형적 여성 타겟팅을 비틀며 도달을 넓힌다. "Face, elbows, legs — one bottle. $24.99"는 바디 확장 서사를 가격 앵커와 한 문장에 압축한 카피 모범 사례.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — "얼굴+팔꿈치+다리, 한 병, $XX" 압축 카피 공식은 그대로 벤치마킹 가능한 문장 구조.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><img src="a/02_img_129d_2170816383755968.jpg" loading="lazy" alt=""></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑦ 리뷰카드 정적형 · 129일</div>
+    <h4>"Taken 10 years off my looks" <span class="chip">🟡 가설</span></h4>
+    <p class="copy">"Real Review Series on Amazon #2 "Taken 10 years off my looks - even my friends noticed!" - Bee, Retinal User"</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — "Real Review Series #2"라는 순번 태깅(전체 17건)이 리뷰 인용을 연재물처럼 운영 — 개별 광고가 아니라 시리즈로 신뢰를 축적하는 프레임. 단 사진 증거 없는 순수 텍스트 클레임이라 투명성 고지가 없다(⑭와 대비).</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 시리즈 넘버링은 저비용으로 반복 신뢰를 쌓는 전술 — 단 우리는 반드시 실제 리뷰 인용 명시·고지를 동반해야.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><img src="a/04_img_129d_1373802991441712.jpg" loading="lazy" alt=""></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑦ 리뷰카드 정적형 · 129일</div>
+    <h4>"#Cleared! Dark elbows" <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Elbows, underarms, inner thighs — the spots we hide without talking about. *Reviews are adapted from verified Amazon customer reviews."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — 같은 팔꿈치 전/후 포맷인데 이 유닛만 "리뷰는 각색됨" 고지가 있고 ⑬엔 없다 — 같은 브랜드 안에서도 컴플라이언스 실행이 유닛마다 다르다는 뜻(중앙 심사가 느슨하거나 담당자별 재량).</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 후기 각색 카드는 채택 가치가 있으나 고지 문구를 템플릿 고정 필드로 박아 매 소재 자동 포함되게 — 사람이 매번 기억해 넣는 구조는 이 사례처럼 새어나간다.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/05_vdo_129d_954247610299377.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑧ UGC 토크형 · 129일</div>
+    <h4>"숙련자" 토크 <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Okay, I have to tell you about this — Meditherapy's Retinal Skin Booster Serum is seriously changing the game."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — "Retinol vs retinal?"은 이 카테고리 소비자가 실제로 헷갈리는 진짜 질문 — 교육 콘텐츠 자체가 훅이 되는 드문 사례. 화려한 편집·자극적 카피 없이 화자의 연령·신뢰도(안경·차분한 톤)로 권위를 산다.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — "비건 마이크로 크리스탈이 마이크로니들과 뭐가 다른가" 같은 실제 헷갈리는 질문을 훅으로 쓰는 교육형 UGC — 규제 리스크가 가장 낮은 포맷.</p>
+  </div>
+</div>
+<div class="hcard">
+  <figure><video src="a/06_vdo_129d_2026604468068999.mp4" controls muted loop playsinline preload="metadata"></video></figure>
+  <div class="hcard-body">
+    <div class="cat-tag">⑧ UGC 토크형 · 129일</div>
+    <h4>"초심자" 토크 <span class="chip">🟢 확증</span></h4>
+    <p class="copy">"Okay, you NEED to hear about this — Meditherapy's Retinal Skin Booster Serum is seriously changing the game."</p>
+    
+    <p class="why"><b>왜 잘되는지</b> — ⑮와 스크립트 90% 동일, 화자만 교체("Okay, I have to tell you" ↔ "Okay, you NEED to hear about this") — 대본 하나로 페르소나(숙련자/초심자)만 바꿔 두 세그먼트에 동시 소구하는 저비용 재사용 구조.</p>
+    <p class="lemon"><b>레몬더마 적용</b> — 대본 1개 = 화자 페르소나 2~3개로 재촬영하는 프로덕션 구조 그대로 채택 가능 — 대본 개발비를 화자 수만큼 나눠 갚는 효율.</p>
+  </div>
+</div>
+
+<div class="verdict"><div class="t">8유형을 관통하는 패턴</div>
+<div class="b">템플릿 팩토리다, 낱개 히트작이 아니다 — 재사용 가능한 템플릿 4~5개 × 언어·SKU 조합 폭발.</div></div>
+<div class="tbl-scroll"><table>
+  <thead><tr><th>패턴</th><th>근거</th><th>우리 시사점</th></tr></thead>
+  <tbody>
+    <tr><td>바디파트 확장 = 카테고리 경쟁 회피</td><td>훅 패턴 29건이 얼굴 외 부위(다리·팔꿈치·겨드랑이)</td><td>같은 제품, 다른 신체 부위 = 다른 경쟁 세트. 저비용 차별화 레버</td></tr>
+    <tr><td>니들/필러 메타포가 SKU 횡단 마스터 내러티브</td><td>시린지 소품(레티날)·필러 문구(HA)가 동일 서사</td><td>마스터 내러티브 1개를 SKU 전체에 재사용해 카피 개발비 절감</td></tr>
+    <tr><td>영상 자산과 카피가 분리 관리</td><td>온스크린 자막≠하단 카피(② 사례)</td><td>원본 영상 1개=카피 배리에이션 N개로 소재 개수 확장</td></tr>
+    <tr><td>컴플라이언스 실행이 유닛마다 다름</td><td>⑬ 고지 없음 vs ⑭ 고지 있음(같은 팔꿈치 포맷)</td><td>고지를 템플릿 고정 필드로 넣어 사람 실수 구조적 차단</td></tr>
+    <tr><td>딜 배너형은 카피 완성도와 무관하게 산다</td><td>"NEVER or NOT" 오탈자성 카피도 76일 생존</td><td>이 포맷은 QC보다 속도 우선</td></tr>
+    <tr><td>UGC 대본 재사용(1대본×N화자)</td><td>⑮⑯ 대본 90% 동일, 화자만 교체</td><td>대본·촬영을 분리해 제작 효율 스케일</td></tr>
+  </tbody>
+</table></div>
+<p class="cap">16개 전량 상세 분석(온스크린 훅·구조 타임라인 포함)은 <code>swipe-file/meditherapy-creatives.md §3~4</code> ·
+전체 40개 카탈로그도 같은 문서. 소재 원본 <code>swipe-file/assets/meditherapy/</code></p>
 
 <h2 id="s5"><span class="no">5</span>틱톡 — 유료 물량과 별개로 도는 "브랜드 인격" 트랙</h2>
 <p>다국가 개별 계정: 글로벌(25.5K)·말레이시아(29.8K)·미국(5K, 틱톡샵 전용)·필리핀·싱가포르·대만.
