@@ -10,9 +10,9 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",Segoe UI,Roboto,sans-serif;
   color:var(--ink);background:var(--surface);line-height:1.68;font-size:15px;letter-spacing:-.01em}
-.wrap{max-width:1020px;margin:0 auto;padding:0 20px 90px}
-header.hero{background:linear-gradient(180deg,var(--y),var(--y-bg));padding:48px 20px 34px}
-.hero-in{max-width:1020px;margin:0 auto}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px 90px}
+header.hero{background:linear-gradient(180deg,var(--y),var(--y-bg));padding:48px 24px 34px}
+.hero-in{max-width:1320px;margin:0 auto}
 .eyebrow{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.06em}
 .hero h1{font-size:clamp(24px,4vw,32px);line-height:1.28;margin-top:10px;letter-spacing:-.4px}
 .hero .sub{margin-top:12px;font-size:15px;color:#39381f;max-width:74ch}
@@ -20,7 +20,7 @@ header.hero{background:linear-gradient(180deg,var(--y),var(--y-bg));padding:48px
 .badge{background:var(--ink);color:var(--y);font-size:12px;padding:5px 11px;border-radius:99px;font-weight:600}
 nav.toc{background:var(--ink);color:#fff;padding:11px 20px;position:sticky;top:0;z-index:50;
   font-size:12.5px;overflow-x:auto;white-space:nowrap}
-nav.toc .in{max-width:1020px;margin:0 auto}
+nav.toc .in{max-width:1320px;margin:0 auto}
 nav.toc a{color:#ccc;text-decoration:none;margin-right:14px;display:inline-block}
 nav.toc a:hover{color:var(--y)}
 h2{font-size:21px;margin:56px 0 8px;padding-top:15px;border-top:3px solid var(--ink);scroll-margin-top:54px;letter-spacing:-.3px}
@@ -58,8 +58,9 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
 .ad-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
 .ad-head h3{margin:0;font-size:17px}
 .ad-meta{font-size:12px;color:var(--ink-3);font-family:var(--mono)}
-.ad-body{display:grid;grid-template-columns:250px 1fr;gap:18px;margin-top:12px}
-@media(max-width:760px){.ad-body{grid-template-columns:1fr}}
+.ad-body{display:grid;grid-template-columns:300px 1fr;gap:26px;margin-top:12px}
+@media(max-width:900px){.ad-body{grid-template-columns:1fr}}
+.ad-media{position:sticky;top:54px;align-self:start}
 .ad-body video{width:100%;border-radius:9px;border:1.5px solid var(--ink);background:#111;display:block}
 .hero-tag{display:inline-block;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:99px;margin:2px 4px 2px 0;
   background:var(--ink);color:var(--y)}
@@ -153,7 +154,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
 <div class="ad-card">
   <div class="ad-head"><h3>#1 — 이마·눈가 주름 (노출 최상위)</h3><div class="ad-meta">lib id 1228512282468053 · 26.6s · 게재 4/12</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad1_1228512282468053.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad1_1228512282468053.mp4"></video>
     <blockquote><span class="who">광고 카피</span>No needles required. Just one drop of this K-beauty secret to erase all my fine lines.
 (Look at the difference!)</blockquote></div>
     <div>
@@ -176,7 +177,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
 <div class="ad-card">
   <div class="ad-head"><h3>#2 — "한국 보톡스 레티놀" (나이 고백형)</h3><div class="ad-meta">lib id 2147598245781663 · 12.1s · 게재 4/16</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad2_2147598245781663.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad2_2147598245781663.mp4"></video>
     <blockquote><span class="who">영상 내 고정 자막 (12초 내내, 오타 원문 그대로)</span>Started using Korean Botox retinal
 and suddenly llook 20 again
 (I'M 39 btw)</blockquote></div>
@@ -198,7 +199,7 @@ and suddenly llook 20 again
 <div class="ad-card">
   <div class="ad-head"><h3>#3 — 다리 다크스팟 (숨김→전시의 서사)</h3><div class="ad-meta">lib id 4268742586774999 · 15.2s · 게재 5/8</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad3_4268742586774999.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad3_4268742586774999.mp4"></video>
     <blockquote><span class="who">광고 카피</span>Uneven skin tone on your legs? Same. 👀
 Retinal + Niacinamide + Centella work together
 to visibly smooth and even out skin texture.</blockquote></div>
@@ -220,7 +221,7 @@ to visibly smooth and even out skin texture.</blockquote></div>
 <div class="ad-card">
   <div class="ad-head"><h3>#4 — 다리·발 건조 (혐오 자극의 정면 사용)</h3><div class="ad-meta">lib id 1350503660334943 · 15.9s · 게재 5/30</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad4_1350503660334943.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad4_1350503660334943.mp4"></video>
     <blockquote><span class="who">광고 카피</span>When your legs are this dry, regular lotion just sits on top.
 Hyaluronic acid goes deeper — pulling moisture in
 and holding it there all day long.</blockquote></div>
@@ -243,7 +244,7 @@ and holding it there all day long.</blockquote></div>
 <div class="ad-card">
   <div class="ad-head"><h3>#5 — 얼굴 다크스팟 (14일 계약서형)</h3><div class="ad-meta">lib id 3083559441844485 · 19.2s · 게재 6/18</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad5_3083559441844485.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad5_3083559441844485.mp4"></video>
     <blockquote><span class="who">광고 카피</span>Those spots didn't stand a chance.
 Retinal + Niacinamide work together to visibly fade dark spots
 and even out skin tone in days.</blockquote></div>
@@ -266,7 +267,7 @@ and even out skin tone in days.</blockquote></div>
 <div class="ad-card">
   <div class="ad-head"><h3>#6 — 허리 튼살 (8초, 증거 없는 신앙고백)</h3><div class="ad-meta">lib id 2010220389578826 · 8.0s · 게재 5/29</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad6_2010220389578826.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad6_2010220389578826.mp4"></video>
     <blockquote><span class="who">영상 내 고정 자막</span>want them to be invisible by
 summer so used this
 religiouslyyyy</blockquote></div>
@@ -287,7 +288,7 @@ religiouslyyyy</blockquote></div>
 <div class="ad-card">
   <div class="ad-head"><h3>#7 — 이마 주름, 중년 남성 (부정 유머의 방패)</h3><div class="ad-meta">lib id 1545963117175084 · 16.0s · 게재 6/18</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad7_1545963117175084.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad7_1545963117175084.mp4"></video>
     <blockquote><span class="who">영상 훅 자막 + 광고 카피</span>the serum that gives me botox allegations
 
 He tracked his skin every single day.
@@ -311,7 +312,7 @@ No filter, no tricks — just the serum.
 <div class="ad-card">
   <div class="ad-head"><h3>#8 — 등 여드름 흉터, 커플 (돌봄의 서사)</h3><div class="ad-meta">lib id 27024091773956501 · 32.1s · 게재 6/18</div></div>
   <div class="ad-body">
-    <div><video controls preload="metadata" src="a/meditherapy_ad8_27024091773956501.mp4"></video>
+    <div class="ad-media"><video controls preload="metadata" src="a/meditherapy_ad8_27024091773956501.mp4"></video>
     <blockquote><span class="who">광고 카피</span>Pointing them out is one thing.
 Actually doing something about it is another.
 
