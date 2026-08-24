@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEDITHERAPY 메타 히어로 UGC 8편 프레임 해부 — 왜 이것들이 최상위 노출인가 (2026-08-24)</title>
+<style>
+:root{--y:#E6EE7A;--y-bg:#fefcd0;--y-line:#ddea65;--ink:#000;--ink-2:#3f3f36;--ink-3:#7a7a6e;
+  --green:#025200;--olive:#4b612d;--surface:#fff;--line:#e6e2cf;--red:#c0392b;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard",Segoe UI,Roboto,sans-serif;
+  color:var(--ink);background:var(--surface);line-height:1.68;font-size:15px;letter-spacing:-.01em}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px 90px}
+header.hero{background:linear-gradient(180deg,var(--y),var(--y-bg));padding:48px 20px 34px}
+.hero-in{max-width:1020px;margin:0 auto}
+.eyebrow{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.06em}
+.hero h1{font-size:clamp(24px,4vw,32px);line-height:1.28;margin-top:10px;letter-spacing:-.4px}
+.hero .sub{margin-top:12px;font-size:15px;color:#39381f;max-width:74ch}
+.badges{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.badge{background:var(--ink);color:var(--y);font-size:12px;padding:5px 11px;border-radius:99px;font-weight:600}
+nav.toc{background:var(--ink);color:#fff;padding:11px 20px;position:sticky;top:0;z-index:50;
+  font-size:12.5px;overflow-x:auto;white-space:nowrap}
+nav.toc .in{max-width:1020px;margin:0 auto}
+nav.toc a{color:#ccc;text-decoration:none;margin-right:14px;display:inline-block}
+nav.toc a:hover{color:var(--y)}
+h2{font-size:21px;margin:56px 0 8px;padding-top:15px;border-top:3px solid var(--ink);scroll-margin-top:54px;letter-spacing:-.3px}
+h2 .no{display:inline-block;background:var(--ink);color:var(--y);font-size:13px;padding:1px 10px;
+  border-radius:99px;margin-right:9px;vertical-align:3px}
+h3{font-size:16px;margin:28px 0 8px}
+p{margin:9px 0}
+.lead{font-size:15.5px;background:var(--y-bg);border-left:4px solid var(--ink);padding:14px 17px;
+  margin:18px 0;border-radius:0 9px 9px 0}
+.verdict{background:var(--y);border:2px solid var(--ink);border-radius:13px;padding:18px 20px;margin:20px 0}
+.verdict .t{font-size:12.5px;font-weight:800;color:var(--olive);letter-spacing:.05em}
+.verdict .b{font-size:18px;font-weight:800;margin-top:6px;line-height:1.48;letter-spacing:-.3px}
+.grid{display:grid;gap:12px;margin:16px 0}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:680px){.g2,.g3,.g4{grid-template-columns:1fr 1fr}}
+.card{border:1.5px solid var(--ink);border-radius:12px;padding:15px 16px;background:#fff}
+.card.y{background:var(--y-bg)}
+.stat .v{font-size:23px;font-weight:800;letter-spacing:-.5px;font-variant-numeric:tabular-nums;color:var(--green)}
+.stat .l{font-size:12.5px;color:var(--ink-2);margin-top:3px;line-height:1.48}
+.cap{font-size:12.5px;color:var(--ink-2);margin:4px 0 20px}
+.tbl-scroll{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:560px}
+th{background:var(--ink);color:#fff;text-align:left;padding:9px 11px;font-weight:600;white-space:nowrap}
+td{border-bottom:1px solid var(--line);padding:9px 11px;vertical-align:top}
+tr:hover td{background:var(--y-bg)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12.5px}
+.frames{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+@media(max-width:760px){.frames{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.frames{grid-template-columns:1fr}}
+figure{border:1.5px solid var(--ink);border-radius:11px;overflow:hidden;background:#fff}
+figure img,figure video{width:100%;display:block;max-height:420px;object-fit:cover;background:#111}
+figcaption{padding:8px 10px;font-size:12px;color:var(--ink-2);border-top:1px solid var(--line);line-height:1.5}
+blockquote{background:#fafaf3;border:1px solid var(--line);border-left:4px solid var(--olive);border-radius:0 9px 9px 0;
+  padding:14px 17px;margin:14px 0;font-size:14px;line-height:1.75;white-space:pre-line}
+blockquote .who{display:block;font-size:11.5px;font-weight:800;color:var(--olive);letter-spacing:.04em;margin-bottom:7px}
+.chip{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--y);
+  border:1px solid var(--ink);margin-left:6px;vertical-align:1px}
+.warn{border:1.5px solid var(--red);border-radius:12px;padding:15px 17px;margin:16px 0;background:#fff7f6}
+.warn b:first-child{color:var(--red)}
+.wedge{border:2px solid var(--olive);border-radius:12px;padding:15px 17px;margin:16px 0;background:#f6faf2}
+.wedge b:first-child{color:var(--olive)}
+.unk{border:1px dashed var(--ink-3);border-radius:10px;padding:13px 16px;margin:14px 0;font-size:13px;color:var(--ink-2)}
+ol.steal{margin:14px 0;padding-left:0;list-style:none;counter-reset:s}
+ol.steal li{counter-increment:s;position:relative;padding:13px 15px 13px 46px;border:1.5px solid var(--ink);
+  border-radius:11px;margin-bottom:10px;background:#fff;font-size:14px;line-height:1.62}
+ol.steal li::before{content:counter(s);position:absolute;left:13px;top:12px;width:23px;height:23px;background:var(--ink);
+  color:var(--y);border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:800}
+ol.steal li b{display:block;margin-bottom:2px}
+footer{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-3);line-height:1.7}
+code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 5px;border-radius:4px}
+.ad-card{border:2px solid var(--ink);border-radius:14px;padding:18px 20px;margin:20px 0;background:#fff}
+.ad-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.ad-head h3{margin:0;font-size:17px}
+.ad-meta{font-size:12px;color:var(--ink-3);font-family:var(--mono)}
+.ad-body{display:grid;grid-template-columns:260px 1fr;gap:18px;margin-top:12px}
+@media(max-width:760px){.ad-body{grid-template-columns:1fr}}
+.ad-body video{width:100%;border-radius:9px;border:1.5px solid var(--ink);background:#111;display:block}
+.timeline{font-size:13px;line-height:1.7;background:var(--y-bg);border-radius:9px;padding:11px 13px;margin-top:10px}
+.timeline b{color:var(--olive)}
+.hero-tag{display:inline-block;font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:99px;margin:2px 4px 2px 0}
+.hero-tag.on{background:var(--ink);color:var(--y)}
+.hero-tag.off{background:#eee;color:var(--ink-3);border:1px dashed #ccc}
+.cat-h{font-size:14px;font-weight:800;margin:26px 0 4px;padding-bottom:4px;border-bottom:2px solid var(--y-line)}
+</style></head><body>
+
+<header class="hero"><div class="hero-in">
+  <div class="eyebrow">US 퍼포먼스 · 크리에이티브 벤치마킹 · MEDITHERAPY</div>
+  <h1>메디테라피 메타 최상위 노출 UGC 8편 —<br>프레임 단위로 뜯어봤을 때 남는 것</h1>
+  <p class="sub">8/24 정기회의에서 John이 리스트업한 노출 상위 광고 8편을 전부 다운로드해 초 단위로 해부했다.
+  회의 중 육안으로는 "병맛"·"AI 같다"는 평가가 나왔지만, 실제로 대만에서만 작년 매출 800억 원을 만든 메타 유입 히어로 소재들이다.
+  이 보고서의 질문은 하나 — <b>제작 퀄리티가 낮아 보이는데도 왜 최상위 노출인가.</b></p>
+  <div class="badges">
+    <span class="badge">8편 전량 확보·프레임 해부</span>
+    <span class="badge">평균 18.1초</span>
+    <span class="badge">공통 시행일 2026.4~6월</span>
+    <span class="badge">신체부위 6종 분산</span>
+  </div>
+</div></header>
+
+<nav class="toc"><div class="in">
+  <a href="#q">① 질문</a>
+  <a href="#overview">② 8편 개요</a>
+  <a href="#detail">③ 편당 해부</a>
+  <a href="#pattern">④ 공통 패턴</a>
+  <a href="#why">⑤ 왜 히어로가 됐나</a>
+  <a href="#apply">⑥ 우리 적용안</a>
+  <a href="#next">⑦ 다음 액션</a>
+</div></nav>
+
+<div class="wrap">
+
+<h2 id="q"><span class="no">①</span>질문 — 회의에서 나온 모순</h2>
+<div class="lead">
+"실제 메타 광고 소재를 함께 검토한 결과 품질이 낮다는 평가가 나왔고, 참석자들은 해당 소재가 AI로 제작된 것으로 판단함."
+— 2026-08-24 정기회의 기록. 그런데 이 소재들은 메디테라피가 작년 매출 921억 원 중 800억 원을 만든 채널(대만 리테일 이후 미국 퍼포먼스 전환)의 최상위 노출 소재다.
+</div>
+<p>이 모순을 풀 열쇠는 같은 회의에서 이미 나왔다 — <b>"메타는 애플의 ATT 이후 자체 소재 분석 기반으로 적합 고객을 찾는 방향으로 알고리즘이 고도화됐다. 키워드·타겟팅 설정이 사실상 불가능해 소재 자체가 알고리즘에 주는 유일한 신호다."</b>
+즉 사람 눈에 "퀄리티가 낮다"는 판단과, 메타 알고리즘이 읽는 "이 소재가 누구에게 매칭되는가"라는 신호는 완전히 다른 축일 수 있다. 이 보고서는 그 축을 프레임 단위로 찾는다.</p>
+
+<div class="verdict">
+  <div class="t">한 줄 결론</div>
+  <div class="b">8편의 공통점은 "잘 만든 광고"가 아니라 "광고처럼 안 보이는 콘텐츠"다. 제작 퀄리티는 편차가 크지만(2편은 짜깁기 티가 나고, 5·7·8편은 상당히 자연스럽다), 8편 전부가 지키는 것은 세로 셀피 앵글·초당 정보밀도·"Day N" 진행 서사·낮은 브랜드 노출 4가지뿐이다.</div>
+</div>
+
+<h2 id="overview"><span class="no">②</span>8편 개요</h2>
+<p>Meditherapy.Global 페이지, 전부 "활성" 상태(2026-08-24 기준). 정렬 기준 = 노출량(total_impressions) 내림차순 — 즉 1번이 가장 많이 노출된 소재다.</p>
+<div class="tbl-scroll"><table>
+<tr><th>#</th><th>대상 부위</th><th>인물</th><th class="num">길이</th><th>게재 시작</th><th>구조 템플릿</th><th>제품 노출</th></tr>
+<tr><td>1</td><td>이마·눈가 주름</td><td>여성</td><td class="num">26.6s</td><td>4/12</td><td>B/A 반복→Day1-7 타임라인</td><td>25-26s(끝)</td></tr>
+<tr><td>2</td><td>이마 주름(레티놀=보톡스)</td><td>여성</td><td class="num">12.1s</td><td>4/16</td><td>고정자막+도포 클로즈업</td><td>없음</td></tr>
+<tr><td>3</td><td>다리 다크스팟</td><td>여성</td><td class="num">15.2s</td><td>5/8</td><td>B(4s)→도포→A2주→제품</td><td>12-14s</td></tr>
+<tr><td>4</td><td>다리·발 건조</td><td>여성</td><td class="num">15.9s</td><td>5/30</td><td>문제→도포→발뒤꿈치 클로즈업</td><td>스침(3-4s,8-9s)</td></tr>
+<tr><td>5</td><td>얼굴 다크스팟</td><td>여성</td><td class="num">19.2s</td><td>6/18</td><td>훅→Day1-14→B/A스플릿→제품</td><td>18s(끝, 라벨노출)</td></tr>
+<tr><td>6</td><td>허리 튼살</td><td>여성</td><td class="num">8.0s</td><td>5/29</td><td>순수 도포루틴(B/A 없음)</td><td>7s(끝)</td></tr>
+<tr><td>7</td><td>이마 주름</td><td><b>중년 남성</b></td><td class="num">16.0s</td><td>6/18</td><td>Day1-7 매일 자가촬영</td><td>3·8·16s(반복)</td></tr>
+<tr><td>8</td><td>등 여드름 흉터</td><td><b>남성+파트너</b></td><td class="num">32.1s</td><td>6/18</td><td>은유 훅→Day1-4 커플루틴→클로징 콜백</td><td>없음(스침만)</td></tr>
+</table></div>
+<p class="cap">부위 6종(이마×3·다리×2·발·허리·등), 인물 2종(여성 6·남성 2, 그중 1편은 남성+파트너 2인). 길이는 8~32초로 4배 편차 — "짧아야 한다"는 통설과 안 맞는다.</p>
+
+<h2 id="detail"><span class="no">③</span>편당 해부</h2>
+<p>각 카드의 영상은 실제 Facebook 광고 라이브러리에서 받은 원본이다. 대표 프레임 4장 + 카피 전문 + 초 단위 구조 + 히어로 요인 판정.</p>
+
+<!-- ===== AD 1 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#1 — 이마·눈가 주름 (노출 최상위)</h3><div class="ad-meta">lib id 1228512282468053 · 26.6s · 게재 4/12</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad1_1228512282468053.mp4"></video>
+    <div class="timeline">
+      <b>0-4s</b> Before↔After 4회 연속 스와이프(같은 인물, 다른 옷 4벌 — 여러 촬영 세션 짜깁기 흔적)<br>
+      <b>5-24s</b> "1 days later"→"3 days later"→"5 days later"→"7 days later" 자막, 매번 동일 동작(주사기형 디스펜서 도포+눈 감기) 반복<br>
+      <b>25-26s</b> 제품 병 클로즈업(유일한 브랜드 노출, 영상 끝 2초에만)
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피</span>No needles required. Just one drop of this K-beauty secret to erase all my fine lines.
+(Look at the difference!)</blockquote>
+      <p><b>히어로 요인 판정</b> — 초반 4초 안에 Before/After를 4번 전환시켜 "무슨 일이 일어나고 있는지" 궁금증을 강제로 만든다. "N days later" 반복은 같은 표정·같은 배경을 재사용해 촬영 부담 없이 "장기 추적"처럼 보이게 압축하는 저비용 고효율 구조 — 이게 옷이 4번 바뀌는 이유(여러 날 진짜 촬영했거나, 최소 그렇게 보이도록 편집)다.</p>
+      <div><span class="hero-tag on">Day N 진행서사</span><span class="hero-tag on">초반 B/A 반복훅</span><span class="hero-tag off">브랜드 저노출</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 2 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#2 — "레티놀이 보톡스 의혹을 산다"</h3><div class="ad-meta">lib id 2147598245781663 · 12.1s · 게재 4/16</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad2_2147598245781663.mp4"></video>
+    <div class="timeline">
+      <b>0-12s 전체</b> 자막이 화면 상단에 처음부터 끝까지 고정 노출(장면 전환과 무관)<br>
+      찡그린 이마 클로즈업(0-1s)→화장대 배경 도포(2-4s)→눈밑 문지름(5-7s)→다시 이마 짚기(9s)로 루프형 마무리
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피(영상 내 고정 자막, 오타 포함)</span>Started using Korean Botox retinal
+and suddenly llook 20 again
+(I'M 39 btw)</blockquote>
+      <p><b>히어로 요인 판정</b> — 8편 중 유일하게 제품이 한 번도 안 보인다. "보톡스로 오해받는다"는 과감한 클레임 자체가 카피이자 훅. 다만 스튜디오급 조명·배경과 캐주얼한 셀피체 자막("btw", 오타)의 부조화가 회의에서 "AI 같다"는 인상을 준 지점으로 추정된다 — 촬영은 프로페셔널한데 자막은 아마추어를 흉내낸 미스매치.</p>
+      <div><span class="hero-tag off">Day N 진행서사</span><span class="hero-tag on">과감한 클레임 훅</span><span class="hero-tag on">브랜드 미노출</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 3 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#3 — 다리 다크스팟 (세로 프레이밍)</h3><div class="ad-meta">lib id 4268742586774999 · 15.2s · 게재 5/8</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad3_4268742586774999.mp4"></video>
+    <div class="timeline">
+      <b>0-4s</b> "my legs before retinal skin booster" — 침대 위, 다리를 수직으로 들어 세로 프레임 꽉 채움<br>
+      <b>4-7s</b> 도포 클로즈업(손등에 문지르는 텍스처 샷 포함)<br>
+      <b>8-11s</b> "after 2 weeks" — 하이힐 신고 복도(라이프스타일 컨텍스트 전환)<br>
+      <b>12-14s</b> 제품(Retinal Skin Booster, Centella Asiatica+Niacinamide 성분 표기) 대리석 배경 클로즈업
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피</span>Uneven skin tone on your legs? Same. 👀
+Retinal + Niacinamide + Centella work together
+to visibly smooth and even out skin texture.</blockquote>
+      <p><b>히어로 요인 판정</b> — 얼굴이 아니라 다리를 세로로 꽉 채운 구도 자체가 스크롤을 멈추게 하는 패턴 인터럽트다("이게 뭐지?" 순간). Before(침대)→After(하이힐, 외출)로 배경을 바꿔 "결과=이런 삶"을 암시하는 게 이 편의 차별점.</p>
+      <div><span class="hero-tag on">니치 부위(다리)</span><span class="hero-tag on">독특한 프레이밍</span><span class="hero-tag off">브랜드 저노출</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 4 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#4 — 다리·발 건조 (가장 자극적인 워딩)</h3><div class="ad-meta">lib id 1350503660334943 · 15.9s · 게재 5/30</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad4_1350503660334943.mp4"></video>
+    <div class="timeline">
+      <b>0-1s</b> "Dry, scaly, crusty legs" — 실제로 각질이 심하게 일어난 다리 클로즈업<br>
+      <b>2s</b> "to this" 즉시 매끈한 다리로 컷 전환<br>
+      <b>3-6s</b> 세럼 도포+"This is going to help"<br>
+      <b>7s</b> 발뒤꿈치 극단적 각질 클로즈업("Skin that is lacking moisture") — 2차 훅<br>
+      <b>8-15s</b> 도포 반복, "It helps improve chicken skin"→"The best ingredient for flaky skin"로 마무리(제품은 손에 스치듯 2번만)
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피</span>When your legs are this dry, regular lotion just sits on top.
+Hyaluronic acid goes deeper — pulling moisture in
+and holding it there all day long.</blockquote>
+      <p><b>히어로 요인 판정</b> — 8편 중 가장 직설적·불쾌감을 활용한 훅("crusty", "chicken skin", "flaky skin"). 회의에서 언급된 "시선을 끄는 자극적 소재가 더 중요하다"는 의견의 실물 사례로 보인다. 텍스처 클로즈업(각질→매끈)의 시각적 대비가 카피의 자극성과 정확히 짝을 이룬다.</p>
+      <div><span class="hero-tag on">자극적 워딩</span><span class="hero-tag on">텍스처 극단 대비</span><span class="hero-tag off">브랜드 저노출</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 5 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#5 — 얼굴 다크스팟 (가장 완성도 높음)</h3><div class="ad-meta">lib id 3083559441844485 · 19.2s · 게재 6/18</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad5_3083559441844485.mp4"></video>
+    <div class="timeline">
+      <b>0-3s</b> "Dark spots gone in 14 days? Watch this" — 실제 짙은 색소침착 얼굴, curiosity-gap 훅+명시적 CTA<br>
+      <b>4-13s</b> Day1→5→7→10→14, 매번 양볼에 세럼 떨어뜨리고 문지르는 동일 동작(헤어밴드·톤 일관 유지로 자연스러움)<br>
+      <b>14s</b> 활짝 웃는 클로즈업(자신감 표현)<br>
+      <b>15s</b> Before/After 상하 스플릿 비교<br>
+      <b>16-18s</b> 제형 클로즈업("Highly effective retinal")→제품 라벨 노출하며 웃음
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피</span>Those spots didn't stand a chance.
+Retinal + Niacinamide work together to visibly fade dark spots
+and even out skin tone in days.</blockquote>
+      <p><b>히어로 요인 판정</b> — 8편 중 가장 자연스럽고 표정 연기가 좋다. "Watch this"라는 명시적 CTA로 완주를 유도하고, Day 진행 중 표정이 점점 밝아지는 연출까지 있다. 이게 5편에 넣지 않은 이유가 없는 정석형 — 그러나 정석형이라고 노출 1위는 아니다(1위는 훨씬 거친 1번).</p>
+      <div><span class="hero-tag on">Day N 진행서사</span><span class="hero-tag on">명시적 CTA</span><span class="hero-tag on">B/A 스플릿샷</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 6 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#6 — 허리 튼살 (가장 짧고 가장 캐주얼)</h3><div class="ad-meta">lib id 2010220389578826 · 8.0s · 게재 5/29</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad6_2010220389578826.mp4"></video>
+    <div class="timeline">
+      <b>0-6s</b> before/after 없이 순수 도포 루틴만 반복 — 튼살 옆구리 클로즈업, 핑크 스포츠브라+회색 조거팬츠, 노란 손톱<br>
+      <b>7s</b> 제품(검정 펌프 보틀) 손에 들고 튼살 배경과 함께 노출
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피(영상 내 고정 자막)</span>want them to be invisible by
+summer so used this
+religiouslyyyy</blockquote>
+      <p><b>히어로 요인 판정</b> — 8편 중 유일하게 before/after 증거가 전혀 없는데도 노출 상위권이다. 대신 "religiouslyyyy"처럼 늘려 쓴 구어체와 계절성("by summer")이 진짜 개인 브이로그 자막처럼 읽힌다. <b>결과 증명 없이도 "네이티브해 보이는 것"만으로 노출이 나온다</b>는 반증 사례.</p>
+      <div><span class="hero-tag off">Day N 진행서사</span><span class="hero-tag off">B/A 증거</span><span class="hero-tag on">구어체 자막(네이티브함)</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 7 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#7 — 이마 주름, 중년 남성 (니치 인구통계)</h3><div class="ad-meta">lib id 1545963117175084 · 16.0s · 게재 6/18</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad7_1545963117175084.mp4"></video>
+    <div class="timeline">
+      <b>0s</b> "the serum that gives me botox allegations" — 셀프 디프리케이션 유머 훅<br>
+      <b>1-14s</b> Day1→2→3→5→6→7, 매일 같은 배경·다른 옷으로 자가촬영, 매번 손가락으로 미간을 짚어 보여주는 동일 제스처(진행 지표 역할)<br>
+      <b>16s</b> 제품 들고 카메라 응시하며 마무리
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피</span>Started using Korean Botox retinal (본문 카피, 회사 문서상 매칭)</blockquote>
+      <p><b>히어로 요인 판정</b> — 뷰티 광고에 중년 백인 남성이 등장하는 것 자체가 강력한 패턴 인터럽트다. 매일 촬영한 흔적(배경 고정, 옷만 바뀜, 피부 텍스처의 미세한 변화)이 8편 중 가장 "진짜"처럼 보인다 — 회의에서 "AI 같다"고 본 소재가 2번이었다면, 이 7번은 오히려 정반대(가장 진정성 있는 축)일 가능성이 높다.</p>
+      <div><span class="hero-tag on">니치 인구통계(중년남성)</span><span class="hero-tag on">Day N 진행서사</span><span class="hero-tag on">유머 훅</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== AD 8 ===== -->
+<div class="ad-card">
+  <div class="ad-head"><h3>#8 — 등 여드름 흉터, 커플 (가장 길고 가장 서사적)</h3><div class="ad-meta">lib id 27024091773956501 · 32.1s · 게재 6/18</div></div>
+  <div class="ad-body">
+    <div><video controls preload="metadata" src="a/meditherapy_ad8_27024091773956501.mp4"></video>
+    <div class="timeline">
+      <b>0-4s</b> 파트너가 남성의 등 흉터를 손가락으로 짚으며 별자리에 비유하는 훅(노란 점 오버레이)<br>
+      <b>5-29s</b> Day1→2→3→4, 커플이 함께 등장해 매일 스프레이/도포하는 루틴 — 옷 색이 매일 바뀌며(체크→네이비→화이트→민트→베이지) 실제 여러 날 촬영한 느낌을 줌<br>
+      <b>30-31s</b> "Now clear — not a star in sight ~☆" — 처음 은유를 회수하는 클로징 카피(콜백 구조)
+    </div></div>
+    <div>
+      <blockquote><span class="who">광고 카피</span>Pointing them out is one thing.
+Actually doing something about it is another.
+
+Retinal Serum applied directly on Day 1 —
+targeting each scar, one pump at a time.
+
+The journey to clearer skin starts with the first application.</blockquote>
+      <p><b>히어로 요인 판정</b> — 8편 중 카피라이팅 완성도가 가장 높다("별자리" 은유를 열고 "별 하나 없이 맑아짐"으로 닫는 콜백). 32초로 가장 길지만 관계 서사(파트너가 봐줌)가 있어 지루하지 않다. 등은 본인이 직접 못 보는 부위라 "파트너가 대신 확인해준다"는 설정 자체가 설득력을 만든다.</p>
+      <div><span class="hero-tag on">관계 서사</span><span class="hero-tag on">카피 콜백 구조</span><span class="hero-tag on">니치 부위(등)</span></div>
+    </div>
+  </div>
+</div>
+
+<h2 id="pattern"><span class="no">④</span>공통 패턴 — 8편이 실제로 공유하는 것</h2>
+<div class="grid g4">
+  <div class="card stat"><div class="v">6/8</div><div class="l">"Day N" 진행 타임스탬프 자막 사용(1·3·5·7·8편)</div></div>
+  <div class="card stat"><div class="v">3/8</div><div class="l">제품(병) 노출이 전혀 없거나 스치듯만(2·4·6·8편 중 3편 실질 미노출)</div></div>
+  <div class="card stat"><div class="v">6종</div><div class="l">얼굴 외 신체부위 분산(다리·발·허리·등) — 회의 중 언급된 겨드랑이·팔꿈치 포함하면 사실상 전신 세그먼트</div></div>
+  <div class="card stat"><div class="v">100%</div><div class="l">9:16 세로 셀피/거치 앵글, 스튜디오 광고 미학 전무</div></div>
+</div>
+
+<h3>패턴 1 — "광고처럼 안 보이는 것"이 최우선 설계 원칙</h3>
+<p>8편 전부 손에 들거나 거치대에 세운 폰 카메라 앵글을 유지한다. 5·7·8편처럼 상대적으로 정교하게 연출된 편도 "스튜디오 광고"가 아니라 "누군가의 브이로그"의 톤을 벗어나지 않는다. 이건 프로덕션 비용을 아끼기 위한 타협이 아니라 <b>일관된 미학적 선택</b>으로 읽힌다 — 광고 티가 나는 순간 피드에서 스킵되기 때문이다.</p>
+
+<h3>패턴 2 — 신체 부위를 "카피 배리에이션"이 아니라 "관심사 세그먼트"로 쓴다</h3>
+<p>회의에서 "소재 배리에이션을 늘리는 것보다 시선을 끄는 자극적 소재가 더 중요하다"는 의견이 나왔는데, 실제 8편을 보면 그 배리에이션의 축이 <b>카피 문구</b>가 아니라 <b>신체 부위(=관심사)</b>였다. 이마 3편, 다리 2편, 발·허리·등 각 1편 — 각 편이 그 부위에 관심 있는 서로 다른 유저 풀에 각각의 신호를 보낸다. ATT 이후 메타가 "소재 콘텐츠로 적합 고객을 역추적"하는 구조(회의 중 설명)와 정확히 맞물린다.</p>
+
+<h3>패턴 3 — "Day N" 타임스탬프는 리텐션 장치다</h3>
+<p>6/8편이 이 패턴을 쓴다. 이는 단순 서사 장치가 아니라 <b>"다음 날은 어떻게 됐지"</b> 하며 끝까지 보게 만드는 완주율(retention) 설계로 해석된다. 메타 알고리즘이 평균 시청시간·완주율을 노출 순위 신호로 쓴다면, 이 패턴이 노출 성과에 직접 기여했을 가능성이 높다.</p>
+
+<h3>패턴 4 — 낮은 브랜드 노출은 반직관적이지만 의도적으로 보인다</h3>
+<p>일반적인 광고 상식은 브랜드를 초반부터 반복 노출하라고 한다. 8편은 정반대다 — 2·4·6·8편은 제품이 거의 안 보이거나 영상 끝에만 스친다. "이건 광고가 아니라 진짜 후기"라는 신호를 강화하기 위한 트레이드오프로 보인다(브랜드 인지 희생 ↔ 광고 회피본능 회피).</p>
+
+<div class="warn">
+  <b>주의 — 경쟁 환경 caveat</b>
+  <p style="margin-top:6px">회의에서 나온 정보: 메디테라피 작년 매출 921억 원 중 800억 원이 대만에서 발생했고, 대만은 "경쟁이 상대적으로 덜한" 시장이었다. 즉 이 소재들의 성공이 순수 크리에이티브 우수성만이 아니라 <b>진입 시점의 낮은 경쟁 밀도</b>에서도 왔을 가능성이 있다. 우리는 이미 경쟁이 훨씬 치열한 미국 시장에서 시작하므로, 같은 패턴을 써도 같은 결과가 보장되지 않는다 — 검증 없이 "따라하면 이긴다"로 읽으면 안 된다.</p>
+</div>
+
+<h2 id="why"><span class="no">⑤</span>왜 히어로가 됐는가 — 종합 진단</h2>
+<div class="verdict">
+  <div class="t">가설</div>
+  <div class="b">퀄리티(제작 정교함)가 히어로 여부를 가르지 않는다. 가르는 건 ① 네이티브함(광고처럼 안 보임) ② 관심사 세그먼트 분산(신체부위) ③ 완주를 유도하는 진행 서사(Day N) 3가지 신호의 조합이다 — 이건 사람이 "잘 만들었다"고 느끼는 기준과 메타 알고리즘이 "매칭하기 좋다"고 판단하는 기준이 다르다는 뜻이다.</div>
+</div>
+<p>회의에서 정리된 메타·아마존 알고리즘 차이를 이 진단에 그대로 대입하면: 아마존은 <b>구매 의도를 가진 유저가 키워드로 찾아오는 구조</b>라 키워드-소재 매칭이 핵심이고(우리가 이번 주 크림 SB 구조를 페인포인트 그룹으로 전면 개편한 이유), 메타는 <b>소재 자체가 알고리즘에 주는 유일한 신호</b>다. 메디테라피 8편은 이 메타 특성에 정확히 맞춰 설계돼 있다 — "잘 만든 광고"가 아니라 "메타가 읽기 좋은 신호 뭉치"로 만들었다.</p>
+
+<h2 id="apply"><span class="no">⑥</span>우리에게 적용 — 그대로/변형/금지</h2>
+
+<h3>그대로 따라할 만한 것</h3>
+<ol class="steal">
+  <li><b>"Day N" 진행 타임스탬프 서사</b> — 지금 우리 세럼·크림 메타 소재는 정지된 순간의 후기 카피뿐, 진행형 타임라인이 없다. 같은 UGC 인물의 클립을 여러 날짜 자막으로 쪼개 재구성하는 건 신규 촬영 없이도 가능하다.</li>
+  <li><b>신체 부위 세그먼트 확장</b> — 우리는 현재 얼굴(다크스팟) 중심이다. B&A 파이프라인(§S5 목/데콜테, 손등)은 이미 시도했지만 메타 소재로는 아직 크게 안 밀었다. 다리·발·허리·등 방향의 UGC를 검토할 가치가 있다.</li>
+  <li><b>초반 3~4초 안에 Before/After를 여러 번 스와이프하는 훅</b> — 1번 소재(노출 최상위)의 핵심 장치. 우리 소재는 대부분 훅이 카피 한 줄로 끝나는데, 시각적 반복 전환 자체를 훅으로 쓰는 방식은 새로운 시도.</li>
+</ol>
+
+<h3>우리 식으로 바꿔야 할 것</h3>
+<ol class="steal">
+  <li><b>낮은 브랜드 노출 실험</b> — 지금은 초반부터 로고·병이 계속 보인다. 메디테라피처럼 "결과 먼저, 브랜드는 끝에 살짝"인 버전을 A/B로 테스트해볼 가치는 있으나, 이건 브랜드 인지도 트레이드오프가 있어 전면 적용이 아니라 소규모 테스트로.</li>
+  <li><b>중년/니치 인구통계 UGC</b> — 7번(중년 남성)의 패턴 인터럽트 효과는 확인됐지만, 우리 UGC7 로스터는 전원 젊은 여성/일부 남성이 있는지 재확인 필요. 무리하게 새 인물을 급조하기보다, 기존 로스터에서 비주류 각도를 찾는 게 우선.</li>
+</ol>
+
+<h3>따라하면 안 될 것</h3>
+<div class="wedge">
+  <b>경쟁 환경을 무시한 1:1 복제</b>
+  <p style="margin-top:6px">위 caveat대로, 대만 성공은 낮은 경쟁 밀도의 산물일 수 있다. 미국은 경쟁이 훨씬 치열하므로 같은 패턴을 그대로 복제해도 같은 노출을 보장 못한다. 소규모 파일럿(2~3편)으로 우리 계정에서 실측 검증 후 확장하는 순서가 맞다.</p>
+</div>
+<div class="unk">
+  자극적 워딩("crusty", "chicken skin")의 브랜드 톤 정합성은 별도 검토 필요 — 레몬더마 브랜드 SSOT(brand.md)는 "Vegan that works"·"Where Nature Meets Science" 축이라 메디테라피의 직설적 자극성과는 톤이 다르다. 그대로 이식하기보다 우리 브랜드 보이스 안에서 "자극적이되 과학적"인 버전으로 번역이 필요.
+</div>
+
+<h2 id="next"><span class="no">⑦</span>다음 액션</h2>
+<div class="grid g2">
+  <div class="card y"><b>이번 주</b>
+    <p style="margin-top:6px;font-size:13.5px">기존 UGC7+AI2 로스터 중 2~3명을 골라 "Day N" 진행 서사 버전 파일럿 제작(신규 촬영 없이 기존 클립 재편집으로 가능한지 먼저 확인)</p>
+  </div>
+  <div class="card y"><b>다음 주 이후</b>
+    <p style="margin-top:6px;font-size:13.5px">파일럿 성과 확인 후 신체부위 세그먼트 확장 여부 판단. 자극적 워딩의 브랜드 보이스 번역안을 별도로 설계.</p>
+  </div>
+</div>
+
+<footer>
+  소스: Facebook Ads Library(Meditherapy.Global, 2026-08-24 확인) — 전체 광고 8편 원본 다운로드·프레임 단위(1초 간격) 해부.
+  회의 컨텍스트: 2026.08.24 Weekly Meeting(Notion). 8/24 회의 도중 참석자들의 육안 평가("병맛"·"AI 제작 추정")는 실제 프레임 해부 결과 편차가 커서(2번은 미스매치 인상, 7번은 오히려 진정성 있어 보임) 소재별로 재판정이 필요하다는 게 이 보고서의 발견 중 하나다.
+  이 문서는 사내 참고용이며 검색엔진에 노출되지 않는다.
+</footer>
+
+</div>
+</body></html>
