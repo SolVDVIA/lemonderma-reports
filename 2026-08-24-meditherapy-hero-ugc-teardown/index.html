@@ -85,6 +85,42 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
 .ad-body.two-col{grid-template-columns:614px 1fr}
 .ad-body>div{min-width:0}
 @media(max-width:1150px){.ad-body.two-col{grid-template-columns:1fr}}
+
+details.sec{margin:56px 0 0}
+details.sec>summary{list-style:none;cursor:pointer;font-size:21px;font-weight:700;line-height:1.4;
+  padding:15px 0 6px;border-top:3px solid var(--ink);display:flex;align-items:center;gap:2px;
+  letter-spacing:-.3px;-webkit-user-select:none;user-select:none}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary::marker{content:""}
+details.sec .toggle{margin-left:auto;flex:none;font-size:11.5px;font-weight:800;letter-spacing:.04em;
+  color:var(--olive);background:var(--y);border:1.5px solid var(--ink);border-radius:99px;padding:3px 12px;white-space:nowrap}
+details.sec>summary:hover .toggle{background:var(--ink);color:var(--y)}
+details.sec>summary:focus-visible{outline:3px solid var(--olive);outline-offset:3px}
+details.sec .toggle::after{content:"펼치기 ▾"}
+details.sec[open] .toggle::after{content:"접기 ▴"}
+details.sec[open]>summary{margin-bottom:6px}
+.sec-body>h3:first-child,.sec-body>p:first-child{margin-top:8px}
+.pbox{margin:18px 0 0;border:1.5px solid var(--ink);border-radius:12px;background:#fff;overflow:hidden}
+.pbox>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  padding:11px 15px;font-size:13.5px;font-weight:800;background:var(--y-bg);-webkit-user-select:none;user-select:none}
+.pbox>summary::-webkit-details-marker{display:none}
+.pbox>summary::marker{content:""}
+.pbox>summary:hover{background:var(--y)}
+.pbox>summary:focus-visible{outline:3px solid var(--olive);outline-offset:-3px}
+.pbox .pm{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--ink-3);letter-spacing:0}
+.pbox .toggle{margin-left:auto;flex:none;font-size:11.5px;font-weight:800;color:var(--olive);white-space:nowrap}
+.pbox .toggle::after{content:"펼치기 ▾"}
+.pbox[open] .toggle::after{content:"접기 ▴"}
+.pbox-body{padding:13px 15px 15px;border-top:1.5px solid var(--ink)}
+.pbox-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:9px}
+.pbox-note{font-size:12px;color:var(--ink-2);flex:1;min-width:0}
+.copy{font:inherit;font-size:12px;font-weight:800;cursor:pointer;background:var(--ink);color:var(--y);
+  border:none;border-radius:99px;padding:6px 15px;white-space:nowrap}
+.copy:hover{background:var(--olive)}
+.copy:focus-visible{outline:3px solid var(--olive);outline-offset:2px}
+.pbox pre{margin:0;max-height:520px;overflow:auto;background:#fbfbf2;border:1px solid var(--line);
+  border-radius:9px;padding:13px 15px;font-family:var(--mono);font-size:12px;line-height:1.62;
+  white-space:pre-wrap;overflow-wrap:anywhere}
 </style></head><body>
 
 <header class="hero"><div class="hero-in">
@@ -105,14 +141,16 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
 <nav class="toc"><div class="in">
   <a href="#overview">① 8편 개요</a>
   <a href="#lens">② 해부의 렌즈</a>
-  <a href="#detail">③ 편당 프레임 심리 해부</a>
-  <a href="#pattern">④ 8편을 관통하는 심리 설계</a>
-  <a href="#why">⑤ 종합 진단</a>
+  <a href="#pattern">③ 심리 설계</a>
+  <a href="#why">④ 종합 진단</a>
+  <a href="#detail">⑤ 제작 시도</a>
 </div></nav>
 
 <div class="wrap">
 
-<h2 id="overview"><span class="no">①</span>8편 개요</h2>
+<details class="sec" id="overview">
+<summary><span class="no">①</span>8편 개요<span class="toggle" aria-hidden="true"></span></summary>
+<div class="sec-body">
 <p>Meditherapy.Global 페이지, 전부 "활성" 상태(2026-08-24 기준). 노출량 내림차순 — 1번이 가장 많이 노출된 소재다.</p>
 <div class="tbl-scroll"><table>
 <tr><th>#</th><th>대상 부위</th><th>인물</th><th class="num">길이</th><th>게재 시작</th><th>구조 템플릿</th><th>제품 노출</th></tr>
@@ -127,8 +165,13 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
 </table></div>
 <p class="cap">부위 6종(이마×3·다리×2·발·허리·등), 인물 축 2종(여성 단독 6 · 남성 2, 그중 1편은 커플). 길이 8~32초로 4배 편차 — "짧아야 한다"는 통설과 다르다.</p>
 
-<h2 id="lens"><span class="no">②</span>해부의 렌즈 — 이 광고들이 조작하는 심리 레버 8종</h2>
-<p>8편 145프레임에서 반복 확인된 심리 장치를 먼저 정의한다. ③의 편당 해부는 전부 이 레버로 태깅된다.</p>
+</div>
+</details>
+
+<details class="sec" id="lens">
+<summary><span class="no">②</span>해부의 렌즈 — 이 광고들이 조작하는 심리 레버 8종<span class="toggle" aria-hidden="true"></span></summary>
+<div class="sec-body">
+<p>8편 145프레임에서 반복 확인된 심리 장치를 먼저 정의한다. ⑤ 제작 시도의 편당 해부는 전부 이 레버로 태깅된다.</p>
 <div class="grid g2">
   <div class="lens"><div class="nm">L1 · 자기감시의 거울</div>
     <div class="de">셀피 앵글 = 소비자가 매일 아침 자기 피부를 검사하는 바로 그 시선. 광고를 보는 게 아니라 "내 거울"을 보는 착각을 만든다. 얼굴을 이마 높이에서 자르고 피부만 채우는 프레이밍이 이 효과를 강화 — 인물의 정체성이 아니라 <b>피부 상태</b>가 주인공이 되어 시청자가 자기 피부를 대입한다.</div>
@@ -156,8 +199,71 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
     <div class="ex">근거: 6편 "invisible by summer", 5편 "in 14 days", 3편 "after 2 weeks"</div></div>
 </div>
 
-<h2 id="detail"><span class="no">③</span>편당 프레임 심리 해부</h2>
-<p>각 편을 구간별로 자른다. <b>화면</b>(실제로 보이는 것) → <b>의식 층위</b>(시청자가 봤다고 생각하는 것) → <b>무의식 층위</b>(실제로 건드려지는 욕망·결핍). 영상은 전부 원본이며 바로 재생된다. <b>#1~#5 카드에는 2026-08-25 제작한 레몬더마 이식본(AD1 26초 · AD2 12초 · AD3 15초 · AD4 16초 · AD5 19초)을 원본 우측에 나란히 수록했다.</b></p>
+</div>
+</details>
+
+<details class="sec" id="pattern">
+<summary><span class="no">③</span>8편을 관통하는 심리 설계<span class="toggle" aria-hidden="true"></span></summary>
+<div class="sec-body">
+<div class="grid g4">
+  <div class="card stat"><div class="v">6/8</div><div class="l">"Day N" 리추얼 서사(L4) — 결과 불안을 수행 가능성으로 치환</div></div>
+  <div class="card stat"><div class="v">8/8</div><div class="l">셀피·자가촬영 앵글(L1) — 광고가 아니라 '거울'로 위장</div></div>
+  <div class="card stat"><div class="v">5/8</div><div class="l">수치 부위·수치 어휘의 대리 발화(L2) — 말해지는 순간 절반 풀리는 수치심</div></div>
+  <div class="card stat"><div class="v">3/8</div><div class="l">브랜드 실질 미노출 — '후기'로 기억되기 위한 정체 은폐</div></div>
+</div>
+
+<h3>설계 1 — 판정권의 이양: "내가 판단했다"는 착각이 최종 병기</h3>
+<p>1번(B/A 차이 찾기)·5번("Watch this"+분할화면)·7번(눌러보기 시연)은 공통적으로 시청자에게 <b>증거를 던져주고 판결을 맡긴다.</b>
+광고가 "효과 있다"고 말하면 방어기제가 작동하지만, 시청자 스스로 "다르네"라고 판단하면 그 결론은 자기 소유가 된다 —
+사람은 남의 주장은 의심해도 자기 판단은 의심하지 않는다. 훅에서 판정자 역할을 부여하고, 본편에서 증거를 배열하고, 말미에 판결 재료(B/A)를 제출하는 3막 구조가 반복된다.</p>
+
+<h3>설계 2 — 수치심 시장: 이 8편의 진짜 카테고리는 '스킨케어'가 아니다</h3>
+<p>이마 주름(노화 불안), 딸기다리(노출 포기), 갈라진 발뒤꿈치(최후의 민망함), 튼살(몸의 이력), 등 흉터(볼 수 없는 부위), 중년 남성의 그루밍(들키기 싫은 관리) —
+8편 전부가 <b>'남에게 말한 적 없는 것'</b>을 다룬다. 검색조차 민망해서 수요가 잠복해 있는 고민을 피드가 먼저 말해주면, 그 안도감("나만이 아니구나")의 수신처가 브랜드가 된다.
+이것이 부위를 6종으로 흩뿌린 진짜 이유로 보인다 — 배리에이션이 아니라 <b>수치심의 종류별 시장 분할</b>이다. 각 편은 서로 다른 잠복 수요층에 "당신 얘기"라는 신호를 쏘는 전용 안테나다.</p>
+
+<h3>설계 3 — 시술 욕망의 번역기: 원하지만 무서운 것의 안전판</h3>
+<p>"No needles required"(1) · "Korean Botox"(2) · "botox allegations"(7) · 주사기형 디스펜서(1) — 보톡스는 3편에서 호명되고 1편에서 소품으로 재현된다.
+전부 <b>부정·농담·모형의 형태</b>다. 시술을 원하는 마음(효과 확실)과 피하는 마음(바늘·비용·부자연스러움)의 이중감정에서, 원함의 절반만 가져오고 두려움의 절반은 버리는 화법.
+"시술급 효과, 시술 아닌 방법"은 이 카테고리의 항구적 마스터 프레임이고, 8편은 그걸 언어(카피)·도상(주사기)·신체언어(당겨보기)의 3개 층위에서 동시에 구사한다.</p>
+
+<h3>설계 4 — 촉각 선지급: 사기 전에 이미 써본 몸</h3>
+<p>과량으로 붓고(3), 흐르게 두고(5·8), 손바닥에 올리고(4·5), 누르고 쓸고 두드린다(전편). 화면 속 손은 시청자의 거울신경을 통해 <b>시청자의 손</b>이 된다.
+바르는 감각을 광고 시청 중에 선(先)체험시키면, 구매는 새로운 결정이 아니라 이미 아는 감각의 확정 절차가 된다.
+이 광고들에서 손이 프레임 밖으로 나가는 시간이 거의 없는 것은 우연이 아니다.</p>
+
+<h3>설계 5 — 정서 그래프가 피부 그래프를 끌고 간다</h3>
+<p>5번의 Day1 무표정→Day14 미소, 7번의 절제된 끄덕임, 8번의 장난→엄지척 — 피부 변화는 화질·조명 때문에 화면에서 입증되기 어렵지만,
+<b>표정 변화는 인간이 가장 빠르고 자동적으로 읽는 신호</b>다. 이 광고들은 피부의 회복을 표정의 회복으로 대리 표현하고,
+시청자는 피부를 봤다고 믿지만 실제로 읽은 것은 감정이다. B/A의 진짜 비교 대상은 명도가 아니라 행복이다.</p>
+
+<div class="warn">
+  <b>해석의 한계 — 명시해둔다</b>
+  <p style="margin-top:6px">① 이 해부는 노출 상위라는 결과에서 역산한 해석이다 — 각 장치의 개별 기여도는 우리 계정에서 A/B로만 검증 가능하다.
+  ② 배경조사(8/19 teardown)에서 확인했듯 메디테라피 매출의 대부분(2024년 816억 중 약 800억)은 경쟁 밀도가 낮았던 대만에서 발생했다 —
+  이 문법의 성공에는 진입 시점·시장 조건이 섞여 있으므로, 미국의 고경쟁 환경에서 같은 결과를 보장하지 않는다.
+  ③ 심리 기제 서술은 프레임에서 확인되는 연출 의도의 재구성이며, 실제 시청자 반응 데이터(홀드율·CTR)는 우리가 접근할 수 없다.</p>
+</div>
+
+</div>
+</details>
+
+<details class="sec" id="why">
+<summary><span class="no">④</span>종합 진단 — 왜 이것들이 히어로인가<span class="toggle" aria-hidden="true"></span></summary>
+<div class="sec-body">
+<div class="verdict">
+  <div class="t">최종 진단</div>
+  <div class="b">이 8편은 '피부 개선'을 파는 광고가 아니다 — 수치심의 해방(L2), 통제감의 회복(L4), 시술 욕망의 안전한 충족(L3), 돌봄받는 관계(L7)라는 <b>정서적 결핍 4종을 각각 전담 마크하는 심리 상품 8종</b>이다. 제작 퀄리티의 편차(2번의 미스매치 ↔ 7번의 정교함)가 성과 편차로 이어지지 않는 이유도 여기 있다 — 승부처가 화질·연출이 아니라 "어떤 결핍을 얼마나 정확히 짚는가"이기 때문이다.</div>
+</div>
+<p>메타 환경에서 소재는 알고리즘에 타겟을 알려주는 유일한 신호다. 이 8편의 부위·인물·어휘 분산은 그 신호를 <b>결핍의 종류별로 순도 높게</b> 쪼갠 것이고,
+각 편 안에서는 판정권 이양(설계 1)→촉각 선지급(설계 4)→정서 그래프(설계 5)의 순서로 시청자의 방어를 해체한다.
+"광고처럼 안 보이게"는 스타일 선택이 아니라 이 전체 설계가 작동하기 위한 전제 조건이다 — 광고로 인식되는 순간 판정권 이양도, 거울 착각도, 후기 위장도 전부 무효가 되기 때문이다.</p>
+
+</div>
+</details>
+
+<h2 id="detail"><span class="no">⑤</span>제작 시도 — 원본 해부와 레몬더마 이식본</h2>
+<p>각 편을 구간별로 자른다. <b>화면</b>(실제로 보이는 것) → <b>의식 층위</b>(시청자가 봤다고 생각하는 것) → <b>무의식 층위</b>(실제로 건드려지는 욕망·결핍). 왼쪽은 원본, 그 우측이 <b>2026-08-25 제작한 레몬더마 이식본</b>(AD1 26초 · AD2 12초 · AD3 15초 · AD4 16초 · AD5 19초)이며 둘 다 바로 재생된다.</p><p>#1~#5 카드 <b>맨 아래에는 그 이식본을 만든 최종 프롬프트 전문</b>을 접이식으로 붙였다 — 검수·반려 15회를 거친 정본 v15(<code>meditherapy-ugc-이식-5편-2026-08-25.md</code>)이고, 거기서 확정된 규칙은 <code>brand-prompt-dna.md</code> LOCK 6에 반영돼 있다. #6~#8은 이식본을 만들지 않아 원본 해부만 있다.</p>
 
 <!-- ===== AD 1 ===== -->
 <div class="ad-card">
@@ -186,6 +292,130 @@ code{font-family:var(--mono);font-size:.88em;background:var(--y-bg);padding:1px 
       <div><span class="hero-tag">L1 자기감시</span><span class="hero-tag">L3 시술우회</span><span class="hero-tag">L4 리추얼</span><span class="hero-tag">L6 지연보상</span></div>
     </div>
   </div>
+
+  <details class="pbox">
+    <summary><span>레몬더마 이식 프롬프트 — AD 1 (26초)</span><span class="pm">정본 v15 · 2026-08-25 · 8,157자</span><span class="toggle" aria-hidden="true"></span></summary>
+    <div class="pbox-body">
+      <div class="pbox-bar"><div class="pbox-note">시댄스(매그니픽) 입력 전문 — 네거티브 포함. 검수·반려 15회 반영 최종본.</div><button class="copy" type="button">프롬프트 복사</button></div>
+      <pre><code>UGC-style vertical video, 26 seconds, front-facing phone self-recording — a
+day-by-day skincare diary. Reference image 1 defines the model: a young woman
+with curly blonde hair tied up, small hoop earrings, bright clean room with a
+plain neutral wall. Same woman, same face, same room and lighting in every
+segment; only her plain tops and hair accessories change between day segments
+to show time passing — a plain white t-shirt, a plain white tank top, a
+simple black tank top, a blue-and-white striped t-shirt, a plain light-gray
+t-shirt: clean, neat basics. Short bare natural nails, no polish.
+Reference image 3 shows the same woman's BEFORE state — the exact source of
+truth for the forehead wrinkle pattern: in the 0-1s BEFORE, the 2-4s pointing
+shot, DAY ONE and the 22-23s RECAP BEFORE, copy the line placement, depth and
+length from reference image 3 and MATCH ITS VISIBILITY EXACTLY — never
+harsher than reference image 3, and never softer or cleaner either: the
+lines must be as clearly visible on screen as they are in reference image 3.
+Lines rendered fainter than reference image 3 in these shots = failed.
+Identity, hair and framing still follow reference image 1.
+Reference image 2 defines the product: the Lemonderma "Lemonshot 150
+Exo:Booster Serum" — a slim frosted bottle in vivid fluorescent lemon-yellow
+(never warm gold or black), 14.6 cm tall, 3.24 cm wide: slightly shorter than
+an adult hand from wrist to fingertip, about two fingertip widths wide (the
+model is 170 cm tall); always at this true scale, never enlarged. It is
+topped with a short cylindrical pump head in the same fluorescent yellow — a
+small flat-topped press-down actuator, no long spout, no dropper, no spray,
+no syringe. PUMP LOCK: serum appears ONLY from the pump's small outlet at the
+exact moment a fingertip visibly presses the actuator down — never from a
+finger, never on its own. Serum without a visible pump press, serum from a
+finger, or a missing pump head = failed. The serum is a glossy translucent
+gel-serum with a 30% soft white milky cast — mostly see-through with a light
+white veil, gently runny once it lands on skin: it briefly holds a soft
+rounded shape, then slowly slides in thin glossy streams; tiny sparkling
+highlights. Opaque white cream or fully clear water = failed. LABEL LOCK:
+copy the label exactly from reference image 2 — "LEMONSHOT 150", "Exo:Booster
+Serum", "LEMONDERMA" (one word ending in DERMA) — never misspelled, mirrored
+or selfie-flipped; anything else = failed. NO TEXT LOCK: the printed label is
+the only text in the video — no captions, subtitles, day counters, numbers or
+emoji in any cut; overlays are added in editing. Any generated text = failed.
+GRADUAL LOCK: her skin improves on a strict percentage schedule — DAY ONE 0%
+improved, identical to BEFORE, every line fully visible; DAY THREE about 30%,
+most lines still clearly visible, just slightly softened; DAY FIVE about 70%,
+noticeably smoother with faint traces left; DAY SEVEN 100%, fully smooth and
+glowing. More improvement than scheduled in any day segment = failed. In
+the DAY ONE and DAY THREE segments the forehead lines stay clearly visible
+at a glance in every frame — skin that reads clear, smooth or flawless in
+those segments = failed.
+NO INSTANT EFFECT LOCK: within each day segment her skin stays at that day's
+level for the whole segment, even while and after applying — the serum never
+visibly improves skin on camera; improvement appears only between day
+segments. Skin improving within one segment = failed.
+Cuts only at the boundaries below; inside each segment the camera is locked —
+no zoom, no pan, no internal cut.
+
+0-1s BEFORE: chest-up, plain white t-shirt, eyes closed, calm. Her forehead
+carries the lines of reference image 3 at full visibility — distinct
+horizontal creases across the forehead and a visible line between the brows,
+obvious at a glance even at chest-up distance; natural and realistic, not
+deep-carved or aged, but unmistakably present.
+1-2s AFTER: identical framing, plain white tank top — the same face smooth
+and even, lines gone, lit-from-within, subtle smile.
+2-4s: close-up of her upper face, white t-shirt, simple black headband. She
+frowns slightly to show the fine lines of reference image 3 and points at
+them with both index fingers.
+4-8s DAY ONE: chest-up, black tank top and black headband, skin identical to
+BEFORE — the reference image 3 lines clearly visible in every frame of this
+segment. She presses the pump down with her index finger — a soft click — and
+a milky bead emerges from the outlet onto the fingertips of her other hand
+held beneath; she smooths it across her forehead in upward strokes, presses
+her palm flat, then taps lightly. Her lines look exactly the same after the
+application — no visible change yet.
+8-12s DAY THREE: chest-up, blue-and-white striped t-shirt. A pump press
+sends a drop from the outlet onto her fingertips; she dabs it onto her
+forehead and under one eye, then rubs her cheek upward. Skin only about 30%
+improved — the lines still clearly visible in every frame, just slightly
+softened — staying at that level through the whole segment.
+12-17s DAY FIVE: chest-up, light-gray t-shirt, thin black headband. She
+smooths her forehead, presses the pump with the other hand — a bead from the
+outlet onto her fingertips — strokes serum onto her left cheek and massages
+in slow circles. Skin about 70% improved, faint traces around the eyes.
+17-22s DAY SEVEN: chest-up, plain white t-shirt. One more pump press onto
+her fingertips; she dots serum on her forehead, presses with the side of her
+hand, blends on her right cheek. Skin now 100% — fully smooth and glowing.
+22-23s RECAP BEFORE: chest-up hard cut back to the BEFORE state — plain
+white t-shirt, the reference image 3 lines fully visible, calm neutral face.
+RECAP LOCK: 22-26s is a comparison insert — a hard graphic cut at 23s, never
+a dissolve; though it reuses DAY SEVEN's white t-shirt and framing, this is
+a flashback to the first BEFORE shot, not her skin getting worse.
+23-26s RECAP AFTER + CTA: hard cut to the identical framing in the plain
+white tank top from 1-2s, hair down, no headband — face fully AFTER: zero
+forehead lines, brow area completely smooth, eye corners perfectly smooth
+with no crow's feet at all — youthful glowing skin; she smiles broadly and
+holds the fluorescent yellow bottle upright beside her face in one relaxed
+natural hand, pump head up, label facing the camera, sharp and legible,
+tilting it slightly to show the packaging.
+
+Audio: no music. Quiet warm room tone throughout; a soft click at each pump
+press; faint fingertip taps during applications. No lyrics, no vocals, no
+voices, no narration.
+
+Negative prompt: captions, subtitles, on-screen text, text overlay, day
+counter text, numbers on screen, watermark, Chinese characters, non-English
+text, emoji, label text warping, brand name misspelled, mirrored label,
+selfie-flipped label, second brand, long spout nozzle, spray mist, dropper,
+syringe, missing pump head, serum without a pump press, serum from a finger,
+warm gold or amber bottle, black bottle, oversized bottle, opaque white
+cream, thick cream texture, clear water-like serum, smooth flawless skin in
+the first two day segments, clear smooth forehead in the BEFORE or DAY ONE
+shots, beauty-filter skin in the before states, wrinkles fainter than
+reference image 3 in the before shots, skin improving instantly during an application,
+exaggerated wrinkles, deep carved wrinkles, harsh aged face, different
+person between segments, face morphing, identity shift, dissolve or
+cross-fade between the 22-23s and 23-26s recap shots, gradual re-wrinkling,
+forehead wrinkles visible in the 23-26s ending frame, crow's feet in the
+ending frame, headband in the final shot, deformed hands, extra fingers,
+merged fingers, long nails, nail polish, raised pimples, pustules, blood,
+scabs, rash, inflamed skin, gray desaturated skin, camera movement inside a
+segment, zoom, whip pan, focus pull, lighting change inside a segment, jump
+cut inside a segment, music, sung lyrics, vocals, voice-over, narration,
+distorted audio, muffled audio, static, audio glitches</code></pre>
+    </div>
+  </details>
 </div>
 
 <!-- ===== AD 2 ===== -->
@@ -214,6 +444,154 @@ and suddenly llook 20 again
       <div><span class="hero-tag">L1 자기감시</span><span class="hero-tag">L3 시술우회</span><span class="hero-tag">나이 비교 강제</span><span class="hero-tag">브랜드 완전 은폐</span></div>
     </div>
   </div>
+
+  <details class="pbox">
+    <summary><span>레몬더마 이식 프롬프트 — AD 2 (12초 · VO)</span><span class="pm">정본 v15 · 2026-08-25 · 9,811자</span><span class="toggle" aria-hidden="true"></span></summary>
+    <div class="pbox-body">
+      <div class="pbox-bar"><div class="pbox-note">시댄스(매그니픽) 입력 전문 — 네거티브 포함. 검수·반려 15회 반영 최종본.</div><button class="copy" type="button">프롬프트 복사</button></div>
+      <pre><code>UGC-style vertical video, 12 seconds total, shot like a front-facing phone
+camera self-recording. Reference image 1 defines the model: a young Korean
+woman with black hair pulled back, luminous fair skin. The same woman appears
+in every segment with the same face and identity. Her outfit follows the
+segment list exactly: a black thin-strap tank top in the BEFORE shots (0-1s
+and 9-10s), a plain white tank top in the AFTER shots (1-2s and 10-12s), and
+a cream-colored silk robe in the application segments. Short bare
+natural nails, no polish.
+Reference image 3 shows the same woman with visible forehead lines — it is
+the source of truth for the wrinkle PATTERN only: in the 0-1s BEFORE, the 2s
+return and the 9-10s RECAP BEFORE, copy the line placement and layout from
+reference image 3, but render every line far shallower and fainter than
+reference image 3 — thin hairline creases you'd only notice on close
+inspection, read mainly as soft shading rather than a visible groove, with
+no shadow pooling inside the line; soft, natural everyday expression lines,
+never harsh, never aged, never unpleasant. Her identity, hair and framing
+still follow reference image 1.
+Reference image 2 is the exact source of truth for the product: the Lemonderma
+"Lemonshot 150 Exo:Booster Serum" — a slim frosted bottle in vivid fluorescent
+lemon-yellow (never warm gold, never amber, never black), 14.6 cm tall and
+3.24 cm in diameter: a narrow cylinder, slightly shorter than an adult woman's
+hand from wrist to fingertip and about two fingertip widths wide (the model is
+170 cm tall); always render it at this true physical scale relative to hands,
+face and body, never enlarged. The bottle is topped with a short cylindrical
+pump head in the same fluorescent lemon-yellow — a small flat-topped
+press-down actuator with a stepped collar, exactly as in the reference image;
+no long spout, no dropper, no spray mist, no syringe. PUMP LOCK: serum leaves
+the bottle ONLY while a fingertip visibly presses the pump head down — it
+never flows, drips or appears on its own, and serum never appears on skin or
+fingers without a visible pump press first. Serum appearing without a visible
+pump press = failed. The pump head missing from the bottle, or a long spout,
+dropper or syringe appearing = failed. OUTLET LOCK: serum emerges ONLY from
+the pump's small outlet on the bottle, at the exact moment the actuator is
+pressed down — never from a finger, never from the fingertip pressing the
+pump, never materializing in mid-air or anywhere else. Serum coming out of a
+finger, or appearing anywhere other than the pump outlet, = failed. The serum
+is a glossy translucent gel-serum with about a 30% soft white milky cast —
+mostly translucent with a light white veil over the skin beneath, and gently
+runny once it lands on skin or fingertips after a pump press: it holds a soft
+rounded shape for a brief moment, then slowly slides and trails a short way
+down the skin in thin glossy streams — this on-skin runniness never applies
+inside the bottle or at the pump head itself, which releases serum only on a
+visible finger press; a few tiny sparkling highlights — never an opaque white
+cream, never fully clear water. Serum rendered as an opaque white cream, or
+as fully clear water = failed. LABEL LOCK: the label is copied exactly from
+reference image 2 and never altered — "LEMONSHOT 150" on top, "Exo:Booster
+Serum" below it, "LEMONDERMA" printed small near the base; LEMONDERMA is a
+single word ending in DERMA; never misspelled, never mirrored, never
+selfie-flipped. A label rendered any other way = failed. NO ON-SCREEN TEXT
+LOCK: the printed product label is the only legible text anywhere in this
+video; no captions, no subtitles, no numbers, no emoji, in any language, in
+any cut — all text overlays are added later in editing. Any generated caption
+or text overlay = failed.
+WRINKLE ARC LOCK: 0-1s BEFORE shows the soft fine lines; 1-2s AFTER is a
+hard-cut flash-preview of the final result — at 2s her forehead returns to
+the BEFORE state to begin the routine. NO INSTANT EFFECT: through ALL the
+application beats (2-9s) her forehead lines stay at the same BEFORE level —
+the serum never visibly improves the skin on camera; the improvement happens
+overnight and is revealed only in the 10-12s AFTER. Lines softening during
+an application beat = failed. The 9-10s RECAP BEFORE is a hard-cut flashback
+to the BEFORE state, not her skin getting worse. The video ENDS on the
+10-12s AFTER state. Ending on a wrinkled frame = failed.
+RECAP LOCK: the 9-10s and 10-12s frames are two distinct freeze-style
+comparison shots of the same forehead — a hard graphic cut between them,
+never a dissolve, cross-fade, or continuous morph. Any gradual re-wrinkling
+or gradual re-smoothing between these two shots = failed.
+She never speaks on camera — her lips stay relaxed and closed; a calm,
+confiding female voice-over narrates, like sharing a secret with a friend.
+Cuts are allowed only at the segment boundaries below; inside each segment
+the camera is locked — no zoom, no pan, no internal cut.
+
+0-1s BEFORE: close-up, black thin-strap tank top, bright even daylight,
+clean out-of-focus white room. Her brow is already furrowed from the very
+first frame; her forehead shows the same soft fine lines as reference image
+3, rendered as thin hairline creases with no shadow pooling inside them —
+faint enough to read as soft shading, not carved grooves. She points at them
+with her index finger. Quiet room tone, voice-over begins mid-beat:
+"Everyone keeps asking—"
+1-2s AFTER: hard cut, same framing, now in the plain white tank top,
+relaxed — forehead smooth and glowing, a subtle smile. Voice-over continues:
+"—what happened."
+2-4s APPLY 1: cream silk robe at a softly blurred vanity, warmer light; her
+forehead back in the BEFORE state. Her index finger is already pressing the
+pump head down, a pea-sized bead of the translucent milky serum emerging
+from the pump outlet onto the fingertips of her other hand — a glossy bead
+that starts to slide slowly — then she applies it across her forehead in
+smooth downward strokes. Voice-over: "Nothing — just this lemon serum."
+4-5s APPLY 2: same setting; she massages the serum into her right cheek with
+circular fingertip motions, dewy sheen. Voice-over: "A little here…"
+5-6s APPLY 3a: she gently dabs around her right eye with one fingertip.
+Voice-over: "…around my eyes…"
+6-7s APPLY 3b: same dabbing around her left eye; her forehead lines remain
+at the BEFORE level, unchanged.
+7-9s APPLY 4: both palms glide slowly over her whole face in one smooth
+motion; her skin turns dewy and glossy from the serum, but the fine lines
+remain unchanged — no improvement on camera. Voice-over: "It just melts in."
+9-10s RECAP BEFORE: extreme close-up of her forehead and brows, back in the
+black tank top and natural light — a hard cut back to the same thin, faint
+hairline creases established in the 0-1s BEFORE shot, matte, no shadow
+pooling inside the lines. Voice-over: "Day one."
+10-12s RECAP AFTER — FINAL FACE LOCK: identical framing, hard cut, now in
+the plain white tank top. Her face and skin in this entire segment are
+copied directly from reference image 1 — the exact same flawless, smooth,
+luminous skin as reference image 1, nothing added. She smiles softly with a
+bright, relaxed expression, brows still: even while she smiles, no line
+forms anywhere — forehead, between the brows, eye corners and around the
+mouth all stay perfectly smooth, exactly like reference image 1, with a
+glassy hydrated sheen. Any wrinkle, crease or fold appearing anywhere on her
+face at any point in this segment = failed. Voice-over: "Three days later.
+You tell me."
+
+Audio: the calm female voice-over above, warm and unhurried, beginning after
+a brief beat of room tone; a soft pump click and gentle liquid and fingertip
+sounds under the application segments; a quiet room tone throughout. No
+music, no background score, no other voices, no echo.
+
+Negative prompt: captions, subtitles, on-screen text, text overlay, lower
+third, day counter text, numbers on screen, watermark, logo overlay, Chinese
+characters, non-English text, garbled label text, emoji on screen, label
+text warping, brand name misspelled, mirrored label, reversed label,
+selfie-flipped label, second brand appearing, long spout nozzle, spray mist,
+dropper, syringe, needles, botox, injections, filler, missing pump head,
+serum flowing without a pump press, serum appearing on its own, serum coming
+out of a finger, serum emerging from a fingertip, bottle changing shape or
+color, warm gold or amber bottle, black bottle, oversized bottle, giant
+bottle, opaque white cream, thick cream texture, fully transparent watery
+serum, clear water-like serum, different person between segments, face
+morphing, identity shift, aged face, extra fingers, deformed hands, long
+nails, nail polish, nail art, talking mouth movements, lip-sync mouth
+motion, music, background score, sung lyrics, singing, raised pimples,
+pustules, blood, scabs, rash, inflamed skin, gray desaturated skin,
+cartoonishly deep carved wrinkles, forehead wrinkles visible in the 10-12s
+ending frame, lines forming while raising eyebrows in the ending frame,
+expression wrinkles in the final shot, forehead creasing during the
+expression, horizontal lines appearing while the brows lift, skin folding
+on the forehead, smile lines in the final shot, nasolabial folds in the
+final shot, eye wrinkles while smiling, wrinkled smile, aged smile, lines softening during an application
+beat, dissolve or cross-fade between the 9-10s and 10-12s recap shots,
+gradual re-wrinkling, camera movement inside a segment, zoom burst,
+whip pan, focus pull, lighting change inside a segment, color shift, jump
+cut inside a segment, distorted audio, muffled audio, static, audio glitches</code></pre>
+    </div>
+  </details>
 </div>
 
 <!-- ===== AD 3 ===== -->
@@ -242,6 +620,141 @@ to visibly smooth and even out skin texture.</blockquote></div>
       <div><span class="hero-tag">L2 수치 대리발화</span><span class="hero-tag">L5 촉각 대리</span><span class="hero-tag">L8 마감(2주)</span><span class="hero-tag">정체성 보상 서사</span></div>
     </div>
   </div>
+
+  <details class="pbox">
+    <summary><span>레몬더마 이식 프롬프트 — AD 3 (15초)</span><span class="pm">정본 v15 · 2026-08-25 · 8,956자</span><span class="toggle" aria-hidden="true"></span></summary>
+    <div class="pbox-body">
+      <div class="pbox-bar"><div class="pbox-note">시댄스(매그니픽) 입력 전문 — 네거티브 포함. 검수·반려 15회 반영 최종본.</div><button class="copy" type="button">프롬프트 복사</button></div>
+      <pre><code>UGC-style vertical video, 15 seconds total, shot like a casual phone
+recording. The video shows only a woman's legs and hands — her face never
+appears in any segment.
+Reference image 1 is the exact source of truth for the product: the Lemonderma
+"Lemonshot 150 Exo:Booster Serum" — a slim frosted bottle in vivid fluorescent
+lemon-yellow (never warm gold, never amber, never black), 14.6 cm tall and
+3.24 cm in diameter: a narrow cylinder, slightly shorter than an adult woman's
+hand from wrist to fingertip and about two fingertip widths wide; always
+render it at this true physical scale relative to the hands and legs in
+frame, never enlarged. The bottle is topped with a short cylindrical pump
+head in the same fluorescent lemon-yellow — a small flat-topped press-down
+actuator with a stepped collar, exactly as in the reference image; no long
+spout, no dropper, no spray mist, no syringe. PUMP LOCK: serum leaves the
+bottle ONLY while a fingertip visibly presses the pump head down — it never
+flows, drips or appears on its own, and serum never appears on skin or hands
+without a visible pump press first. Serum appearing without a visible pump
+press = failed. The pump head missing from the bottle, or a long spout,
+dropper or syringe appearing = failed. OUTLET LOCK: serum emerges ONLY from
+the pump's small outlet on the bottle, at the exact moment the actuator is
+pressed down — never from a finger, never from the fingertip pressing the
+pump, never materializing in mid-air or anywhere else. Serum coming out of a
+finger, or appearing anywhere other than the pump outlet, = failed. SERUM COLOUR AND
+TEXTURE LOCK: the serum itself is WHITE — a soft milky white with about 30%
+opacity, mostly translucent with a light white veil over the skin beneath.
+It is never yellow, never lemon-tinted, never cream-coloured: the vivid
+yellow belongs to the bottle only, never to the liquid. It is a runny,
+slightly stringy liquid — thin and slippery like a lightweight essence: the
+moment it leaves the pump outlet it already runs and drips, and wherever it
+lands it immediately flattens into a soft irregular puddle with trailing
+tails and keeps creeping outward. It never sits up as a round bead, dome,
+droplet or cream-like dollop, not even for an instant; a few tiny sparkling
+highlights. Yellow or tinted serum, or serum holding any rounded raised
+shape, = failed. Serum rendered as an opaque white cream, or
+as fully clear water = failed. LABEL LOCK: the label is copied exactly from
+reference image 1 and never altered — "LEMONSHOT 150" on top, "Exo:Booster
+Serum" below it, "LEMONDERMA" printed small near the base; LEMONDERMA is a
+single word ending in DERMA; never misspelled, never mirrored, never
+selfie-flipped. A label rendered any other way = failed. NO ON-SCREEN TEXT
+LOCK: the printed product label is the only legible text anywhere in this
+video; no captions, no subtitles, no numbers, no emoji, in any language, in
+any cut — all text overlays are added later in editing. Any generated caption
+or text overlay = failed.
+Reference image 2 defines the legs: the same pair of legs appears throughout,
+skin tone matched to reference image 2, but rendered noticeably slimmer than
+in that reference — about one tenth slimmer, the calf at its widest about
+the width of two stacked adult fists, with realistic muscle and natural knee
+and ankle proportions, never bone-thin, never warped. Short bare natural
+fingernails and toenails, no polish.
+This is modest, family-friendly, everyday skincare content shot like a
+clean daytime pharmacy commercial — she is casually dressed in an oversized
+white t-shirt and knee-area soft-gray cotton shorts throughout the indoor
+scenes, and the focus is entirely on skin texture.
+EVEN SPOTS LOCK: in the before state the dark spots are distributed evenly
+across BOTH legs and across the visible length of each leg — lower thigh,
+knee area, shin and calf alike — never concentrated on one leg only, never
+clustered in a single zone such as knee-to-calf. Spots appearing on only one
+leg, or clustered in one zone, = failed.
+SELF-APPLICATION LOCK: this is first-person self care — her own hands always
+enter the frame from the body side, the same lower edge of the frame that
+the leg extends from, reaching forward along her own leg. Her right hand
+holds the bottle and presses the pump; her left hand spreads and massages.
+Hands reaching in from the far side of the leg, as if another person is
+applying the serum, = failed.
+Cuts are allowed only at the segment boundaries below. Segments up to 11s
+hold a gentle organic handheld sway, never jerky; the final product segment
+11-15s is locked and static.
+
+0-3s: first-person POV selfie shot filmed by the woman herself in bright
+morning daylight — she sits on a light beige fabric sofa in the oversized
+white t-shirt and soft-gray cotton shorts, holding the phone at her own
+chest and looking down along her own legs: her thighs are nearest the camera
+at the bottom of the frame and her feet point away from her into the upper
+part of the frame, the natural view of someone filming their own legs. Both
+legs show heavy dark-brown spotting, unmistakable at a glance — dozens of
+distinctly dark flat spots, each about 2-4 mm across, strongly contrasted
+against her skin tone, irregular in size and spacing, densely scattered and
+spread evenly from lower thigh to ankle on each leg — an everyday cosmetic
+concern, completely flat, no bumps, no inflammation. Spots too faint or too
+small to read clearly on screen = failed.
+3-6s: bright bathroom, still in the t-shirt and shorts, one foot propped
+on the low edge of a clean white bathtub, the rest of the room softly
+blurred behind. Her right hand holds the bottle and presses the pump several times
+with the index finger — soft clicks — each press sending serum from the pump
+outlet into her left palm, building a generous pool of the runny white
+serum in her palm — clearly white, never yellow; then both hands, reaching from the body side along her own leg, rub
+it into the lower leg in long strokes — the leg turns wet and glossy, one
+slow rivulet running down the shin.
+6-8s: extreme close-up of her left hand: the runny white serum lies flat
+across her fingers and slides down between them in long slippery strings and
+drips — slumped, glossy and formless, never a round bead or droplet; the
+shiny leg is blurred out of focus behind.
+8-11s: her leg held up against a white door with a dark frame, wearing the
+clear transparent mule heel — a square open toe, one wide clear strap across
+the toes, and a sculpted flared-pedestal heel in clear acrylic with a slim
+silver core; the skin on the leg now smooth, even-toned and glossy, free of
+dark spots, bright light catching the sheen.
+11-15s: static close-up: the fluorescent yellow serum bottle stands upright
+on the flat rim of the white bathtub, pump head up, next to a neatly folded
+white towel and a small green plant, white tiled wall behind; label facing
+the camera, sharp and legible.
+
+Audio: no music anywhere in the clip. A quiet warm room tone runs
+throughout; soft pump clicks and gentle hand-on-skin sounds under 3-6s; a
+faint heel click at 8-11s. No lyrics, no vocals, no voices, no narration.
+
+Negative prompt: captions, subtitles, on-screen text, text overlay, lower
+third, numbers on screen, watermark, logo overlay, Chinese characters,
+non-English text, garbled label text, emoji on screen, label text warping,
+brand name misspelled, mirrored label, reversed label, selfie-flipped label,
+second brand appearing, long spout nozzle, spray mist, dropper, syringe,
+missing pump head, serum flowing without a pump press, serum appearing on
+its own, serum coming out of a finger, serum emerging from a fingertip,
+bottle changing shape or color, warm gold or amber bottle, black bottle,
+oversized bottle, giant bottle, opaque white cream, thick cream texture, yellow serum, lemon-tinted serum,
+cream-coloured serum, round beads of serum, serum droplets holding shape,
+dome-shaped serum, cream-like dollop,
+fully transparent watery serum, clear water-like serum, a face appearing,
+another person's hands, second person, hands reaching from the opposite side
+of the leg, different legs between segments, black high heels, dark shoes, bone-thin legs, rail-thin legs,
+warped legs, rubber legs, extra toes, deformed feet, long nails, nail
+polish, nail art, marble surface, gold accents, velvet, glitter, high-gloss
+luxury styling, raised pimples, pustules, blood, scabs, rash, inflamed skin,
+gray desaturated skin, spots on only one leg, spots clustered in one
+zone, lying on a bed, bathrobe, lingerie, underwear, swimwear, suggestive
+pose, seductive angle, music, background score, sung lyrics, vocals,
+singing, voice-over, narration, spoken words, top-down overhead angle on the legs, third-person camera angle, camera
+spinning, violent shake, zoom burst, whip pan, focus pull, jump cut inside a segment,
+distorted audio, muffled audio, static, audio glitches</code></pre>
+    </div>
+  </details>
 </div>
 
 <!-- ===== AD 4 ===== -->
@@ -271,6 +784,123 @@ and holding it there all day long.</blockquote></div>
       <div><span class="hero-tag">L2 수치 대리발화</span><span class="hero-tag">L5 촉각 대리</span><span class="hero-tag">L6 혐오→안도</span><span class="hero-tag">자기독백 어휘</span></div>
     </div>
   </div>
+
+  <details class="pbox">
+    <summary><span>레몬더마 이식 프롬프트 — AD 4 (16초)</span><span class="pm">정본 v15 · 2026-08-25 · 7,485자</span><span class="toggle" aria-hidden="true"></span></summary>
+    <div class="pbox-body">
+      <div class="pbox-bar"><div class="pbox-note">시댄스(매그니픽) 입력 전문 — 네거티브 포함. 검수·반려 15회 반영 최종본.</div><button class="copy" type="button">프롬프트 복사</button></div>
+      <pre><code>UGC-style vertical video, 16 seconds total, shot like a casual phone
+recording. The video shows only a woman's legs, feet and hands — her face
+never appears in any segment.
+Reference image 1 is the exact source of truth for the product: the Lemonderma
+"Lemonshot 150 Exo:Booster Serum" — a slim frosted bottle in vivid fluorescent
+lemon-yellow (never warm gold, never amber, never black), 14.6 cm tall and
+3.24 cm in diameter: a narrow cylinder, slightly shorter than an adult woman's
+hand from wrist to fingertip and about two fingertip widths wide; always
+render it at this true physical scale relative to the hands and legs in
+frame, never enlarged. SCALE ANCHORS: on screen the bottle always reads
+small — its full height spans well under half the length of the visible
+shin, and it never appears longer than her hand; in the dispensing close-ups
+it occupies only a small part of the frame, never dominating. When in doubt,
+render the bottle smaller, never larger. A bottle longer than her hand, or
+spanning half the shin or more, = failed. The bottle is topped with a short cylindrical pump
+head in the same fluorescent lemon-yellow — a small flat-topped press-down
+actuator with a stepped collar, exactly as in the reference image; no long
+spout, no dropper, no spray mist, no syringe. PUMP LOCK: serum leaves the
+bottle ONLY while a fingertip visibly presses the pump head down — it never
+flows, drips or appears on its own, and serum never appears on skin or hands
+without a visible pump press first. Serum appearing without a visible pump
+press = failed. The pump head missing from the bottle, or a long spout,
+dropper or syringe appearing = failed. OUTLET LOCK: serum emerges ONLY from
+the pump's small outlet on the bottle, at the exact moment the actuator is
+pressed down — never from a finger, never from the fingertip pressing the
+pump, never materializing in mid-air or anywhere else. Serum coming out of a
+finger, or appearing anywhere other than the pump outlet, = failed. The serum
+is a runny LIQUID serum with a light 30% soft white milky veil — thin and
+fluid like a lightweight essence, mostly translucent over the skin beneath:
+the moment a drop lands after a pump press it flattens and runs, spreading
+into a thin glossy film and trailing down the skin in fine streams — it
+never sits up as a thick rounded blob or cream-like dollop; a few tiny
+sparkling highlights — never an opaque white cream, never fully clear
+water. Serum rendered as an opaque white cream, or
+as fully clear water = failed. LABEL LOCK: the label is copied exactly from
+reference image 1 and never altered — "LEMONSHOT 150" on top, "Exo:Booster
+Serum" below it, "LEMONDERMA" printed small near the base; LEMONDERMA is a
+single word ending in DERMA; never misspelled, never mirrored, never
+selfie-flipped. A label rendered any other way = failed. NO ON-SCREEN TEXT
+LOCK: the printed product label is the only legible text anywhere in this
+video; no captions, no subtitles, no numbers, no emoji, in any language, in
+any cut — all text overlays are added later in editing. Any generated caption
+or text overlay = failed.
+Reference image 2 defines the legs: the same pair of legs appears throughout,
+skin tone matched to reference image 2 but lifted to a fair, luminous,
+well-lit glow — about 20% brighter, closer to the brightness of a sheet of
+warm white paper held beside it — never bleached-white, never gray or
+desaturated. Realistic anatomy, natural proportions. Short bare natural
+fingernails and toenails, no polish.
+MATCHED LEGS LOCK: whenever both legs are visible in the same frame, both
+legs share exactly the same skin condition and the same brightness — both
+flaky together in the early state, both smooth together after. One flaky leg
+next to one smooth leg in the same shot = failed.
+Cuts are allowed only at the segment boundaries below; inside each segment
+the camera is locked — no zoom, no pan, no internal cut.
+
+0-2s: high-angle shot: she sits on a white bedsheet, hands gently framing
+her left shin, which is covered in dry peeling skin matching the dry-skin
+reference photo — thin white translucent flakes lifting from the surface in
+scattered patches, a crackled dry-paper texture, rough and matte — dry
+surface only, no cracks, no redness, no wounds. Her fingers give the dry
+skin a light scratch.
+2-3s TEASE: overhead shot of the same legs now smooth and glossy, both legs
+equally smooth. TEASE LOCK: this one-second beat is a hard-cut flash-preview
+of the final result, not a continuous action — at 3s the leg returns to its
+flaky state to begin the real routine.
+3-4s: close-up: holding the bottle low over the flaky shin, she presses the
+pump with her index finger — a soft click — and a drop of thin liquid serum
+falls from the pump outlet onto the skin and immediately runs down the curve
+of the shin in a fine glossy stream.
+4-6s: her right hand spreads the serum in upward circular strokes; the flaky
+texture dissolves into a wet, hydrated sheen.
+6-7s: side view of her foot on the sheet: the heel is dry with the same
+peeling texture as the reference photo — thin white flakes lifting in small
+patches, rough and matte — dry surface only, no cracks, no wounds.
+7-8s: she presses the pump again with her index finger over the heel; a
+drop of the liquid serum falls from the pump outlet onto the dry patch and
+spreads flat at once.
+8-10s: her fingertips massage the serum into the heel in small circles, the
+dryness giving way to a smooth hydrated glow.
+10-12s: overhead: both legs extended on the white bedding, uniformly smooth,
+even-toned and glossy — both legs in exactly the same condition.
+12-16s: same overhead framing: her right hand glides slowly down one shin in
+a single satisfying friction-free sweep from knee to ankle.
+
+Audio: no music anywhere in the clip. A quiet warm room tone runs
+throughout; a soft click at each pump press; gentle liquid and skin-massage
+sounds under 3-10s. No lyrics, no vocals, no voices, no narration.
+
+Negative prompt: captions, subtitles, on-screen text, text overlay, lower
+third, numbers on screen, watermark, logo overlay, Chinese characters,
+non-English text, garbled label text, emoji on screen, label text warping,
+brand name misspelled, mirrored label, reversed label, selfie-flipped label,
+second brand appearing, long spout nozzle, spray mist, dropper, syringe,
+missing pump head, serum flowing without a pump press, serum appearing on
+its own, serum coming out of a finger, serum emerging from a fingertip,
+bottle changing shape or color, warm gold or amber bottle, black bottle,
+oversized bottle, giant bottle, bottle as long as the shin, bottle
+dominating the frame, opaque white cream, thick cream texture, thick rounded blob, cream-like
+dollop, serum holding a dome shape, whipped texture,
+fully transparent watery serum, clear water-like serum, a face appearing,
+one leg smooth while the other is flaky, mismatched legs, different legs
+between segments, bone-thin legs, warped legs, rubber legs, extra toes,
+deformed feet, long nails, nail polish, nail art, cracked heels, deep
+fissures, bleeding, open wounds, scabs, raised pimples, pustules, blood,
+rash, inflamed skin, bleached-white skin, gray desaturated skin, music,
+background score, sung lyrics, vocals, singing, voice-over, narration,
+spoken words, camera movement inside a segment, zoom burst, whip pan, focus
+pull, lighting change inside a segment, color shift, jump cut inside a
+segment, distorted audio, muffled audio, static, audio glitches</code></pre>
+    </div>
+  </details>
 </div>
 
 <!-- ===== AD 5 ===== -->
@@ -300,6 +930,113 @@ and even out skin tone in days.</blockquote></div>
       <div><span class="hero-tag">L1 자기감시</span><span class="hero-tag">L4 리추얼</span><span class="hero-tag">L8 마감(14일)</span><span class="hero-tag">정서 곡선 동기화</span></div>
     </div>
   </div>
+
+  <details class="pbox">
+    <summary><span>레몬더마 이식 프롬프트 — AD 5 (19초)</span><span class="pm">정본 v15 · 2026-08-25 · 6,509자</span><span class="toggle" aria-hidden="true"></span></summary>
+    <div class="pbox-body">
+      <div class="pbox-bar"><div class="pbox-note">시댄스(매그니픽) 입력 전문 — 네거티브 포함. 검수·반려 15회 반영 최종본.</div><button class="copy" type="button">프롬프트 복사</button></div>
+      <pre><code>UGC-style vertical video, 19 seconds, front-facing phone self-recording.
+Reference image 1 defines the model: a young Korean woman, dark hair loosely
+tied back with soft loose strands, natural light freckles across her nose
+bridge, white ribbed tank top, dewy skin, bright white room. Same woman,
+same face, same outfit and hair in every segment. Short bare natural nails,
+no polish.
+Reference image 2 defines the product: the Lemonderma "Lemonshot 150
+Exo:Booster Serum" — a slim frosted bottle in vivid fluorescent lemon-yellow
+(never warm gold or black), 14.6 cm tall, 3.24 cm wide: slightly shorter
+than an adult hand from wrist to fingertip, about two fingertip widths wide
+(the model is 170 cm tall); always at this true scale, never enlarged. It is
+topped with a short cylindrical pump head in the same fluorescent yellow — a
+small flat-topped press-down actuator, no long spout, no dropper, no spray,
+no syringe. PUMP LOCK: serum appears ONLY from the pump's small outlet at
+the exact moment a fingertip visibly presses the actuator down — never from
+a finger, never on its own. Serum without a visible pump press, serum from a
+finger, or a missing pump head = failed. The serum is a runny,
+slightly stringy LIQUID serum with a light 30% white milky veil — mostly
+see-through, like a thin slippery gel: once it lands on skin it flattens
+into a soft irregular puddle and slowly creeps and trails in glossy streams,
+exactly like the reference texture photo — never sitting up as a dome, scoop
+or cream-like dollop; tiny sparkling highlights. Opaque white cream, a thick
+dollop, or fully clear water = failed. LABEL LOCK:
+copy the label exactly from reference image 2 — "LEMONSHOT 150",
+"Exo:Booster Serum", "LEMONDERMA" (one word ending in DERMA) — never
+misspelled, mirrored or selfie-flipped; anything else = failed. NO TEXT
+LOCK: the printed label is the only text in the video — no captions,
+subtitles, day counters, numbers or emoji in any cut; overlays are added in
+editing. Any generated text = failed.
+SPOT LOCK: in the early segments dense clusters of flat brown
+hyperpigmentation cover both cheeks from under the eyes down to the
+jawline — dozens of overlapping spots, 2-6 mm each, clearly darker than her
+base skin, heavy mottled sun-damage pigmentation matching the BEFORE
+reference, so the before and after look dramatically different; completely
+flat, no bumps, no redness. Only these brown spots fade as the video
+progresses — her light freckles on the nose bridge stay unchanged; freckles
+erased = failed. From 13s to the end her cheeks stay in the cleared AFTER state —
+the spots never return; spots after 13s = failed. NO-SMILE LOCK: neutral,
+unsmiling until 13s; her first smile appears only in 13-15s. Smile before
+13s = failed.
+No speaking, no voice-over. Cuts only at the boundaries below; inside each
+segment the camera is locked — no zoom, no pan, no internal cut.
+
+0-1s: extreme close-up of her right cheek: dense flat brown spots covering
+the cheek from under the eye to the jawline — heavy mottled pigmentation
+matching the BEFORE reference video, clearly darker than her base skin —
+completely flat, non-inflamed, no wounds. Soft neutral light.
+1-3s: two quick shoulder-up beats, neutral: chin resting on one hand, then
+facing the camera straight on — the dense spots clearly visible on both
+cheeks.
+3-5s: close-up: she holds the bottle beside her right cheek and presses the
+pump with her index finger — three small milky beads fall from the outlet
+onto the cheek and trail slowly toward the jawline.
+5-7s: another pump press places beads on her left cheek, calm and neutral.
+7-8s: her right hand massages the left cheek in circles, skin wet and
+reflective.
+8-10s: she massages the right cheek, hydrated and glossy; the brown spots
+look slightly softer than before.
+10-12s: one more pump press adds serum to her right cheek; she presses it in
+with a flat palm — the spots visibly fainter, freckles unchanged.
+12-13s: a slow fingertip sweep: skin clear and dewy, the spots greatly
+faded.
+13-15s: her first smile slowly appears as she touches her cheek with one
+fingertip — teeth showing, skin glowing.
+15-17s: close-up of her open palm, camera locked and unmoving: a freshly
+dispensed pool of the runny serum sits on the palm — a soft, slumped,
+irregular flat puddle with a short trailing tail, exactly like the reference
+texture photo: glossy, translucent-milky, mostly flat against the skin, its
+edges slowly creeping outward during the shot — never a thick dome, never a
+cream scoop, never holding a raised shape.
+17-19s: chest-up: her face fully in the cleared AFTER state — even-toned,
+glowing, only her natural freckles left — smiling brightly. She holds the
+bottle upright in her right hand at chest height beside her face, the hand
+relaxed and natural: exactly five slender fingers wrapped loosely around the
+middle of the bottle, thumb toward the camera, no overlapping or bent-back
+fingers, natural wrist angle; label facing the camera, sharp and legible,
+pump head up.
+
+Audio: no music, no voice. Quiet warm room tone throughout; soft pump
+clicks, faint liquid and palm-press sounds under the applications. No
+lyrics, no vocals, no narration.
+
+Negative prompt: captions, subtitles, on-screen text, text overlay, day
+counter text, numbers on screen, watermark, Chinese characters, non-English
+text, emoji, label text warping, brand name misspelled, mirrored label,
+selfie-flipped label, second brand, split screen, divided frame, comparison
+panel, long spout nozzle, spray mist, dropper, syringe, missing pump head,
+serum without a pump press, serum from a finger, warm gold or amber bottle,
+black bottle, oversized bottle, opaque white cream, thick cream texture, thick rounded blob, cream-like
+dollop, dome-shaped serum, whipped texture, serum holding a raised shape,
+clear water-like serum, freckles erased, smiling before 13 seconds, brown
+spots returning in the final shot, before-state skin in the final shot,
+different person between segments, face morphing, identity shift, outfit
+changing, aged face, deformed hands, extra fingers, missing fingers, merged
+fingers, twisted fingers, broken wrist, long nails, nail polish, raised
+pimples, pustules, blood, scabs, rash, inflamed acne, cracked bleeding
+skin, gray desaturated skin, camera movement inside a segment, zoom, whip
+pan, focus pull, lighting change inside a segment, jump cut inside a
+segment, music, sung lyrics, vocals, voice-over, narration, distorted
+audio, muffled audio, static, audio glitches</code></pre>
+    </div>
+  </details>
 </div>
 
 <!-- ===== AD 6 ===== -->
@@ -374,62 +1111,29 @@ The journey to clearer skin starts with the first application.</blockquote></div
   </div>
 </div>
 
-<h2 id="pattern"><span class="no">④</span>8편을 관통하는 심리 설계</h2>
-<div class="grid g4">
-  <div class="card stat"><div class="v">6/8</div><div class="l">"Day N" 리추얼 서사(L4) — 결과 불안을 수행 가능성으로 치환</div></div>
-  <div class="card stat"><div class="v">8/8</div><div class="l">셀피·자가촬영 앵글(L1) — 광고가 아니라 '거울'로 위장</div></div>
-  <div class="card stat"><div class="v">5/8</div><div class="l">수치 부위·수치 어휘의 대리 발화(L2) — 말해지는 순간 절반 풀리는 수치심</div></div>
-  <div class="card stat"><div class="v">3/8</div><div class="l">브랜드 실질 미노출 — '후기'로 기억되기 위한 정체 은폐</div></div>
-</div>
-
-<h3>설계 1 — 판정권의 이양: "내가 판단했다"는 착각이 최종 병기</h3>
-<p>1번(B/A 차이 찾기)·5번("Watch this"+분할화면)·7번(눌러보기 시연)은 공통적으로 시청자에게 <b>증거를 던져주고 판결을 맡긴다.</b>
-광고가 "효과 있다"고 말하면 방어기제가 작동하지만, 시청자 스스로 "다르네"라고 판단하면 그 결론은 자기 소유가 된다 —
-사람은 남의 주장은 의심해도 자기 판단은 의심하지 않는다. 훅에서 판정자 역할을 부여하고, 본편에서 증거를 배열하고, 말미에 판결 재료(B/A)를 제출하는 3막 구조가 반복된다.</p>
-
-<h3>설계 2 — 수치심 시장: 이 8편의 진짜 카테고리는 '스킨케어'가 아니다</h3>
-<p>이마 주름(노화 불안), 딸기다리(노출 포기), 갈라진 발뒤꿈치(최후의 민망함), 튼살(몸의 이력), 등 흉터(볼 수 없는 부위), 중년 남성의 그루밍(들키기 싫은 관리) —
-8편 전부가 <b>'남에게 말한 적 없는 것'</b>을 다룬다. 검색조차 민망해서 수요가 잠복해 있는 고민을 피드가 먼저 말해주면, 그 안도감("나만이 아니구나")의 수신처가 브랜드가 된다.
-이것이 부위를 6종으로 흩뿌린 진짜 이유로 보인다 — 배리에이션이 아니라 <b>수치심의 종류별 시장 분할</b>이다. 각 편은 서로 다른 잠복 수요층에 "당신 얘기"라는 신호를 쏘는 전용 안테나다.</p>
-
-<h3>설계 3 — 시술 욕망의 번역기: 원하지만 무서운 것의 안전판</h3>
-<p>"No needles required"(1) · "Korean Botox"(2) · "botox allegations"(7) · 주사기형 디스펜서(1) — 보톡스는 3편에서 호명되고 1편에서 소품으로 재현된다.
-전부 <b>부정·농담·모형의 형태</b>다. 시술을 원하는 마음(효과 확실)과 피하는 마음(바늘·비용·부자연스러움)의 이중감정에서, 원함의 절반만 가져오고 두려움의 절반은 버리는 화법.
-"시술급 효과, 시술 아닌 방법"은 이 카테고리의 항구적 마스터 프레임이고, 8편은 그걸 언어(카피)·도상(주사기)·신체언어(당겨보기)의 3개 층위에서 동시에 구사한다.</p>
-
-<h3>설계 4 — 촉각 선지급: 사기 전에 이미 써본 몸</h3>
-<p>과량으로 붓고(3), 흐르게 두고(5·8), 손바닥에 올리고(4·5), 누르고 쓸고 두드린다(전편). 화면 속 손은 시청자의 거울신경을 통해 <b>시청자의 손</b>이 된다.
-바르는 감각을 광고 시청 중에 선(先)체험시키면, 구매는 새로운 결정이 아니라 이미 아는 감각의 확정 절차가 된다.
-이 광고들에서 손이 프레임 밖으로 나가는 시간이 거의 없는 것은 우연이 아니다.</p>
-
-<h3>설계 5 — 정서 그래프가 피부 그래프를 끌고 간다</h3>
-<p>5번의 Day1 무표정→Day14 미소, 7번의 절제된 끄덕임, 8번의 장난→엄지척 — 피부 변화는 화질·조명 때문에 화면에서 입증되기 어렵지만,
-<b>표정 변화는 인간이 가장 빠르고 자동적으로 읽는 신호</b>다. 이 광고들은 피부의 회복을 표정의 회복으로 대리 표현하고,
-시청자는 피부를 봤다고 믿지만 실제로 읽은 것은 감정이다. B/A의 진짜 비교 대상은 명도가 아니라 행복이다.</p>
-
-<div class="warn">
-  <b>해석의 한계 — 명시해둔다</b>
-  <p style="margin-top:6px">① 이 해부는 노출 상위라는 결과에서 역산한 해석이다 — 각 장치의 개별 기여도는 우리 계정에서 A/B로만 검증 가능하다.
-  ② 배경조사(8/19 teardown)에서 확인했듯 메디테라피 매출의 대부분(2024년 816억 중 약 800억)은 경쟁 밀도가 낮았던 대만에서 발생했다 —
-  이 문법의 성공에는 진입 시점·시장 조건이 섞여 있으므로, 미국의 고경쟁 환경에서 같은 결과를 보장하지 않는다.
-  ③ 심리 기제 서술은 프레임에서 확인되는 연출 의도의 재구성이며, 실제 시청자 반응 데이터(홀드율·CTR)는 우리가 접근할 수 없다.</p>
-</div>
-
-<h2 id="why"><span class="no">⑤</span>종합 진단 — 왜 이것들이 히어로인가</h2>
-<div class="verdict">
-  <div class="t">최종 진단</div>
-  <div class="b">이 8편은 '피부 개선'을 파는 광고가 아니다 — 수치심의 해방(L2), 통제감의 회복(L4), 시술 욕망의 안전한 충족(L3), 돌봄받는 관계(L7)라는 <b>정서적 결핍 4종을 각각 전담 마크하는 심리 상품 8종</b>이다. 제작 퀄리티의 편차(2번의 미스매치 ↔ 7번의 정교함)가 성과 편차로 이어지지 않는 이유도 여기 있다 — 승부처가 화질·연출이 아니라 "어떤 결핍을 얼마나 정확히 짚는가"이기 때문이다.</div>
-</div>
-<p>메타 환경에서 소재는 알고리즘에 타겟을 알려주는 유일한 신호다. 이 8편의 부위·인물·어휘 분산은 그 신호를 <b>결핍의 종류별로 순도 높게</b> 쪼갠 것이고,
-각 편 안에서는 판정권 이양(설계 1)→촉각 선지급(설계 4)→정서 그래프(설계 5)의 순서로 시청자의 방어를 해체한다.
-"광고처럼 안 보이게"는 스타일 선택이 아니라 이 전체 설계가 작동하기 위한 전제 조건이다 — 광고로 인식되는 순간 판정권 이양도, 거울 착각도, 후기 위장도 전부 무효가 되기 때문이다.</p>
-
 <footer>
   소스: Facebook Ads Library(Meditherapy.Global, 2026-08-24 확인) — 광고 8편 원본 다운로드, 1초 간격 프레임 145장 해부.
-  모든 심리 해석은 프레임에서 실제 확인된 요소(구도·소품·손짓·자막·표정)에만 근거하며, 근거 프레임을 각 렌즈(②)와 구간표(③)에 명시했다.
+  모든 심리 해석은 프레임에서 실제 확인된 요소(구도·소품·손짓·자막·표정)에만 근거하며, 근거 프레임을 각 렌즈(②)와 구간표(⑤)에 명시했다.
   이 문서는 사내 참고용이며 검색엔진에 노출되지 않는다.
   레몬더마 이식본 5편(AD1~AD5)은 이식 프롬프트 정본 v3(2026-08-25, Sol)로 제작해 #1~#5 카드에 수록.
 </footer>
 
 </div>
+<script>
+document.querySelectorAll('nav.toc a').forEach(function(a){
+  a.addEventListener('click', function(){
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t && t.tagName === 'DETAILS') t.open = true;
+  });
+});
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click', function(){
+    var code = b.closest('.pbox-body').querySelector('code').textContent;
+    navigator.clipboard.writeText(code).then(function(){
+      var o = b.textContent; b.textContent = '복사됨 ✓';
+      setTimeout(function(){ b.textContent = o; }, 1600);
+    }, function(){ b.textContent = '복사 실패'; });
+  });
+});
+</script>
 </body></html>
